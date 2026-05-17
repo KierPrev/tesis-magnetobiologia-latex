@@ -1,0 +1,137 @@
+\section{Resultados}
+
+\subsection{Controles negativos}
+
+Se realizaron tres experimentos de 72\,h los días 20260404, 20260428 y 20260507, para un total de \(n = 81\) bandejas (27 por día). La variable principal de análisis fue el cambio porcentual en peso húmedo (\(\text{pct\_change}\)), definido como el aumento de masa respecto al peso inicial de las semillas en cada bandeja.
+
+\subsubsection{Supuestos estadísticos}
+
+Se evaluó la normalidad de los residuos mediante el test de Shapiro-Wilk y la homogeneidad de varianzas mediante el test de Brown-Forsythe. Para la variable \(\text{pct\_change}\), los residuos resultaron normales (\(p = 0.5773\)) pero las varianzas no resultaron homogéneas entre días (\(p = 0.0302\)). Por lo tanto, los modelos presentados a continuación fueron ajustados por día experimental y utilizan errores robustos HC3 para compensar la heterogeneidad de varianzas.
+
+\subsubsection{Calidad del armado (pesos iniciales)}
+
+Para descartar un posible sesgo de selección al momento de armar las bandejas, se analizó si las semillas iniciales tenían masas diferentes entre pisos. El resultado no fue significativo (\(p = 0.4926\)), lo que indica que los pisos A, B y C comenzaron con masas de semillas estadísticamente equivalentes. Las diferencias observadas al final del experimento se atribuyen, por lo tanto, a factores ocurridos durante el crecimiento y no a un sesgo inicial.
+
+\subsubsection{Efecto del piso (A, B, C)}
+
+La Figura~\ref{fig:ctrl_pct_change_floor} muestra el crecimiento relativo promedio para cada piso. La Tabla~\ref{tab:ctrl_floor} presenta las medias y desvíos estándar.
+
+\begin{table}[h]
+\centering
+\caption{Crecimiento relativo (\(\text{pct\_change}\)) por piso en controles negativos combinados. Los valores se expresan como media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
+\label{tab:ctrl_floor}
+\begin{tabular}{lc}
+\hline
+Piso & Media \(\pm\) SD \\
+\hline
+A & 0.4455 \(\pm\) 0.0376 \\
+B & 0.4261 \(\pm\) 0.0448 \\
+C & 0.4094 \(\pm\) 0.0534 \\
+\hline
+\end{tabular}
+\end{table}
+
+Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3.9746\), \(p = 0.0228\)), con un patrón consistente A \(>\) B \(>\) C en crecimiento promedio.
+
+% FIGURA 1: pct_change por piso A/B/C
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.6\textwidth]{figuras/ctrl_pct_change_floor.png}
+% \caption{Crecimiento relativo (pct_change) por piso en controles negativos combinados.}
+% \label{fig:ctrl_pct_change_floor}
+% \end{figure}
+
+\subsubsection{Efecto de la posición lateral (izquierda, centro, derecha)}
+
+La Figura~\ref{fig:ctrl_pct_change_lcr} muestra el crecimiento según la posición lateral. La Tabla~\ref{tab:ctrl_lcr} presenta los valores numéricos.
+
+\begin{table}[h]
+\centering
+\caption{Crecimiento relativo (\(\text{pct\_change}\)) según posición lateral. Izquierda = celdas 1, 4, 7; centro = 2, 5, 8; derecha = 3, 6, 9. \(n = 27\) por grupo.}
+\label{tab:ctrl_lcr}
+\begin{tabular}{lc}
+\hline
+Posición & Media \(\pm\) SD \\
+\hline
+Izquierda & 0.4176 \(\pm\) 0.0465 \\
+Centro    & 0.4264 \(\pm\) 0.0498 \\
+Derecha   & 0.4370 \(\pm\) 0.0460 \\
+\hline
+\end{tabular}
+\end{table}
+
+No se detectaron diferencias significativas entre izquierda, centro y derecha (\(F_{2,76} = 1.1339\), \(p = 0.3272\)).
+
+% FIGURA 2: pct_change por izquierda/centro/derecha
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.6\textwidth]{figuras/ctrl_pct_change_left_center_right.png}
+% \caption{Crecimiento relativo (pct_change) según posición lateral.}
+% \label{fig:ctrl_pct_change_lcr}
+% \end{figure}
+
+\subsubsection{Efecto de la profundidad (frente, medio, atrás)}
+
+La Figura~\ref{fig:ctrl_pct_change_fmb} muestra el crecimiento según la profundidad. La Tabla~\ref{tab:ctrl_fmb} presenta los valores.
+
+\begin{table}[h]
+\centering
+\caption{Crecimiento relativo (\(\text{pct\_change}\)) según profundidad. Frente = celdas 7, 8, 9; medio = 4, 5, 6; atrás = 1, 2, 3. \(n = 27\) por grupo.}
+\label{tab:ctrl_fmb}
+\begin{tabular}{lc}
+\hline
+Posición & Media \(\pm\) SD \\
+\hline
+Frente & 0.4170 \(\pm\) 0.0472 \\
+Medio  & 0.4317 \(\pm\) 0.0554 \\
+Atrás  & 0.4323 \(\pm\) 0.0388 \\
+\hline
+\end{tabular}
+\end{table}
+
+No se detectaron diferencias significativas entre frente, medio y atrás (\(F_{2,76} = 0.9012\), \(p = 0.4104\)).
+
+% FIGURA 3: pct_change por frente/medio/atrás
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.6\textwidth]{figuras/ctrl_pct_change_front_mid_back.png}
+% \caption{Crecimiento relativo (pct_change) según profundidad.}
+% \label{fig:ctrl_pct_change_fmb}
+% \end{figure}
+
+\subsubsection{Comparación entre todas las celdas (A1--C9)}
+
+El análisis a escala de celda individual reveló diferencias significativas entre posiciones (\(F_{26,52} = 6.2658\), \(p = 1.07 \times 10^{-8}\)).
+
+El análisis post-hoc por pares con corrección FDR identificó que las diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas (Tabla~\ref{tab:ctrl_posthoc}).
+
+\begin{table}[h]
+\centering
+\caption{Comparaciones post-hoc significativas (FDR) para \(\text{pct\_change}\) en el análisis A1--C9. Cada celda tiene \(n = 3\).}
+\label{tab:ctrl_posthoc}
+\begin{tabular}{lccc}
+\hline
+Comparación & Media celda 1 & Media celda 2 & Diferencia \\
+\hline
+C9 vs B8 & 0.3721 & 0.4263 & 0.0542 \\
+C9 vs A1 & 0.3721 & 0.4373 & 0.0652 \\
+C9 vs A9 & 0.3721 & 0.4636 & 0.0915 \\
+C9 vs A3 & 0.3721 & 0.4676 & 0.0955 \\
+C9 vs B6 & 0.3721 & 0.4751 & 0.1030 \\
+\hline
+\end{tabular}
+\end{table}
+
+Notar que si bien C9 presentó una desviación estándar muy pequeña (0.0114), esto refleja la consistencia entre las tres réplicas, no necesariamente una mayor precisión a nivel poblacional.
+
+% FIGURA 4: pct_change por todas las celdas A1-C9
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.7\textwidth]{figuras/ctrl_pct_change_all_cells.png}
+% \caption{Crecimiento relativo (pct_change) por celda individual (A1--C9).}
+% \label{fig:ctrl_pct_change_all}
+% \end{figure}
+
+\subsubsection{Conclusión parcial}
+
+En los controles negativos combinados se detectó un efecto espacial general asociado al piso de la bandeja (A \(>\) B \(>\) C), pero no a los ejes izquierda-centro-derecha ni frente-medio-atrás. Sin embargo, al analizar cada celda individual A1--C9, se observaron diferencias significativas entre posiciones específicas. El análisis post-hoc indicó que estas diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas de mayor crecimiento. Esto sugiere que el control negativo no fue completamente homogéneo a escala espacial fina, por lo que los análisis de tratamientos deberían considerar o controlar posibles efectos de posición.
