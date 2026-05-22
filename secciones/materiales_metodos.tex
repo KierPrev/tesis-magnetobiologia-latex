@@ -58,7 +58,7 @@ Además de la estructura principal de tratamiento, se diseñaron piezas auxiliar
 
 Con el fin de evitar el conteo manual repetido de 20 semillas por muestra, se diseñó una cuchara medidora orientada a dosificar aproximadamente esa cantidad con la menor variabilidad posible. Dado que el volumen ocupado por las semillas depende de su tamaño y disposición, se optó por un diseño paramétrico utilizando \textit{build123d}, lo que permitió modificar de manera sistemática las dimensiones de la pieza.
 
-A partir de un diseño inicial, se generaron variantes con cambios de tamaño del orden de $\pm 5\%$, con el objetivo de evaluar cuál de ellas se ajustaba mejor a una carga cercana a 20 semillas de maíz por uso. Las distintas versiones fueron fabricadas mediante impresión 3D y comparadas experimentalmente, seleccionándose finalmente aquella que mostró el mejor ajuste al valor buscado y una menor variabilidad entre repeticiones.
+A partir de un diseño inicial, se generaron variantes con cambios de tamaño del orden de $\pm 5\%$, con el objetivo de evaluar cuál de ellas se ajustaba mejor a una carga cercana a 20 semillas de maíz por uso. Las distintas versiones fueron fabricadas mediante impresión 3D y comparadas experimentalmente, seleccionándose finalmente aquella que mostró el mejor ajuste al valor buscado y una menor variabilidad entre repeticiones. La caracterización de la cuchara seleccionada, realizada a partir de 108 mediciones, mostró una media de 17,44 semillas por carga, una mediana de 17,00 semillas y una desviación estándar de 2,08 semillas. Se agradece a Lucía Guerreiro por la obtención y provisión de estos datos.
 
 La Figura~\ref{fig:cuchara3D} muestra la cuchara medidora desarrollada para esta tarea. Los archivos de diseño correspondientes se encuentran documentados en el repositorio del proyecto.
 
@@ -67,6 +67,13 @@ La Figura~\ref{fig:cuchara3D} muestra la cuchara medidora desarrollada para esta
     \includegraphics[width=0.5\linewidth]{secciones//images/cuchara3D.png}
     \caption{Diseño 3D de la cuchara medidora desarrollada para dosificar aproximadamente 20 semillas de maíz.}
     \label{fig:cuchara3D}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{secciones//images/CaracterizacionCucharaPlots.png}
+    \caption{Caracterización experimental de la cuchara medidora seleccionada. Se muestra la distribución de las mediciones de cantidad de semillas por carga y el diagrama de caja correspondiente.}
+    \label{fig:caracterizacion_cuchara}
 \end{figure}
 
 \subsubsection{Construcción del photobox}
