@@ -1,0 +1,135 @@
+\section{Marco teórico}
+
+\subsection{Campo magnético estático y escala de energía}
+
+En esta tesina se considera un campo magnético estático (CME) aplicado como tratamiento físico previo a la germinación de semillas de maíz (\textit{Zea mays}). Por campo estático se entiende un campo cuya intensidad y geometría permanecen constantes durante la exposición, de modo que no se introducen mecanismos asociados a inducción electromagnética, radiofrecuencia, pulsos ni calentamiento macroscópico. El problema físico central es entonces más restrictivo: explicar cómo un campo que no entrega energía de manera oscilante puede modificar, aunque sea indirectamente, una respuesta biológica medible.
+
+La primera estimación relevante surge de comparar la energía magnética de un momento dipolar con la energía térmica disponible a temperatura ambiente. Para un momento magnético $\bm{\mu}$ en un campo $\bm{B}$,
+\begin{equation}
+    E_{\mathrm{mag}}=-\bm{\mu}\cdot\bm{B},
+    \label{eq:energia_magnetica}
+\end{equation}
+mientras que la escala térmica característica del medio es
+\begin{equation}
+    E_{\mathrm{term}} \sim k_{\mathrm B}T.
+    \label{eq:energia_termica}
+\end{equation}
+Si se toma como escala máxima de momento magnético elemental el magnetón de Bohr, $\mu_{\mathrm B}=9{,}27\times10^{-24}\,\mathrm{J\,T^{-1}}$, y un campo de $B=150\,\mathrm{mT}$, se obtiene
+\begin{equation}
+    \mu_{\mathrm B}B \simeq 1{,}4\times10^{-24}\,\mathrm{J},
+    \qquad
+    k_{\mathrm B}T \simeq 4{,}1\times10^{-21}\,\mathrm{J}
+    \quad (T=300\,\mathrm{K}).
+\end{equation}
+Por lo tanto,
+\begin{equation}
+    E_{\mathrm{mag}}\sim\mu B \ll k_{\mathrm B}T.
+    \label{eq:paradoja_termica}
+\end{equation}
+La desigualdad anterior expresa la llamada paradoja térmica de la magnetobiología: si el efecto del campo se interpretara como una alineación clásica de momentos magnéticos en equilibrio, el ruido térmico dominaría por varios órdenes de magnitud. En consecuencia, un enfoque basado solamente en poblaciones de equilibrio de Boltzmann no alcanza para justificar una respuesta biológica robusta frente a campos débiles o moderados.
+
+Esta comparación no implica que todo efecto magnético sea imposible. Lo que descarta es una explicación clásica simple por energía de alineamiento. Una vía físicamente plausible debe depender de variables que no estén determinadas únicamente por la energía térmica de equilibrio. El mecanismo de pares de radicales, desarrollado dentro de la química de espines y discutido como hipótesis central de magnetorrecepción vegetal, cumple esa condición: el campo no necesita ``calentar'' el sistema ni orientar macroscópicamente moléculas, sino modificar la evolución coherente de espines electrónicos durante una ventana temporal breve, antes de que la relajación y la recombinación química borren la correlación cuántica \cite{maffei_2022,saletnik_2022_static}.
+
+También puede descartarse, al nivel de este marco teórico, una explicación dominante por fuerza de Lorentz sobre iones celulares. Para un ion que se mueve en un medio viscoso, la comparación de orden de magnitud entre $qvB$ y el arrastre $6\pi\eta r v$ da $qB/(6\pi\eta r)\ll1$ para radios iónicos nanométricos, viscosidades acuosas o mayores, y campos de la escala experimental. Por ello, el transporte iónico celular se tratará aquí como parte de la respuesta biológica posterior, no como el receptor físico primario del CME.
+
+\subsection{Pares de radicales como mecanismo físico}
+
+Un radical es una especie química con al menos un electrón desapareado. Un par de radicales se forma cuando un proceso químico o fotoquímico produce dos radicales cuyos electrones desapareados conservan una correlación de espín heredada del precursor molecular. En proteínas fotorreceptoras, por ejemplo, la absorción de luz puede iniciar una transferencia electrónica que genera dos radicales separados espacialmente; en una semilla hidratada, el inicio metabólico y los procesos redox tempranos también proporcionan un contexto químico donde aparecen especies radicalarias. En ambos casos, el elemento físico importante es que los dos electrones no nacen como grados de libertad independientes, sino en un estado de espín correlacionado.
+
+Para dos electrones de espín $1/2$, los estados electrónicos pueden organizarse en un estado singlete y tres estados triplete. El estado singlete tiene espín total nulo,
+\begin{equation}
+    \mathrm{S}=\frac{1}{\sqrt{2}}
+    \left(\uparrow\downarrow-\downarrow\uparrow\right),
+    \label{eq:singlete}
+\end{equation}
+mientras que los tripletes tienen espín total uno,
+\begin{equation}
+    \mathrm{T}_{+}=\uparrow\uparrow,\qquad
+    \mathrm{T}_{0}=\frac{1}{\sqrt{2}}
+    \left(\uparrow\downarrow+\downarrow\uparrow\right),\qquad
+    \mathrm{T}_{-}=\downarrow\downarrow.
+    \label{eq:tripletes}
+\end{equation}
+Las rutas químicas de recombinación suelen ser selectivas en espín: un par en configuración singlete puede recombinar hacia un producto, mientras que un par en configuración triplete puede recombinar más lentamente o seguir otra ruta. Por lo tanto, si un CME cambia la probabilidad de que el par se encuentre en $\mathrm{S}$ o en $\mathrm{T}$ durante su vida química, cambia también el rendimiento relativo de los productos de reacción.
+
+La clave es que la interconversión singlete--triplete no está determinada por una energía de equilibrio, sino por la evolución temporal de la fase cuántica de los espines. Esta evolución ocurre en tiempos típicos de nano- a microsegundos, comparables con escalas de transferencia electrónica, relajación de espín y recombinación. En ese intervalo, la interacción con el campo externo puede alterar frecuencias de precesión y condiciones de mezcla entre estados, generando cambios pequeños pero químicamente amplificables en los rendimientos \cite{maffei_2022,radhakrishnan_2019}. Esta es la razón por la cual el mecanismo de pares de radicales (RPM, por sus siglas en inglés) permite sortear la objeción térmica de la ecuación~\eqref{eq:paradoja_termica}.
+
+\subsection{Hamiltoniano de espín en un campo estático}
+
+El modelo mínimo del RPM conserva solamente los grados de libertad de espín relevantes para la reacción: los dos espines electrónicos del par radical y los espines nucleares acoplados por interacción hiperfina. Para un campo magnético externo estático $\bm{B}$, el Hamiltoniano efectivo puede escribirse como
+\begin{equation}
+    H=
+    \mu_{\mathrm B}\,
+    \bm{B}\cdot
+    \left(
+        g_{1}\bm{S}_{1}
+        +g_{2}\bm{S}_{2}
+    \right)
+    +\sum_{i}\bm{S}_{1}\cdot\bm{A}_{1i}\cdot\bm{I}_{1i}
+    +\sum_{j}\bm{S}_{2}\cdot\bm{A}_{2j}\cdot\bm{I}_{2j}.
+    \label{eq:hamiltoniano_rpm}
+\end{equation}
+El primer término es la interacción Zeeman entre el campo externo y los espines electrónicos. Los factores $g_{1}$ y $g_{2}$ representan los factores giromagnéticos efectivos de cada radical, que pueden diferir por el entorno molecular. Los términos restantes describen el acoplamiento hiperfino entre cada espín electrónico $\bm{S}_{1,2}$ y los espines nucleares $\bm{I}_{1i}$, $\bm{I}_{2j}$ de los átomos cercanos; $\bm{A}_{1i}$ y $\bm{A}_{2j}$ son tensores hiperfinos que codifican la anisotropía local de la molécula.
+
+La interacción hiperfina es esencial porque proporciona campos magnéticos internos y anisotrópicos que mezclan los subespacios singlete y triplete. El campo externo modifica esa mezcla al cambiar las frecuencias de precesión de los espines electrónicos y al levantar parcialmente la degeneración de los tripletes. Si $g_{1}=g_{2}$ y no existieran interacciones hiperfinas, un campo uniforme no produciría por sí solo una conversión singlete--triplete efectiva. En sistemas moleculares reales, sin embargo, los acoplamientos hiperfinos y posibles diferencias $\Delta g=g_{1}-g_{2}$ hacen que la probabilidad de encontrar al par en $\mathrm{S}$ o $\mathrm{T}$ dependa de $\bm{B}$.
+
+Esta formulación permite entender por qué el campo puede ser débil en términos energéticos y aun así relevante dinámicamente. La sensibilidad no surge de comparar $\mu_{\mathrm B}B$ con $k_{\mathrm B}T$, sino de comparar frecuencias de precesión, acoplamientos hiperfinos, tiempos de vida del par radical y tasas de recombinación. Dicho de otro modo, el CME actúa sobre una competencia cinética: debe modificar la evolución de espín antes de que el par radical recombine o pierda coherencia.
+
+\subsection{Dinámica de espines y rendimiento químico}
+
+La dinámica cuántica del par radical puede representarse mediante una matriz densidad $\rho(t)$ que evoluciona bajo el Hamiltoniano de la ecuación~\eqref{eq:hamiltoniano_rpm}. En su forma más simple,
+\begin{equation}
+    \frac{d\rho}{dt}
+    =
+    -\frac{i}{\hbar}[H,\rho]
+    -\frac{1}{2}
+    \left\{
+        k_{\mathrm S}P_{\mathrm S}
+        +k_{\mathrm T}P_{\mathrm T},
+        \rho
+    \right\}
+    -\mathcal{L}_{\mathrm{rel}}[\rho].
+    \label{eq:liouville_rpm}
+\end{equation}
+El primer término describe la precesión coherente de los espines. El segundo introduce la desaparición química del par por canales selectivos singlete y triplete, con constantes $k_{\mathrm S}$ y $k_{\mathrm T}$ y proyectores $P_{\mathrm S}$ y $P_{\mathrm T}$. El último término representa, de manera fenomenológica, la relajación y decoherencia inducidas por el entorno molecular.
+
+Una magnitud observable en este modelo es el rendimiento singlete,
+\begin{equation}
+    \Phi_{\mathrm S}
+    =
+    k_{\mathrm S}\int_{0}^{\infty}
+    \operatorname{Tr}
+    \left[
+        P_{\mathrm S}\rho(t)
+    \right]dt,
+    \label{eq:rendimiento_singlete}
+\end{equation}
+y de forma análoga puede definirse $\Phi_{\mathrm T}$ para el canal triplete. La dependencia magnética aparece porque $\rho(t)$ depende del Hamiltoniano, y por lo tanto de $\bm{B}$. Un cambio en la intensidad, orientación o geometría local del CME puede modificar la interconversión $\mathrm{S}\leftrightarrow\mathrm{T}$ y alterar los rendimientos químicos antes de que el sistema alcance una descripción térmica ordinaria.
+
+Para los fines de esta tesina no es necesario resolver analíticamente la ecuación~\eqref{eq:liouville_rpm}. Lo relevante es el esquema causal: el campo estático cambia la dinámica de espín; la dinámica de espín cambia la proporción de productos químicos; esos productos participan luego en señales bioquímicas que la fisiología vegetal amplifica. El modelo conserva así el núcleo físico-matemático sin pretender describir, desde primeros principios, toda la complejidad metabólica de la germinación.
+
+\subsection{Criptocromos y complejos FAD como entorno molecular}
+
+En plantas, los criptocromos son fotorreceptores de luz azul que contienen flavina adenina dinucleótido (FAD) como cromóforo. La fotoexcitación del FAD puede iniciar transferencias electrónicas intraproteicas y formar pares radicalarios con espines correlacionados. Por esta razón, los criptocromos se consideran candidatos naturales para implementar el RPM en sistemas biológicos \cite{maffei_2022,saletnik_2022_static,araujo_2016}. En el presente marco teórico no se modela la proteína completa; se la trata como el entorno molecular que fija los acoplamientos hiperfinos, los tiempos de vida del par radical, la orientación local de los ejes moleculares y las tasas de recombinación.
+
+La relevancia de los criptocromos para semillas de maíz debe leerse con cautela. El experimento de esta tesina no mide directamente estados de criptocromo ni identifica pares radicalarios específicos. Sin embargo, la literatura de magnetobiología vegetal utiliza este tipo de proteínas como puente físico-químico plausible entre un CME externo y una señal bioquímica inicial \cite{maffei_2022,sarraf_2020}. Por lo tanto, el criptocromo no se introduce aquí como una afirmación experimental cerrada, sino como un receptor físico compatible con el mecanismo cuántico discutido.
+
+En términos del modelo, la hidratación de la semilla cumple un papel importante porque reactiva procesos metabólicos y redox que estaban fuertemente restringidos en la semilla seca. La imbibición inicia transporte de electrones, respiración, movilización de reservas y producción controlada de especies radicalarias. Si existen pares radicales sensibles al campo en este intervalo temprano, el CME podría modificar sus rendimientos antes de que la respuesta se propague a escalas celulares.
+
+\subsection{ROS como señal y límite del modelo físico}
+
+Las especies reactivas del oxígeno (ROS), como $O_{2}^{\bullet-}$, $H_{2}O_{2}$ y radicales hidroxilo, suelen asociarse a daño oxidativo cuando se acumulan en exceso. Sin embargo, en semillas también cumplen funciones de señalización durante la germinación: participan en la ruptura de dormancia, la movilización de reservas y la coordinación de respuestas tempranas al ambiente \cite{shine_2017,kataria_2017,araujo_2016}. Esta dualidad permite conectar el RPM con observables macroscópicos sin suponer que el campo magnético actúa directamente sobre el crecimiento de la plántula.
+
+El puente propuesto es el siguiente. Un CME modifica la dinámica singlete--triplete de pares radicalarios en un entorno molecular como FAD/criptocromo u otros complejos redox. Ese cambio altera el rendimiento de productos asociados a estados oxidativos o conformaciones activas de proteínas. Como consecuencia, se modifica la concentración inicial de ROS o la disponibilidad de señales redox. A partir de allí, la fisiología vegetal amplifica la perturbación mediante cascadas bioquímicas que pueden afectar la velocidad de germinación, la elongación radical y el vigor temprano.
+
+El alcance físico de esta tesina termina en ese punto. No se desarrollarán modelos de síntesis, transporte o regulación de fitohormonas; tampoco se abordarán mecanismos genéticos específicos del maíz. Esos procesos se consideran una caja negra fisiológica apoyada en el consenso bibliográfico: cambios tempranos en ROS inducidos magnéticamente pueden actuar como segundos mensajeros que activan respuestas de germinación y crecimiento \cite{araujo_2016,sarraf_2020,shine_2017}. Esta decisión mantiene el foco en la física del acoplamiento campo--espín y evita convertir el marco teórico en una revisión extensa de biología vegetal.
+
+\subsection{Consecuencias para la interpretación experimental}
+
+El marco anterior conduce a tres consecuencias útiles para interpretar los resultados de un tratamiento de semillas con CME. En primer lugar, no se espera una relación lineal simple entre intensidad de campo y respuesta biológica. En el RPM la sensibilidad depende de una competencia entre campo externo, acoplamientos hiperfinos, tiempos de vida y tasas de relajación; por ello pueden aparecer ventanas de intensidad donde la respuesta aumenta y otras donde disminuye.
+
+En segundo lugar, el efecto primario esperado no es térmico. Si se observaran diferencias de germinación o crecimiento, el modelo no las atribuye a calentamiento de la semilla, sino a una modificación de rendimientos químicos tempranos. Esto es consistente con el uso de campos estáticos y con la desigualdad energética de la ecuación~\eqref{eq:paradoja_termica}.
+
+En tercer lugar, una respuesta macroscópica puede ser pequeña, variable y dependiente del estado fisiológico inicial de la semilla. El RPM actúa en una escala molecular y temporal muy breve; la señal debe sobrevivir a procesos de relajación, heterogeneidad de tejidos, variabilidad genética y condiciones de germinación. Por esa razón, la medición experimental debe apoyarse en controles, repetición, caracterización del campo aplicado y análisis estadístico cuidadoso. El objetivo no es demostrar directamente el par radical, sino evaluar si el tratamiento con CME produce efectos reproducibles compatibles con una vía físico-química de este tipo.
+
+\clearpage
