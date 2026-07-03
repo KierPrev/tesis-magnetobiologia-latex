@@ -16,6 +16,37 @@ Para la adquisición de imágenes se construyó un \textit{photobox}, consistent
 
 Finalmente, cabe señalar que el sistema PID utilizado en el laboratorio ya se encontraba previamente implementado en el MBLab por otros integrantes, por lo que no forma parte del desarrollo original de esta tesis.
 
+\subsection{Caracterización de los imanes}
+
+Con el fin de conocer el perfil espacial del campo magnético generado por los imanes utilizados en los tratamientos, se realizó una caracterización experimental del campo en función de la distancia a la cara del imán. Para ello se empleó un gaussímetro con sonda Hall, registrándose la intensidad de campo magnético (mT) sobre el eje central de la cara del imán (\textit{Centro}) y sobre sus cuatro esquinas (\textit{Esq A}, \textit{Esq B}, \textit{Esq C} y \textit{Esq D}), a una serie de distancias crecientes respecto de la superficie del imán.
+
+La Figura~\ref{fig:ceramica_n_perfil} muestra el perfil de campo obtenido para el imán de cerámica, polo norte. Como es esperable, la intensidad de campo decae de forma pronunciada con la distancia, y las mediciones tomadas en el centro resultan sistemáticamente algo mayores que las obtenidas en las esquinas, reflejando la distribución no uniforme del campo sobre la cara del imán.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{datos/img/ceramica_n_perfil.png}
+    \caption{Caracterización del campo magnético del imán de cerámica, polo norte, en función de la distancia a su cara. Se muestran las mediciones tomadas en el centro y en las cuatro esquinas de la cara del imán.}
+    \label{fig:ceramica_n_perfil}
+\end{figure}
+
+Un comportamiento equivalente se observó para el imán de cerámica, polo sur (Figura~\ref{fig:ceramica_s_perfil}), donde nuevamente el centro presenta los valores más elevados y las cuatro esquinas se agrupan entre sí, con una caída marcada del campo dentro de los primeros 50~mm.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{datos/img/ceramica_s_perfil.png}
+    \caption{Caracterización del campo magnético del imán de cerámica, polo sur, en función de la distancia a su cara. Se muestran las mediciones tomadas en el centro y en las cuatro esquinas de la cara del imán.}
+    \label{fig:ceramica_s_perfil}
+\end{figure}
+
+El imán de neodimio, polo norte, presentó un campo considerablemente más intenso que los imanes de cerámica, alcanzando cerca de 295~mT en el centro a la mínima distancia medida (Figura~\ref{fig:neodimio_n_perfil}). A diferencia de los imanes de cerámica, las mediciones en las esquinas no decrecen monótonamente desde el primer punto, sino que muestran un máximo local a pocos milímetros de la cara antes de decaer, lo cual es consistente con la geometría y distribución de flujo característica de los imanes de neodimio de mayor intensidad.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{datos/img/neodimio_n_perfil.png}
+    \caption{Caracterización del campo magnético del imán de neodimio, polo norte, en función de la distancia a su cara. Se muestran las mediciones tomadas en el centro y en las cuatro esquinas de la cara del imán.}
+    \label{fig:neodimio_n_perfil}
+\end{figure}
+
 \subsection{Montaje experimental}
 
 \subsubsection{Diseño de la torre y semilleros}
@@ -28,12 +59,22 @@ El modelado de la geometría se realizó principalmente en \textit{Tinkercad}, h
 
 A lo largo del desarrollo fue necesario realizar ajustes sucesivos sobre las dimensiones y el diseño de las piezas, con el fin de mejorar aspectos de calce, estabilidad mecánica y facilidad de uso. Una vez obtenidas versiones satisfactorias, las piezas fueron fabricadas mediante impresión 3D e incorporadas al sistema experimental.
 
-La imagen de la Figura~\ref{fig:torre_semilleros} muestra el diseño digital. Los archivos de diseño y desarrollo asociados se encuentran documentados en el repositorio del proyecto.
+La Figura~\ref{fig:torre_semilleros} muestra, lado a lado, el diseño digital y la pieza ya impresa. Los archivos de diseño y desarrollo asociados se encuentran documentados en el repositorio del proyecto.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{secciones//images/torre3D.png}
-    \caption{Diseño 3D realizado en \textit{Tinkercad} de la torre utilizada para alojar los cajones durante el tratamiento magnético.}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{secciones//images/torre3D.png}
+        \caption{Diseño 3D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.28\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{datos/img/torre_foto.jpg}
+        \caption{Pieza impresa}
+    \end{subfigure}
+    \caption{Torre utilizada para alojar los cajones durante el tratamiento magnético: diseño realizado en \textit{Tinkercad} y pieza final fabricada mediante impresión 3D.}
     \label{fig:torre_semilleros}
 \end{figure}
 
@@ -41,12 +82,22 @@ La imagen de la Figura~\ref{fig:torre_semilleros} muestra el diseño digital. Lo
 
 Como parte de este sistema, se diseñó un cajón destinado a contener las semillas durante el tratamiento. En su diseño se buscó que permitiera una disposición ordenada de las muestras, facilitara su manipulación y resultara compatible con el resto de la estructura experimental. Asimismo, se procuró que sus dimensiones fueran adecuadas para el alojamiento de las semillas y para su fabricación mediante impresión 3D.
 
-El modelado de estas piezas se realizó principalmente en \textit{Tinkercad}, complementado en algunos casos con \textit{build123d} para ajustes paramétricos. Las versiones finales fueron fabricadas mediante impresión 3D. En la Figura~\ref{fig:cajon_semillas} se muestra una vista del diseño y/o de la pieza física utilizada.
+El modelado de estas piezas se realizó principalmente en \textit{Tinkercad}, complementado en algunos casos con \textit{build123d} para ajustes paramétricos. Las versiones finales fueron fabricadas mediante impresión 3D. En la Figura~\ref{fig:cajon_semillas} se muestra, lado a lado, el diseño y la pieza física utilizada.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{secciones//images/cajon3D.png}
-    \caption{Diseño del cajón portasemillas con cuatro compartimentos para el alojamiento de semillas.}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{secciones//images/cajon3D.png}
+        \caption{Diseño 3D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{datos/img/cajon_foto.jpg}
+        \caption{Pieza impresa}
+    \end{subfigure}
+    \caption{Cajón portasemillas con cuatro compartimentos para el alojamiento de semillas: diseño y pieza fabricada mediante impresión 3D.}
     \label{fig:cajon_semillas}
 \end{figure}
 
@@ -60,12 +111,22 @@ Con el fin de evitar el conteo manual repetido de 20 semillas por muestra, se di
 
 A partir de un diseño inicial, se generaron variantes con cambios de tamaño del orden de $\pm 5\%$, con el objetivo de evaluar cuál de ellas se ajustaba mejor a una carga cercana a 20 semillas de maíz por uso. Las distintas versiones fueron fabricadas mediante impresión 3D y comparadas experimentalmente, seleccionándose finalmente aquella que mostró el mejor ajuste al valor buscado y una menor variabilidad entre repeticiones. La caracterización de la cuchara seleccionada, realizada a partir de 108 mediciones, mostró una media de 17,44 semillas por carga, una mediana de 17,00 semillas y una desviación estándar de 2,08 semillas. Se agradece a Lucía Guerreiro por la obtención y provisión de estos datos.
 
-La Figura~\ref{fig:cuchara3D} muestra la cuchara medidora desarrollada para esta tarea. Los archivos de diseño correspondientes se encuentran documentados en el repositorio del proyecto.
+La Figura~\ref{fig:cuchara3D} muestra, lado a lado, el diseño digital y la cuchara medidora ya impresa. Los archivos de diseño correspondientes se encuentran documentados en el repositorio del proyecto.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{secciones//images/cuchara3D.png}
-    \caption{Diseño 3D de la cuchara medidora desarrollada para dosificar aproximadamente 20 semillas de maíz.}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{secciones//images/cuchara3D.png}
+        \caption{Diseño 3D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{datos/img/cuchara_foto.jpg}
+        \caption{Pieza impresa}
+    \end{subfigure}
+    \caption{Cuchara medidora desarrollada para dosificar aproximadamente 20 semillas de maíz: diseño y pieza fabricada mediante impresión 3D.}
     \label{fig:cuchara3D}
 \end{figure}
 
