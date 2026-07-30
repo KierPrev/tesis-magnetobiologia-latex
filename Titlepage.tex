@@ -1,50 +1,64 @@
+% ============================================================
+%  Portada
+%  Sin minipage: un minipage no se puede partir y, al no entrar,
+%  empujaba todo el bloque de autoría a una segunda página.
+%  Los \vfill reparten el espacio sobrante y garantizan una sola hoja.
+% ============================================================
 \begin{titlepage}
   \thispagestyle{empty}
-  \begin{center}
-    \vspace*{0.6cm}
-    {\includegraphics[width=3.35cm]{./secciones/images/logoUNSL.jpg}\par}
+  \centering
 
-    \vspace*{0.6cm}
-    {\large\bfseries UNIVERSIDAD NACIONAL DE SAN LUIS\par}
+  \vspace*{0cm}
 
-    \vspace*{0.22cm}
-    {\normalsize FACULTAD DE CIENCIAS FÍSICO MATEMÁTICAS Y NATURALES\par}
+  {\includegraphics[width=2.9cm]{./secciones/images/logoUNSL.jpg}\par}
 
-    \vspace*{0.6cm}
-    {\color{accent}\rule{0.55\textwidth}{0.8pt}\par}
+  \vspace{0.55cm}
 
-    \vspace*{0.35cm}
-    {\large Trabajo Especial de Licenciatura en Física\par}
+  {\large\bfseries UNIVERSIDAD NACIONAL DE SAN LUIS\par}
+  \vspace{0.20cm}
+  {\normalsize FACULTAD DE CIENCIAS FÍSICO MATEMÁTICAS Y NATURALES\par}
+  \vspace{0.10cm}
+  {\small DEPARTAMENTO DE FÍSICA\par}
+  \vspace{0.14cm}
+  {\small\itshape Laboratorio de Magnetobiología (MBLab)\par}
 
-    \vspace*{1.2cm}
-    {\Large\bfseries Efecto de campos magnéticos estáticos\par}
-    \vspace*{0.22cm}
-    {\large\bfseries sobre la germinación de \textit{Zea mays}\par}
-    \vspace*{0.22cm}
-    {\large exploración de parámetros de exposición\par}
+  \vspace{0.55cm}
+  {\color{accent}\rule{0.55\textwidth}{0.8pt}\par}
+  \vspace{0.3cm}
 
-    %\vspace{0.65cm}
+  {\large Trabajo Especial de Licenciatura en Física\par}
 
+  \vfill
 
-    {\color{accent}\rule{0.32\textwidth}{0.8pt}\par}
+  {\Large\bfseries Efecto de campos magnéticos estáticos\par}
+  \vspace{0.22cm}
+  {\large\bfseries sobre la germinación de \textit{Zea mays}\par}
+  \vspace{0.22cm}
+  {\large exploración de parámetros de exposición\par}
 
-    \begin{minipage}{0.6\textwidth}
-      \centering
+  \vspace{0.45cm}
+  {\color{accent}\rule{0.32\textwidth}{0.8pt}\par}
 
-      \vspace{0.85cm}
-      {\small\bfseries TESISTA\par}
-      \vspace*{0.12cm}
-      {\normalsize Kiernan Elizabeth Preve\par}
+  \vfill
 
-      \vspace*{0.28cm}
-      {\small\bfseries DIRECTOR\par}
-      \vspace*{0.12cm}
-      {\normalsize Leonardo Makinistian\par}
+  {\small\bfseries TESISTA\par}
+  \vspace{0.12cm}
+  {\normalsize Kiernan Elizabeth Preve\par}
 
-      \vspace*{0.85cm}
-      {\normalsize San Luis, Argentina\par}
-      \vspace*{0.1cm}
-      {\normalsize Septiembre, 2026\par}
-    \end{minipage}
-  \end{center}
+  \vspace{0.55cm}
+  {\small\bfseries DIRECTOR\par}
+  \vspace{0.12cm}
+  {\normalsize Leonardo Makinistián\par}
+
+  \vspace{0.55cm}
+  {\small\bfseries CODIRECTOR\par}
+  \vspace{0.12cm}
+  {\normalsize Daniel Guerreiro\par}
+
+  \vfill
+
+  {\normalsize San Luis, Argentina\par}
+  \vspace{0.1cm}
+  {\normalsize Noviembre, 2026\par}
+
 \end{titlepage}

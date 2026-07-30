@@ -1,0 +1,109 @@
+% ============================================================
+% Disponibilidad de datos y código
+% ============================================================
+
+\chapter*{Disponibilidad de datos y código}
+\addcontentsline{toc}{chapter}{Disponibilidad de datos y código}
+\markboth{Disponibilidad de datos y código}{}
+
+La totalidad de los datos crudos, del código de análisis y de los archivos fuente de este documento se encuentra disponible públicamente. El objetivo de esta sección es que cualquier lector pueda reconstruir, a partir de las mediciones originales, cada figura y cada tabla que aparecen en esta tesis.
+
+\section*{Repositorios}
+
+\begin{description}\raggedright
+  \item[Documento y bibliografía.] Fuentes \LaTeX, archivo \texttt{bib.bib} e imágenes:\\
+    \small\url{https://github.com/KierPrev/tesis-magnetobiologia-latex}
+  \item[Datos y software de análisis.] Datos crudos por experimento, código de procesamiento y \textit{scripts} de generación de figuras:\\
+    \small\url{https://github.com/KierPrev/tesis-magnetobiologia-software}
+\end{description}
+
+\noindent La versión de los repositorios que corresponde a este documento queda identificada por los siguientes \textit{commits}:
+
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+Repositorio & \textit{Commit} \\
+\midrule
+\texttt{tesis-magnetobiologia-latex}    & \pendiente{hash} \\
+\texttt{tesis-magnetobiologia-software} & \pendiente{hash} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Organización de los datos}
+
+Los datos siguen una estructura por experimento, en la que cada ensayo posee un directorio propio identificado por su fecha:
+
+\begin{quote}\ttfamily\footnotesize\raggedright
+data/experiments/AAAAMMDD/\\
+\hspace*{2em}raw/\hfill mediciones originales, no modificadas\\
+\hspace*{2em}processed/\hfill derivados del procesamiento\\
+\hspace*{2em}plots/\hfill figuras propias del experimento\\
+data/global/full\_dataset.csv\hfill consolidado de todos los experimentos\\
+data/extra/plots/\hfill figuras transversales (caracterización, dosis)
+\end{quote}
+
+\noindent Rige un criterio de \textbf{inmutabilidad de los archivos crudos}: los contenidos de \texttt{raw/} no se editan una vez registrados. El archivo \texttt{full\_dataset.csv} es una vista derivada, reconstruible en cualquier momento a partir de los archivos por experimento, y no una fuente primaria de datos. Cada registro conserva el identificador de bandeja, su posición dentro del montaje, el tratamiento asignado y el identificador del experimento, de modo que la trazabilidad entre una medición y su origen físico se mantiene en todas las etapas.
+
+\section*{Correspondencia entre figuras, tablas y código}
+
+La Tabla~\ref{tab:repro} indica, para cada figura y tabla generada computacionalmente, el archivo de salida y el \textit{script} que la produce. Las figuras que corresponden a fotografías o a capturas de pantalla no se incluyen, por no ser reproducibles a partir de datos.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Correspondencia entre figuras, tablas y código de generación]{\textbf{Correspondencia entre figuras, tablas y código de generación.} Rutas relativas al repositorio de datos y software.}
+\label{tab:repro}
+\small
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.46\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
+\toprule
+Elemento & Archivo de salida & \textit{Script} \\
+\midrule
+Fig.~\ref{fig:mapa_dosis}          & \path{extra/plots/mapa_dosis_literatura.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ceramica_n_perfil}   & \path{extra/plots/ceramica_n_bz_fit.pdf}             & \pendiente{script} \\
+Fig.~\ref{fig:ceramica_s_perfil}   & \path{extra/plots/ceramica_s_bz_fit.pdf}             & \pendiente{script} \\
+Fig.~\ref{fig:neodimio_n_perfil}   & \path{extra/plots/neodimio_n_bz_fit.pdf}             & \pendiente{script} \\
+Fig.~\ref{fig:ceramica_n_mapa}     & \path{extra/plots/ceramica_n_bz_fit_field_map.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:neodimio_n_mapa}     & \path{extra/plots/neodimio_n_bz_fit_field_map.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:caracterizacion_cuchara} & \path{extra/plots/caracterizacion_cuchara.pdf}     & \pendiente{script} \\
+Fig.~\ref{fig:torre_campos}        & \path{extra/plots/torre_exposicion_campos.pdf}        & \pendiente{script} \\
+Fig.~\ref{fig:heatmaps_ceramica}   & \path{extra/plots/heatmaps/grilla_heatmaps_ceramica_n.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:heatmaps_neodimio}   & \path{extra/plots/heatmaps/grilla_heatmaps_neodimio_n.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ctrl_pct_change_floor}   & \path{analysis/negative_control_combined/...floor_barplot.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ctrl_pct_change_lcr}     & \path{analysis/negative_control_combined/...left_center_right_barplot.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ctrl_pct_change_fmb}     & \path{analysis/negative_control_combined/...front_middle_back_barplot.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ctrl_pct_change_heatmap} & \path{analysis/negative_control_combined/...heatmap.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:ctrl_pct_change_all}     & \path{analysis/negative_control_combined/...tray_cell_barplot.pdf} & \pendiente{script} \\
+\midrule
+Tabla~\ref{tab:ajuste_imanes}      & --- & \pendiente{script} \\
+Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} & --- & \pendiente{script} \\
+Tablas~\ref{tab:ctrl_floor}--\ref{tab:ctrl_posthoc} & --- & \pendiente{script} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item Las rutas se indican relativas a \texttt{data/} en el repositorio de software.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\section*{Entorno de cómputo}
+
+El análisis se realizó en Python. Las dependencias y sus versiones exactas se encuentran declaradas en el repositorio de software, de modo que el entorno pueda reconstruirse de forma idéntica:
+
+\begin{quote}\ttfamily\small\raggedright
+\pendiente{comando de instalación del entorno, p.\ ej. pip install -r requirements.txt}
+\end{quote}
+
+\noindent Las bibliotecas centrales del análisis son \texttt{pandas} para la gestión de datos, \texttt{statsmodels} y \texttt{scipy} para las pruebas estadísticas, \texttt{matplotlib} para las figuras y \texttt{magpylib}~\cite{magpylib} para el cálculo del campo magnético.
+
+\section*{Cómo reproducir los resultados}
+
+\begin{enumerate}
+  \item Clonar ambos repositorios en directorios hermanos, de modo que el enlace simbólico \texttt{datos/software\_data} del repositorio del documento resuelva correctamente.
+  \item Reconstruir el entorno de cómputo con el comando indicado más arriba.
+  \item Ejecutar \pendiente{script maestro que regenera figuras y tablas}, que regenera la totalidad de las figuras y de los valores reportados a partir de los archivos crudos.
+  \item Compilar el documento con \texttt{latexmk -xelatex tesis.tex}.
+\end{enumerate}
+
+\endinput

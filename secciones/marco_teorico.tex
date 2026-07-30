@@ -1,6 +1,10 @@
-\section{Marco teórico}
+\chapter{Marco teórico}
+\epigrafeen{We have to remember that what we observe is not nature in
+itself, but nature exposed to our method of questioning.}{Werner
+Heisenberg}{Physics and Philosophy, 1958}
 
-\subsection{Campo magnético estático y escala de energía}
+
+\section{Campo magnético estático y escala de energía}
 
 En esta tesina se considera un campo magnético estático (CME) aplicado como tratamiento físico previo a la germinación de semillas de maíz (\textit{Zea mays}). Por campo estático se entiende un campo cuya intensidad y geometría permanecen constantes durante la exposición, de modo que no se introducen mecanismos asociados a inducción electromagnética, radiofrecuencia, pulsos ni calentamiento macroscópico. El problema físico central es entonces más restrictivo: explicar cómo un campo que no entrega energía de manera oscilante puede modificar, aunque sea indirectamente, una respuesta biológica medible.
 
@@ -32,7 +36,7 @@ Esta comparación no implica que todo efecto magnético sea imposible. Lo que de
 
 También puede descartarse, al nivel de este marco teórico, una explicación dominante por fuerza de Lorentz sobre iones celulares. Para un ion que se mueve en un medio viscoso, la comparación de orden de magnitud entre $qvB$ y el arrastre $6\pi\eta r v$ da $qB/(6\pi\eta r)\ll1$ para radios iónicos nanométricos, viscosidades acuosas o mayores, y campos de la escala experimental. Por ello, el transporte iónico celular se tratará aquí como parte de la respuesta biológica posterior, no como el receptor físico primario del CME.
 
-\subsection{Pares de radicales como mecanismo físico}
+\section{Pares de radicales como mecanismo físico}
 
 Un radical es una especie química con al menos un electrón desapareado. Un par de radicales se forma cuando un proceso químico o fotoquímico produce dos radicales cuyos electrones desapareados conservan una correlación de espín heredada del precursor molecular. En proteínas fotorreceptoras, por ejemplo, la absorción de luz puede iniciar una transferencia electrónica que genera dos radicales separados espacialmente; en una semilla hidratada, el inicio metabólico y los procesos redox tempranos también proporcionan un contexto químico donde aparecen especies radicalarias. En ambos casos, el elemento físico importante es que los dos electrones no nacen como grados de libertad independientes, sino en un estado de espín correlacionado.
 
@@ -54,7 +58,7 @@ Las rutas químicas de recombinación suelen ser selectivas en espín: un par en
 
 La clave es que la interconversión singlete--triplete no está determinada por una energía de equilibrio, sino por la evolución temporal de la fase cuántica de los espines. Esta evolución ocurre en tiempos típicos de nano- a microsegundos, comparables con escalas de transferencia electrónica, relajación de espín y recombinación. En ese intervalo, la interacción con el campo externo puede alterar frecuencias de precesión y condiciones de mezcla entre estados, generando cambios pequeños pero químicamente amplificables en los rendimientos \cite{maffei_2022,radhakrishnan_2019}. Esta es la razón por la cual el mecanismo de pares de radicales (RPM, por sus siglas en inglés) permite sortear la objeción térmica de la ecuación~\eqref{eq:paradoja_termica}.
 
-\subsection{Hamiltoniano de espín en un campo estático}
+\section{Hamiltoniano de espín en un campo estático}
 
 El modelo mínimo del RPM conserva solamente los grados de libertad de espín relevantes para la reacción: los dos espines electrónicos del par radical y los espines nucleares acoplados por interacción hiperfina. Para un campo magnético externo estático $\bm{B}$, el Hamiltoniano efectivo puede escribirse como
 \begin{equation}
@@ -77,7 +81,7 @@ Esta formulación permite entender por qué el campo puede ser débil en términ
 
 Cabe señalar que la sensibilidad del RPM a la intensidad del campo no es monótona. La mayor parte de la evidencia experimental y de modelado que sustenta este mecanismo se concentra en campos débiles, del orden de magnitud del campo geomagnético (decenas de $\mu\mathrm{T}$) o comparables a los acoplamientos hiperfinos típicos (del orden de $\sim1\,\mathrm{mT}$), rango en el que el rendimiento singlete--triplete suele crecer con $B$. Los imanes utilizados en esta tesina generan campos de intensidad muy superior, de varias decenas de mT en la región cercana a su superficie. En ese rango, el sistema se aproxima a un régimen de campo alto, donde el efecto magnético sobre los rendimientos químicos tiende a saturarse o a variar de forma no lineal, en lugar de seguir creciendo proporcionalmente con la intensidad aplicada. Esto no invalida al RPM como mecanismo físico plausible para el presente trabajo, pero sí implica que no debe esperarse una relación simple de \textit{a mayor campo, mayor efecto} en el rango experimental utilizado.
 
-\subsection{Dinámica de espines y rendimiento químico}
+\section{Dinámica de espines y rendimiento químico}
 
 La dinámica cuántica del par radical puede representarse mediante una matriz densidad $\rho(t)$ que evoluciona bajo el Hamiltoniano de la ecuación~\eqref{eq:hamiltoniano_rpm}. En su forma más simple,
 \begin{equation}
@@ -110,7 +114,7 @@ y de forma análoga puede definirse $\Phi_{\mathrm T}$ para el canal triplete. L
 
 Para los fines de esta tesina no es necesario resolver analíticamente la ecuación~\eqref{eq:liouville_rpm}. Lo relevante es el esquema causal: el campo estático cambia la dinámica de espín; la dinámica de espín cambia la proporción de productos químicos; esos productos participan luego en señales bioquímicas que la fisiología vegetal amplifica. El modelo conserva así el núcleo físico-matemático sin pretender describir, desde primeros principios, toda la complejidad metabólica de la germinación.
 
-\subsection{Criptocromos y complejos FAD como entorno molecular}
+\section{Criptocromos y complejos FAD como entorno molecular}
 
 En plantas, los criptocromos son fotorreceptores de luz azul que contienen flavina adenina dinucleótido (FAD) como cromóforo. La fotoexcitación del FAD puede iniciar transferencias electrónicas intraproteicas y formar pares radicalarios con espines correlacionados. Por esta razón, los criptocromos se consideran candidatos naturales para implementar el RPM en sistemas biológicos \cite{maffei_2022,saletnik_2022_static,araujo_2016}. En el presente marco teórico no se modela la proteína completa; se la trata como el entorno molecular que fija los acoplamientos hiperfinos, los tiempos de vida del par radical, la orientación local de los ejes moleculares y las tasas de recombinación.
 
@@ -118,7 +122,7 @@ La relevancia de los criptocromos para semillas de maíz debe leerse con cautela
 
 En términos del modelo, la hidratación de la semilla cumple un papel importante porque reactiva procesos metabólicos y redox que estaban fuertemente restringidos en la semilla seca. La imbibición inicia transporte de electrones, respiración, movilización de reservas y producción controlada de especies radicalarias. Si existen pares radicales sensibles al campo en este intervalo temprano, el CME podría modificar sus rendimientos antes de que la respuesta se propague a escalas celulares.
 
-\subsection{ROS como señal y límite del modelo físico}
+\section{ROS como señal y límite del modelo físico}
 
 Las especies reactivas del oxígeno (ROS), como $O_{2}^{\bullet-}$, $H_{2}O_{2}$ y radicales hidroxilo, suelen asociarse a daño oxidativo cuando se acumulan en exceso. Sin embargo, en semillas también cumplen funciones de señalización durante la germinación: participan en la ruptura de dormancia, la movilización de reservas y la coordinación de respuestas tempranas al ambiente \cite{shine_2017,kataria_2017,araujo_2016}. Esta dualidad permite conectar el RPM con observables macroscópicos sin suponer que el campo magnético actúa directamente sobre el crecimiento de la plántula.
 
@@ -126,7 +130,7 @@ El puente propuesto es el siguiente. Un CME modifica la dinámica singlete--trip
 
 El alcance físico de esta tesina termina en ese punto. No se desarrollarán modelos de síntesis, transporte o regulación de fitohormonas; tampoco se abordarán mecanismos genéticos específicos del maíz. Esos procesos se consideran una caja negra fisiológica apoyada en el consenso bibliográfico: cambios tempranos en ROS inducidos magnéticamente pueden actuar como segundos mensajeros que activan respuestas de germinación y crecimiento \cite{araujo_2016,sarraf_2020,shine_2017}. Esta decisión mantiene el foco en la física del acoplamiento campo--espín y evita convertir el marco teórico en una revisión extensa de biología vegetal.
 
-\subsection{Consecuencias para la interpretación experimental}
+\section{Consecuencias para la interpretación experimental}
 
 El marco anterior conduce a tres consecuencias útiles para interpretar los resultados de un tratamiento de semillas con CME. En primer lugar, no se espera una relación lineal simple entre intensidad de campo y respuesta biológica. En el RPM la sensibilidad depende de una competencia entre campo externo, acoplamientos hiperfinos, tiempos de vida y tasas de relajación; por ello pueden aparecer ventanas de intensidad donde la respuesta aumenta y otras donde disminuye.
 
@@ -134,4 +138,6 @@ En segundo lugar, el efecto primario esperado no es térmico. Si se observaran d
 
 En tercer lugar, una respuesta macroscópica puede ser pequeña, variable y dependiente del estado fisiológico inicial de la semilla. El RPM actúa en una escala molecular y temporal muy breve; la señal debe sobrevivir a procesos de relajación, heterogeneidad de tejidos, variabilidad genética y condiciones de germinación. Por esa razón, la medición experimental debe apoyarse en controles, repetición, caracterización del campo aplicado y análisis estadístico cuidadoso. El objetivo no es demostrar directamente el par radical, sino evaluar si el tratamiento con CME produce efectos reproducibles compatibles con una vía físico-química de este tipo.
 
-\clearpage
+
+
+\endinput

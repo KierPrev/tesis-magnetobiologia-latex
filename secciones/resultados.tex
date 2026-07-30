@@ -1,268 +1,282 @@
-\section{Resultados}
+\chapter{Resultados}
 
-\subsection{Controles negativos}
+\section{Controles negativos}
 
 Se realizaron tres experimentos de 72\,h los días 20260404, 20260428 y 20260507, para un total de \(n = 81\) bandejas (27 por día). La variable principal de análisis fue el \textbf{cambio porcentual de peso} (\emph{pct\_change} en el código de análisis), definido como el aumento de masa respecto al peso inicial de las semillas en cada bandeja. Como verificación de robustez, los principales análisis se repitieron con dos variables de crecimiento alternativas: el \textbf{cambio absoluto de peso} (\emph{raw\_delta\_weight}), definido como la diferencia entre el peso final e inicial en gramos, y el \textbf{logaritmo de la razón de pesos} (\emph{raw\_log\_ratio}), definido como el logaritmo natural del cociente entre el peso final y el inicial. Estas tres variables cuantifican el mismo fenómeno de crecimiento con distintas propiedades estadísticas; su coincidencia en dirección y significancia refuerza que los efectos reportados no dependen de la métrica elegida.
 
-\subsubsection{Supuestos estadísticos}
+\subsection{Supuestos estadísticos}
 
-Se evaluó la normalidad de los residuos mediante el test de Shapiro-Wilk y la homogeneidad de varianzas mediante el test de Brown-Forsythe. Para el cambio porcentual de peso, los residuos resultaron normales (\(p = 0.5773\)) pero las varianzas no resultaron homogéneas entre días (\(p = 0.0302\)). Por lo tanto, los modelos presentados a continuación fueron ajustados por día experimental y utilizan errores robustos HC3 para compensar la heterogeneidad de varianzas.
+Se evaluó la normalidad de los residuos mediante el test de Shapiro-Wilk y la homogeneidad de varianzas mediante el test de Brown-Forsythe. Para el cambio porcentual de peso, los residuos resultaron normales (\(p = 0{,}577\)) pero las varianzas no resultaron homogéneas entre días (\(p = 0{,}030\)). Por lo tanto, los modelos presentados a continuación fueron ajustados por día experimental y utilizan errores robustos HC3 para compensar la heterogeneidad de varianzas.
 
-\subsubsection{Calidad del armado (pesos iniciales)}
+\subsection{Calidad del armado (pesos iniciales)}
 
-Para descartar un posible sesgo de selección al momento de armar las bandejas, se analizó si las semillas iniciales tenían masas diferentes entre pisos. El resultado no fue significativo (\(p = 0.4926\)), lo que indica que los pisos A, B y C comenzaron con masas de semillas estadísticamente equivalentes. Las diferencias observadas al final del experimento se atribuyen, por lo tanto, a factores ocurridos durante el crecimiento y no a un sesgo inicial.
+Para descartar un posible sesgo de selección al momento de armar las bandejas, se analizó si las semillas iniciales tenían masas diferentes entre pisos. El resultado no fue significativo (\(p = 0{,}493\)), lo que indica que los pisos A, B y C comenzaron con masas de semillas estadísticamente equivalentes. Las diferencias observadas al final del experimento se atribuyen, por lo tanto, a factores ocurridos durante el crecimiento y no a un sesgo inicial.
 
-\subsubsection{Efecto del piso (A, B, C)}
+\subsection{Efecto del piso (A, B, C)}
 
 La Figura~\ref{fig:ctrl_pct_change_floor} muestra el crecimiento relativo promedio para cada piso. La Tabla~\ref{tab:ctrl_floor} presenta las medias y desvíos estándar.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento relativo (cambio porcentual de peso) por piso en controles negativos combinados. Los valores se expresan como media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
+\caption[Crecimiento relativo por piso en controles negativos]{\textbf{Crecimiento relativo por piso en controles negativos combinados.} Cambio porcentual de peso, expresado como media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
 \label{tab:ctrl_floor}
 \begin{tabular}{lc}
-\hline
+\toprule
 Piso & Media \(\pm\) SD \\
-\hline
-A & 0.4455 \(\pm\) 0.0376 \\
-B & 0.4261 \(\pm\) 0.0448 \\
-C & 0.4094 \(\pm\) 0.0534 \\
-\hline
+\midrule
+A & 0,446 \(\pm\) 0,038 \\
+B & 0,426 \(\pm\) 0,045 \\
+C & 0,409 \(\pm\) 0,053 \\
+\bottomrule
 \end{tabular}
 \end{table}
 
-Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3.9746\), \(p = 0.0228\)*), con un gradiente descendente de A hacia C en crecimiento promedio.
+Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3{,}97\), \(p = 0{,}023\)*), con un gradiente descendente de A hacia C en crecimiento promedio.
 
 \paragraph{Análisis post-hoc.} El ANOVA indica que las medias de los tres pisos no son todas iguales, pero no identifica cuáles pares difieren entre sí. Para determinarlo se realizaron comparaciones múltiples por pares mediante el test de Tukey HSD, que controla la tasa de error familiar al conjunto de las tres comparaciones. Dado que el test de Brown-Forsythe había indicado varianzas no homogéneas entre días, el análisis se repitió con el test de Games-Howell, que no asume homocedasticidad, como verificación de robustez. La Tabla~\ref{tab:ctrl_floor_posthoc} presenta ambos resultados.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Comparaciones post-hoc por pares entre pisos para el cambio porcentual de peso. Se reportan los valores \(p\) ajustados de Tukey HSD y de Games-Howell (verificación sin supuesto de homocedasticidad). \(n = 27\) por piso.}
+\begin{threeparttable}
+\caption[Comparaciones post-hoc entre pisos]{\textbf{Comparaciones post-hoc por pares entre pisos.} Cambio porcentual de peso. Se reportan los valores \(p\) ajustados de Tukey HSD y de Games-Howell (verificación sin supuesto de homocedasticidad); \(n = 27\) por piso.}
 \label{tab:ctrl_floor_posthoc}
-\begin{tabular}{lccc}
-\hline
+\begin{tabular}{lrrr}
+\toprule
 Comparación & Diferencia de medias & \(p\) (Tukey) & \(p\) (Games-Howell) \\
-\hline
-A vs B & 0.0194 & 0.2694 & 0.2061 \\
-A vs C & 0.0361 & 0.0131* & 0.0164* \\
-B vs C & 0.0167 & 0.3750 & 0.4312 \\
-\hline
+\midrule
+A vs B & 0,019 & 0,269  & 0,206 \\
+A vs C & 0,036 & 0,013* & 0,016* \\
+B vs C & 0,017 & 0,375  & 0,431 \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\).}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item * \(p < 0{,}05\);\quad ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\).
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-La única diferencia estadísticamente significativa se observó entre los pisos extremos, A y C (\(p = 0.0131\)*), mientras que las comparaciones A--B y B--C no alcanzaron significancia. Ambos tests coinciden en las tres comparaciones, de modo que la heterogeneidad de varianzas no altera las conclusiones. Este resultado indica que el efecto de piso corresponde a un gradiente vertical suave antes que a diferencias abruptas entre niveles contiguos: el piso B ocupa una posición intermedia que no se distingue estadísticamente de ninguno de los otros dos. Un gradiente monótono de este tipo resulta compatible con la acción de un factor ambiental continuo a lo largo de la altura del montaje, tal como la temperatura, la iluminación o la humedad.
+La única diferencia estadísticamente significativa se observó entre los pisos extremos, A y C (\(p = 0{,}013\)*), mientras que las comparaciones A--B y B--C no alcanzaron significancia. Ambos tests coinciden en las tres comparaciones, de modo que la heterogeneidad de varianzas no altera las conclusiones. Este resultado indica que el efecto de piso corresponde a un gradiente vertical suave antes que a diferencias abruptas entre niveles contiguos: el piso B ocupa una posición intermedia que no se distingue estadísticamente de ninguno de los otros dos. Un gradiente monótono de este tipo resulta compatible con la acción de un factor ambiental continuo a lo largo de la altura del montaje, tal como la temperatura, la iluminación o la humedad.
 
 El mismo análisis post-hoc, aplicado a las variables de robustez, reproduce el patrón observado (Tabla~\ref{tab:ctrl_floor_posthoc_robustez}): en ambos casos la única comparación significativa es A vs C.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Comparaciones post-hoc por pares entre pisos para el cambio absoluto de peso y el logaritmo de la razón de pesos, como verificación de robustez. Se reportan los valores \(p\) ajustados de Tukey HSD y de Games-Howell. \(n = 27\) por piso.}
+\begin{threeparttable}
+\caption[Comparaciones post-hoc entre pisos: verificación de robustez]{\textbf{Comparaciones post-hoc entre pisos: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos, con los valores \(p\) ajustados de Tukey HSD y de Games-Howell; \(n = 27\) por piso.}
 \label{tab:ctrl_floor_posthoc_robustez}
-\begin{tabular}{lcccc}
-\hline
+\begin{tabular}{llrrr}
+\toprule
 Variable & Comparación & Diferencia & \(p\) (Tukey) & \(p\) (Games-Howell) \\
-\hline
-\multirow{3}{*}{Cambio absoluto de peso} & A vs B & 0.0552 & 0.4822 & 0.4362 \\
- & A vs C & 0.1520 & 0.0058** & 0.0063** \\
- & B vs C & 0.0968 & 0.1121 & 0.1517 \\
-\hline
-\multirow{3}{*}{Logaritmo razón de pesos} & A vs B & 0.0137 & 0.2679 & 0.2015 \\
- & A vs C & 0.0257 & 0.0120* & 0.0152* \\
- & B vs C & 0.0120 & 0.3591 & 0.4180 \\
-\hline
+\midrule
+\multirow{3}{*}{Cambio absoluto de peso} & A vs B & 0,055 & 0,482   & 0,436 \\
+ & A vs C & 0,152 & 0,006** & 0,006** \\
+ & B vs C & 0,097 & 0,112   & 0,152 \\
+\midrule
+\multirow{3}{*}{Logaritmo razón de pesos} & A vs B & 0,014 & 0,268  & 0,202 \\
+ & A vs C & 0,026 & 0,012* & 0,015* \\
+ & B vs C & 0,012 & 0,359  & 0,418 \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\).}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item * \(p < 0{,}05\);\quad ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\).
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 Como verificación de robustez, el mismo análisis se repitió utilizando el cambio absoluto de peso y el logaritmo de la razón de pesos. La Tabla~\ref{tab:ctrl_floor_robustez} presenta las medias y desvíos estándar por piso para ambas variables, junto con los resultados del test de diferencias.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento por piso para el cambio absoluto de peso y el logaritmo de la razón de pesos, como verificación de robustez del efecto observado con el cambio porcentual de peso. Los valores se expresan como media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
+\begin{threeparttable}
+\caption[Crecimiento por piso: verificación de robustez]{\textbf{Crecimiento por piso: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos, como control del efecto observado con el cambio porcentual. Media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
 \label{tab:ctrl_floor_robustez}
-\begin{tabular}{lcccc}
-\hline
+\begin{tabular}{lcccr}
+\toprule
 Variable & Piso A & Piso B & Piso C & \(F_{2,76}\) (\(p\)) \\
-\hline
-Cambio absoluto de peso & 1.6412 \(\pm\) 0.1463 & 1.5860 \(\pm\) 0.1796 & 1.4892 \(\pm\) 0.1964 & 4.7870 (0.0110)* \\
-Logaritmo razón de pesos & 0.3681 \(\pm\) 0.0261 & 0.3545 \(\pm\) 0.0314 & 0.3425 \(\pm\) 0.0378 & 4.0686 (0.0210)* \\
-\hline
+\midrule
+Cambio absoluto de peso  & 1,641 \(\pm\) 0,146 & 1,586 \(\pm\) 0,180 & 1,489 \(\pm\) 0,196 & 4,79 (0,011)* \\
+Logaritmo razón de pesos & 0,368 \(\pm\) 0,026 & 0,354 \(\pm\) 0,031 & 0,343 \(\pm\) 0,038 & 4,07 (0,021)* \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\).}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item * \(p < 0{,}05\);\quad ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\).
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 Ambas variables reproducen el mismo patrón A \(>\) B \(>\) C y alcanzan significancia estadística, confirmando que el efecto de piso no depende de la métrica de crecimiento elegida. Adicionalmente, se verificó el resultado mediante un ANOVA clásico ajustado por día experimental (sin errores robustos), obteniéndose resultados consistentes para las tres variables (Tabla~\ref{tab:ctrl_floor_anova_clasico}).
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Verificación del efecto de piso mediante ANOVA clásico ajustado por día experimental.}
+\begin{threeparttable}
+\caption[Efecto de piso mediante ANOVA clásico]{\textbf{Efecto de piso mediante ANOVA clásico.} Modelo ajustado por día experimental, sin errores robustos, como verificación del análisis principal.}
 \label{tab:ctrl_floor_anova_clasico}
-\begin{tabular}{lcc}
-\hline
-Variable & \(F\) clásico & \(p\) clásico \\
-\hline
-Cambio absoluto de peso & 5.1563 & 0.00794** \\
-Cambio porcentual de peso & 4.2663 & 0.0175* \\
-Logaritmo razón de pesos  & 4.3650 & 0.0161* \\
-\hline
+\begin{tabular}{lrr}
+\toprule
+Variable & \(F_{2,76}\) & \(p\) \\
+\midrule
+Cambio absoluto de peso   & 5,16 & 0,008** \\
+Cambio porcentual de peso & 4,27 & 0,018* \\
+Logaritmo razón de pesos  & 4,37 & 0,016* \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\).}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item * \(p < 0{,}05\);\quad ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\).
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_floor_barplot.png}
-    \caption{Crecimiento relativo (cambio porcentual de peso) por piso en controles negativos combinados. Cada punto corresponde a una bandeja individual, coloreada según el día del experimento.}
+    \caption[Crecimiento relativo por piso en controles negativos]{\textbf{Crecimiento relativo por piso en controles negativos combinados.} Cada punto corresponde a una bandeja individual, coloreada según el día del experimento.}
     \label{fig:ctrl_pct_change_floor}
 \end{figure}
 
-\subsubsection{Efecto de la posición lateral (izquierda, centro, derecha)}
+\subsection{Efecto de la posición lateral (izquierda, centro, derecha)}
 
 La Figura~\ref{fig:ctrl_pct_change_lcr} muestra el crecimiento según la posición lateral. La Tabla~\ref{tab:ctrl_lcr} presenta los valores numéricos.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento relativo (cambio porcentual de peso) según posición lateral. Izquierda = celdas 1, 4, 7; centro = 2, 5, 8; derecha = 3, 6, 9. \(n = 27\) por grupo.}
+\caption[Crecimiento relativo según posición lateral]{\textbf{Crecimiento relativo según posición lateral.} Cambio porcentual de peso; izquierda = celdas 1, 4, 7; centro = 2, 5, 8; derecha = 3, 6, 9. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_lcr}
 \begin{tabular}{lc}
-\hline
+\toprule
 Posición & Media \(\pm\) SD \\
-\hline
-Izquierda & 0.4176 \(\pm\) 0.0465 \\
-Centro    & 0.4264 \(\pm\) 0.0498 \\
-Derecha   & 0.4370 \(\pm\) 0.0460 \\
-\hline
+\midrule
+Izquierda & 0,418 \(\pm\) 0,047 \\
+Centro    & 0,426 \(\pm\) 0,050 \\
+Derecha   & 0,437 \(\pm\) 0,046 \\
+\bottomrule
 \end{tabular}
 \end{table}
 
-No se detectaron diferencias significativas entre izquierda, centro y derecha (\(F_{2,76} = 1.1339\), \(p = 0.3272\)).
+No se detectaron diferencias significativas entre izquierda, centro y derecha (\(F_{2,76} = 1{,}13\), \(p = 0{,}327\)).
 
 El mismo análisis con el cambio absoluto de peso y el logaritmo de la razón de pesos confirma la ausencia de efecto lateral (Tabla~\ref{tab:ctrl_lcr_robustez}).
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento según posición lateral para el cambio absoluto de peso y el logaritmo de la razón de pesos, como verificación de robustez. \(n = 27\) por grupo.}
+\begin{threeparttable}
+\caption[Posición lateral: verificación de robustez]{\textbf{Posición lateral: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_lcr_robustez}
-\begin{tabular}{lcccc}
-\hline
+\begin{tabular}{lcccr}
+\toprule
 Variable & Izquierda & Centro & Derecha & \(F_{2,76}\) (\(p\)) \\
-\hline
-Cambio absoluto de peso & 1.5506 \(\pm\) 0.1754 & 1.5726 \(\pm\) 0.2022 & 1.5932 \(\pm\) 0.1787 & 0.3598 (0.6990) n.s. \\
-Logaritmo razón de pesos & 0.3484 \(\pm\) 0.0331 & 0.3546 \(\pm\) 0.0348 & 0.3621 \(\pm\) 0.0322 & 1.1254 (0.3299) n.s. \\
-\hline
+\midrule
+Cambio absoluto de peso  & 1,551 \(\pm\) 0,175 & 1,573 \(\pm\) 0,202 & 1,593 \(\pm\) 0,179 & 0,36 (0,699) n.s. \\
+Logaritmo razón de pesos & 0,348 \(\pm\) 0,033 & 0,355 \(\pm\) 0,035 & 0,362 \(\pm\) 0,032 & 1,13 (0,330) n.s. \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\); n.s. \(=\) no significativo.}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item n.s.: no significativo. Convención de asteriscos según la Sección~\ref{subsec:plan_analisis}.
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_left_center_right_barplot.png}
-    \caption{Crecimiento relativo (cambio porcentual de peso) según posición lateral (izquierda, centro, derecha) en controles negativos combinados.}
+    \caption[Crecimiento relativo según posición lateral]{\textbf{Crecimiento relativo según posición lateral.} Cambio porcentual de peso por columna (izquierda, centro, derecha) en controles negativos combinados.}
     \label{fig:ctrl_pct_change_lcr}
 \end{figure}
 
-\subsubsection{Efecto de la profundidad (frente, medio, atrás)}
+\subsection{Efecto de la profundidad (frente, medio, atrás)}
 
 La Figura~\ref{fig:ctrl_pct_change_fmb} muestra el crecimiento según la profundidad. La Tabla~\ref{tab:ctrl_fmb} presenta los valores.
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento relativo (cambio porcentual de peso) según profundidad. Frente = celdas 7, 8, 9; medio = 4, 5, 6; atrás = 1, 2, 3. \(n = 27\) por grupo.}
+\caption[Crecimiento relativo según profundidad]{\textbf{Crecimiento relativo según profundidad.} Cambio porcentual de peso; frente = celdas 7, 8, 9; medio = 4, 5, 6; atrás = 1, 2, 3. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_fmb}
 \begin{tabular}{lc}
-\hline
+\toprule
 Posición & Media \(\pm\) SD \\
-\hline
-Frente & 0.4170 \(\pm\) 0.0472 \\
-Medio  & 0.4317 \(\pm\) 0.0554 \\
-Atrás  & 0.4323 \(\pm\) 0.0388 \\
-\hline
+\midrule
+Frente & 0,417 \(\pm\) 0,047 \\
+Medio  & 0,432 \(\pm\) 0,055 \\
+Atrás  & 0,432 \(\pm\) 0,039 \\
+\bottomrule
 \end{tabular}
 \end{table}
 
-No se detectaron diferencias significativas entre frente, medio y atrás (\(F_{2,76} = 0.9012\), \(p = 0.4104\)).
+No se detectaron diferencias significativas entre frente, medio y atrás (\(F_{2,76} = 0{,}90\), \(p = 0{,}410\)).
 
 El mismo análisis con el cambio absoluto de peso y el logaritmo de la razón de pesos confirma la ausencia de efecto de profundidad (Tabla~\ref{tab:ctrl_fmb_robustez}).
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Crecimiento según profundidad para el cambio absoluto de peso y el logaritmo de la razón de pesos, como verificación de robustez. \(n = 27\) por grupo.}
+\begin{threeparttable}
+\caption[Profundidad: verificación de robustez]{\textbf{Profundidad: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_fmb_robustez}
-\begin{tabular}{lcccc}
-\hline
+\begin{tabular}{lcccr}
+\toprule
 Variable & Frente & Medio & Atrás & \(F_{2,76}\) (\(p\)) \\
-\hline
-Cambio absoluto de peso & 1.5364 \(\pm\) 0.1561 & 1.5692 \(\pm\) 0.2369 & 1.6108 \(\pm\) 0.1454 & 1.5663 (0.2155) n.s. \\
-Logaritmo razón de pesos & 0.3480 \(\pm\) 0.0336 & 0.3581 \(\pm\) 0.0387 & 0.3589 \(\pm\) 0.0272 & 0.9039 (0.4093) n.s. \\
-\hline
+\midrule
+Cambio absoluto de peso  & 1,536 \(\pm\) 0,156 & 1,569 \(\pm\) 0,237 & 1,611 \(\pm\) 0,145 & 1,57 (0,216) n.s. \\
+Logaritmo razón de pesos & 0,348 \(\pm\) 0,034 & 0,358 \(\pm\) 0,039 & 0,359 \(\pm\) 0,027 & 0,90 (0,409) n.s. \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize * \(p < 0.05\); ** \(p < 0.01\); *** \(p < 0.001\); n.s. \(=\) no significativo.}
+    \begin{tablenotes}[flushleft]\footnotesize
+      \item n.s.: no significativo. Convención de asteriscos según la Sección~\ref{subsec:plan_analisis}.
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_front_middle_back_barplot.png}
-    \caption{Crecimiento relativo (cambio porcentual de peso) según profundidad (frente, medio, atrás) en controles negativos combinados.}
+    \caption[Crecimiento relativo según profundidad]{\textbf{Crecimiento relativo según profundidad.} Cambio porcentual de peso por fila (frente, medio, atrás) en controles negativos combinados.}
     \label{fig:ctrl_pct_change_fmb}
 \end{figure}
 
-\subsubsection{Comparación entre todas las celdas (A1--C9)}
+\subsection{Comparación entre todas las celdas (A1--C9)}
 
-El análisis a escala de celda individual reveló diferencias significativas entre posiciones (\(F_{26,52} = 6.2658\), \(p = 1.07 \times 10^{-8}\)***). El mismo análisis, realizado con el cambio absoluto de peso (\(F_{26,52} = 6.2815\), \(p = 1.03 \times 10^{-8}\)***) y con el logaritmo de la razón de pesos (\(F_{26,52} = 6.5493\), \(p = 5.04 \times 10^{-9}\)***), confirma la existencia de un efecto de celda independientemente de la métrica de crecimiento utilizada.
+El análisis a escala de celda individual reveló diferencias significativas entre posiciones (\(F_{26,52} = 6{,}27\), \(p = 1{,}1 \times 10^{-8}\)***). El mismo análisis, realizado con el cambio absoluto de peso (\(F_{26,52} = 6{,}28\), \(p = 1{,}0 \times 10^{-8}\)***) y con el logaritmo de la razón de pesos (\(F_{26,52} = 6{,}55\), \(p = 5{,}0 \times 10^{-9}\)***), confirma la existencia de un efecto de celda independientemente de la métrica de crecimiento utilizada.
 
 La Figura~\ref{fig:ctrl_pct_change_heatmap} presenta un mapa de calor con el crecimiento relativo promedio de cada celda, permitiendo visualizar simultáneamente el patrón por piso y las diferencias finas entre celdas individuales.
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.85\linewidth]{datos/img/ctrl_pct_change_heatmap.png}
-    \caption{Mapa de calor del crecimiento relativo promedio (cambio porcentual de peso) por celda (A1--C9) en controles negativos combinados. La celda C9 se destaca por presentar el menor valor promedio del conjunto.}
+    \caption[Mapa de calor del crecimiento relativo por celda]{\textbf{Mapa de calor del crecimiento relativo por celda.} Cambio porcentual de peso promedio de cada celda (A1--C9) en controles negativos combinados. La celda C9 presenta el menor valor promedio del conjunto.}
     \label{fig:ctrl_pct_change_heatmap}
 \end{figure}
 
 El análisis post-hoc por pares con corrección FDR identificó que las diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas (Tabla~\ref{tab:ctrl_posthoc}).
 
-\begin{table}[h]
+\begin{table}[tbp]
 \centering
-\caption{Comparaciones post-hoc significativas (FDR) para el cambio porcentual de peso en el análisis A1--C9. Cada celda tiene \(n = 3\).}
+\begin{threeparttable}
+\caption[Comparaciones post-hoc significativas entre celdas individuales]{\textbf{Comparaciones post-hoc significativas entre celdas individuales.} Cambio porcentual de peso en el análisis A1--C9, con corrección FDR; \(n = 3\) por celda.}
 \label{tab:ctrl_posthoc}
-\begin{tabular}{lccc}
-\hline
+\begin{tabular}{lrrr}
+\toprule
 Comparación & Media celda 1 & Media celda 2 & Diferencia \\
-\hline
-C9 vs B8 & 0.3721 & 0.4263 & 0.0542 \\
-C9 vs A1 & 0.3721 & 0.4373 & 0.0652 \\
-C9 vs A9 & 0.3721 & 0.4636 & 0.0915 \\
-C9 vs A3 & 0.3721 & 0.4676 & 0.0955 \\
-C9 vs B6 & 0.3721 & 0.4751 & 0.1030 \\
-\hline
+\midrule
+C9 vs B8 & 0,372 & 0,426 & 0,054 \\
+C9 vs A1 & 0,372 & 0,437 & 0,065 \\
+C9 vs A9 & 0,372 & 0,464 & 0,092 \\
+C9 vs A3 & 0,372 & 0,468 & 0,096 \\
+C9 vs B6 & 0,372 & 0,475 & 0,103 \\
+\bottomrule
 \end{tabular}
-
-\vspace{0.5em}
-{\footnotesize Todas las comparaciones listadas resultaron significativas (\(p < 0.05\)) tras la corrección FDR.}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item Todas las comparaciones listadas resultaron significativas (\(p < 0{,}05\)) tras la corrección FDR.
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-Notar que si bien C9 presentó una desviación estándar muy pequeña (0.0114), esto refleja la consistencia entre las tres réplicas, no necesariamente una mayor precisión a nivel poblacional.
+Notar que si bien C9 presentó una desviación estándar muy pequeña (0,011), esto refleja la consistencia entre las tres réplicas, no necesariamente una mayor precisión a nivel poblacional.
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_tray_cell_barplot.png}
-    \caption{Crecimiento relativo (cambio porcentual de peso) por celda individual (A1--C9) en controles negativos combinados. Se observa el menor crecimiento relativo de la celda C9 respecto de las demás.}
+    \caption[Crecimiento relativo por celda individual]{\textbf{Crecimiento relativo por celda individual.} Cambio porcentual de peso de cada celda (A1--C9) en controles negativos combinados. Se observa el menor crecimiento de la celda C9 respecto de las demás.}
     \label{fig:ctrl_pct_change_all}
 \end{figure}
 
-\subsubsection{Conclusión parcial}
+\subsection{Conclusión parcial}
 
 En los controles negativos combinados se detectó un efecto espacial general asociado al piso de la bandeja, con un gradiente descendente de A hacia C, pero no a los ejes izquierda-centro-derecha ni frente-medio-atrás. El análisis post-hoc mostró que dicho gradiente resulta significativo únicamente entre los pisos extremos (A vs C), ocupando el piso B una posición intermedia no distinguible de los otros dos. Sin embargo, al analizar cada celda individual A1--C9, se observaron diferencias significativas entre posiciones específicas. El análisis post-hoc indicó que estas diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas de mayor crecimiento. Esto sugiere que el control negativo no fue completamente homogéneo a escala espacial fina, por lo que los análisis de tratamientos deberían considerar o controlar posibles efectos de posición.

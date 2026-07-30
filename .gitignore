@@ -19,3 +19,6 @@
 *.toc
 *.xdv
 
+
+# Auxiliares de compilacion
+build/

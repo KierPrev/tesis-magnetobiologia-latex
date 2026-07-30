@@ -1,76 +1,199 @@
 % !TEX program = xelatex
-\documentclass[12pt,fleqn]{article}
+% ============================================================
+%  Tesis de Licenciatura en Física — UNSL
+%  Kiernan Elizabeth Preve
+%  Requiere XeLaTeX (o LuaLaTeX) + biber
+% ============================================================
+\documentclass[12pt,fleqn,openany,oneside]{report}
 
 \usepackage{iftex}
-\usepackage[spanish,es-nodecimaldot]{babel}
+% El idioma principal va ÚLTIMO. «english» hace falta para el Abstract
+% y para los epígrafes en inglés (guionado correcto).
+\usepackage[english,spanish,es-nodecimaldot]{babel}
+
+% ------------------------------------------------------------
+%  Tipografía
+%  TeX Gyre Pagella es un clon libre de Palatino que SÍ trae
+%  versalitas y —lo importante— una fuente matemática hermana
+%  (Pagella Math). Con Palatino del sistema, la matemática caía
+%  en Computer Modern y no combinaba con el texto.
+% ------------------------------------------------------------
+\usepackage{amsmath}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{lmodern}
+  \usepackage{mathpazo}
+  \usepackage{bm}
 \else
   \usepackage{fontspec}
   \defaultfontfeatures{Ligatures=TeX}
-  \setmainfont{Palatino}
-  \setsansfont{Helvetica Neue}
-  \setmonofont{Menlo}
+
+  % IMPORTANTE: las TeX Gyre se cargan POR NOMBRE DE ARCHIVO, no por nombre
+  % de familia. En macOS las fuentes del árbol de TeX no quedan registradas
+  % en CoreText, de modo que \setmainfont{TeX Gyre Pagella} falla aunque el
+  % .otf esté instalado, y el documento sale entero en «nullfont».
+  % Por archivo, kpathsea las encuentra en cualquier plataforma.
+
+  % --- Texto ---
+  \newif\ifgyretext
+  \IfFontExistsTF{texgyrepagella-regular.otf}{\gyretexttrue}{\gyretextfalse}
+  \ifgyretext
+    \setmainfont{texgyrepagella}[
+      Extension      = .otf,
+      UprightFont    = *-regular,
+      ItalicFont     = *-italic,
+      BoldFont       = *-bold,
+      BoldItalicFont = *-bolditalic]
+  \else
+    \IfFontExistsTF{Palatino}{\setmainfont{Palatino}}{}
+  \fi
+
+  % --- Sans ---
+  \IfFontExistsTF{texgyreheros-regular.otf}{%
+    \setsansfont{texgyreheros}[
+      Extension      = .otf,
+      UprightFont    = *-regular,
+      ItalicFont     = *-italic,
+      BoldFont       = *-bold,
+      BoldItalicFont = *-bolditalic,
+      Scale          = MatchLowercase]%
+  }{%
+    \IfFontExistsTF{Helvetica Neue}{\setsansfont{Helvetica Neue}[Scale=MatchLowercase]}{}%
+  }
+
+  % --- Monoespaciada ---
+  \IfFontExistsTF{texgyrecursor-regular.otf}{%
+    \setmonofont{texgyrecursor}[
+      Extension      = .otf,
+      UprightFont    = *-regular,
+      ItalicFont     = *-italic,
+      BoldFont       = *-bold,
+      BoldItalicFont = *-bolditalic,
+      Scale          = MatchLowercase]%
+  }{%
+    \IfFontExistsTF{Menlo}{\setmonofont{Menlo}[Scale=MatchLowercase]}{}%
+  }
+
+  % --- Caligráfica para la dedicatoria de Agradecimientos ---
+  % TeX Gyre Chorus es el clon de Zapf Chancery. La diseñó Hermann Zapf,
+  % igual que Palatino, así que combina con el cuerpo del texto.
+  % Si no está, cae en la itálica de la fuente principal.
+  \IfFontExistsTF{texgyrechorus-mediumitalic.otf}{%
+    \newfontfamily\caligrafica{texgyrechorus}[
+      Extension   = .otf,
+      UprightFont = *-mediumitalic,
+      ItalicFont  = *-mediumitalic]%
+  }{%
+    \newcommand{\caligrafica}{\itshape}%
+  }
+
+  % --- Matemática: solo si existe la OTF hermana ---
+  % Si falta (BasicTeX no trae tex-gyre-math), NO se carga unicode-math,
+  % porque dejaría las familias matemáticas sin definir.
+  % Para instalarla:  sudo tlmgr install tex-gyre tex-gyre-math
+  \newif\ifmathotf
+  \IfFontExistsTF{texgyrepagella-math.otf}{\mathotftrue}{\mathotffalse}
+  \ifmathotf
+    \usepackage{unicode-math}
+    \setmathfont{texgyrepagella-math.otf}
+    % \bm venía del paquete bm, incompatible con unicode-math
+    \newcommand{\bm}[1]{\symbf{#1}}
+  \else
+    \usepackage{amssymb}
+    \usepackage{bm}
+    \PackageWarningNoLine{tesis}{%
+      No se encontro texgyrepagella-math.otf: la matematica usa Latin
+      Modern y no combina con el texto.^^JInstalala con:
+      tlmgr install tex-gyre tex-gyre-math}
+  \fi
 \fi
 \usepackage{microtype}
-\usepackage{comment}
+
+% ------------------------------------------------------------
+%  Gráficos, tablas y flotantes
+% ------------------------------------------------------------
 \usepackage[final]{graphicx}
-\usepackage{subcaption}
 \setkeys{Gin}{draft=false}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{float}
 \usepackage{textcomp}
 \ifPDFTeX
   \usepackage{epstopdf}
 \fi
-\usepackage{latexsym}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{tabularx}
-\usepackage{float}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{bm}
-\usepackage[mathcal]{euscript}
-\usepackage{slashed}
+
+% ------------------------------------------------------------
+%  Color y geometría
+% ------------------------------------------------------------
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{C97B63}
 \definecolor{ink}{HTML}{222222}
 \color{ink}
+% OJO: report/article usan US Letter por defecto. Sin «a4paper» la tesis
+% se componía en 216x279 mm en vez de 210x297 mm.
+\usepackage[a4paper, top=32mm, bottom=30mm, left=27mm, right=24mm]{geometry}
+
+% ------------------------------------------------------------
+%  Bibliografía
+% ------------------------------------------------------------
 \usepackage{csquotes}
 \usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
 \addbibresource{bib.bib}
-\usepackage[top=34mm, bottom=34mm, left=24mm, right=24mm]{geometry}
-\numberwithin{equation}{section}
-\usepackage{marvosym}
-\usepackage{pythonhighlight}
+
+% ------------------------------------------------------------
+%  Espaciado, numeración y epígrafes
+% ------------------------------------------------------------
 \usepackage{appendix}
 \usepackage{indentfirst}
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{tocloft}
-\usepackage{hyperref}
-\hypersetup{
-    unicode,
-    hidelinks,
-    pdfpagelabels,
-    plainpages=false,
-    bookmarksopen=true,
-    bookmarksopenlevel=\maxdimen,
-}
+\usepackage[font=small,labelfont=bf,labelsep=period,
+            justification=justified,skip=6pt]{caption}
 
-\usepackage{fancyhdr}
+\numberwithin{equation}{chapter}
+\setcounter{secnumdepth}{3}   % numera hasta subsubsection
+\setcounter{tocdepth}{2}      % el índice llega hasta subsection
+
 \setstretch{1.08}
 \setlength{\parindent}{1.5em}
 \setlength{\parskip}{0.25em}
 \emergencystretch=1.5em
 
-\titleformat{\section}[display]
+% Flotantes: parámetros generosos para evitar páginas semivacías
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\textfraction}{0.12}
+\renewcommand{\floatpagefraction}{0.70}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+
+% ------------------------------------------------------------
+%  Títulos
+% ------------------------------------------------------------
+\titleformat{\chapter}[display]
   {\filcenter\normalfont\bfseries}
-  {\color{accent}\large\thesection}
+  {\color{accent}\large\chaptertitlename\ \thechapter}
   {0.35em}
-  {\Large}
+  {\LARGE}
   [\vspace{0.6em}\color{accent}\titlerule]
+
+\titleformat{name=\chapter,numberless}[display]
+  {\filcenter\normalfont\bfseries}
+  {}
+  {0pt}
+  {\LARGE}
+  [\vspace{0.6em}\color{accent}\titlerule]
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\color{accent}\thesection}
+  {0.7em}
+  {}
 
 \titleformat{\subsection}
   {\normalfont\large\bfseries}
@@ -84,59 +207,150 @@
   {0.6em}
   {}
 
-\titlespacing*{\section}{0pt}{0pt}{2.2ex}
+\titlespacing*{\chapter}{0pt}{-8pt}{3.2ex}
+\titlespacing*{\section}{0pt}{4.2ex}{1.6ex}
 \titlespacing*{\subsection}{0pt}{3.5ex}{1.2ex}
 \titlespacing*{\subsubsection}{0pt}{2.8ex}{0.8ex}
 
-\renewcommand{\contentsname}{Índice}
+% ------------------------------------------------------------
+%  Índices
+% ------------------------------------------------------------
+\renewcommand{\contentsname}{Índice general}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tablas}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}} % babel usa «Cuadro»
+\renewcommand{\bibname}{Referencias}
+
 \renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
 \renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftchappagefont}{\bfseries}
 \renewcommand{\cftsecfont}{\normalfont}
 \renewcommand{\cftsubsecfont}{\normalfont}
-\renewcommand{\cftsubsubsecfont}{\normalfont}
 \renewcommand{\cftsecpagefont}{\normalfont}
 \renewcommand{\cftsubsecpagefont}{\normalfont}
-\renewcommand{\cftsubsubsecpagefont}{\normalfont}
-\setlength{\cftbeforesecskip}{0.45em}
-\setlength{\cftbeforesubsecskip}{0.15em}
-\setlength{\cftbeforesubsubsecskip}{0.05em}
+\setlength{\cftbeforechapskip}{0.8em}
+\setlength{\cftbeforesecskip}{0.25em}
+\setlength{\cftbeforesubsecskip}{0.1em}
+\setlength{\cftfignumwidth}{3.2em}
+\setlength{\cfttabnumwidth}{3.2em}
 
+% ------------------------------------------------------------
+%  Encabezados y pies
+% ------------------------------------------------------------
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{-2pt}
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyfoot[C]{\small\thepage}
-\fancypagestyle{plain}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{0pt}
-  \fancyfoot[C]{\small\thepage}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{\small\thepage}%
+}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+
+% ------------------------------------------------------------
+%  Hipervínculos (siempre al final del preámbulo)
+% ------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+    unicode,
+    hidelinks,
+    plainpages=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=\maxdimen,
+    pdftitle={Efecto de campos magnéticos estáticos sobre la germinación de Zea mays},
+    pdfauthor={Kiernan Elizabeth Preve},
+    pdfsubject={Trabajo Especial de Licenciatura en Física — UNSL},
+    pdfkeywords={magnetobiología, magnetopriming, Zea mays, campo magnético estático, germinación},
 }
 
+% ------------------------------------------------------------
+%  Epígrafes de capítulo (citas)
+%
+%  USO:  \epigrafe{texto de la cita}{Autor}{Obra, año}
+%        Va SIEMPRE inmediatamente después de \chapter{...},
+%        nunca antes (antes rompe el formato de titlesec).
+%        El tercer argumento puede dejarse vacío: {}
+%
+%  Criterio: pocos (3 o 4 en toda la tesis), breves (2--3 líneas),
+%  y ninguno en Resultados.
+% ------------------------------------------------------------
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.62\textwidth}
+\setlength{\epigraphrule}{0pt}          % sin línea divisoria
+\setlength{\beforeepigraphskip}{0.4\baselineskip}
+\setlength{\afterepigraphskip}{2.2\baselineskip}
+\renewcommand{\epigraphflush}{flushright}
+\renewcommand{\textflush}{flushepinormal} % justificado dentro del bloque
+\renewcommand{\sourceflush}{flushright}
+\renewcommand{\epigraphsize}{\small}
+
+\newcommand{\epigrafe}[3]{%
+  \epigraph{\itshape #1}%
+           {\textsc{#2}\ifx\relax#3\relax\else\\\textit{#3}\fi}%
+}
+
+% Igual que \epigrafe pero para citas en inglés: activa el guionado
+% inglés dentro de la cita, para que babel no la corte en español.
+\newcommand{\epigrafeen}[3]{%
+  \epigraph{\foreignlanguage{english}{\itshape #1}}%
+           {\textsc{#2}\ifx\relax#3\relax\else\\\textit{#3}\fi}%
+}
+
+% ------------------------------------------------------------
+%  Macros propias
+% ------------------------------------------------------------
+% Marcador visible para lo que queda por completar.
+% Descomentá \pendientesoff en la versión final para ocultarlos.
+\newcommand{\pendiente}[1]{\textcolor{red}{\textbf{[COMPLETAR: #1]}}}
+\newcommand{\pendientesoff}{\renewcommand{\pendiente}[1]{}}
+% \pendientesoff
+
 % === Para compilar solo algunas partes ===
-% Descomentá esto cuando quieras compilar solo ciertos archivos:
-% \includeonly{
-%   Titlepage,
-%   secciones/resumen,
-%   secciones/introduccion
-% }
+% \includeonly{secciones/resumen,secciones/introduccion}
 
 \begin{document}
 
 \input{Titlepage}
 
+% ============================ PRELIMINARES ============================
 \pagenumbering{roman}
 \setcounter{page}{1}
-\tableofcontents
-
-\bigskip
-\noindent {\footnotesize Repositorio de esta tesis: \url{https://github.com/KierPrev/tesis-magnetobiologia-latex}\par}
-
-\clearpage
-\pagenumbering{arabic}
 
 \include{secciones/agradecimientos}
 \include{secciones/resumen}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+\include{secciones/simbolos}
+
+% ============================ CUERPO ============================
+\clearpage
+\pagenumbering{arabic}
+
 \include{secciones/introduccion}
 \include{secciones/antecedentes}
 \include{secciones/marco_teorico}
@@ -144,8 +358,12 @@
 \include{secciones/resultados}
 \include{secciones/discusion}
 \include{secciones/conclusiones}
+\include{secciones/reproducibilidad}
 
-\printbibliography
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography[title=\bibname]
 
 \begin{appendices}
 \include{secciones/apendices}
