@@ -25,8 +25,8 @@ La totalidad de los datos crudos, del código de análisis y de los archivos fue
 \toprule
 Repositorio & \textit{Commit} \\
 \midrule
-\texttt{tesis-magnetobiologia-latex}    & \pendiente{hash} \\
-\texttt{tesis-magnetobiologia-software} & \pendiente{hash} \\
+\texttt{tesis-magnetobiologia-latex}    & \texttt{c222ad6} \\
+\texttt{tesis-magnetobiologia-software} & \texttt{9de216f} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -60,25 +60,25 @@ La Tabla~\ref{tab:repro} indica, para cada figura y tabla generada computacional
 \toprule
 Elemento & Archivo de salida & \textit{Script} \\
 \midrule
-Fig.~\ref{fig:mapa_dosis}          & \path{extra/plots/mapa_dosis_literatura.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ceramica_n_perfil}   & \path{extra/plots/ceramica_n_bz_fit.pdf}             & \pendiente{script} \\
-Fig.~\ref{fig:ceramica_s_perfil}   & \path{extra/plots/ceramica_s_bz_fit.pdf}             & \pendiente{script} \\
-Fig.~\ref{fig:neodimio_n_perfil}   & \path{extra/plots/neodimio_n_bz_fit.pdf}             & \pendiente{script} \\
-Fig.~\ref{fig:ceramica_n_mapa}     & \path{extra/plots/ceramica_n_bz_fit_field_map.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:neodimio_n_mapa}     & \path{extra/plots/neodimio_n_bz_fit_field_map.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:caracterizacion_cuchara} & \path{extra/plots/caracterizacion_cuchara.pdf}     & \pendiente{script} \\
-Fig.~\ref{fig:torre_campos}        & \path{extra/plots/torre_exposicion_campos.pdf}        & \pendiente{script} \\
-Fig.~\ref{fig:heatmaps_ceramica}   & \path{extra/plots/heatmaps/grilla_heatmaps_ceramica_n.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:heatmaps_neodimio}   & \path{extra/plots/heatmaps/grilla_heatmaps_neodimio_n.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ctrl_pct_change_floor}   & \path{analysis/negative_control_combined/...floor_barplot.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ctrl_pct_change_lcr}     & \path{analysis/negative_control_combined/...left_center_right_barplot.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ctrl_pct_change_fmb}     & \path{analysis/negative_control_combined/...front_middle_back_barplot.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ctrl_pct_change_heatmap} & \path{analysis/negative_control_combined/...heatmap.pdf} & \pendiente{script} \\
-Fig.~\ref{fig:ctrl_pct_change_all}     & \path{analysis/negative_control_combined/...tray_cell_barplot.pdf} & \pendiente{script} \\
+Fig.~\ref{fig:mapa_dosis}          & \path{extra/plots/mapa_dosis_literatura.pdf} & \texttt{src/plot\_literature\_dose\_map.py} \\
+Fig.~\ref{fig:ceramica_n_perfil}   & \path{extra/plots/ceramica_n_bz_fit.pdf}             & \texttt{src/simulate\_magnet\_field.py} \\
+Fig.~\ref{fig:ceramica_s_perfil}   & \path{extra/plots/ceramica_s_bz_fit.pdf}             & \texttt{src/simulate\_magnet\_field.py} \\
+Fig.~\ref{fig:neodimio_n_perfil}   & \path{extra/plots/neodimio_n_bz_fit.pdf}             & \texttt{src/simulate\_magnet\_field.py} \\
+Fig.~\ref{fig:ceramica_n_mapa}     & \path{extra/plots/ceramica_n_bz_fit_field_map.pdf} & \texttt{src/simulate\_magnet\_field.py} \\
+Fig.~\ref{fig:neodimio_n_mapa}     & \path{extra/plots/neodimio_n_bz_fit_field_map.pdf} & \texttt{src/simulate\_magnet\_field.py} \\
+Fig.~\ref{fig:caracterizacion_cuchara} & \path{secciones/images/CaracterizacionCucharaPlots.png} & \textit{dato externo (Lucía Guerreiro), sin script en el repositorio} \\
+Fig.~\ref{fig:torre_campos}        & \path{extra/plots/torre_exposicion_campos.pdf}        & \texttt{src/plot\_exposure\_tower.py} \\
+Fig.~\ref{fig:heatmaps_ceramica}   & \path{extra/plots/heatmaps/grilla_heatmaps_ceramica_n.pdf} & \texttt{src/plot\_field\_heatmaps.py} \\
+Fig.~\ref{fig:heatmaps_neodimio}   & \path{extra/plots/heatmaps/grilla_heatmaps_neodimio_n.pdf} & \texttt{src/plot\_field\_heatmaps.py} \\
+Fig.~\ref{fig:ctrl_pct_change_floor}   & \path{analysis/negative_control_combined/...floor_barplot.pdf} & \texttt{src/AnalisisTrays.py} \\
+Fig.~\ref{fig:ctrl_pct_change_lcr}     & \path{analysis/negative_control_combined/...left_center_right_barplot.pdf} & \texttt{src/AnalisisTrays.py} \\
+Fig.~\ref{fig:ctrl_pct_change_fmb}     & \path{analysis/negative_control_combined/...front_middle_back_barplot.pdf} & \texttt{src/AnalisisTrays.py} \\
+Fig.~\ref{fig:ctrl_pct_change_heatmap} & \path{analysis/negative_control_combined/...heatmap.pdf} & \texttt{src/AnalisisTrays.py} \\
+Fig.~\ref{fig:ctrl_pct_change_all}     & \path{analysis/negative_control_combined/...tray_cell_barplot.pdf} & \texttt{src/AnalisisTrays.py} \\
 \midrule
-Tabla~\ref{tab:ajuste_imanes}      & --- & \pendiente{script} \\
-Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} & --- & \pendiente{script} \\
-Tablas~\ref{tab:ctrl_floor}--\ref{tab:ctrl_posthoc} & --- & \pendiente{script} \\
+Tabla~\ref{tab:ajuste_imanes}      & --- & \texttt{src/simulate\_magnet\_field.py} \\
+Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} & --- & \texttt{src/compute\_treatment\_doses.py} \\
+Tablas~\ref{tab:ctrl_floor}--\ref{tab:ctrl_posthoc} & --- & \texttt{src/AnalisisTrays.py} \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}[flushleft]\footnotesize
@@ -92,7 +92,7 @@ Tablas~\ref{tab:ctrl_floor}--\ref{tab:ctrl_posthoc} & --- & \pendiente{script} \
 El análisis se realizó en Python. Las dependencias y sus versiones exactas se encuentran declaradas en el repositorio de software, de modo que el entorno pueda reconstruirse de forma idéntica:
 
 \begin{quote}\ttfamily\small\raggedright
-\pendiente{comando de instalación del entorno, p.\ ej. pip install -r requirements.txt}
+pip install -r requirements.txt
 \end{quote}
 
 \noindent Las bibliotecas centrales del análisis son \texttt{pandas} para la gestión de datos, \texttt{statsmodels} y \texttt{scipy} para las pruebas estadísticas, \texttt{matplotlib} para las figuras y \texttt{magpylib}~\cite{magpylib} para el cálculo del campo magnético.
@@ -102,7 +102,16 @@ El análisis se realizó en Python. Las dependencias y sus versiones exactas se 
 \begin{enumerate}
   \item Clonar ambos repositorios en directorios hermanos, de modo que el enlace simbólico \texttt{datos/software\_data} del repositorio del documento resuelva correctamente.
   \item Reconstruir el entorno de cómputo con el comando indicado más arriba.
-  \item Ejecutar \pendiente{script maestro que regenera figuras y tablas}, que regenera la totalidad de las figuras y de los valores reportados a partir de los archivos crudos.
+  \item No existe un único script maestro: el análisis de bandejas se ejecuta mediante una interfaz gráfica (\texttt{src/PipelineGUI.py}), mientras que las figuras de caracterización de imanes y dosis se generan con \textit{scripts} independientes. Ejecutar, desde la raíz del repositorio de software:
+  \begin{quote}\ttfamily\footnotesize\raggedright
+    python src/simulate\_magnet\_field.py\\
+    python src/plot\_field\_heatmaps.py\\
+    python src/plot\_exposure\_tower.py\\
+    python src/plot\_literature\_dose\_map.py\\
+    python src/compute\_treatment\_doses.py\\
+    python src/AnalisisTrays.py \emph{[sin \texttt{--exp-id}, analiza todos los experimentos; alternativamente, \texttt{PipelineGUI.py} para uso interactivo]}
+  \end{quote}
+  que regeneran la totalidad de las figuras y de los valores reportados a partir de los archivos crudos.
   \item Compilar el documento con \texttt{latexmk -xelatex tesis.tex}.
 \end{enumerate}
 

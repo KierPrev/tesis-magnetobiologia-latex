@@ -129,7 +129,7 @@
 %  Color y geometría
 % ------------------------------------------------------------
 \usepackage{xcolor}
-\definecolor{accent}{HTML}{C97B63}
+\definecolor{accent}{HTML}{A85D42}
 \definecolor{ink}{HTML}{222222}
 \color{ink}
 % OJO: report/article usan US Letter por defecto. Sin «a4paper» la tesis
@@ -264,7 +264,10 @@
 \usepackage{hyperref}
 \hypersetup{
     unicode,
-    hidelinks,
+    colorlinks=true,
+    linkcolor=accent,
+    citecolor=accent,
+    urlcolor=accent,
     plainpages=false,
     bookmarksopen=true,
     bookmarksopenlevel=\maxdimen,

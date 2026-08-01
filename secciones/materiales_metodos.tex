@@ -51,7 +51,46 @@ Cabe señalar que la sonda Hall empleada mide \textbf{únicamente la componente 
 
 Con el objeto de contrastar las mediciones contra una predicción independiente, se implementó una simulación del campo de cada imán mediante la biblioteca \texttt{magpylib} \cite{magpylib}, que resuelve de forma analítica el campo de un prisma uniformemente magnetizado. Se optó por esta aproximación en lugar de un método de elementos finitos porque la geometría involucrada es un único imán en el aire, sin núcleos ferromagnéticos ni contornos complejos, condiciones bajo las cuales la solución analítica es exacta y computacionalmente mucho más económica.
 
-El modelo se construyó con las dimensiones nominales de cada imán (Tabla~\ref{tab:dimensiones_imanes}) y un \textbf{único parámetro libre}: la remanencia \(B_r\). Dado que \(B_z\) es lineal en \(B_r\) por superposición, el ajuste por mínimos cuadrados admite solución cerrada.
+\paragraph{Fundamento del modelo analítico.}
+En ausencia de corrientes libres y de dependencia temporal, el campo magnetostático satisface \(\nabla\times\bm{H}=\bm{0}\), de modo que admite un potencial escalar magnético \(\psi\) tal que \(\bm{H}=-\nabla\psi\). Combinando esta relación con \(\nabla\cdot\bm{B}=0\) y con la definición \(\bm{B}=\mu_0\bm{H}+\bm{J}\), donde \(\bm{J}=\mu_0\bm{M}\) es la polarización magnética y \(\bm{M}\) la magnetización, se obtiene una ecuación de Poisson formalmente idéntica a la de la electrostática,
+\begin{equation}
+    \nabla^{2}\psi = \nabla\cdot\bm{M},
+    \label{eq:poisson_magnetico}
+\end{equation}
+cuya solución integral es
+\begin{equation}
+    \psi(\bm{r}) = \frac{1}{4\pi}\left[
+        \oint_{S} \frac{\bm{M}\cdot\hat{\bm{n}}}{|\bm{r}-\bm{r}'|}\,\mathrm{d}a'
+        - \int_{V} \frac{\nabla\cdot\bm{M}}{|\bm{r}-\bm{r}'|}\,\mathrm{d}V'
+    \right].
+    \label{eq:potencial_escalar}
+\end{equation}
+
+Los dos términos de la Ecuación~\ref{eq:potencial_escalar} se interpretan, respectivamente, como una densidad de carga magnética superficial \(\sigma_m=\bm{M}\cdot\hat{\bm{n}}\) y una volumétrica \(\rho_m=-\nabla\cdot\bm{M}\). Conviene subrayar que dichas cargas no representan monopolos físicos ---inexistentes, conforme a \(\nabla\cdot\bm{B}=0\)---, sino un artificio de cálculo: constituyen fuentes de \(\bm{H}\) y no de \(\bm{B}\), y su origen reside en que los dipolos atómicos alineados se cancelan mutuamente en el interior del material, quedando sin compensar únicamente los extremos de las cadenas de dipolos sobre las superficies.
+
+Bajo la hipótesis de magnetización uniforme se tiene \(\nabla\cdot\bm{M}=0\) y el término volumétrico se anula, de modo que el prisma queda representado exactamente por dos distribuciones superficiales de signo opuesto sobre las caras normales al eje de magnetización. La integral de la Ecuación~\ref{eq:potencial_escalar} sobre una superficie rectangular admite primitiva analítica, de donde resulta una expresión cerrada para el campo como suma sobre los ocho vértices del prisma. Para una polarización \(\bm{J}=J\,\hat{\bm{z}}\) y semidimensiones \(a\), \(b\) y \(c\), la componente normal resulta
+\begin{equation}
+    B_z(x,y,z)=\frac{J}{4\pi}\sum_{i,j,k=1}^{2}(-1)^{\,i+j+k}
+    \arctan\!\left(\frac{(x-x_i)\,(y-y_j)}{(z-z_k)\,r_{ijk}}\right),
+    \label{eq:bz_prisma}
+\end{equation}
+con \(x_{1,2}=\pm a\), \(y_{1,2}=\pm b\), \(z_{1,2}=\pm c\) y \(r_{ijk}=\left[(x-x_i)^{2}+(y-y_j)^{2}+(z-z_k)^{2}\right]^{1/2}\). Las componentes transversales admiten expresiones análogas de tipo logarítmico. Esta solución ha sido publicada de forma equivalente en diversas ocasiones \cite{yang_1990,engel_herbert_2005,camacho_2013} y es la que implementa \texttt{magpylib}. Fuera del imán se cumple \(\bm{J}=\bm{0}\) y por lo tanto \(\bm{B}=\mu_0\bm{H}\), de manera que la Ecuación~\ref{eq:bz_prisma} proporciona directamente la magnitud registrada por la sonda.
+
+\paragraph{Ajuste de la remanencia.}
+El modelo se construyó con las dimensiones nominales de cada imán (Tabla~\ref{tab:dimensiones_imanes}) y un \textbf{único parámetro libre}: la remanencia \(B_r\). La Ecuación~\ref{eq:bz_prisma} se evaluó en las coordenadas de cada punto de medición, esto es, en \((x,y)=(0,0)\) para el \textit{Centro} y \((x,y)=(\pm 30,\pm 30)\)~mm para las esquinas, con \(z=c+d\), siendo \(d\) la distancia a la cara del imán.
+
+Puesto que \(J\) aparece como factor multiplicativo global en la Ecuación~\ref{eq:bz_prisma}, el campo simulado es lineal en la remanencia. Resulta conveniente entonces evaluar el modelo con remanencia unitaria, lo que proporciona un perfil \(B_z^{\mathrm{u}}(d)\) que depende exclusivamente de la geometría ---dimensiones del imán y coordenadas del punto de medición--- y es por completo independiente del material. El campo simulado para una remanencia arbitraria es entonces \(B_z^{\mathrm{sim}}=B_r\,B_z^{\mathrm{u}}\), y la minimización de la suma de residuos cuadráticos
+\begin{equation}
+    S(B_r)=\sum_{i}\left(B_{z,i}^{\mathrm{med}}-B_r\,B_{z,i}^{\mathrm{u}}\right)^{2}
+    \label{eq:residuos_br}
+\end{equation}
+conduce, por tratarse de una función cuadrática en \(B_r\), a la solución cerrada
+\begin{equation}
+    B_r=\frac{\sum_{i} B_{z,i}^{\mathrm{med}}\,B_{z,i}^{\mathrm{u}}}
+             {\sum_{i} \left(B_{z,i}^{\mathrm{u}}\right)^{2}},
+    \label{eq:br_ajustado}
+\end{equation}
+que no requiere procedimiento iterativo alguno.
 
 El procedimiento se estructuró deliberadamente como un esquema de \textbf{ajuste y validación independiente}:
 
@@ -309,27 +348,29 @@ La razón es que las semillas se disponen sin orientación privilegiada dentro d
 
 Una vez validado el modelo, la obtención de \(|\vec{B}|\) es inmediata, dado que la solución analítica proporciona el campo vectorial completo. Se reportan por lo tanto ambas magnitudes: \(B_z\), por ser la efectivamente medida y validada, y \(|\vec{B}|\), por ser la relevante para la interpretación biológica. Sobre el eje del imán ambas coinciden exactamente, ya que por simetría las componentes transversales se anulan.
 
-Las Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} consignan, para cada nivel, el campo en el centro de la capa de semillas sobre el eje, el intervalo que abarca dicha capa en sentido vertical, el gradiente vertical en su centro y los intervalos de valores que se registran a lo largo de la extensión horizontal de los compartimentos, tanto para \(B_z\) como para \(|\vec{B}|\).
+Las Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} consignan, para cada nivel, el campo en el centro de la capa de semillas sobre el eje, el campo en el centro geométrico de un compartimento, el intervalo que abarca dicha capa en sentido vertical, el gradiente vertical en su centro y los intervalos de valores que se registran a lo largo de la extensión horizontal de los compartimentos, tanto para \(B_z\) como para \(|\vec{B}|\).
+
+Conviene precisar el sentido de las dos primeras columnas de campo. El eje del imán coincide con el eje de la torre, esto es, con la arista en que se encuentran las paredes de los cuatro compartimentos: se trata del punto geométricamente mejor definido y del valor nominal que se adopta para cada nivel, pero en él no se aloja semilla alguna. Por ese motivo se consigna además \(|\vec{B}|\) en el centro geométrico de un compartimento, ubicado a \(65{,}56/4 = 16{,}39\)~mm del eje en ambas direcciones horizontales. Dicho valor es común a los cuatro compartimentos: aun cuando la cara del imán de cerámica es rectangular, el montaje posee simetría de reflexión respecto de los dos planos verticales que contienen al eje, de modo que los cuatro puntos \((\pm d, \pm d)\) resultan equivalentes. El valor es asimismo poco sensible a la posición exacta adoptada: desplazar \(d\) entre 15,5 y 17,5~mm ---esto es, cualquier espesor razonable de las paredes divisorias--- modifica \(|\vec{B}|\) en menos de un 1\% en el imán de cerámica y menos de un 4\% en el de neodimio.
 
 \begin{table}[tbp]
     \centering
     \small
-    \caption[Campo aplicado en cada nivel, imán de cerámica]{\textbf{Campo aplicado en cada nivel, imán de cerámica polo norte.} El campo en el centro corresponde al eje del imán, donde las componentes transversales se anulan por simetría y \(B_z\) resulta positiva en todo el rango considerado, de modo que \(|\vec{B}| = B_z\); el intervalo vertical abarca la base y el tope de la capa de semillas, y los intervalos horizontales, la extensión de los compartimentos.}
+    \caption[Campo aplicado en cada nivel, imán de cerámica]{\textbf{Campo aplicado en cada nivel, imán de cerámica polo norte.} La columna \textit{Eje} corresponde al eje del imán, donde las componentes transversales se anulan por simetría y \(B_z\) resulta positiva en todo el rango considerado, de modo que \(|\vec{B}| = B_z\); la columna \textit{Compart.} consigna \(|\vec{B}|\) en el centro geométrico de un compartimento, valor común a los cuatro por simetría. El intervalo vertical abarca la base y el tope de la capa de semillas sobre el eje, y los intervalos horizontales, la extensión de los compartimentos.}
     \label{tab:dosis_ceramica}
-    \begin{tabular}{ccccccc}
+    \begin{tabular}{cccccccc}
         \toprule
-        & Altura & Centro & Interv. vert. & \(\partial B/\partial z\) & \multicolumn{2}{c}{Intervalo horizontal} \\
-        \cmidrule(lr){6-7}
-        Nivel & (mm) & (mT) & (mT) & (mT/mm) & \(B_z\) (mT) & \(|\vec{B}|\) (mT) \\
+        & Altura & \multicolumn{2}{c}{\(|\vec{B}|\) centro (mT)} & Interv. vert. & \(\partial B/\partial z\) & \multicolumn{2}{c}{Intervalo horizontal} \\
+        \cmidrule(lr){3-4}\cmidrule(lr){7-8}
+        Nivel & (mm) & Eje & Compart. & (mT) & (mT/mm) & \(B_z\) (mT) & \(|\vec{B}|\) (mT) \\
         \midrule
-        1 & 5{,}3  & 76{,}2 & 71{,}9--80{,}4 & \(-1{,}50\) & 73{,}5--82{,}1 & 76{,}3--94{,}6 \\
-        2 & 15{,}1 & 61{,}0 & 56{,}6--65{,}4 & \(-1{,}55\) & 42{,}8--61{,}0 & 57{,}3--62{,}0 \\
-        3 & 24{,}9 & 46{,}7 & 43{,}0--50{,}6 & \(-1{,}33\) & 28{,}0--46{,}7 & 38{,}1--46{,}7 \\
-        4 & 34{,}7 & 35{,}1 & 32{,}3--38{,}1 & \(-1{,}04\) & 20{,}2--35{,}0 & 27{,}0--35{,}0 \\
-        5 & 44{,}5 & 26{,}3 & 24{,}2--28{,}5 & \(-0{,}77\) & 15{,}4--26{,}2 & 19{,}9--26{,}2 \\
-        6 & 54{,}3 & 19{,}8 & 18{,}3--21{,}4 & \(-0{,}56\) & 12{,}1--19{,}8 & 15{,}1--19{,}8 \\
-        7 & 64{,}1 & 15{,}1 & 14{,}0--16{,}3 & \(-0{,}41\) & 9{,}6--15{,}1  & 11{,}7--15{,}1 \\
-        8 & 73{,}9 & 11{,}7 & 10{,}9--12{,}5 & \(-0{,}30\) & 7{,}8--11{,}6  & 9{,}2--11{,}6 \\
+        1 & 5{,}3  & 76{,}2 & 81{,}9 & 71{,}9--80{,}4 & \(-1{,}50\) & 73{,}5--82{,}1 & 76{,}3--94{,}6 \\
+        2 & 15{,}1 & 61{,}0 & 61{,}7 & 56{,}6--65{,}4 & \(-1{,}55\) & 42{,}8--61{,}0 & 57{,}3--62{,}0 \\
+        3 & 24{,}9 & 46{,}7 & 45{,}2 & 43{,}0--50{,}6 & \(-1{,}33\) & 28{,}0--46{,}7 & 38{,}1--46{,}7 \\
+        4 & 34{,}7 & 35{,}1 & 33{,}1 & 32{,}3--38{,}1 & \(-1{,}04\) & 20{,}2--35{,}0 & 27{,}0--35{,}0 \\
+        5 & 44{,}5 & 26{,}3 & 24{,}5 & 24{,}2--28{,}5 & \(-0{,}77\) & 15{,}4--26{,}2 & 19{,}9--26{,}2 \\
+        6 & 54{,}3 & 19{,}8 & 18{,}4 & 18{,}3--21{,}4 & \(-0{,}56\) & 12{,}1--19{,}8 & 15{,}1--19{,}8 \\
+        7 & 64{,}1 & 15{,}1 & 14{,}1 & 14{,}0--16{,}3 & \(-0{,}41\) & 9{,}6--15{,}1  & 11{,}7--15{,}1 \\
+        8 & 73{,}9 & 11{,}7 & 11{,}0 & 10{,}9--12{,}5 & \(-0{,}30\) & 7{,}8--11{,}6  & 9{,}2--11{,}6 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -337,22 +378,22 @@ Las Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} consignan, para c
 \begin{table}[tbp]
     \centering
     \small
-    \caption[Campo aplicado en cada nivel, imán de neodimio]{\textbf{Campo aplicado en cada nivel, imán de neodimio polo norte.} El valor negativo del intervalo horizontal de \(B_z\) en el nivel 1 corresponde a la región de campo de retorno y no implica un campo débil, como muestra la columna de \(|\vec{B}|\).}
+    \caption[Campo aplicado en cada nivel, imán de neodimio]{\textbf{Campo aplicado en cada nivel, imán de neodimio polo norte.} Columnas con el mismo significado que en la Tabla~\ref{tab:dosis_ceramica}. El valor negativo del intervalo horizontal de \(B_z\) en el nivel 1 corresponde a la región de campo de retorno y no implica un campo débil, como muestra la columna de \(|\vec{B}|\).}
     \label{tab:dosis_neodimio}
-    \begin{tabular}{ccccccc}
+    \begin{tabular}{cccccccc}
         \toprule
-        & Altura & Centro & Interv. vert. & \(\partial B/\partial z\) & \multicolumn{2}{c}{Intervalo horizontal} \\
-        \cmidrule(lr){6-7}
-        Nivel & (mm) & (mT) & (mT) & (mT/mm) & \(B_z\) (mT) & \(|\vec{B}|\) (mT) \\
+        & Altura & \multicolumn{2}{c}{\(|\vec{B}|\) centro (mT)} & Interv. vert. & \(\partial B/\partial z\) & \multicolumn{2}{c}{Intervalo horizontal} \\
+        \cmidrule(lr){3-4}\cmidrule(lr){7-8}
+        Nivel & (mm) & Eje & Compart. & (mT) & (mT/mm) & \(B_z\) (mT) & \(|\vec{B}|\) (mT) \\
         \midrule
-        1 & 5{,}3  & 253{,}5 & 224{,}3--283{,}0 & $-10{,}46$ & $-16{,}8$--253{,}5 & 78{,}4--266{,}3 \\
-        2 & 15{,}1 & 160{,}2 & 138{,}8--184{,}4 & \(-8{,}08\)  & 8{,}1--159{,}9     & 55{,}2--160{,}1 \\
-        3 & 24{,}9 & 97{,}1  & 84{,}3--112{,}2  & \(-4{,}93\)  & 13{,}9--96{,}8     & 38{,}9--97{,}0 \\
-        4 & 34{,}7 & 60{,}0  & 52{,}6--68{,}7   & \(-2{,}83\)  & 14{,}0--59{,}8     & 28{,}0--59{,}9 \\
-        5 & 44{,}5 & 38{,}6  & 34{,}3--43{,}7   & \(-1{,}65\)  & 12{,}4--38{,}5     & 20{,}6--38{,}5 \\
-        6 & 54{,}3 & 25{,}9  & 23{,}3--28{,}9   & \(-1{,}00\)  & 10{,}4--25{,}9     & 15{,}4--25{,}9 \\
-        7 & 64{,}1 & 18{,}1  & 16{,}4--20{,}0   & \(-0{,}63\)  & 8{,}6--18{,}1      & 11{,}7--18{,}1 \\
-        8 & 73{,}9 & 13{,}1  & 11{,}9--14{,}3   & \(-0{,}41\)  & 7{,}1--13{,}0      & 9{,}1--13{,}0 \\
+        1 & 5{,}3  & 253{,}5 & 263{,}0 & 224{,}3--283{,}0 & $-10{,}46$ & $-16{,}8$--253{,}5 & 78{,}4--266{,}3 \\
+        2 & 15{,}1 & 160{,}2 & 133{,}6 & 138{,}8--184{,}4 & \(-8{,}08\)  & 8{,}1--159{,}9     & 55{,}2--160{,}1 \\
+        3 & 24{,}9 & 97{,}1  & 77{,}3  & 84{,}3--112{,}2  & \(-4{,}93\)  & 13{,}9--96{,}8     & 38{,}9--97{,}0 \\
+        4 & 34{,}7 & 60{,}0  & 48{,}5  & 52{,}6--68{,}7   & \(-2{,}83\)  & 14{,}0--59{,}8     & 28{,}0--59{,}9 \\
+        5 & 44{,}5 & 38{,}6  & 32{,}2  & 34{,}3--43{,}7   & \(-1{,}65\)  & 12{,}4--38{,}5     & 20{,}6--38{,}5 \\
+        6 & 54{,}3 & 25{,}9  & 22{,}3  & 23{,}3--28{,}9   & \(-1{,}00\)  & 10{,}4--25{,}9     & 15{,}4--25{,}9 \\
+        7 & 64{,}1 & 18{,}1  & 15{,}9  & 16{,}4--20{,}0   & \(-0{,}63\)  & 8{,}6--18{,}1      & 11{,}7--18{,}1 \\
+        8 & 73{,}9 & 13{,}1  & 11{,}8  & 11{,}9--14{,}3   & \(-0{,}41\)  & 7{,}1--13{,}0      & 9{,}1--13{,}0 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -368,6 +409,8 @@ En el imán de cerámica la simplificación de hablar de una dosis única result
 En el imán de neodimio la situación es menos favorable. Su cara mide \(50{,}8 \times 50{,}8\)~mm, esto es, un semiancho de 25{,}4~mm, inferior al del cajón, de modo que los compartimentos se extienden más allá del borde del imán. La variación de \(|\vec{B}|\) dentro de una misma bandeja alcanza el 74\% del valor central en el nivel~1, donde el módulo recorre el intervalo de 78 a 266~mT. Aun cuando el campo conserva un mismo orden de magnitud en toda la muestra, la dispersión resulta considerablemente mayor que en el caso del imán de cerámica.
 
 A ello se añade que dicha región coincide con aquella en que la validación del modelo resultó deficiente (Sección~\ref{subsec:caracterizacion_imanes}), por lo que los extremos del intervalo del neodimio deben tomarse como órdenes de magnitud. Conviene precisar, no obstante, que la validación falló sobre \(B_z\), magnitud mal condicionada en esa zona por resultar de la cancelación parcial de contribuciones de signo contrario: un error milimétrico de posición produce allí un error relativo enorme sobre \(B_z\), pero mucho menor sobre \(|\vec{B}|\), que varía de manera considerablemente más suave. Cabe esperar, en consecuencia, que la predicción del módulo sea más confiable de lo que sugiere el \(R^2\) obtenido sobre la componente normal.
+
+La comparación entre las columnas \textit{Eje} y \textit{Compart.} permite precisar hasta qué punto el valor nominal representa la exposición efectiva de las semillas, en lugar de un punto del montaje que ninguna de ellas ocupa. En el imán de cerámica el campo en el centro de los compartimentos se mantiene entre el 93\% y el 108\% del valor sobre el eje, de modo que el valor nominal describe adecuadamente lo que las muestras experimentaron. En el de neodimio, en cambio, desciende hasta el 80\% en los niveles 3 y 4: allí el valor nominal sobreestima de manera sistemática la exposición real, en aproximadamente un quinto. El nivel~1 del neodimio ilustra además con particular claridad por qué la magnitud pertinente es el módulo: en el centro del compartimento \(B_z\) desciende a 223~mT frente a los 253~mT del eje, mientras que \(|\vec{B}|\) asciende a 263~mT, por hallarse el punto en la región donde las líneas ya se han inclinado hacia el borde del imán.
 
 En consecuencia, el valor sobre el eje se adopta como valor nominal de cada nivel, y los intervalos se reportan junto a él para explicitar el grado de idealización que dicho valor supone. En la interpretación de los resultados debe contemplarse que el imán de cerámica define una condición de exposición mejor determinada que el de neodimio, y que la dispersión relativa disminuye de manera sistemática con la distancia en ambos casos: los niveles superiores, aunque expuestos a campos más débiles, constituyen condiciones más homogéneas.
 
