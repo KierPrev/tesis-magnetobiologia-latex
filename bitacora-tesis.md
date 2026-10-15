@@ -6,6 +6,12 @@
 
 ---
 
+### Pendiente revisión de Leo (sí o sí)
+Cambiá "Cuadros" por "Tablas" (esto se hace con un sólo comando para todo el documento).
+Fijate los comentarios/sugerencias agregados
+Naturalmente, cuando tengas los experimentos terminados, incluílos en resultados.
+Luego de los resultados suele ir una sección de discusión, que también puede ser "Discusión y conclusiones" o incluso "Discusión, conclusiones y trabajo a futuro".
+
 ## Para la reunión con Leo
 
 ### Inhomogeneidad del campo dentro de una misma bandeja
@@ -101,6 +107,19 @@ Los datos ya salen de `compute_treatment_doses.py`; habría que agregar un scrip
 El marco teórico (Sección 3.3) explica que el RPM es altamente sensible en **campos bajos (~1 mT)** y tiende a la saturación o a comportamiento no lineal en **campos altos**. Los imanes usados exponen a **cientos de mT** — régimen de campo alto.
 
 Conectar explícitamente esa distinción en la Discusión. Si los resultados muestran respuestas no monótonas —o nulas—, la justificación teórica del capítulo 3 es la herramienta para explicarlo. No es excusa post-hoc: ya está escrita antes de los resultados.
+
+### Hormesis y criterio de germinación
+
+- Mencionar **hormesis** en el documento final.
+- Mencionar el **criterio de germinación** usado (por ejemplo, se consideró germinada una semilla al ver una raíz de ~2 mm); aclarar que esto se hizo a ojo, no se midió.
+
+### Verificar referencias bibliográficas
+
+- Chequear que **todas las referencias citadas sean reales** (no inventadas/alucinadas) y que **coincidan con lo que se afirma** en la oración o párrafo donde se citan.
+
+### Para la presentación (PowerPoint)
+
+- Transmitir que el proceso fue de **ir descubriendo cosas y adaptarse** sobre la marcha (cambios de protocolo, imprevistos, ajustes de diseño) — encuadrarlo como una **fortaleza**, no como algo a ocultar.
 
 ### Menor
 
