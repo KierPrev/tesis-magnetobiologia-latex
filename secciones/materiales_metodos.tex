@@ -314,15 +314,65 @@ Corresponde distinguir esta torre de exposición del arreglo de germinación. Co
 El procedimiento seguido en cada experimento fue el siguiente:
 
 \begin{enumerate}
-    \item \textbf{Dosificación y armado.} Se cargan 20 semillas de maíz por muestra mediante el dispositivo de celdas descrito anteriormente, que fija esa cantidad por construcción geométrica. Las semillas se disponen sobre una lámina de papel absorbente de cocina y se cubren con una segunda lámina, de modo que el lote queda contenido entre ambas. Las láminas se cortan con idénticas dimensiones para todas las muestras, a fin de que su capacidad de retención de agua sea equivalente entre unidades experimentales.
+    \item \textbf{Dosificación y armado.} Se carga el lote de semillas de maíz de cada muestra mediante uno de los dos dispositivos descritos anteriormente, según la etapa del trabajo: la cuchara medidora en los experimentos iniciales, que dosifica por volumen con una dispersión de \(\sigma = 2{,}08\) semillas, y el medidor de celdas en los posteriores, que fija exactamente 20 semillas por construcción geométrica \pendiente{confirmar la fecha exacta del reemplazo; la dispersión del peso seco por bandeja lo ubica en el experimento del 04/08/2026}. Las semillas se disponen sobre una lámina de papel absorbente de cocina y se cubren con una segunda lámina, de modo que el lote queda contenido entre ambas. Las láminas se cortan con idénticas dimensiones para todas las muestras, a fin de que su capacidad de retención de agua sea equivalente entre unidades experimentales.
     \item \textbf{Pesaje en seco.} Se tara la balanza con el cajón vacío y su papel, y a continuación se incorporan las semillas: la lectura resultante corresponde a la masa seca del lote, sin intervención del recipiente ni del papel.
     \item \textbf{Exposición.} Los cajones se apilan en la torre sobre el imán y permanecen allí durante \textbf{1~h}. Las muestras de control permanecen ese mismo lapso alejadas del montaje.
-    \item \textbf{Hidratación.} Concluida la exposición, se suministran 5~mL de agua por muestra.
+    \item \textbf{Hidratación.} Concluida la exposición, se suministra a cada muestra el volumen de agua correspondiente a su régimen hídrico: 5~mL en los experimentos de saturación y 3~mL en los de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}).
     \item \textbf{Germinación.} Las muestras se distribuyen aleatoriamente en el sistema de germinación y permanecen allí durante \(72 \pm 1\)~h a una temperatura de 25~\textdegree C.
     \item \textbf{Pesaje húmedo.} Transcurridas las 72~h se tara la balanza con el cajón completo ---semillas y papel húmedo--- y se retiran las semillas. La lectura resultante, de signo negativo, corresponde en valor absoluto a la masa húmeda del lote.
 \end{enumerate}
 
 El procedimiento de tara empleado en ambos pesajes tiene una consecuencia metodológica que conviene explicitar: al descontar el cajón y el papel en el mismo acto de medición, \textbf{el agua retenida por el papel absorbente no interviene en la variable de respuesta}. Lo que se registra es la masa del lote de semillas, no la del conjunto hidratado. La variable de respuesta se construye a partir de ambos pesajes según la Ecuación~\ref{eq:pct_change}.
+
+\subsection{Régimen hídrico}
+\label{subsec:regimen_hidrico}
+
+El volumen de agua suministrado en la etapa de hidratación no fue el mismo en todos los experimentos: constituye un \textbf{segundo factor del diseño}, con dos niveles. La Tabla~\ref{tab:regimen_hidrico} resume la correspondencia entre cada grupo de experimentos y su régimen.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Régimen hídrico de cada grupo de experimentos]{\textbf{Régimen hídrico de cada grupo de experimentos.} Volumen de agua suministrado por muestra en la etapa de hidratación del protocolo.}
+\label{tab:regimen_hidrico}
+\begin{tabular}{@{}llcl@{}}
+\toprule
+Grupo & Fechas & Agua & Condición \\
+\midrule
+Cerámica N        & 31/03, 08/06, 22/06 & 5~mL & saturación \\
+Neodimio N        & 26/06, 21/07, 27/07 & 5~mL & saturación \\
+Neodimio N        & 04/08, 07/09, 11/09 & 3~mL & estrés hídrico \\
+Control negativo  & 04/04, 28/04, 07/05 & 5~mL & saturación \\
+Control positivo  & 18/05, 22/05, 03/06 & \multicolumn{2}{l}{2, 5 y 6~mL (factor deliberado)} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item Todas las fechas corresponden al año 2026.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\paragraph{Motivación del régimen de estrés hídrico.}
+
+Los tres primeros grupos de la tabla se realizaron en condiciones de saturación de agua. Una vez concluido el análisis de los experimentos con imán de cerámica, que no detectó efecto alguno sobre la imbibición, se incorporó un régimen de \textbf{estrés hídrico} de 3~mL, bajo la hipótesis de que un efecto del campo magnético podría manifestarse cuando la disponibilidad de agua es limitante y no cuando el sistema se encuentra saturado. Esta expectativa es consistente con la literatura revisada en la Sección~\ref{subsec:estres_abiotico}, que reporta efectos de magnitud mayor en condiciones de estrés abiótico que en condiciones óptimas.
+
+Corresponde declarar con precisión el momento de esta decisión: el régimen de 3~mL \textbf{no estaba previsto en el diseño inicial} y se incorporó con posterioridad al resultado nulo del primer grupo. Esto no afecta la validez de la pre-especificación del plan de análisis (Sección~\ref{subsec:plan_analisis}), que se fijó antes de examinar los datos de los experimentos con neodimio y se aplicó a ellos sin modificación; se trata de dos cuestiones distintas, y conviene no confundirlas. Lo que se agregó a posteriori fue una \emph{condición experimental nueva}, motivada por la literatura; lo que se mantuvo fijo de antemano fue el \emph{procedimiento de análisis} con que se evaluaría.
+
+\paragraph{La magnitud del efecto del agua.}
+
+El volumen de agua es, con diferencia, la variable más influyente del ensayo. Los experimentos de control positivo (Sección~\ref{subsec:ctrl_positivo}) cuantifican su efecto en \(+0{,}064\) de imbibición por cada mililitro suministrado, de modo que la diferencia entre 5 y 3~mL representa un desplazamiento de la línea de base muy superior a cualquier efecto atribuible al tratamiento magnético. Por esta razón los dos regímenes se analizan como \textbf{grupos separados} y nunca se agrupan en un mismo modelo: hacerlo introduciría en la comparación una fuente de variación que excede en un orden de magnitud al efecto de interés.
+
+\paragraph{Discontinuidad de protocolo asociada.}
+
+El cambio de régimen hídrico coincidió con otras modificaciones del protocolo, que por honestidad metodológica conviene enumerar, ya que impiden atribuir al agua de manera aislada cualquier diferencia observada entre ambos conjuntos de experimentos. A partir del experimento del 04/08/2026, simultáneamente:
+
+\begin{enumerate}
+    \item el volumen de agua se redujo de 5 a 3~mL;
+    \item la dosificación de semillas pasó de la cuchara volumétrica al medidor de celdas, de modo que el número de semillas por muestra dejó de ser aproximado y quedó fijado en exactamente 20;
+    \item se incorporó el \textbf{conteo de germinación}, ausente en los experimentos anteriores;
+    \item se incorporó el registro fotográfico sistemático para la medición de radículas.
+\end{enumerate}
+
+La segunda de estas modificaciones es verificable en los propios datos: el coeficiente de variación del peso seco por muestra cae de valores de entre 3 y 10\,\% en los experimentos previos a valores de entre 2{,}5 y 3{,}2\,\% a partir de esa fecha, un rango compatible con el que cabe esperar de un lote de exactamente veinte semillas. Esta mejora en la precisión del armado explica, a su vez, que la sensibilidad del ensayo sea apreciablemente mayor en el grupo de 3~mL que en los de 5~mL (Sección~\ref{subsec:plan_analisis}).
 
 \subsection{Campo magnético aplicado en cada nivel de tratamiento}
 \label{subsec:dosis}
@@ -454,7 +504,13 @@ Dos consideraciones atenúan, sin eliminar, este riesgo. En primer lugar, la exp
 
 Con el fin de asegurar un registro sistemático de la información experimental, se generó para cada ensayo una estructura de directorios y archivos en la que se almacenaron tanto los datos descriptivos del experimento como los resultados obtenidos durante las distintas etapas del trabajo.
 
-En particular, se registró la identificación de cada bandeja, su posición dentro del montaje experimental, la asignación correspondiente dentro del esquema de tratamiento y metadatos asociados al experimento, tales como el imán utilizado y el polo enfrentado a las semillas. Asimismo, se incorporó la posibilidad de registrar pesos iniciales y finales de cada unidad experimental, facilitando una organización estructurada de la información.
+En particular, se registró la identificación de cada muestra, su posición dentro del montaje experimental, la asignación correspondiente dentro del esquema de tratamiento y metadatos asociados al experimento, tales como el imán utilizado, el polo enfrentado a las semillas y el volumen de agua del régimen hídrico. Asimismo, se incorporó la posibilidad de registrar pesos iniciales y finales de cada unidad experimental, facilitando una organización estructurada de la información.
+
+\paragraph{Variables controladas con registro parcial.}
+
+Dos condiciones ambientales merecen una precisión, porque su grado de control y su grado de \emph{registro} no coinciden. La germinación se realizó en una cámara termostatizada a 25~\textdegree C mediante control PID, de modo que la temperatura estuvo efectivamente regulada en todos los experimentos; sin embargo, el registro de su evolución temporal se conservó únicamente en los dos primeros ensayos. El control, por lo tanto, está establecido por el dispositivo, pero la verificación documentada cubre solo una parte de las fechas. El volumen de agua, por su parte, quedó fijado por el protocolo de cada campaña y fue incorporado con posterioridad a los metadatos de los experimentos, al advertirse que no constituía un campo registrado pese a ser la variable de mayor influencia sobre la respuesta (Sección~\ref{subsec:regimen_hidrico}).
+
+La incorporación de ambos registros al protocolo de adquisición ---no solo al control--- es una recomendación que este trabajo deja planteada para ensayos posteriores.
 
 Las fotografías adquiridas durante la etapa de germinación también fueron almacenadas de manera ordenada dentro de la estructura del proyecto, de modo de conservar la trazabilidad entre las imágenes, las bandejas y los resultados del análisis posterior.
 
@@ -501,11 +557,21 @@ La Figura~\ref{fig:software_radiculas} presenta una captura de pantalla de la in
 
 \paragraph{Alcance efectivo de la medición de radículas.}
 
-Corresponde precisar el grado en que esta herramienta fue empleada a lo largo del trabajo. La medición de longitud de radículas se aplicó de manera sistemática al primer experimento, sobre el cual se validó el funcionamiento del procesamiento automático. En los experimentos posteriores la adquisición fotográfica fue discontinuada.
+Corresponde precisar en qué grupos de experimentos esta herramienta aportó datos efectivamente analizables, porque no fue en todos.
 
-La razón es de orden práctico. El registro fotográfico exige, por cada experimento, disponer las 27 bandejas de a una en el \textit{photobox}, capturar las imágenes bajo condiciones controladas y transferirlas y procesarlas posteriormente, todo ello dentro de la misma jornada en que debe realizarse el pesaje a las 72~h. El tiempo requerido resultó desproporcionado respecto de la contribución de esta variable al objetivo del trabajo, dado que la variable de respuesta primaria es el peso húmedo (Ecuación~\ref{eq:pct_change}) y no la longitud de radícula. Frente a la alternativa de reducir el número de experimentos para sostener ambas mediciones, se priorizó maximizar la cantidad de réplicas de la variable primaria, decisión consistente con la limitación de potencia estadística señalada más adelante.
+El registro fotográfico es exigente en tiempo: requiere, por cada experimento, disponer las 27 muestras de a una en el \textit{photobox}, capturar las imágenes bajo condiciones controladas y transferirlas y procesarlas, todo ello dentro de la misma jornada en que debe realizarse el pesaje a las 72~h. En las etapas iniciales del trabajo esa carga resultó incompatible con el resto del protocolo y la adquisición se realizó de manera intermitente. Solo a partir de la incorporación del régimen de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}) el registro pasó a ser sistemático.
 
-En consecuencia, la longitud de radícula no integra el análisis estadístico de los tratamientos, y la herramienta descrita debe entenderse como un desarrollo metodológico disponible para trabajos futuros, validado sobre un experimento, antes que como fuente de datos del presente análisis. La extensión de la medición de radículas a la totalidad de los experimentos ---junto con el registro sistemático de temperatura--- constituye una línea natural de continuidad, particularmente si se dispusiera de un procedimiento de captura menos demandante en tiempo.
+La consecuencia es una disponibilidad desigual. En el grupo de \textbf{neodimio a 3~mL} las tres fechas cuentan con fotografías procesadas, lo que permite analizar la variable: se dispone de 77 muestras con radículas medidas. En el grupo de \textbf{cerámica}, en cambio, solo el experimento del 31/03 tiene radículas medidas; el del 08/06 produjo un archivo sin mediciones y el del 22/06 no tiene fotografías. Con una sola fecha, el bloque coincidiría con la fecha misma y la comparación dejaría de ser la que se aleatorizó, de modo que el análisis de radícula se omite para ese grupo en lugar de realizarse sobre una base que no corresponde al diseño. Los grupos de \textbf{neodimio a 5~mL} no cuentan con registro fotográfico.
+
+\paragraph{Escalas no comparables entre fechas.}
+
+Aun en el grupo donde la variable está disponible, el procesamiento no es homogéneo entre fechas, y esto condiciona cómo debe leerse el resultado. Las imágenes del 07/09 son exportaciones reducidas, de \(960 \times 1280\) píxeles, frente a los \(4618 \times 3464\) de las otras dos fechas, y el desempeño del algoritmo de segmentación difiere en consecuencia: el 04/08 sobresegmenta, detectando del orden de 69 objetos por muestra para veinte semillas y arrojando una mediana de 2{,}5~mm; el 07/09 subdetecta, con unos 11 objetos y una mediana de 9{,}6~mm; el 11/09 resulta el más verosímil, con unos 24 objetos y una mediana de 5{,}6~mm.
+
+El efecto es cuantificable: el término de bloque en el modelo de radícula alcanza \(F_{8,60} = 37{,}2\) (\(p < 0{,}001\)***), muy superior a cualquier efecto atribuible al tratamiento. Por esta razón la variable se analiza y se grafica \textbf{centrada por bloque}, es decir, como desvío respecto del promedio del bloque al que pertenece cada muestra, que es exactamente la operación que realiza el término \(C(\text{bloque})\) del modelo. En milímetros absolutos, las distancias entre fechas dominarían la representación y ocultarían el efecto de interés.
+
+Debe tenerse presente, por lo tanto, que el largo de radícula constituye en este trabajo una variable de \textbf{baja potencia}, con un efecto mínimo detectable del 26{,}4\,\%, y que su eje no admite lectura en milímetros absolutos. La media absoluta del control, de 6{,}42~mm, se conserva como referencia de escala.
+
+La homogeneización del procedimiento de captura ---junto con el registro sistemático de temperatura, disponible solo en los dos primeros experimentos--- constituye una línea natural de continuidad para trabajos futuros.
 
 \subsection{Plan de análisis estadístico}
 \label{subsec:plan_analisis}
@@ -514,9 +580,15 @@ Con el objeto de evitar que las decisiones analíticas quedaran condicionadas po
 
 Esta pre-especificación responde a un riesgo concreto en diseños con múltiples grupos: si la métrica de respuesta, el criterio de exclusión de valores atípicos o la estructura del contraste se eligen después de observar los datos, la tasa de error de tipo I deja de ser la nominal, ya que cada elección constituye una comparación implícita adicional.
 
-\paragraph{Variable de respuesta.}
+\paragraph{Unidad experimental.}
 
-La variable primaria es el \textbf{cambio porcentual de peso} de cada bandeja entre el estado seco inicial y las 72~h de imbibición,
+La unidad experimental es la \textbf{muestra}, es decir, el lote de semillas alojado en un compartimento, y en ningún caso la semilla individual. Las veinte semillas de una muestra comparten el mismo nivel de tratamiento, el mismo volumen de agua y la misma posición en el sistema de germinación, de modo que no constituyen réplicas independientes: analizarlas por separado sería pseudo-replicación, y produciría intervalos de confianza artificialmente estrechos al tratar como veinte observaciones lo que es una sola. Todas las variables de respuesta se agregan, por lo tanto, a nivel de muestra antes de entrar en los modelos.
+
+\paragraph{Variables de respuesta.}
+
+Se analizan tres variables, con distinta disponibilidad según el grupo de experimentos.
+
+La \textbf{variable primaria} es la \textbf{imbibición a 72~h}, definida como el cambio porcentual de peso de cada muestra entre el estado seco inicial y las 72~h,
 
 \begin{equation}
     \Delta\% = \frac{w_{\text{final}} - w_{\text{inicial}}}{w_{\text{inicial}}} \times 100 ,
@@ -525,13 +597,32 @@ La variable primaria es el \textbf{cambio porcentual de peso} de cada bandeja en
 
 \noindent donde la normalización por el peso inicial compensa las diferencias de masa entre bandejas. Se evaluó como alternativa el logaritmo de la razón de pesos, \(\ln(w_{\text{final}}/w_{\text{inicial}})\), habitual cuando el proceso subyacente es multiplicativo o cuando la dispersión crece con la media. Sobre los tratamientos con imán de cerámica ambas métricas resultaron equivalentes en cuanto a homogeneidad de varianzas (prueba de Brown-Forsythe: \(p = 0{,}708\) y \(p = 0{,}689\) respectivamente) y produjeron estadísticos \(F\) prácticamente indistinguibles. Ante esa equivalencia se adoptó el cambio porcentual como métrica primaria por su interpretación directa, y el logaritmo de la razón se conserva como \textbf{verificación de robustez}: se reporta junto a la métrica primaria, y toda discrepancia cualitativa entre ambas se señala explícitamente.
 
-\paragraph{Estructura del contraste.}
+Conviene precisar qué mide esta variable y qué no. A las 72~h el peso registrado combina el agua físicamente absorbida por el grano con la que incorpora la plántula al iniciar su crecimiento, de modo que la magnitud es una \textbf{medida de absorción de agua} y no de biomasa producida. La determinación de biomasa requeriría peso seco final, lo que implica secado en estufa y, por lo tanto, la destrucción de la muestra. Por esta razón la variable se denomina imbibición a lo largo de todo el trabajo, y no crecimiento ni biomasa.
 
-El contraste primario enfrenta cada condición de tratamiento contra las \textbf{tres bandejas control internas de su propio experimento}, es decir, del mismo día, el mismo lote de semillas y las mismas condiciones ambientales.
+Las dos variables restantes son \textbf{secundarias}:
 
-Esta elección no es una preferencia metodológica abstracta, sino una consecuencia de la magnitud del efecto de experimento observado. En los tres experimentos con imán de cerámica, el cambio porcentual medio fue de 56{,}4\%, 47{,}8\% y 44{,}0\% respectivamente, con un efecto de experimento altamente significativo (\(F_{2,70} = 62{,}2\), \(p < 0{,}001\)***). La variación entre fechas supera holgadamente cualquier diferencia atribuible al tratamiento, de modo que agrupar réplicas de distintos experimentos sin contemplar su origen introduciría una fuente de variabilidad que enmascararía el efecto de interés. El contraste contra controles internos cancela dicha componente por construcción.
+\begin{itemize}
+    \item \textbf{Germinación}: número de semillas germinadas sobre las veinte de la muestra, expresado como proporción. Solo está disponible en el grupo de neodimio a 3~mL: en los experimentos anteriores el conteo no se registró (Sección~\ref{subsec:regimen_hidrico}). No se trata de un dato pendiente de procesamiento, sino de una medición que no se realizó. Su denominador es exactamente veinte porque esas tres fechas son las que emplearon el medidor de celdas; extenderla a los experimentos dosificados con cuchara requeriría conocer el número efectivo de semillas de cada muestra, que no se registró.
+    \item \textbf{Largo de radícula}: mediana del largo de las radículas de cada muestra, obtenida por análisis de imagen. Solo está disponible en el grupo de neodimio a 3~mL, por las razones detalladas más adelante en esta misma sección.
+\end{itemize}
+
+La asimetría en la disponibilidad de variables entre grupos es una limitación del trabajo y no un criterio de selección: ningún grupo quedó fuera del análisis por el resultado que arrojó, y las variables que faltan son las que no se midieron.
+
+\paragraph{Estructura del contraste: bloques completos aleatorizados.}
+
+El diseño es de \textbf{bloques completos aleatorizados}. El bloque se define como la combinación de \textbf{fecha de experimento y piso de germinación} ---por ejemplo, \texttt{20260804-A}---, de modo que cada experimento aporta tres bloques y cada grupo de tres fechas aporta nueve. Dentro de cada bloque están representados los nueve niveles de tratamiento exactamente una vez: los ocho niveles expuestos y el control interno. Todos los modelos incluyen, en consecuencia, el término \(C(\text{bloque})\), y el contraste del tratamiento se evalúa \emph{dentro} del bloque.
+
+Esta elección no es una preferencia metodológica abstracta, sino una consecuencia de la magnitud del efecto de bloque observado. En los tres experimentos con imán de cerámica, la imbibición media fue de 56{,}4\%, 47{,}8\% y 44{,}0\% respectivamente, y el término de bloque resulta altamente significativo (\(F_{8,64} = 18{,}4\), \(p < 0{,}001\)***). La variación entre bloques supera holgadamente cualquier diferencia atribuible al tratamiento, de modo que agrupar réplicas sin contemplar su origen introduciría una fuente de variabilidad que enmascararía el efecto de interés. El bloqueo la cancela por construcción.
+
+Corresponde señalar que esa variabilidad \textbf{no presenta una tendencia temporal}. A volumen de agua constante (5~mL), la imbibición media de las muestras control oscila entre 0{,}38 y 0{,}54 a lo largo de los nueve experimentos realizados en ese régimen, sin dirección definida, y los dos grupos de imán a 5~mL arrojan medias de control prácticamente coincidentes (0{,}4878 y 0{,}4872) pese a haberse realizado en meses distintos. No se trata, por lo tanto, de una deriva del sistema, sino de variabilidad entre fechas, que es precisamente lo que el bloqueo está diseñado para absorber.
+
+Sobre esta estructura se define el \textbf{contraste primario}, de un grado de libertad: el promedio de los ocho niveles expuestos frente al control interno, ajustado por bloque. Se reportan además los ocho contrastes individuales de cada nivel contra el control, con corrección por multiplicidad, y un contraste de tendencia dosis-respuesta frente al logaritmo de la intensidad de campo.
 
 Los controles negativos combinados se emplean como referencia de variabilidad basal y como validación del montaje, no como grupo de comparación del tratamiento.
+
+\paragraph{Nomenclatura.}
+
+Para evitar ambigüedades conviene fijar dos términos que designan ejes distintos del montaje y que podrían confundirse. Se denomina \textbf{nivel de tratamiento} a la posición en la torre de exposición, numerada de 1 a 9, que determina la dosis de campo recibida: el nivel 1 es el más intenso, los niveles 1 a 8 son los expuestos y el \textbf{nivel 9 es siempre el control interno}, que no recibe campo. Se denomina \textbf{piso} a cada una de las tres bandas del sistema de germinación, identificadas con las letras A, B y C, que no guardan relación con la dosis. Un enunciado como «el nivel 3» se refiere, por lo tanto, a una intensidad de campo, y «el piso C» a una ubicación física durante la germinación.
 
 \paragraph{Tratamiento de valores atípicos.}
 
@@ -546,14 +637,63 @@ Para cada conjunto de datos se verifican los supuestos antes de aplicar las prue
 \begin{itemize}
     \item \textbf{Homogeneidad de varianzas:} prueba de Brown-Forsythe (Levene centrada en la mediana), por su robustez frente a desviaciones de la normalidad. Si no se satisface, el análisis \textit{post-hoc} se realiza mediante Games-Howell en lugar de Tukey HSD.
     \item \textbf{Normalidad de residuos:} prueba de Shapiro-Wilk sobre los residuos del modelo. Ante desviaciones apreciables se reporta adicionalmente la prueba no paramétrica de Kruskal-Wallis como verificación.
-    \item \textbf{Comparaciones múltiples:} los valores \(p\) de las comparaciones entre condiciones se corrigen mediante el procedimiento de Benjamini-Hochberg para control de la tasa de falsos descubrimientos.
+    \item \textbf{Comparaciones múltiples:} los valores \(p\) de los ocho contrastes de cada nivel contra el control se corrigen mediante el procedimiento de \textbf{Holm}, que controla la tasa de error por familia. Se eligió este criterio, y no uno de control de la tasa de falsos descubrimientos como Benjamini-Hochberg, porque la pregunta que se formula es si \emph{algún} nivel de campo difiere del control: en ese planteo lo que debe acotarse es la probabilidad de declarar al menos un falso positivo en el conjunto, no la proporción esperada de falsos positivos entre los declarados. En todas las tablas se informan tanto el valor \(p\) sin corregir como el corregido, y la interpretación se apoya siempre en el segundo.
 \end{itemize}
+
+La distinción no es cosmética. En el grupo de neodimio a 3~mL, el nivel 3 (77~mT) presenta en el largo de radícula un valor \(p\) sin corregir de 0{,}012, que pasa a 0{,}093 tras la corrección de Holm. Es la corrección por multiplicidad la que determina que ese valor no constituya un hallazgo, y la que impide presentarlo como tal.
 
 Se adopta un nivel de significación \(\alpha = 0{,}05\). En todas las tablas se emplea la convención *~(\(p < 0{,}05\)), **~(\(p < 0{,}01\)) y ***~(\(p < 0{,}001\)), indicándose explícitamente ``n.s.'' cuando no se alcanza significancia.
 
-\paragraph{Consideración sobre la potencia estadística.}
+\paragraph{Desviaciones de los supuestos y del diseño.}
 
-Con \(n = 9\) réplicas por condición, el diseño posee una potencia limitada para detectar efectos de magnitud pequeña. En consecuencia, un resultado no significativo debe interpretarse como ausencia de evidencia de un efecto detectable bajo estas condiciones, y no como evidencia de ausencia de efecto. Por esta razón se reportan, junto con los valores \(p\), los tamaños de efecto y sus intervalos de confianza, que resultan más informativos que la sola decisión binaria de significancia. La validación de sensibilidad del ensayo mediante los experimentos de control positivo, en los que se varió deliberadamente la cantidad de agua suministrada, es lo que permite atribuir contenido informativo a un eventual resultado nulo: acredita que el procedimiento de medición es capaz de detectar una modificación conocida del crecimiento.
+Los supuestos no se satisfacen por igual en todos los grupos, y las desviaciones se declaran antes de presentar los resultados para que no se las descubra al pie de una tabla.
+
+El grupo de \textbf{neodimio a 3~mL} satisface los supuestos sin reparos: la prueba de Shapiro-Wilk sobre los residuos arroja \(p = 0{,}55\) y la de Levene entre niveles \(p = 0{,}73\), y sus bloques están completos y balanceados.
+
+El grupo de \textbf{cerámica} presenta dos desviaciones. La primera es que los residuos se apartan de la normalidad (Shapiro-Wilk, \(p = 0{,}0003\)). La segunda es que sus bloques \textbf{no están balanceados}: en el experimento del 31/03 hay celdas del diseño sin muestra y celdas con dos, de modo que la correspondencia de un nivel por bloque no se cumple exactamente. Ninguna de las dos invalida el análisis, por tres razones que conviene explicitar: el tamaño de muestra es de 81 unidades, lo que vuelve robusta la inferencia sobre una media por el teorema central del límite; el contraste primario es de un solo grado de libertad, el caso en que esa robustez es mayor; y el análisis de sensibilidad ---con y sin el término de bloque, con y sin el término de posición--- desplaza la estimación del efecto entre +1{,}43\,\% y +0{,}60\,\% sin alterar la conclusión en ninguna de las cuatro especificaciones. Aun así, la inferencia sobre este grupo debe considerarse menos firme que la de los demás, y el margen de equivalencia se evalúa con esa reserva.
+
+El grupo de \textbf{neodimio a 5~mL} presenta una desviación leve de la normalidad (\(p = 0{,}025\)) con bloques completos y balanceados.
+
+En el análisis de \textbf{radícula} los bloques tampoco están completos, por las muestras sin radículas medidas, de modo que el grupo queda en 77 unidades en lugar de 81.
+
+\paragraph{Inferencia de equivalencia.}
+
+Un contraste no significativo, por sí solo, no permite concluir nada: es compatible tanto con la ausencia de efecto como con un efecto real que el diseño no tuvo potencia para detectar. Dado que la hipótesis bajo examen admite como respuesta legítima que el campo magnético no produzca efecto alguno, el plan de análisis incorpora un procedimiento que permite distinguir ambas situaciones en lugar de dejarlas confundidas.
+
+El procedimiento adoptado es el de las \textbf{dos pruebas unilaterales} (\textit{two one-sided tests}, TOST) \cite{schuirmann_1987, lakens_2017}. En lugar de contrastar la hipótesis nula de efecto exactamente cero ---que nunca puede acreditarse--- se fija de antemano un margen de relevancia \(\pm\delta\) y se contrastan dos hipótesis nulas: que el efecto sea menor que \(-\delta\) y que sea mayor que \(+\delta\). Si ambas se rechazan, el efecto queda \emph{acotado} dentro del margen, lo que equivale a verificar que el intervalo de confianza al 90\,\% esté contenido enteramente en \((-\delta, +\delta)\). La conclusión que se obtiene no es que el efecto sea nulo, sino que, si existe, es menor que \(\delta\).
+
+\paragraph{Margen de relevancia.}
+
+Se adoptó un margen de \(\pm 10\)\,\% relativo a la media del control, fijado de antemano como umbral de \textbf{relevancia biológica}: un efecto menor que ese valor se considera irrelevante para los fines prácticos que motivan el interés en el magnetopriming, con independencia de que pudiera alcanzar significancia estadística con un tamaño de muestra suficientemente grande.
+
+La elección de ese valor se apoya en las magnitudes que reporta la literatura revisada en el Capítulo~\ref{cap:antecedentes}, que son considerablemente mayores. El meta-análisis de Tapia-Belmonte et al. \cite{tapia_belmonte_2023} informa mejoras del 12{,}8\,\% en germinación para campos uniformes y del 123\,\% en peso fresco para campos no uniformes; Kataria et al. \cite{kataria_2017} reportan, en la variable más directamente comparable con la de este trabajo, un incremento del 62\,\% en la absorción de agua bajo estrés salino. Un margen del 10\,\% es, por lo tanto, \textbf{conservador} respecto de los efectos que se pretende poder descartar: queda por debajo del menor de los valores citados, de modo que acreditar equivalencia dentro de ese margen excluye los efectos de la magnitud que la literatura atribuye al tratamiento.
+
+\paragraph{Efecto mínimo detectable.}
+
+Con \(n = 9\) réplicas por nivel de tratamiento, el diseño posee una potencia limitada para efectos pequeños, y esa limitación se declara de manera cuantitativa. Para cada grupo y cada variable se reporta el \textbf{efecto mínimo detectable} con una potencia del 80\,\%, que expresa con precisión qué magnitud el ensayo estaba en condiciones de ver. Los valores obtenidos sobre la variable primaria son del 8{,}19\,\% en el grupo de cerámica a 5~mL, del 6{,}87\,\% en neodimio a 5~mL y del 3{,}40\,\% en neodimio a 3~mL; la diferencia entre ellos refleja la mejora en la precisión del armado descrita en la Sección~\ref{subsec:regimen_hidrico}. En el largo de radícula, en cambio, el efecto mínimo detectable asciende al 26{,}4\,\%, de modo que esa variable solo permite descartar efectos de gran magnitud y se interpreta en consecuencia.
+
+Junto con los valores \(p\) se reportan siempre los tamaños de efecto y sus intervalos de confianza, más informativos que la sola decisión binaria de significancia.
+
+\paragraph{El papel del control positivo.}
+
+Lo anterior establece qué se puede concluir de los datos, pero no acredita que el instrumento mida. Esa función la cumplen los experimentos de control positivo (Sección~\ref{subsec:ctrl_positivo}), en los que se varió deliberadamente la cantidad de agua suministrada: si un procedimiento no detecta una modificación conocida y de magnitud conocida del fenómeno que pretende medir, ningún resultado nulo que arroje es informativo. Acreditar la sensibilidad del ensayo es lo que permite sostener que un resultado nulo constituye evidencia sobre el tratamiento y no un simple reflejo de la insensibilidad del método.
+
+\section{Experimentos control positivo}
+\label{subsec:ctrl_positivo}
+
+Los experimentos de control positivo cumplen una función distinta de la de los demás: no buscan detectar un efecto nuevo, sino \textbf{acreditar que el procedimiento de medición es capaz de detectar un efecto real cuando este existe}. Sin esa verificación, un resultado nulo sobre el tratamiento magnético sería indistinguible de la insensibilidad del método, y por lo tanto no informativo.
+
+El razonamiento es el siguiente. Si se introduce deliberadamente una modificación de magnitud conocida en el fenómeno que se pretende medir y el ensayo la detecta con holgura, queda establecido que la cadena completa ---armado de las muestras, pesaje, germinación controlada, agregación por muestra y modelo estadístico--- posee la sensibilidad necesaria. Si, en cambio, el ensayo no detectara ni esa modificación, nada podría concluirse de un resultado nulo sobre el campo magnético.
+
+\paragraph{Diseño.}
+
+La modificación elegida fue la \textbf{cantidad de agua suministrada}, por tres motivos: su efecto sobre la imbibición es grande y de signo conocido, es trivial de dosificar con precisión, y opera sobre exactamente la misma variable de respuesta que los experimentos de tratamiento, de modo que lo que se valida es el instrumento efectivamente empleado y no un sustituto.
+
+Se realizaron tres experimentos independientes, los días 18/05/2026, 22/05/2026 y 03/06/2026, con tres niveles de agua: \textbf{2, 5 y 6~mL} por muestra. El protocolo fue en todo lo demás idéntico al de los experimentos de tratamiento, con la salvedad de que no se aplicó campo magnético y de que ninguna muestra ingresó en la torre de exposición. El conjunto reúne \(n = 38\) muestras. Al igual que en el resto del trabajo, el modelo incluye la fecha como bloque.
+
+\paragraph{Exclusión declarada.}
+
+Se excluyó una muestra, la \texttt{20260522\_A9}, en la que el peso inicial y el final coinciden exactamente. Una ganancia de masa nula a las 72~h no es un valor extremo sino un fallo de registro o de hidratación, y la exclusión responde a ese criterio y no a la magnitud del valor. La muestra se conserva en los archivos de datos con el peso final vacío, de modo que la exclusión opere de igual manera en cualquier análisis posterior, y queda documentada en la bitácora del proyecto.
 
 \section{Experimentos control negativo}
 \label{subsec:ctrl_negativo}
@@ -562,4 +702,4 @@ Con el objetivo de caracterizar la variabilidad basal del sistema experimental y
 
 Cada experimento control consistió en 27 bandejas experimentales, distribuidas en 3 pisos (A, B, C) y 9 posiciones, siguiendo la misma disposición geométrica y el mismo protocolo de preparación, hidratación, germinación y pesaje que los experimentos con tratamiento. No se colocaron imanes en ninguna de las bandejas durante la etapa de exposición.
 
-El diseño repetido en el tiempo permitió evaluar la reproducibilidad del protocolo y cuantificar la variabilidad interexperimento atribuible a factores no controlados, como fluctuaciones ambientales o diferencias entre lotes de semillas. Asimismo, el diseño espacial (piso y posición) posibilitó la detección de posibles sesgos sistemáticos dentro del montaje experimental, información relevante para la interpretación de los resultados de los experimentos con tratamiento.
+El diseño repetido en el tiempo permitió evaluar la reproducibilidad del protocolo y cuantificar la variabilidad interexperimento atribuible a factores no controlados. Conviene precisar que esa variabilidad no proviene de diferencias entre lotes de semillas: todos los experimentos de este trabajo se realizaron con el mismo lote. Las fuentes posibles son, por lo tanto, la variación de masa entre los granos efectivamente seleccionados en cada armado y fluctuaciones ambientales residuales no capturadas por el control de temperatura. Asimismo, el diseño espacial (piso y posición) posibilitó la detección de posibles sesgos sistemáticos dentro del montaje experimental, información relevante para la interpretación de los resultados de los experimentos con tratamiento.
