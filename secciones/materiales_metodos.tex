@@ -580,6 +580,14 @@ Con el objeto de evitar que las decisiones analíticas quedaran condicionadas po
 
 Esta pre-especificación responde a un riesgo concreto en diseños con múltiples grupos: si la métrica de respuesta, el criterio de exclusión de valores atípicos o la estructura del contraste se eligen después de observar los datos, la tasa de error de tipo I deja de ser la nominal, ya que cada elección constituye una comparación implícita adicional.
 
+\paragraph{Criterio de inclusión de experimentos.}
+
+Entran en el análisis todos los experimentos de tratamiento que cuentan con los pesos completos de sus 27 muestras y con una tabla de dosis disponible para su combinación de imán y polo. El criterio es deliberadamente mecánico, y no contempla el resultado obtenido.
+
+Corresponde señalar que tres experimentos con imán de neodimio ---los del 26/06, 21/07 y 27/07--- habían quedado inicialmente fuera del análisis por no haber mostrado diferencias significativas. Esa exclusión fue revertida, porque apartar un experimento en función de su resultado es precisamente la práctica que el plan de análisis pre-especificado busca impedir: si se descartan las series que no muestran efecto, la tasa de error de tipo I del conjunto deja de ser la nominal y cualquier resultado positivo que sobreviva queda sin valor inferencial. Los tres experimentos satisfacen el criterio de inclusión, sus bloques están completos y balanceados y su variabilidad entre fechas es menor que la del grupo de cerámica, de modo que no existía fundamento metodológico para excluirlos.
+
+El único experimento de tratamiento que queda fuera es el del 14/08, con el polo sur enfrentado a las semillas, por una razón ajena a su resultado: no se dispone de la caracterización del campo de esa configuración ni, en consecuencia, de la tabla de dosis por nivel, sin la cual los niveles de tratamiento no pueden asociarse a una intensidad de campo.
+
 \paragraph{Unidad experimental.}
 
 La unidad experimental es la \textbf{muestra}, es decir, el lote de semillas alojado en un compartimento, y en ningún caso la semilla individual. Las veinte semillas de una muestra comparten el mismo nivel de tratamiento, el mismo volumen de agua y la misma posición en el sistema de germinación, de modo que no constituyen réplicas independientes: analizarlas por separado sería pseudo-replicación, y produciría intervalos de confianza artificialmente estrechos al tratar como veinte observaciones lo que es una sola. Todas las variables de respuesta se agregan, por lo tanto, a nivel de muestra antes de entrar en los modelos.

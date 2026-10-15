@@ -209,37 +209,37 @@ salvo los tres últimos ítems.
 
 ---
 
-## Etapa 1 — Reparar Materiales y métodos `[ ]`
+## Etapa 1 — Reparar Materiales y métodos `[x]`
 
 El Plan de análisis estadístico describe un análisis que no es el que se corrió.
 
-- [ ] Declarar los tres endpoints (imbibición, germinación, radícula) y la bandeja
+- [x] Declarar los tres endpoints (imbibición, germinación, radícula) y la bandeja
       como unidad experimental
-- [ ] **Declarar el agua como factor del diseño**: dos regímenes, 5 mL y 3 mL, con
+- [x] **Declarar el agua como factor del diseño**: dos regímenes, 5 mL y 3 mL, con
       el razonamiento del estrés hídrico y la referencia a Antecedentes
-- [ ] **Declarar que el régimen de 3 mL se agregó a posteriori**, después del
+- [x] **Declarar que el régimen de 3 mL se agregó a posteriori**, después del
       resultado nulo de cerámica. Es legítimo y declararlo protege el valor del
       TOST; presentarlo como planificado no lo sería. El plan de análisis sí fue
       pre-especificado antes de ver los datos de neodimio: las dos cosas son
       compatibles y conviene decirlo explícitamente
-- [ ] Reescribir *Alcance efectivo de la medición de radículas* (dice que la
+- [x] Reescribir *Alcance efectivo de la medición de radículas* (dice que la
       fotografía se discontinuó; Neodimio N 3 mL tiene las 3 fechas, n=77)
-- [ ] Reconciliar la estructura del contraste con el modelo de bloques `C(bloque)`
-- [ ] Cambiar Benjamini-Hochberg por Holm (es lo que usa el pipeline). Es Holm lo
+- [x] Reconciliar la estructura del contraste con el modelo de bloques `C(bloque)`
+- [x] Cambiar Benjamini-Hochberg por Holm (es lo que usa el pipeline). Es Holm lo
       que decide que el nivel 3 no sea un hallazgo
-- [ ] Sección propia para los experimentos de control positivo (n=38, 2/5/6 mL).
+- [x] Sección propia para los experimentos de control positivo (n=38, 2/5/6 mL).
       Tiene doble rol: acredita la sensibilidad del ensayo **y** es la curva de
       calibración que permite ubicar el régimen de 3 mL
-- [ ] Reescribir el párrafo de potencia e introducir TOST y el margen de ±10%
+- [x] Reescribir el párrafo de potencia e introducir TOST y el margen de ±10%
       (+ citas de Schuirmann 1987 y Lakens 2017 en `bib.bib`, hoy no hay ninguna)
-- [ ] Declarar las limitaciones de Cerámica N: Shapiro p=0,0003, bloques no
+- [x] Declarar las limitaciones de Cerámica N: Shapiro p=0,0003, bloques no
       balanceados, y la caída de línea de base dentro de la campaña
-- [ ] Declarar las variables no registradas: agua (hasta que se corrija) y
+- [x] Declarar las variables no registradas: agua (hasta que se corrija) y
       temperatura, registrada solo en 20260331 y 20260608 de 6 fechas. La cámara
       es termostatizada a 25 °C con control PID: setpoint declarado, registro parcial
-- [ ] **Declarar la reincorporación de 20260626/0721/0727** y por qué: la
+- [x] **Declarar la reincorporación de 20260626/0721/0727** y por qué: la
       exclusión original se basaba en el resultado, no en una falla de protocolo
-- [ ] Fijar la nomenclatura: **nivel de tratamiento = 1–9**, **piso = A/B/C**
+- [x] Fijar la nomenclatura: **nivel de tratamiento = 1–9**, **piso = A/B/C**
       (el inventario usa "piso" para 1–9, al revés: no copiar de ahí)
 
 ---
