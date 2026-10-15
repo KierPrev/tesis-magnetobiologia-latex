@@ -313,6 +313,12 @@
 % ------------------------------------------------------------
 %  Macros propias
 % ------------------------------------------------------------
+% Porcentaje utilizable TAMBIÉN en modo matemático.
+% El «%» de babel-spanish es un shorthand activo que hace \unskip sobre
+% la glue previa; dentro de \( \) eso choca con el \, matemático y aborta
+% con «Incompatible glue units». Envolverlo en \text lo evalúa en modo
+% texto, donde el shorthand funciona. Sirve igual en texto corrido.
+\newcommand{\pct}{\text{\%}}
 % Marcador visible para lo que queda por completar.
 % Descomentá \pendientesoff en la versión final para ocultarlos.
 \newcommand{\pendiente}[1]{\textcolor{red}{\textbf{[COMPLETAR: #1]}}}

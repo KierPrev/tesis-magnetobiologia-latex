@@ -199,8 +199,10 @@ salvo los tres últimos ítems.
 - [x] Verificado que los reportes de cerámica y de neodimio 3 mL quedan
       **byte a byte idénticos** a los anteriores
 - [ ] Llevar el test de interacción al pipeline (hoy está en un script suelto)
-- [ ] Revisar `comparativa_dosis_respuesta`: junta grupos sin contemplar el agua,
-      así que con tres grupos hay que separar por régimen o retirarla
+- [x] `comparativa_dosis_respuesta` retirada del documento: juntaba dos regímenes
+      de agua en un mismo modelo, asi que el coeficiente de imán no era
+      interpretable. Su lugar lo ocupa el test de interacción (Sección 2.8).
+      Queda pendiente decidir si se la quita del pipeline o se la separa por régimen
 - [ ] Actualizar `INVENTARIO_RESULTADOS.md`: dice que 20260626/0721/0727 están
       descartados, no menciona los regímenes de agua ni los directorios nuevos
 - [x] Agua de los controles negativos: **5 mL**, ya cargada en el metadata
@@ -244,7 +246,7 @@ El Plan de análisis estadístico describe un análisis que no es el que se corr
 
 ---
 
-## Etapa 2 — Capítulo de Resultados `[ ]`
+## Etapa 2 — Capítulo de Resultados `[x]`
 
 Hoy `secciones/resultados.tex` tiene 282 líneas dedicadas **exclusivamente** al
 control negativo. No hay ni una línea sobre los experimentos de imán ni sobre el
@@ -253,20 +255,20 @@ control positivo.
 Orden propuesto: el control positivo va **primero**, para que el lector llegue al
 resultado nulo sabiendo que el instrumento mide.
 
-- [ ] 2.1 Control positivo (n=38; +0,064 por mL, p=2,9e-07, R² aj. 0,59;
+- [x] 2.1 Control positivo (n=38; +0,064 por mL, p=2,9e-07, R² aj. 0,59;
       contrastes 2 vs 5 mL Holm=0,004 y 2 vs 6 mL Holm=8,4e-05)
-- [ ] 2.2 Control negativo (ya escrito, reubicar en el orden del capítulo)
-- [ ] 2.3 Cerámica N, 5 mL (n=81; +1,43%, IC95 [−4,32; +7,18], p=0,62;
+- [x] 2.2 Control negativo (ya escrito, reubicar en el orden del capítulo)
+- [x] 2.3 Cerámica N, 5 mL (n=81; +1,43%, IC95 [−4,32; +7,18], p=0,62;
       TOST p=0,002; MDE 8,19%)
-- [ ] 2.4 Neodimio N, 5 mL — **grupo nuevo, ya calculado** (n=81; **−1,46%**,
+- [x] 2.4 Neodimio N, 5 mL — **grupo nuevo, ya calculado** (n=81; **−1,46%**,
       IC95 [−6,28; +3,36], p=0,55; **TOST p=0,00037 → equivalente**; MDE 6,87%;
       bloques completos y balanceados; `C(bloque)` F=1,08 p=0,39; sin tendencia
       dosis-respuesta p=0,74; Shapiro p=0,025). Solo imbibición
-- [ ] 2.5 Neodimio N, 3 mL — imbibición (n=81; +1,59%, IC95 [−0,80; +3,98],
+- [x] 2.5 Neodimio N, 3 mL — imbibición (n=81; +1,59%, IC95 [−0,80; +3,98],
       p=0,19; TOST p<1e-5; MDE 3,40%)
-- [ ] 2.6 Neodimio N, 3 mL — germinación (n=81; +6,2 pp, IC95 [−2,0; +14,5], p=0,14)
-- [ ] 2.7 Neodimio N, 3 mL — radícula (n=77; +0,60 mm = +9,3%, p=0,32; MDE 26,4%)
-- [ ] 2.8 **Comparación de regímenes — ya calculada.** Mismo imán (neodimio N),
+- [x] 2.6 Neodimio N, 3 mL — germinación (n=81; +6,2 pp, IC95 [−2,0; +14,5], p=0,14)
+- [x] 2.7 Neodimio N, 3 mL — radícula (n=77; +0,60 mm = +9,3%, p=0,32; MDE 26,4%)
+- [x] 2.8 **Comparación de regímenes — ya calculada.** Mismo imán (neodimio N),
       dos niveles de agua. Efecto del imán: **−1,46% a 5 mL** (SE 2,42%) y
       **+1,59% a 3 mL** (SE 1,20%). Término de interacción
       `con_iman:C(agua)`: coef −0,0131, SE 0,0126, t=−1,04, **p=0,30**, IC95

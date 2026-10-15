@@ -1,6 +1,76 @@
 \chapter{Resultados}
 
-\section{Controles negativos}
+Este capítulo se ordena siguiendo la lógica del argumento antes que el orden cronológico de los experimentos. Se presenta primero la \textbf{validación del método} mediante el control positivo, que establece que el procedimiento detecta un efecto real cuando este existe; a continuación la \textbf{caracterización del sistema} mediante los controles negativos, que cuantifica la variabilidad propia del montaje; y recién entonces los \textbf{experimentos de tratamiento}. Este orden no es una preferencia expositiva: sin las dos primeras piezas, los resultados de la tercera no admitirían interpretación.
+
+\section{Validación del método: control positivo}
+\label{sec:res_ctrl_positivo}
+
+Se realizaron tres experimentos en los que se varió deliberadamente el volumen de agua suministrado, con tres niveles de 2, 5 y 6~mL por muestra (Sección~\ref{subsec:ctrl_positivo}). El conjunto reúne \(n = 38\) muestras, distribuidas entre las tres fechas y los tres niveles.
+
+La Tabla~\ref{tab:ctrl_pos_niveles} presenta la imbibición media de cada nivel de agua.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Imbibición según el volumen de agua suministrado]{\textbf{Imbibición según el volumen de agua suministrado.} Media \(\pm\) SD entre muestras de cada nivel, en los tres experimentos de control positivo combinados.}
+\label{tab:ctrl_pos_niveles}
+\begin{tabular}{crc}
+\toprule
+Agua (mL) & \(n\) & Imbibición \\
+\midrule
+2 & 13 & 0,343 \(\pm\) 0,075 \\
+5 & 12 & 0,500 \(\pm\) 0,131 \\
+6 & 13 & 0,614 \(\pm\) 0,156 \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+El efecto del volumen de agua resultó altamente significativo (\(F_{2,33} = 21{,}71\), \(p < 0{,}001\)***), con un efecto de fecha también significativo (\(F_{2,33} = 8{,}34\), \(p = 0{,}0012\)**) que el modelo absorbe como bloque. Ajustando el volumen como variable continua, la pendiente resultó de \textbf{\(+0{,}0639\) de imbibición por cada mililitro} suministrado, con un intervalo de confianza del 95\,\pct de \([+0{,}0435;\ +0{,}0843]\) y \(p = 2{,}9 \times 10^{-7}\)***. El modelo explica una fracción sustancial de la variabilidad observada (\(R^2\) ajustado \(= 0{,}593\)).
+
+Los contrastes entre niveles, mediante la prueba de Welch con corrección de Holm, se presentan en la Tabla~\ref{tab:ctrl_pos_contrastes}.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Contrastes entre niveles de agua]{\textbf{Contrastes entre niveles de agua.} Diferencias de imbibición entre pares de niveles, con prueba de Welch y corrección de Holm por multiplicidad.}
+\label{tab:ctrl_pos_contrastes}
+\begin{tabular}{lrrr}
+\toprule
+Contraste & Diferencia & \(p\) & \(p\) (Holm) \\
+\midrule
+2 vs 5~mL & \(+0{,}156\) & \(0{,}0020\)  & \(0{,}0040\)**  \\
+2 vs 6~mL & \(+0{,}271\) & \(2{,}8 \times 10^{-5}\) & \(8{,}4 \times 10^{-5}\)*** \\
+5 vs 6~mL & \(+0{,}114\) & \(0{,}0587\)  & \(0{,}0587\) n.s. \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item * \(p < 0{,}05\);\quad ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\);\quad n.s.: no significativo.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Los dos contrastes que comparan el nivel más bajo con los dos superiores sobreviven la corrección por multiplicidad. El contraste entre 5 y 6~mL no alcanza significancia, lo que resulta coherente con la proximidad de ambos niveles y con un acercamiento a la saturación del sustrato.
+
+La Figura~\ref{fig:ctrl_positivo} muestra la relación completa.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{datos/software_data/analysis/control_positivo_combinado/fig_control_positivo.pdf}
+    \caption[Imbibición frente al volumen de agua suministrado]{\textbf{Imbibición frente al volumen de agua suministrado.} Cada punto corresponde a una muestra, con el color indicando la fecha del experimento. La recta ajustada corresponde al modelo con la fecha como bloque.}
+    \label{fig:ctrl_positivo}
+\end{figure}
+
+\subsection{Conclusión parcial}
+
+El procedimiento de medición detecta una modificación conocida del fenómeno con holgura: el efecto del agua es grande, monótono, reproducible entre fechas y estadísticamente inequívoco. Queda establecido, por lo tanto, que la cadena completa de medición ---armado de las muestras, pesaje, germinación controlada y agregación por muestra--- posee la sensibilidad necesaria para registrar un efecto real sobre la imbibición.
+
+Esta verificación es la que confiere contenido informativo a los resultados nulos que se presentan más adelante. Un resultado nulo obtenido con un instrumento cuya sensibilidad no se ha acreditado no distingue entre la ausencia de efecto y la incapacidad de detectarlo; obtenido con un instrumento que sí detecta lo que debe detectar, constituye evidencia sobre el tratamiento.
+
+Corresponde además señalar un uso secundario de estos datos: la pendiente estimada permite ubicar cuantitativamente el régimen de estrés hídrico de 3~mL respecto del de saturación de 5~mL (Sección~\ref{subsec:regimen_hidrico}), y da cuenta del desplazamiento de la línea de base entre ambos conjuntos de experimentos.
+
+\section{Caracterización del sistema: controles negativos}
+\label{sec:res_ctrl_negativo}
 
 Se realizaron tres experimentos de 72\,h los días 20260404, 20260428 y 20260507, para un total de \(n = 81\) bandejas (27 por día). La variable principal de análisis fue el \textbf{cambio porcentual de peso} (\emph{pct\_change} en el código de análisis), definido como el aumento de masa respecto al peso inicial de las semillas en cada bandeja. Como verificación de robustez, los principales análisis se repitieron con dos variables de crecimiento alternativas: el \textbf{cambio absoluto de peso} (\emph{raw\_delta\_weight}), definido como la diferencia entre el peso final e inicial en gramos, y el \textbf{logaritmo de la razón de pesos} (\emph{raw\_log\_ratio}), definido como el logaritmo natural del cociente entre el peso final y el inicial. Estas tres variables cuantifican el mismo fenómeno de crecimiento con distintas propiedades estadísticas; su coincidencia en dirección y significancia refuerza que los efectos reportados no dependen de la métrica elegida.
 
@@ -280,3 +350,227 @@ Notar que si bien C9 presentó una desviación estándar muy pequeña (0,011), e
 \subsection{Conclusión parcial}
 
 En los controles negativos combinados se detectó un efecto espacial general asociado al piso de la bandeja, con un gradiente descendente de A hacia C, pero no a los ejes izquierda-centro-derecha ni frente-medio-atrás. El análisis post-hoc mostró que dicho gradiente resulta significativo únicamente entre los pisos extremos (A vs C), ocupando el piso B una posición intermedia no distinguible de los otros dos. Sin embargo, al analizar cada celda individual A1--C9, se observaron diferencias significativas entre posiciones específicas. El análisis post-hoc indicó que estas diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas de mayor crecimiento. Esto sugiere que el control negativo no fue completamente homogéneo a escala espacial fina, por lo que los análisis de tratamientos deberían considerar o controlar posibles efectos de posición.
+
+\section{Imbibición bajo campo magnético}
+\label{sec:res_imbibicion}
+
+Se analizan los tres grupos de experimentos de tratamiento descritos en la Sección~\ref{subsec:regimen_hidrico}: cerámica norte en saturación, neodimio norte en saturación y neodimio norte en estrés hídrico. Cada grupo reúne tres experimentos y \(n = 81\) muestras, de las cuales nueve constituyen el control interno. Los tres se analizan por separado, nunca agrupados, por las razones expuestas en la Sección~\ref{subsec:regimen_hidrico}.
+
+En los tres casos el contraste primario es el promedio de los ocho niveles expuestos frente al control interno, ajustado por bloque, y se reportan además los ocho contrastes individuales con corrección de Holm.
+
+\subsection{Resultados por nivel de tratamiento}
+
+La Tabla~\ref{tab:imbibicion_niveles} presenta la diferencia de imbibición de cada nivel respecto del control de su grupo, expresada en porcentaje relativo a la media del control.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Imbibición de cada nivel de tratamiento respecto del control]{\textbf{Imbibición de cada nivel de tratamiento respecto del control.} Diferencia en porcentaje relativo a la media del control de cada grupo, ajustada por bloque. El nivel 9 es el control interno y no aparece en la tabla. Los campos aplicados difieren entre imanes, por lo que se indican por separado.}
+\label{tab:imbibicion_niveles}
+\begin{tabular}{crrrrr}
+\toprule
+ & \multicolumn{2}{c}{Cerámica N, 5~mL} & \multicolumn{3}{c}{Neodimio N} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+Nivel & \(B\) (mT) & \(\Delta\) (\%) & \(B\) (mT) & 5~mL: \(\Delta\) (\%) & 3~mL: \(\Delta\) (\%) \\
+\midrule
+1 & 81,9 & \(-2{,}14\) & 263,0 & \(-0{,}59\) & \(+0{,}80\) \\
+2 & 61,7 & \(-0{,}21\) & 133,6 & \(-2{,}70\) & \(+0{,}94\) \\
+3 & 45,2 & \(+1{,}09\) & 77,3  & \(-1{,}24\) & \(+1{,}84\) \\
+4 & 33,1 & \(+4{,}37\) & 48,5  & \(-1{,}04\) & \(+2{,}22\) \\
+5 & 24,5 & \(+1{,}76\) & 32,2  & \(+1{,}19\) & \(+0{,}50\) \\
+6 & 18,4 & \(+3{,}82\) & 22,3  & \(-3{,}58\) & \(+1{,}89\) \\
+7 & 14,1 & \(-0{,}98\) & 15,9  & \(-0{,}74\) & \(+2{,}05\) \\
+8 & 11,0 & \(+3{,}74\) & 11,8  & \(-2{,}97\) & \(+2{,}45\) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item Ninguno de los 24 contrastes alcanza significancia: el menor valor \(p\) sin corregir es 0,14 y los 24 valores corregidos por Holm son iguales a 1,00. Los intervalos de confianza de cada contraste se representan en las Figuras~\ref{fig:forest_ceramica}--\ref{fig:forest_neodimio_3ml}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Conviene detenerse en la estructura de esa tabla antes de pasar a los contrastes globales. Las diferencias no solo son pequeñas: \textbf{no son consistentes entre grupos}. En cerámica son predominantemente positivas, en neodimio a 5~mL predominantemente negativas y en neodimio a 3~mL positivas de nuevo, sin que ningún nivel de campo se destaque de manera reproducible en los tres. Tampoco se ordenan según la intensidad: el nivel 1, que recibe el campo más intenso de cada montaje, no se distingue del nivel 8, que recibe el más débil. El patrón es el que cabe esperar de fluctuación aleatoria en torno a cero.
+
+\subsection{Cerámica N en saturación de agua}
+
+La media de imbibición del control resultó de 0,4878. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}686\), \(p = 0{,}70\)), mientras que el término de bloque resultó altamente significativo (\(F_{8,64} = 18{,}36\), \(p < 0{,}001\)***), lo que confirma la necesidad del bloqueo.
+
+El contraste primario arrojó una diferencia de \textbf{\(+1{,}43\,\pct\)} entre las muestras expuestas y el control, con un intervalo de confianza del 95\,\pct de \([-4{,}32\,\pct;\ +7{,}18\,\pct]\) y \(p = 0{,}62\). El contraste de tendencia dosis-respuesta frente al logaritmo de la intensidad tampoco resultó significativo (\(p = 0{,}18\)).
+
+La Figura~\ref{fig:forest_ceramica} presenta los contrastes por nivel junto con la banda de equivalencia.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{datos/software_data/analysis/confirmatorio_ceramica_n_5ml/fig_forest_peso_germinacion.pdf}
+    \caption[Imbibición por nivel de tratamiento, cerámica N en saturación]{\textbf{Imbibición por nivel de tratamiento, cerámica N en saturación (5~mL).} Diferencia respecto del control con su intervalo de confianza del 95\,\pct, por nivel. La banda sombreada indica el margen de equivalencia de \(\pm 10\,\pct\). Este grupo no cuenta con conteo de germinación, de modo que la figura tiene un solo panel.}
+    \label{fig:forest_ceramica}
+\end{figure}
+
+Las desviaciones de los supuestos de este grupo, declaradas en la Sección~\ref{subsec:plan_analisis}, se verifican aquí: los residuos se apartan de la normalidad (Shapiro-Wilk, \(p = 0{,}0003\)) aunque las varianzas resultan homogéneas (Levene, \(p = 0{,}71\)), y cuatro muestras superan el umbral convencional de influencia de Cook. El análisis de sensibilidad desplaza la estimación entre \(+1{,}43\,\pct\) y \(+0{,}60\,\pct\) según se incluyan o no los términos de bloque y de posición, sin alterar la conclusión en ninguna de las cuatro especificaciones.
+
+\subsection{Neodimio N en saturación de agua}
+
+La media de imbibición del control resultó de 0,4872, prácticamente idéntica a la del grupo de cerámica pese a tratarse de otro imán y de otras fechas. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}424\), \(p = 0{,}90\)), y en este grupo el término de bloque tampoco resultó significativo (\(F_{8,64} = 1{,}080\), \(p = 0{,}39\)): se trata de la campaña más homogénea entre fechas de todo el trabajo.
+
+El contraste primario arrojó una diferencia de \textbf{\(-1{,}46\,\pct\)}, con un intervalo de confianza del 95\,\pct de \([-6{,}28\,\pct;\ +3{,}36\,\pct]\) y \(p = 0{,}55\). Nótese que el signo es opuesto al del grupo anterior, lo que refuerza la lectura de fluctuación aleatoria en torno a cero antes que de un efecto sistemático de pequeña magnitud. La tendencia dosis-respuesta tampoco resultó significativa (\(p = 0{,}74\)).
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{datos/software_data/analysis/confirmatorio_neodimio_n_5ml/fig_forest_peso_germinacion.pdf}
+    \caption[Imbibición por nivel de tratamiento, neodimio N en saturación]{\textbf{Imbibición por nivel de tratamiento, neodimio N en saturación (5~mL).} Diferencia respecto del control con su intervalo de confianza del 95\,\pct, por nivel, y margen de equivalencia de \(\pm 10\,\pct\). Este grupo no cuenta con conteo de germinación.}
+    \label{fig:forest_neodimio_5ml}
+\end{figure}
+
+Los supuestos se satisfacen con una desviación leve de la normalidad (Shapiro-Wilk, \(p = 0{,}025\); Levene, \(p = 0{,}21\)) y los bloques están completos y balanceados.
+
+\subsection{Neodimio N en estrés hídrico}
+
+La media de imbibición del control resultó de 0,3758, sensiblemente menor que en los dos grupos anteriores, como corresponde al régimen de 3~mL. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}551\), \(p = 0{,}81\)) y el término de bloque resultó despreciable (\(F_{8,64} = 0{,}293\), \(p = 0{,}97\)).
+
+El contraste primario arrojó una diferencia de \textbf{\(+1{,}59\,\pct\)}, con un intervalo de confianza del 95\,\pct de \([-0{,}80\,\pct;\ +3{,}98\,\pct]\) y \(p = 0{,}19\). Es el intervalo más estrecho de los tres grupos, consecuencia de la mayor precisión del armado descrita en la Sección~\ref{subsec:regimen_hidrico}. La tendencia dosis-respuesta no resultó significativa (\(p = 0{,}29\)).
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\linewidth]{datos/software_data/analysis/confirmatorio_neodimio_n_3ml/fig_forest_peso_germinacion.pdf}
+    \caption[Imbibición y germinación por nivel, neodimio N en estrés hídrico]{\textbf{Imbibición y germinación por nivel de tratamiento, neodimio N en estrés hídrico (3~mL).} Panel izquierdo: diferencia de imbibición respecto del control con su intervalo de confianza del 95\,\pct y margen de equivalencia de \(\pm 10\,\pct\). Panel derecho: germinación por nivel. Es el único grupo que cuenta con ambas variables.}
+    \label{fig:forest_neodimio_3ml}
+\end{figure}
+
+Este grupo satisface los supuestos sin reparos (Shapiro-Wilk, \(p = 0{,}55\); Levene, \(p = 0{,}73\)) y sus bloques están completos y balanceados.
+
+\subsection{Equivalencia y sensibilidad}
+
+Lo anterior establece que ninguno de los tres grupos detectó un efecto. La pregunta que corresponde formular a continuación es qué magnitud de efecto queda descartada en cada caso, y es la que responde el análisis de equivalencia. La Tabla~\ref{tab:tost} reúne los tres resultados.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Contraste primario, equivalencia y sensibilidad por grupo]{\textbf{Contraste primario, equivalencia y sensibilidad por grupo.} El margen de relevancia es de \(\pm 10\,\pct\) relativo a la media del control. El efecto mínimo detectable corresponde a una potencia del 80\,\pct. Todos los grupos reúnen \(n = 81\) muestras.}
+\label{tab:tost}
+\begin{tabular}{lrrrr}
+\toprule
+Grupo & \(\Delta\) (\%) & IC 95\,\pct (\%) & \(p\)(TOST) & Efecto mín. det. \\
+\midrule
+Cerámica N, 5~mL  & \(+1{,}43\) & \([-4{,}32;\ +7{,}18]\) & \(0{,}0020\)** & \(8{,}19\,\pct\) \\
+Neodimio N, 5~mL  & \(-1{,}46\) & \([-6{,}28;\ +3{,}36]\) & \(0{,}00037\)*** & \(6{,}87\,\pct\) \\
+Neodimio N, 3~mL  & \(+1{,}59\) & \([-0{,}80;\ +3{,}98]\) & \(< 10^{-5}\)*** & \(3{,}40\,\pct\) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item ** \(p < 0{,}01\);\quad *** \(p < 0{,}001\). Un valor \(p\) de TOST menor que 0,05 permite declarar equivalencia dentro del margen.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Los tres grupos resultan \textbf{equivalentes} dentro del margen de \(\pm 10\,\pct\). El resultado no consiste, por lo tanto, en no haber hallado un efecto, sino en haber acotado su magnitud: si el campo magnético produce algún efecto sobre la imbibición en las condiciones ensayadas, es menor que el 10\,\pct y queda por debajo del umbral de relevancia biológica fijado de antemano.
+
+El efecto mínimo detectable precisa el alcance de esa afirmación en cada grupo. El de neodimio en estrés hídrico, con un 3{,}40\,\pct, es el más sensible y el que acota con mayor firmeza; el de cerámica, con un 8{,}19\,\pct, es el menos sensible, lo que se corresponde con su mayor variabilidad entre bloques y con las desviaciones de los supuestos ya señaladas. En los tres casos, no obstante, el margen de equivalencia resulta mayor que el efecto mínimo detectable, de modo que la conclusión de equivalencia está respaldada por la potencia del diseño y no es un artificio de un margen excesivamente amplio.
+
+\section{Germinación}
+\label{sec:res_germinacion}
+
+El conteo de germinación está disponible únicamente en el grupo de neodimio en estrés hídrico, por las razones detalladas en la Sección~\ref{subsec:plan_analisis}. Las 81 muestras aportan la proporción de semillas germinadas sobre las veinte de cada muestra.
+
+Las muestras control germinaron en promedio 14,22 semillas de 20, es decir un 71,1\,\pct, frente a un 77,4\,\pct en las muestras expuestas. El contraste primario arrojó una diferencia de \textbf{\(+6{,}2\) puntos porcentuales}, con un intervalo de confianza del 95\,\pct de \([-2{,}0;\ +14{,}5]\) y \(p = 0{,}14\). No se detectó tendencia dosis-respuesta (\(p = 0{,}23\)), resultado que se verificó además mediante una prueba de permutación dentro de bloque con 5000 remuestreos (\(p = 0{,}23\)), en previsión de que la naturaleza acotada de la variable comprometiera los supuestos del modelo lineal.
+
+La Tabla~\ref{tab:germinacion_niveles} presenta la germinación de cada nivel.
+
+\begin{table}[tbp]
+\centering
+\begin{threeparttable}
+\caption[Germinación por nivel de tratamiento]{\textbf{Germinación por nivel de tratamiento, neodimio N en estrés hídrico.} Número de semillas germinadas sobre 20, como media \(\pm\) SD entre las nueve muestras de cada nivel. El nivel 9 es el control interno.}
+\label{tab:germinacion_niveles}
+\begin{tabular}{crc}
+\toprule
+Nivel & \(B\) (mT) & Germinadas de 20 \\
+\midrule
+1 & 263,0 & 13,78 \(\pm\) 2,73 \\
+2 & 133,6 & 16,00 \(\pm\) 1,94 \\
+3 & 77,3  & 15,56 \(\pm\) 2,60 \\
+4 & 48,5  & 15,78 \(\pm\) 1,79 \\
+5 & 32,2  & 15,33 \(\pm\) 2,18 \\
+6 & 22,3  & 16,78 \(\pm\) 1,56 \\
+7 & 15,9  & 15,44 \(\pm\) 2,01 \\
+8 & 11,8  & 15,11 \(\pm\) 3,10 \\
+\midrule
+9 & sin campo & 14,22 \(\pm\) 1,92 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+  \item \(n = 9\) muestras por nivel.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\linewidth]{datos/software_data/analysis/confirmatorio_neodimio_n_3ml/fig_germinacion_boxplot.pdf}
+    \caption[Germinación por nivel de tratamiento]{\textbf{Germinación por nivel de tratamiento, neodimio N en estrés hídrico.} Semillas germinadas de 20 por muestra. Se superponen las muestras individuales y se anotan los valores \(p\) sin corregir y corregidos por Holm.}
+    \label{fig:germinacion_boxplot}
+\end{figure}
+
+Dos observaciones sobre esta tabla. La primera es que el nivel 1, que recibe el campo más intenso, presenta la germinación más baja de los niveles expuestos y es el único que queda por debajo del control, de modo que si hubiera una tendencia con la intensidad sería de signo contrario al que postula la hipótesis de trabajo; la diferencia, en cualquier caso, no es significativa. La segunda es que la dispersión dentro de cada nivel es considerable ---desvíos de entre 1,6 y 3,1 semillas sobre una media del orden de 15---, lo que sitúa las diferencias entre niveles muy por debajo de la variabilidad entre muestras de una misma condición.
+
+\paragraph{Germinación como mediador.}
+
+La germinación y la imbibición no son variables independientes: una semilla que germina incorpora más agua que una que no lo hace, de modo que un efecto sobre la germinación se trasladaría mecánicamente a la imbibición. Para evaluar esa dependencia se repitió el análisis de imbibición incluyendo la germinación como covariable. El efecto estimado desciende de \(+1{,}59\,\pct\) (\(p = 0{,}19\)) a \(+0{,}72\,\pct\) (\(p = 0{,}51\)).
+
+La interpretación de ese descenso requiere cautela. Ajustar por un mediador potencial no aísla un efecto directo sino que introduce un sesgo de condicionamiento, y el resultado se reporta como verificación de consistencia y no como estimación preferida. Lo relevante es que ambas especificaciones coinciden en no detectar efecto, y que la segunda arroja una estimación aún más próxima a cero que la primera.
+
+\section{Largo de radícula}
+\label{sec:res_radicula}
+
+El largo de radícula está disponible únicamente en el grupo de neodimio en estrés hídrico, con 77 muestras de las 81 del grupo. Las cuatro restantes no cuentan con radículas medidas, de modo que los bloques no están completos para esta variable.
+
+La media del control resultó de \textbf{6,42~mm}. La prueba global del tratamiento no alcanzó significancia (\(F_{8,60} = 1{,}923\), \(p = 0{,}073\)), mientras que el término de bloque resultó muy grande (\(F_{8,60} = 37{,}16\), \(p < 0{,}001\)***), reflejo de las escalas no comparables entre fechas analizadas en la Sección~\ref{subsec:plan_analisis}.
+
+El contraste primario arrojó una diferencia de \textbf{\(+0{,}60\)~mm}, equivalente a un \(+9{,}3\,\pct\), con un intervalo de confianza del 95\,\pct de \([-9{,}2\,\pct;\ +27{,}8\,\pct]\) y \(p = 0{,}32\). No se detectó tendencia dosis-respuesta (\(p = 0{,}70\)).
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\linewidth]{datos/software_data/analysis/confirmatorio_neodimio_n_3ml/fig_radicula_boxplot.pdf}
+    \caption[Largo de radícula por nivel de tratamiento]{\textbf{Largo de radícula por nivel de tratamiento, neodimio N en estrés hídrico.} \textbf{El eje vertical no está en milímetros absolutos}: representa el desvío respecto del promedio del bloque, que es la escala en que opera el modelo. La media absoluta del control, de 6,42~mm, se indica como referencia de escala.}
+    \label{fig:radicula_boxplot}
+\end{figure}
+
+\paragraph{Sensibilidad de la variable.}
+
+El efecto mínimo detectable de esta variable asciende a 1,69~mm, es decir un 26,4\,\pct relativo. Se trata, por lo tanto, de una variable de \textbf{baja potencia}: solo permite descartar efectos de gran magnitud, y no admite un análisis de equivalencia informativo dentro del margen del 10\,\pct adoptado para la variable primaria. Esta limitación es consecuencia directa de la heterogeneidad del procesamiento fotográfico entre fechas y no del diseño experimental.
+
+El análisis se repitió con tres especificaciones alternativas, con resultados concordantes: tomando la mediana por muestra (\(+0{,}60\)~mm, \(p = 0{,}32\)), la media por muestra (\(+0{,}10\)~mm, \(p = 0{,}79\)) y excluyendo la única muestra marcada como probable sobresegmentación (\(+0{,}65\)~mm, \(p = 0{,}27\), \(n = 76\)). Los supuestos se satisfacen (Shapiro-Wilk, \(p = 0{,}43\); Levene, \(p = 0{,}95\)).
+
+\paragraph{El nivel 3: una observación que no constituye un hallazgo.}
+
+En esta variable, el nivel 3 (77~mT) presenta la mayor diferencia respecto del control, de \(+1{,}96\)~mm o \(+30{,}6\,\pct\), con un valor \(p\) sin corregir de 0,012. Tras la corrección de Holm por los ocho contrastes, ese valor pasa a \textbf{0,093} y no alcanza significancia.
+
+Corresponde ser explícito sobre el estatus de esta observación. Los ocho contrastes se realizaron de manera simultánea, y con ocho comparaciones independientes la probabilidad de que al menos una arroje un valor \(p\) sin corregir inferior a 0,05 por azar es cercana al 34\,\pct. El valor observado es, por lo tanto, compatible con lo esperable del propio procedimiento de comparación múltiple. Se señala que el mismo nivel aparece también entre los más altos en germinación, lo que lo vuelve un candidato razonable para una prueba dirigida en un diseño que lo contemple específicamente, pero en el presente trabajo \textbf{no constituye un resultado} y no se lo presenta como tal.
+
+\section{Efecto del régimen hídrico sobre la respuesta al campo}
+\label{sec:res_interaccion}
+
+La incorporación del régimen de estrés hídrico respondió a la hipótesis de que un efecto del campo magnético pudiera manifestarse cuando la disponibilidad de agua es limitante y no cuando el sistema se encuentra saturado (Sección~\ref{subsec:regimen_hidrico}). Disponiendo del mismo imán en ambos regímenes, esa hipótesis admite una prueba directa.
+
+La comparación es legítima porque los grupos de neodimio a 5 y a 3~mL comparten el imán, el polo, la torre de exposición, el tiempo de exposición y la tabla de dosis: lo que difiere es el régimen. El efecto del campo estimado en cada uno fue de \(-1{,}46\,\pct\) en saturación (error estándar 2,42\,\pct) y de \(+1{,}59\,\pct\) en estrés hídrico (error estándar 1,20\,\pct).
+
+Ajustando un modelo conjunto con el término de bloque y la interacción entre la exposición al campo y el régimen hídrico, el término de interacción resultó de \(-0{,}0131\) con un error estándar de 0,0126 (\(t = -1{,}04\), \(p = 0{,}30\); intervalo de confianza del 95\,\pct \([-0{,}038;\ +0{,}012]\) en unidades absolutas de imbibición).
+
+\textbf{No se detectó evidencia de que el estrés hídrico modifique la respuesta al campo magnético.} El efecto es nulo en ambos regímenes, y la diferencia entre ambos resultados nulos tampoco es significativa. La hipótesis que motivó la ampliación del protocolo recibe, por lo tanto, una respuesta negativa.
+
+\paragraph{Límite de esta comparación.}
+
+Corresponde declarar un límite que impide atribuir el resultado al agua de manera aislada. Como se detalló en la Sección~\ref{subsec:regimen_hidrico}, el cambio de régimen coincidió con otras modificaciones del protocolo, entre ellas el reemplazo del dosificador. Los dos conjuntos difieren, por lo tanto, en el volumen de agua y también en la precisión del armado. Dado que el resultado de la comparación es nulo, esta confusión no altera la conclusión: ninguna de las dos variables, ni su combinación, produjo una respuesta al campo. Si el resultado hubiera sido positivo, en cambio, no habría sido interpretable, y conviene dejarlo asentado.
+
+\paragraph{Sobre la comparación entre imanes.}
+
+Una comparación que este trabajo \textbf{no} está en condiciones de realizar es la del tipo de imán, cerámica frente a neodimio, en igualdad de condiciones de dosis. Los dos materiales producen rangos de campo distintos ---de 11 a 82~mT la cerámica y de 12 a 263~mT el neodimio--- que solo se superponen parcialmente, y el grupo de cerámica presenta además las desviaciones de supuestos ya señaladas. Lo que sí puede afirmarse es que ambos materiales arrojaron resultados equivalentes dentro del margen en el mismo régimen de saturación, con medias de control prácticamente coincidentes (0,4878 y 0,4872), lo que constituye una verificación de reproducibilidad del montaje entre campañas separadas por varios meses.
+
+\section{Síntesis de los resultados}
+
+Los resultados pueden resumirse en cuatro enunciados.
+
+\begin{enumerate}
+    \item \textbf{El método detecta lo que debe detectar.} El control positivo establece un efecto del agua sobre la imbibición grande, monótono y reproducible (\(+0{,}0639\) por mL, \(p = 2{,}9 \times 10^{-7}\)).
+    \item \textbf{El montaje posee una variabilidad espacial propia}, caracterizada en los controles negativos, que la asignación aleatoria de posiciones impide confundir con el efecto del tratamiento.
+    \item \textbf{No se detectó efecto del campo magnético estático sobre ninguna de las tres variables}, en ninguno de los tres grupos de tratamiento, y la magnitud del efecto quedó acotada por debajo del margen de relevancia del 10\,\pct en la variable primaria de los tres grupos.
+    \item \textbf{El estrés hídrico no modificó esa respuesta}, de modo que la hipótesis de que el efecto se manifestara solo bajo condiciones limitantes no encontró respaldo.
+\end{enumerate}
