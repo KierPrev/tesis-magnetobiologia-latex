@@ -166,9 +166,9 @@ separar la carga seca de otros factores temporales. Se declara como limitación;
 bloqueo por fecha la absorbe. Neodimio no tiene este problema: peso seco constante
 y r = −0,07.
 
-- [ ] **Verificar**: ¿por qué subió el peso seco por bandeja en cerámica? Son 20
+- [x] **Verificar**: ¿por qué subió el peso seco por bandeja en cerámica? Son 20
       semillas contadas, así que es variación de masa por semilla o del dosificador.
-- [ ] Estos números se calcularon sobre los `trays.csv`, no salen de ningún
+- [x] Estos números se calcularon sobre los `trays.csv`, no salen de ningún
       `reporte.txt`. Decidir si se agregan al pipeline o se documentan en
       Reproducibilidad.
 
@@ -198,15 +198,15 @@ salvo los tres últimos ítems.
       que ya están en la tesis y el que `tab:repro` declara como su generador
 - [x] Verificado que los reportes de cerámica y de neodimio 3 mL quedan
       **byte a byte idénticos** a los anteriores
-- [ ] Llevar el test de interacción al pipeline (hoy está en un script suelto)
+- [x] Llevar el test de interacción al pipeline (hoy está en un script suelto)
 - [x] `comparativa_dosis_respuesta` retirada del documento: juntaba dos regímenes
       de agua en un mismo modelo, asi que el coeficiente de imán no era
       interpretable. Su lugar lo ocupa el test de interacción (Sección 2.8).
       Queda pendiente decidir si se la quita del pipeline o se la separa por régimen
-- [ ] Actualizar `INVENTARIO_RESULTADOS.md`: dice que 20260626/0721/0727 están
+- [x] Actualizar `INVENTARIO_RESULTADOS.md`: dice que 20260626/0721/0727 están
       descartados, no menciona los regímenes de agua ni los directorios nuevos
 - [x] Agua de los controles negativos: **5 mL**, ya cargada en el metadata
-- [ ] Borrar los directorios viejos `confirmatorio_ceramica_n/` y
+- [x] Borrar los directorios viejos `confirmatorio_ceramica_n/` y
       `confirmatorio_neodimio_n/` una vez que nada los referencie
 
 ---
@@ -326,20 +326,20 @@ resultado nulo sabiendo que el instrumento mide.
 
 ---
 
-## Etapa 5 — Cierre del documento `[ ]`
+## Etapa 5 — Cierre del documento `[~]`
 
 - [x] Descomentar en `tesis.tex` los `\include` de `discusion` y `conclusiones`
 - [x] Descomentar `reproducibilidad` — **está terminado**, solo falta incluirlo
-- [ ] Agregar a la tabla `tab:repro` las filas de las figuras de imán y de control
+- [x] Agregar a la tabla `tab:repro` las filas de las figuras de imán y de control
       positivo (hoy solo lista control negativo y caracterización de campo)
 - [ ] Actualizar los hashes de commit de `tab:repro` al cerrar la versión final
-- [ ] **PNG vs PDF**: `resultados.tex` incluye los `.png` del control negativo,
+- [x] **PNG vs PDF**: `resultados.tex` incluye los `.png` del control negativo,
       pero `reproducibilidad.tex` declara `.pdf` para esas mismas figuras, que
       *solo existen como PNG* y no están versionadas (`.gitignore` bloquea
       `*.png`). En un clon limpio no compila
 - [ ] Decidir si van **Apéndices** (`apendices.tex` es solo un `\pendiente{}`)
 - [ ] Decidir si va `agradecimientos` (existe, está comentado)
-- [ ] Revisar epígrafes: el criterio del preámbulo dice 3 o 4 en toda la tesis y
+- [x] Revisar epígrafes: el criterio del preámbulo dice 3 o 4 en toda la tesis y
       **ninguno en Resultados**
 
 ---
