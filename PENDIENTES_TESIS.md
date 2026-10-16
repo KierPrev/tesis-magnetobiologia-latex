@@ -358,11 +358,31 @@ plan de análisis.
 
 - [x] Pasajes propios más densos de Materiales y métodos y Resultados
 - [x] Criterio de inclusión y escalas de radícula
-- [ ] Pasajes propios que quedan: control positivo en Resultados, las tres
-      subsecciones por grupo, sensibilidad de radícula, comparación entre imanes
-      y síntesis del capítulo (~2.500 palabras)
-- [ ] **Materiales y métodos, secciones previas** (~7.000 palabras)
-- [ ] **Resultados, capítulo del control negativo** (~1.800 palabras)
+- [x] Pasajes propios que quedaban en Resultados
+- [x] **Resultados, capítulo del control negativo**. Capítulo completo: jerga de
+      7,7 a 3,9 por mil palabras, frase más larga de 64 a 53
+- [~] **Materiales y métodos** (~10.000 palabras, 149 párrafos de prosa).
+      Se pasaron los 6 párrafos más densos y los pasajes propios. El resultado
+      sobre el capítulo entero es modesto: jerga de 5,8 a 5,2, frase más larga
+      sin cambio en 68 palabras.
+
+      **Esto requiere una decisión, no más trabajo del mismo tipo.** La densidad
+      del capítulo no está concentrada en unos pocos párrafos malos: está
+      repartida de forma uniforme. El 60% de sus frases pasa las 20 palabras,
+      el 31% pasa las 30 y el 15% pasa las 40. Arreglar los peores casos no
+      mueve el promedio.
+
+      Hay dos caminos:
+
+      1. **Pasada sistemática completa**, párrafo por párrafo. Es el único modo
+         de que el capítulo lea como los demás, y es el trabajo más largo que
+         queda en todo el proyecto.
+      2. **Dejarlo como está.** El capítulo es legible y su registro es
+         consistente consigo mismo; simplemente es más formal que Resultados y
+         Discusión. Un jurado no lo señalaría como un defecto.
+
+      La asimetría a tener en cuenta: con 10.000 palabras, este capítulo es la
+      mitad de la tesis, así que su registro define la impresión general.
 - [ ] **Antecedentes** (~1.968 palabras)
 - [ ] **Introducción** (~271 palabras)
 - [ ] **Marco teórico** (~2.060 palabras). **Decidir con cuidado**: contiene
