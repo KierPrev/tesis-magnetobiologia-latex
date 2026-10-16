@@ -353,9 +353,13 @@ Control positivo  & 18/05, 22/05, 03/06 & \multicolumn{2}{l}{2, 5 y 6~mL (factor
 
 \paragraph{Motivación del régimen de estrés hídrico.}
 
-Los tres primeros grupos de la tabla se realizaron en condiciones de saturación de agua. Una vez concluido el análisis de los experimentos con imán de cerámica, que no detectó efecto alguno sobre la imbibición, se incorporó un régimen de \textbf{estrés hídrico} de 3~mL, bajo la hipótesis de que un efecto del campo magnético podría manifestarse cuando la disponibilidad de agua es limitante y no cuando el sistema se encuentra saturado. Esta expectativa es consistente con la literatura revisada en la Sección~\ref{subsec:estres_abiotico}, que reporta efectos de magnitud mayor en condiciones de estrés abiótico que en condiciones óptimas.
+Los primeros experimentos se hicieron con agua abundante. Cuando el análisis del imán de cerámica no encontró ningún efecto, surgió una pregunta razonable: ¿y si el campo solo se nota cuando la semilla está en dificultades? Con agua de sobra, una semilla germina bien de todos modos, y un empujón adicional no tendría dónde manifestarse.
 
-Corresponde declarar con precisión el momento de esta decisión: el régimen de 3~mL \textbf{no estaba previsto en el diseño inicial} y se incorporó con posterioridad al resultado nulo del primer grupo. Esto no afecta la validez de la pre-especificación del plan de análisis (Sección~\ref{subsec:plan_analisis}), que se fijó antes de examinar los datos de los experimentos con neodimio y se aplicó a ellos sin modificación; se trata de dos cuestiones distintas, y conviene no confundirlas. Lo que se agregó a posteriori fue una \emph{condición experimental nueva}, motivada por la literatura; lo que se mantuvo fijo de antemano fue el \emph{procedimiento de análisis} con que se evaluaría.
+Esa idea no es una ocurrencia: la literatura revisada en la Sección~\ref{subsec:estres_abiotico} reporta justamente efectos mayores cuando las semillas germinan en condiciones adversas que cuando germinan en condiciones óptimas. Por eso se incorporó un segundo régimen, con 3~mL en lugar de 5.
+
+Hay que ser claros sobre cuándo se tomó esta decisión: el régimen de 3~mL \textbf{no estaba previsto al comienzo} y se agregó después de ver el resultado nulo del primer grupo. Decirlo importa, porque cambiar el experimento según lo que van mostrando los datos es una práctica que puede invalidar las conclusiones.
+
+Lo que salva la situación es distinguir dos cosas. Una es agregar una \emph{condición experimental nueva}, que es lo que se hizo acá, y que es legítimo siempre que se declare. La otra sería cambiar el \emph{método de análisis} después de ver los resultados, para que salgan más favorables, y eso no se hizo: el plan de análisis quedó fijado antes de mirar los datos de neodimio y se aplicó sin modificaciones (Sección~\ref{subsec:plan_analisis}).
 
 \paragraph{La magnitud del efecto del agua.}
 
@@ -590,7 +594,11 @@ El único experimento de tratamiento que queda fuera es el del 14/08, con el pol
 
 \paragraph{Unidad experimental.}
 
-La unidad experimental es la \textbf{muestra}, es decir, el lote de semillas alojado en un compartimento, y en ningún caso la semilla individual. Las veinte semillas de una muestra comparten el mismo nivel de tratamiento, el mismo volumen de agua y la misma posición en el sistema de germinación, de modo que no constituyen réplicas independientes: analizarlas por separado sería pseudo-replicación, y produciría intervalos de confianza artificialmente estrechos al tratar como veinte observaciones lo que es una sola. Todas las variables de respuesta se agregan, por lo tanto, a nivel de muestra antes de entrar en los modelos.
+Antes de cualquier cuenta hay que decidir qué cuenta como un dato. Acá el dato es la \textbf{muestra} ---el lote de veinte semillas de un compartimento--- y nunca la semilla suelta.
+
+El motivo es que las veinte semillas de una muestra no son veinte experimentos independientes: recibieron el mismo campo, la misma agua y la misma posición durante la germinación. Si una muestra estuvo en un lugar un poco más cálido, las veinte estuvieron ahí. Contarlas como veinte datos sería multiplicar por veinte una sola observación, y el resultado serían intervalos de confianza mucho más angostos de lo que corresponde, es decir, una falsa sensación de precisión. Este error tiene nombre propio en la literatura estadística: \textbf{pseudo-replicación}.
+
+En consecuencia, cada variable se resume primero a un número por muestra, y recién ese número entra en los modelos. Con 27 muestras por experimento y tres experimentos por grupo, cada grupo aporta 81 datos.
 
 \paragraph{Variables de respuesta.}
 
@@ -618,13 +626,15 @@ La asimetría en la disponibilidad de variables entre grupos es una limitación 
 
 \paragraph{Estructura del contraste: bloques completos aleatorizados.}
 
-El diseño es de \textbf{bloques completos aleatorizados}. El bloque se define como la combinación de \textbf{fecha de experimento y piso de germinación} ---por ejemplo, \texttt{20260804-A}---, de modo que cada experimento aporta tres bloques y cada grupo de tres fechas aporta nueve. Dentro de cada bloque están representados los nueve niveles de tratamiento exactamente una vez: los ocho niveles expuestos y el control interno. Todos los modelos incluyen, en consecuencia, el término \(C(\text{bloque})\), y el contraste del tratamiento se evalúa \emph{dentro} del bloque.
+Hay un problema que hay que resolver antes de comparar nada: \textbf{dos experimentos hechos en fechas distintas no dan lo mismo}, aunque se sigan los mismos pasos. En los tres experimentos con imán de cerámica, la imbibición media fue del 56{,}4\%, del 47{,}8\% y del 44{,}0\%. Esa diferencia entre fechas es mucho mayor que cualquier efecto que pudiera tener el imán, así que si se juntan todas las muestras en una sola bolsa y se comparan tratadas contra control, la diferencia entre fechas se mete en el medio y tapa lo que se quiere ver.
 
-Esta elección no es una preferencia metodológica abstracta, sino una consecuencia de la magnitud del efecto de bloque observado. En los tres experimentos con imán de cerámica, la imbibición media fue de 56{,}4\%, 47{,}8\% y 44{,}0\% respectivamente, y el término de bloque resulta altamente significativo (\(F_{8,64} = 18{,}4\), \(p < 0{,}001\)***). La variación entre bloques supera holgadamente cualquier diferencia atribuible al tratamiento, de modo que agrupar réplicas sin contemplar su origen introduciría una fuente de variabilidad que enmascararía el efecto de interés. El bloqueo la cancela por construcción.
+La solución es \textbf{comparar solo dentro de lo comparable}. Se llama \textbf{bloque} a un conjunto de muestras que compartieron fecha y piso de germinación ---por ejemplo, todas las del 04/08 que fueron al piso A--- y se exige que dentro de cada bloque estén los nueve niveles de tratamiento, con una muestra cada uno. Así cada experimento aporta tres bloques, uno por piso, y cada grupo de tres fechas aporta nueve. Esta estructura se conoce como \textbf{diseño de bloques completos aleatorizados}: completos porque cada bloque contiene todos los tratamientos, y aleatorizados porque la posición de cada muestra dentro del sistema de germinación se sorteó.
 
-Corresponde señalar que esa variabilidad \textbf{no presenta una tendencia temporal}. A volumen de agua constante (5~mL), la imbibición media de las muestras control oscila entre 0{,}38 y 0{,}54 a lo largo de los nueve experimentos realizados en ese régimen, sin dirección definida, y los dos grupos de imán a 5~mL arrojan medias de control prácticamente coincidentes (0{,}4878 y 0{,}4872) pese a haberse realizado en meses distintos. No se trata, por lo tanto, de una deriva del sistema, sino de variabilidad entre fechas, que es precisamente lo que el bloqueo está diseñado para absorber.
+La comparación se hace entonces nivel contra control \emph{dentro de cada bloque}, y después se promedia entre bloques. En los modelos esto aparece como un término \(C(\text{bloque})\), que no es otra cosa que la instrucción de descontar el promedio propio de cada bloque antes de comparar. En el grupo de cerámica ese término resulta muy grande (\(F_{8,64} = 18{,}4\), \(p < 0{,}001\)***), lo que confirma que sin él la comparación no se sostendría.
 
-Sobre esta estructura se define el \textbf{contraste primario}, de un grado de libertad: el promedio de los ocho niveles expuestos frente al control interno, ajustado por bloque. Se reportan además los ocho contrastes individuales de cada nivel contra el control, con corrección por multiplicidad, y un contraste de tendencia dosis-respuesta frente al logaritmo de la intensidad de campo.
+Conviene aclarar que esta variabilidad entre fechas \textbf{no es una deriva}: el sistema no se degrada con el tiempo. Manteniendo el agua en 5~mL, la imbibición de las muestras control va y viene entre 0{,}38 y 0{,}54 a lo largo de los nueve experimentos de ese régimen, sin dirección definida. De hecho los dos grupos de imán a 5~mL, separados por varios meses, arrojan medias de control casi idénticas: 0{,}4878 y 0{,}4872. Es variabilidad entre fechas, y es justamente lo que el bloqueo está pensado para absorber.
+
+Sobre esta estructura se definen tres comparaciones. La \textbf{principal} es una sola: el promedio de los ocho niveles expuestos contra el control. Las \textbf{secundarias} son ocho, una por nivel contra el control, y por ser ocho necesitan la corrección que se explica más abajo. La tercera pregunta si la respuesta crece o decrece con la intensidad del campo; se evalúa contra el logaritmo de la intensidad, porque los niveles cubren casi dos órdenes de magnitud.
 
 Los controles negativos combinados se emplean como referencia de variabilidad basal y como validación del montaje, no como grupo de comparación del tratamiento.
 
@@ -645,42 +655,60 @@ Para cada conjunto de datos se verifican los supuestos antes de aplicar las prue
 \begin{itemize}
     \item \textbf{Homogeneidad de varianzas:} prueba de Brown-Forsythe (Levene centrada en la mediana), por su robustez frente a desviaciones de la normalidad. Si no se satisface, el análisis \textit{post-hoc} se realiza mediante Games-Howell en lugar de Tukey HSD.
     \item \textbf{Normalidad de residuos:} prueba de Shapiro-Wilk sobre los residuos del modelo. Ante desviaciones apreciables se reporta adicionalmente la prueba no paramétrica de Kruskal-Wallis como verificación.
-    \item \textbf{Comparaciones múltiples:} los valores \(p\) de los ocho contrastes de cada nivel contra el control se corrigen mediante el procedimiento de \textbf{Holm}, que controla la tasa de error por familia. Se eligió este criterio, y no uno de control de la tasa de falsos descubrimientos como Benjamini-Hochberg, porque la pregunta que se formula es si \emph{algún} nivel de campo difiere del control: en ese planteo lo que debe acotarse es la probabilidad de declarar al menos un falso positivo en el conjunto, no la proporción esperada de falsos positivos entre los declarados. En todas las tablas se informan tanto el valor \(p\) sin corregir como el corregido, y la interpretación se apoya siempre en el segundo.
+    \item \textbf{Comparaciones múltiples:} los ocho valores \(p\) de cada nivel contra el control se corrigen con el procedimiento de \textbf{Holm}. En todas las tablas se informan el valor sin corregir y el corregido, y la interpretación se apoya siempre en el segundo.
 \end{itemize}
 
-La distinción no es cosmética. En el grupo de neodimio a 3~mL, el nivel 3 (77~mT) presenta en el largo de radícula un valor \(p\) sin corregir de 0{,}012, que pasa a 0{,}093 tras la corrección de Holm. Es la corrección por multiplicidad la que determina que ese valor no constituya un hallazgo, y la que impide presentarlo como tal.
+\paragraph{Por qué hay que corregir cuando se hacen ocho comparaciones.}
+
+Cuando se hace una sola comparación, un valor \(p\) menor que 0{,}05 significa que un resultado así de extremo ocurriría menos de una vez en veinte si no hubiera ningún efecto. Pero si se hacen ocho comparaciones a la vez, hay ocho oportunidades de que alguna salga extrema por azar, y la probabilidad de que al menos una lo haga sube al 34\%. Es decir: \emph{si el campo no tuviera ningún efecto, lo más esperable sería encontrar exactamente una comparación «significativa»}.
+
+La corrección de Holm ajusta los valores \(p\) según cuántas comparaciones se hicieron, de manera que una comparación llamativa entre ocho no cuente lo mismo que una comparación llamativa decidida de antemano y hecha sola. Se eligió Holm, y no un criterio de los que controlan la proporción de falsos positivos entre los declarados, porque la pregunta de este trabajo es si \emph{algún} nivel difiere del control: lo que interesa acotar es la probabilidad de equivocarse al menos una vez en el conjunto.
+
+Esto no es un detalle de forma. En el grupo de neodimio a 3~mL, el nivel 3 (77~mT) presenta en el largo de radícula un valor \(p\) sin corregir de 0{,}012, que al corregir pasa a 0{,}093. Es la corrección la que determina que ese valor no sea un hallazgo, y la que impide presentarlo como tal.
 
 Se adopta un nivel de significación \(\alpha = 0{,}05\). En todas las tablas se emplea la convención *~(\(p < 0{,}05\)), **~(\(p < 0{,}01\)) y ***~(\(p < 0{,}001\)), indicándose explícitamente ``n.s.'' cuando no se alcanza significancia.
 
 \paragraph{Desviaciones de los supuestos y del diseño.}
 
-Los supuestos no se satisfacen por igual en todos los grupos, y las desviaciones se declaran antes de presentar los resultados para que no se las descubra al pie de una tabla.
+Las pruebas estadísticas que se usan acá dan por buenas dos cosas: que los errores del modelo se distribuyan de forma aproximadamente normal y que su dispersión sea parecida entre niveles. Conviene decir de entrada dónde eso se cumple y dónde no, en lugar de que el lector lo descubra en una nota al pie.
 
-El grupo de \textbf{neodimio a 3~mL} satisface los supuestos sin reparos: la prueba de Shapiro-Wilk sobre los residuos arroja \(p = 0{,}55\) y la de Levene entre niveles \(p = 0{,}73\), y sus bloques están completos y balanceados.
+El grupo de \textbf{neodimio a 3~mL} cumple sin problemas: la prueba de Shapiro-Wilk, que evalúa la normalidad, da \(p = 0{,}55\), y la de Levene, que evalúa la dispersión, da \(p = 0{,}73\). En estas pruebas un valor alto es buena noticia, porque significa que no hay evidencia de que el supuesto falle. Sus bloques están completos.
 
-El grupo de \textbf{cerámica} presenta dos desviaciones. La primera es que los residuos se apartan de la normalidad (Shapiro-Wilk, \(p = 0{,}0003\)). La segunda es que sus bloques \textbf{no están balanceados}: en el experimento del 31/03 hay celdas del diseño sin muestra y celdas con dos, de modo que la correspondencia de un nivel por bloque no se cumple exactamente. Ninguna de las dos invalida el análisis, por tres razones que conviene explicitar: el tamaño de muestra es de 81 unidades, lo que vuelve robusta la inferencia sobre una media por el teorema central del límite; el contraste primario es de un solo grado de libertad, el caso en que esa robustez es mayor; y el análisis de sensibilidad ---con y sin el término de bloque, con y sin el término de posición--- desplaza la estimación del efecto entre +1{,}43\,\pct y +0{,}60\,\pct sin alterar la conclusión en ninguna de las cuatro especificaciones. Aun así, la inferencia sobre este grupo debe considerarse menos firme que la de los demás, y el margen de equivalencia se evalúa con esa reserva.
+El grupo de \textbf{neodimio a 5~mL} se aparta levemente de la normalidad (\(p = 0{,}025\)), con bloques completos.
 
-El grupo de \textbf{neodimio a 5~mL} presenta una desviación leve de la normalidad (\(p = 0{,}025\)) con bloques completos y balanceados.
+El grupo de \textbf{cerámica} es el que tiene dos problemas reales. El primero es que se aparta claramente de la normalidad (\(p = 0{,}0003\)). El segundo es que sus bloques \textbf{no están completos}: en el experimento del 31/03 hay posiciones del diseño que quedaron sin muestra y otras con dos, así que la regla de una muestra por nivel y por bloque no se cumple del todo.
 
-En el análisis de \textbf{radícula} los bloques tampoco están completos, por las muestras sin radículas medidas, de modo que el grupo queda en 77 unidades en lugar de 81.
+Ninguno de los dos invalida el análisis, y vale explicar por qué. El grupo tiene 81 muestras, y con esa cantidad el promedio se comporta de manera estable aunque los datos individuales no sean normales. Además, la comparación principal es una sola, que es el caso en que esa estabilidad es mayor. Y sobre todo: el análisis se repitió de cuatro formas distintas, incluyendo y excluyendo los términos de bloque y de posición, y la estimación se movió entre +1{,}43\,\pct y +0{,}60\,\pct sin cambiar la conclusión en ningún caso. Dicho eso, las conclusiones sobre cerámica son menos firmes que las de los otros grupos, y así se las presenta.
+
+Por último, en el análisis de \textbf{radícula} los bloques tampoco están completos, porque cuatro muestras no tienen radículas medidas. Ese análisis queda con 77 muestras en lugar de 81.
 
 \paragraph{Inferencia de equivalencia.}
 
-Un contraste no significativo, por sí solo, no permite concluir nada: es compatible tanto con la ausencia de efecto como con un efecto real que el diseño no tuvo potencia para detectar. Dado que la hipótesis bajo examen admite como respuesta legítima que el campo magnético no produzca efecto alguno, el plan de análisis incorpora un procedimiento que permite distinguir ambas situaciones en lugar de dejarlas confundidas.
+Si una prueba no da significativa, eso solo no alcanza para concluir nada. Puede ser que el efecto no exista, o puede ser que exista y el experimento no haya tenido la sensibilidad necesaria para verlo. Son dos situaciones muy distintas y conviene poder separarlas, porque en este trabajo que el campo magnético no produzca efecto es una respuesta posible y no un fracaso del experimento.
 
-El procedimiento adoptado es el de las \textbf{dos pruebas unilaterales} (\textit{two one-sided tests}, TOST) \cite{schuirmann_1987, lakens_2017}. En lugar de contrastar la hipótesis nula de efecto exactamente cero ---que nunca puede acreditarse--- se fija de antemano un margen de relevancia \(\pm\delta\) y se contrastan dos hipótesis nulas: que el efecto sea menor que \(-\delta\) y que sea mayor que \(+\delta\). Si ambas se rechazan, el efecto queda \emph{acotado} dentro del margen, lo que equivale a verificar que el intervalo de confianza al 90\,\pct esté contenido enteramente en \((-\delta, +\delta)\). La conclusión que se obtiene no es que el efecto sea nulo, sino que, si existe, es menor que \(\delta\).
+El problema de fondo es que ninguna medición puede demostrar que un efecto vale exactamente cero: siempre queda la posibilidad de que exista pero sea demasiado chico para verse. Por eso la pregunta útil no es \emph{¿el efecto es cero?} sino \textbf{¿el efecto es lo bastante chico como para no importar?}
+
+Responderla requiere decidir primero qué significa «no importar», es decir, fijar un umbral por debajo del cual un cambio deja de tener interés. Una vez fijado ese umbral, la prueba consiste en descartar dos posibilidades: que el efecto sea mayor que el umbral y que sea menor que el umbral con signo contrario. Si se descartan las dos, el efecto quedó encerrado dentro de esa franja. Equivale a verificar que el intervalo de confianza del 90\,\pct entre entero en la franja.
+
+Este procedimiento se conoce como \textbf{prueba de equivalencia} o \textbf{TOST}, por las iniciales de \textit{two one-sided tests}: las dos pruebas unilaterales que se hacen, una por cada extremo de la franja \cite{schuirmann_1987, lakens_2017}. Lo que se concluye con él no es «el campo no hace nada», sino «si el campo hace algo, es menos que el umbral».
 
 \paragraph{Margen de relevancia.}
 
-Se adoptó un margen de \(\pm 10\)\,\pct relativo a la media del control, fijado de antemano como umbral de \textbf{relevancia biológica}: un efecto menor que ese valor se considera irrelevante para los fines prácticos que motivan el interés en el magnetopriming, con independencia de que pudiera alcanzar significancia estadística con un tamaño de muestra suficientemente grande.
+El umbral se fijó en el \textbf{10\,\pct} respecto de la media del control, y se fijó antes de mirar los datos. La idea es que un cambio menor al 10\,\pct no tendría interés práctico para nadie que quisiera usar esta técnica, aunque llegara a dar significativo con una muestra suficientemente grande. Es un criterio de \emph{relevancia}, no de estadística.
 
-La elección de ese valor se apoya en las magnitudes que reporta la literatura revisada en el Capítulo~\ref{cap:antecedentes}, que son considerablemente mayores. El meta-análisis de Tapia-Belmonte et al. \cite{tapia_belmonte_2023} informa mejoras del 12{,}8\,\pct en germinación para campos uniformes y del 123\,\pct en peso fresco para campos no uniformes; Kataria et al. \cite{kataria_2017} reportan, en la variable más directamente comparable con la de este trabajo, un incremento del 62\,\pct en la absorción de agua bajo estrés salino. Un margen del 10\,\pct es, por lo tanto, \textbf{conservador} respecto de los efectos que se pretende poder descartar: queda por debajo del menor de los valores citados, de modo que acreditar equivalencia dentro de ese margen excluye los efectos de la magnitud que la literatura atribuye al tratamiento.
+¿Por qué el 10\,\pct y no otro número? Porque los efectos que reporta la literatura son bastante mayores, y conviene que el umbral quede por debajo de ellos. El meta-análisis de Tapia-Belmonte et al.~\cite{tapia_belmonte_2023} informa mejoras del 12{,}8\,\pct en germinación con campos uniformes y del 123\,\pct en peso fresco con campos no uniformes. Kataria et al.~\cite{kataria_2017}, en la variable más parecida a la de este trabajo, reportan un 62\,\pct más de absorción de agua bajo estrés salino.
+
+Fijar el umbral en el 10\,\pct es entonces exigente con uno mismo: es más chico que el menor de esos valores. Si se acredita que el efecto cae dentro de esa franja, quedan descartados los efectos del tamaño que la literatura atribuye al tratamiento.
 
 \paragraph{Efecto mínimo detectable.}
 
-Con \(n = 9\) réplicas por nivel de tratamiento, el diseño posee una potencia limitada para efectos pequeños, y esa limitación se declara de manera cuantitativa. Para cada grupo y cada variable se reporta el \textbf{efecto mínimo detectable} con una potencia del 80\,\pct, que expresa con precisión qué magnitud el ensayo estaba en condiciones de ver. Los valores obtenidos sobre la variable primaria son del 8{,}19\,\pct en el grupo de cerámica a 5~mL, del 6{,}87\,\pct en neodimio a 5~mL y del 3{,}40\,\pct en neodimio a 3~mL; la diferencia entre ellos refleja la mejora en la precisión del armado descrita en la Sección~\ref{subsec:regimen_hidrico}. En el largo de radícula, en cambio, el efecto mínimo detectable asciende al 26{,}4\,\pct, de modo que esa variable solo permite descartar efectos de gran magnitud y se interpreta en consecuencia.
+Un experimento con nueve réplicas por condición no puede ver efectos arbitrariamente chicos. En lugar de dejar esa limitación implícita, se la mide: para cada grupo y cada variable se calcula el \textbf{efecto mínimo detectable}, que es el efecto más chico que el experimento habría tenido buenas chances de encontrar si hubiera existido. Convencionalmente «buenas chances» significa un 80\,\pct.
 
-Junto con los valores \(p\) se reportan siempre los tamaños de efecto y sus intervalos de confianza, más informativos que la sola decisión binaria de significancia.
+Sobre la variable primaria, ese valor es del 8{,}19\,\pct en cerámica a 5~mL, del 6{,}87\,\pct en neodimio a 5~mL y del 3{,}40\,\pct en neodimio a 3~mL. Que el último sea el más chico no es casualidad: es el grupo armado con el dosificador exacto, y menos variabilidad en el armado permite ver diferencias más finas (Sección~\ref{subsec:regimen_hidrico}).
+
+El largo de radícula es el caso incómodo: su efecto mínimo detectable es del 26{,}4\,\pct. Esa variable solo sirve, entonces, para descartar efectos muy grandes, y así se la interpreta.
+
+Leído junto con el umbral de relevancia, el efecto mínimo detectable dice si una conclusión de equivalencia tiene sustento real. Si el experimento no pudiera ver ni siquiera efectos del tamaño del umbral, declarar equivalencia no significaría nada. Por eso se reportan los dos números, y siempre acompañados del tamaño de efecto estimado y su intervalo de confianza, que dicen más que el solo veredicto de significativo o no.
 
 \paragraph{El papel del control positivo.}
 
@@ -689,9 +717,11 @@ Lo anterior establece qué se puede concluir de los datos, pero no acredita que 
 \section{Experimentos control positivo}
 \label{subsec:ctrl_positivo}
 
-Los experimentos de control positivo cumplen una función distinta de la de los demás: no buscan detectar un efecto nuevo, sino \textbf{acreditar que el procedimiento de medición es capaz de detectar un efecto real cuando este existe}. Sin esa verificación, un resultado nulo sobre el tratamiento magnético sería indistinguible de la insensibilidad del método, y por lo tanto no informativo.
+Estos experimentos no buscan descubrir nada. Buscan responder una pregunta previa a todo lo demás: \textbf{¿este método es capaz de detectar un efecto, si lo hubiera?}
 
-El razonamiento es el siguiente. Si se introduce deliberadamente una modificación de magnitud conocida en el fenómeno que se pretende medir y el ensayo la detecta con holgura, queda establecido que la cadena completa ---armado de las muestras, pesaje, germinación controlada, agregación por muestra y modelo estadístico--- posee la sensibilidad necesaria. Si, en cambio, el ensayo no detectara ni esa modificación, nada podría concluirse de un resultado nulo sobre el campo magnético.
+La pregunta importa porque, sin respuesta, un resultado nulo no dice nada. Si los experimentos con imán no muestran efecto, hay dos explicaciones posibles: que el imán no haga nada, o que el método no sirva para verlo. Mientras no se descarte la segunda, no se puede afirmar la primera.
+
+La forma de descartarla es provocar a propósito un cambio que uno \emph{sabe} que existe, y ver si el método lo registra. Si lo registra con holgura, queda demostrado que toda la cadena ---el armado de las muestras, el pesaje, la germinación controlada y el análisis--- tiene la sensibilidad necesaria. Si no lo registrara, habría que arreglar el método antes de sacar cualquier conclusión sobre imanes.
 
 \paragraph{Diseño.}
 

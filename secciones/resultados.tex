@@ -1,6 +1,10 @@
 \chapter{Resultados}
 
-Este capítulo se ordena siguiendo la lógica del argumento antes que el orden cronológico de los experimentos. Se presenta primero la \textbf{validación del método} mediante el control positivo, que establece que el procedimiento detecta un efecto real cuando este existe; a continuación la \textbf{caracterización del sistema} mediante los controles negativos, que cuantifica la variabilidad propia del montaje; y recién entonces los \textbf{experimentos de tratamiento}. Este orden no es una preferencia expositiva: sin las dos primeras piezas, los resultados de la tercera no admitirían interpretación.
+Este capítulo no sigue el orden en que se hicieron los experimentos, sino el orden en que hacen falta para entender el resultado.
+
+Va primero el \textbf{control positivo}, que responde una pregunta previa a todas: ¿este método es capaz de detectar un efecto real? Después los \textbf{controles negativos}, que miden cuánto varía el sistema por sí solo, sin ningún tratamiento. Y recién entonces los \textbf{experimentos con imán}.
+
+El orden importa porque las dos primeras piezas son las que vuelven interpretable a la tercera. Sin saber que el método detecta efectos, no se podría distinguir «el imán no hace nada» de «este método no ve nada». Y sin saber cuánto varía el sistema solo, cualquier diferencia podría ser del montaje y no del tratamiento.
 
 \section{Validación del método: control positivo}
 \label{sec:res_ctrl_positivo}
@@ -389,7 +393,13 @@ Nivel & \(B\) (mT) & \(\Delta\) (\%) & \(B\) (mT) & 5~mL: \(\Delta\) (\%) & 3~mL
 \end{threeparttable}
 \end{table}
 
-Conviene detenerse en la estructura de esa tabla antes de pasar a los contrastes globales. Las diferencias no solo son pequeñas: \textbf{no son consistentes entre grupos}. En cerámica son predominantemente positivas, en neodimio a 5~mL predominantemente negativas y en neodimio a 3~mL positivas de nuevo, sin que ningún nivel de campo se destaque de manera reproducible en los tres. Tampoco se ordenan según la intensidad: el nivel 1, que recibe el campo más intenso de cada montaje, no se distingue del nivel 8, que recibe el más débil. El patrón es el que cabe esperar de fluctuación aleatoria en torno a cero.
+Vale la pena mirar esa tabla con atención, porque dice más que los valores \(p\).
+
+Lo primero es que las diferencias son chicas: ninguna pasa del 4{,}4\%, cuando el umbral de relevancia es el 10\%. Pero lo segundo es más importante: \textbf{no son consistentes entre grupos}. En cerámica son casi todas positivas, en neodimio a 5~mL casi todas negativas, y en neodimio a 3~mL positivas otra vez. Ningún nivel de campo se destaca en los tres.
+
+Lo tercero es que no se ordenan por intensidad. El nivel 1, que recibe el campo más fuerte de cada montaje, no se diferencia del nivel 8, que recibe el más débil. Si el campo tuviera un efecto, lo esperable sería alguna relación entre la dosis y la respuesta; acá no hay ninguna.
+
+Los tres rasgos juntos ---diferencias chicas, signos que cambian de grupo a grupo y ningún orden por dosis--- son exactamente lo que se ve cuando lo único que hay es fluctuación al azar alrededor de cero.
 
 \subsection{Cerámica N en saturación de agua}
 
@@ -462,9 +472,11 @@ Neodimio N, 3~mL  & \(+1{,}59\) & \([-0{,}80;\ +3{,}98]\) & \(< 10^{-5}\)*** & \
 \end{threeparttable}
 \end{table}
 
-Los tres grupos resultan \textbf{equivalentes} dentro del margen de \(\pm 10\,\pct\). El resultado no consiste, por lo tanto, en no haber hallado un efecto, sino en haber acotado su magnitud: si el campo magnético produce algún efecto sobre la imbibición en las condiciones ensayadas, es menor que el 10\,\pct y queda por debajo del umbral de relevancia biológica fijado de antemano.
+En los tres grupos la prueba de equivalencia da positiva. Lo que se obtiene, entonces, no es «no encontramos nada», sino algo más preciso: \textbf{si el campo magnético afecta la imbibición en estas condiciones, lo hace en menos del 10\,\pct}, que es el umbral por debajo del cual el cambio deja de tener interés práctico.
 
-El efecto mínimo detectable precisa el alcance de esa afirmación en cada grupo. El de neodimio en estrés hídrico, con un 3{,}40\,\pct, es el más sensible y el que acota con mayor firmeza; el de cerámica, con un 8{,}19\,\pct, es el menos sensible, lo que se corresponde con su mayor variabilidad entre bloques y con las desviaciones de los supuestos ya señaladas. En los tres casos, no obstante, el margen de equivalencia resulta mayor que el efecto mínimo detectable, de modo que la conclusión de equivalencia está respaldada por la potencia del diseño y no es un artificio de un margen excesivamente amplio.
+La última columna dice hasta dónde llega esa afirmación en cada caso. El grupo de neodimio en estrés hídrico es el más sensible: podía detectar efectos desde el 3{,}40\,\pct, así que su conclusión es la más firme. El de cerámica es el menos sensible, con un 8{,}19\,\pct, lo que concuerda con su mayor variabilidad entre fechas y con los problemas de supuestos ya señalados.
+
+Hay un detalle que conviene mirar, porque es lo que impide que esta conclusión sea un truco. En los tres grupos el umbral de relevancia (10\,\pct) es \emph{mayor} que el efecto mínimo detectable. Si fuera al revés ---si el experimento no pudiera ver ni siquiera efectos del tamaño del umbral--- declarar equivalencia no significaría nada: se estaría afirmando que el efecto es chico solo porque el instrumento era grueso. Acá no es el caso.
 
 \section{Germinación}
 \label{sec:res_germinacion}
@@ -513,9 +525,11 @@ Dos observaciones sobre esta tabla. La primera es que el nivel 1, que recibe el 
 
 \paragraph{Germinación como mediador.}
 
-La germinación y la imbibición no son variables independientes: una semilla que germina incorpora más agua que una que no lo hace, de modo que un efecto sobre la germinación se trasladaría mecánicamente a la imbibición. Para evaluar esa dependencia se repitió el análisis de imbibición incluyendo la germinación como covariable. El efecto estimado desciende de \(+1{,}59\,\pct\) (\(p = 0{,}19\)) a \(+0{,}72\,\pct\) (\(p = 0{,}51\)).
+Las dos variables no son independientes. Una semilla que germinó absorbió más agua que una que no, simplemente porque empezó a crecer. Entonces, si el campo afectara la germinación, ese efecto aparecería también en el peso, sin que el campo hubiera actuado sobre la absorción de agua en sí misma. La germinación sería lo que se llama un \textbf{mediador}: un paso intermedio por el cual el efecto viaja de una variable a la otra.
 
-La interpretación de ese descenso requiere cautela. Ajustar por un mediador potencial no aísla un efecto directo sino que introduce un sesgo de condicionamiento, y el resultado se reporta como verificación de consistencia y no como estimación preferida. Lo relevante es que ambas especificaciones coinciden en no detectar efecto, y que la segunda arroja una estimación aún más próxima a cero que la primera.
+Para ver cuánto pesa esa dependencia se repitió el análisis de imbibición agregando la germinación al modelo. El efecto estimado baja de \(+1{,}59\,\pct\) (\(p = 0{,}19\)) a \(+0{,}72\,\pct\) (\(p = 0{,}51\)).
+
+Ese número hay que leerlo con cuidado y no como «el efecto verdadero es más chico». Cuando se agrega un mediador al modelo, el resultado no es el efecto que quedaría si el mediador no existiera: la propia operación introduce un sesgo, porque se están comparando muestras que germinaron parecido pero que llegaron ahí por caminos distintos. Por eso este análisis se reporta como verificación y no como la estimación preferida. Lo que importa es que las dos versiones coinciden en no encontrar efecto, y que la segunda da un número todavía más cercano a cero.
 
 \section{Largo de radícula}
 \label{sec:res_radicula}
@@ -543,18 +557,22 @@ El análisis se repitió con tres especificaciones alternativas, con resultados 
 
 En esta variable, el nivel 3 (77~mT) presenta la mayor diferencia respecto del control, de \(+1{,}96\)~mm o \(+30{,}6\,\pct\), con un valor \(p\) sin corregir de 0,012. Tras la corrección de Holm por los ocho contrastes, ese valor pasa a \textbf{0,093} y no alcanza significancia.
 
-Corresponde ser explícito sobre el estatus de esta observación. Los ocho contrastes se realizaron de manera simultánea, y con ocho comparaciones independientes la probabilidad de que al menos una arroje un valor \(p\) sin corregir inferior a 0,05 por azar es cercana al 34\,\pct. El valor observado es, por lo tanto, compatible con lo esperable del propio procedimiento de comparación múltiple. Se señala que el mismo nivel aparece también entre los más altos en germinación, lo que lo vuelve un candidato razonable para una prueba dirigida en un diseño que lo contemple específicamente, pero en el presente trabajo \textbf{no constituye un resultado} y no se lo presenta como tal.
+¿Por qué esto no es un hallazgo? Porque los ocho niveles se compararon contra el control al mismo tiempo, y cuando se hacen ocho comparaciones crece la probabilidad de que alguna dé un valor bajo por puro azar. Esa probabilidad es del 34\,\pct: si el campo no tuviera ningún efecto, lo más esperable sería encontrar exactamente una comparación «significativa» entre las ocho. Es lo que ocurrió, y es para eso que existe la corrección de Holm.
+
+Hay además una razón física para desconfiar. El nivel 3 recibe 77~mT, mientras que el nivel 1 recibe 263~mT, más del triple, y el nivel 1 no muestra nada. Un efecto que apareciera a 77~mT y desapareciera al triplicar la intensidad no describe ninguna relación entre dosis y respuesta, y el contraste de tendencia lo confirma (\(p = 0{,}70\)).
+
+El nivel 3 queda, entonces, como una pista y no como un resultado. Si alguien quisiera ponerla a prueba, el diseño adecuado sería un experimento dedicado a esa dosis, que la comparara contra el control sin las otras siete comparaciones compitiendo. En este trabajo \textbf{no constituye un resultado} y no se lo presenta como tal.
 
 \section{Efecto del régimen hídrico sobre la respuesta al campo}
 \label{sec:res_interaccion}
 
-La incorporación del régimen de estrés hídrico respondió a la hipótesis de que un efecto del campo magnético pudiera manifestarse cuando la disponibilidad de agua es limitante y no cuando el sistema se encuentra saturado (Sección~\ref{subsec:regimen_hidrico}). Disponiendo del mismo imán en ambos regímenes, esa hipótesis admite una prueba directa.
+El régimen de estrés hídrico se incorporó con una idea concreta: que el campo magnético tal vez solo se note cuando el agua es escasa, y no cuando las semillas la tienen de sobra (Sección~\ref{subsec:regimen_hidrico}). Como el mismo imán se usó en los dos regímenes, esa idea se puede poner a prueba directamente.
 
-La comparación es legítima porque los grupos de neodimio a 5 y a 3~mL comparten el imán, el polo, la torre de exposición, el tiempo de exposición y la tabla de dosis: lo que difiere es el régimen. El efecto del campo estimado en cada uno fue de \(-1{,}46\,\pct\) en saturación (error estándar 2,42\,\pct) y de \(+1{,}59\,\pct\) en estrés hídrico (error estándar 1,20\,\pct).
+La comparación es válida porque los dos grupos de neodimio comparten todo lo demás: el mismo imán, el mismo polo, la misma torre, la misma hora de exposición y la misma tabla de dosis. Lo único que cambia es el agua. En cada uno, el efecto del campo fue de \(-1{,}46\,\pct\) con agua abundante y de \(+1{,}59\,\pct\) con agua escasa.
 
-Ajustando un modelo conjunto con el término de bloque y la interacción entre la exposición al campo y el régimen hídrico, el término de interacción resultó de \(-0{,}0131\) con un error estándar de 0,0126 (\(t = -1{,}04\), \(p = 0{,}30\); intervalo de confianza del 95\,\pct \([-0{,}038;\ +0{,}012]\) en unidades absolutas de imbibición).
+La pregunta no es si cada uno de esos números difiere de cero ---ya se vio que no--- sino si \emph{difieren entre sí}. Para responderla se ajusta un modelo con los dos grupos juntos que estima directamente esa diferencia. El resultado es \(-0{,}0131\) con un error estándar de 0{,}0126, es decir, una diferencia del tamaño de su propia incertidumbre (\(p = 0{,}30\)).
 
-\textbf{No se detectó evidencia de que el estrés hídrico modifique la respuesta al campo magnético.} El efecto es nulo en ambos regímenes, y la diferencia entre ambos resultados nulos tampoco es significativa. La hipótesis que motivó la ampliación del protocolo recibe, por lo tanto, una respuesta negativa.
+\textbf{No hay evidencia de que la escasez de agua cambie la respuesta al campo magnético.} El efecto es nulo en los dos regímenes, y la diferencia entre ambos tampoco llega a distinguirse de cero. La idea que motivó ampliar el protocolo recibe, entonces, una respuesta negativa.
 
 \paragraph{Límite de esta comparación.}
 
