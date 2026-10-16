@@ -344,6 +344,33 @@ resultado nulo sabiendo que el instrumento mide.
 
 ---
 
+## Etapa 6 — Pasada de prosa sobre el resto del documento `[~]`
+
+Criterio acordado: explicar cada término técnico la primera vez que aparece, usar
+preguntas como señales para guiar al lector, y sacar las fórmulas rituales
+(«corresponde señalar», «por lo tanto», «no obstante»). El objetivo es que lo
+pueda leer un estudiante de licenciatura y también un jurado.
+
+La métrica útil no es el largo de las frases ---ya eran más cortas que las del
+texto previo--- sino la **densidad de jerga sin explicar**. En los pasajes ya
+pasados bajó de 9,3 a 4,9 por mil palabras en Resultados y de 10,6 a 4,6 en el
+plan de análisis.
+
+- [x] Pasajes propios más densos de Materiales y métodos y Resultados
+- [x] Criterio de inclusión y escalas de radícula
+- [ ] Pasajes propios que quedan: control positivo en Resultados, las tres
+      subsecciones por grupo, sensibilidad de radícula, comparación entre imanes
+      y síntesis del capítulo (~2.500 palabras)
+- [ ] **Materiales y métodos, secciones previas** (~7.000 palabras)
+- [ ] **Resultados, capítulo del control negativo** (~1.800 palabras)
+- [ ] **Antecedentes** (~1.968 palabras)
+- [ ] **Introducción** (~271 palabras)
+- [ ] **Marco teórico** (~2.060 palabras). **Decidir con cuidado**: contiene
+      derivaciones físicas y una reescritura mal hecha puede introducir errores
+      de contenido, no solo de estilo. Conviene dejarlo último, o no tocarlo
+
+---
+
 ## Verificación final
 
 ```bash

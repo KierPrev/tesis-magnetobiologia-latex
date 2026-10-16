@@ -569,11 +569,21 @@ La consecuencia es una disponibilidad desigual. En el grupo de \textbf{neodimio 
 
 \paragraph{Escalas no comparables entre fechas.}
 
-Aun en el grupo donde la variable está disponible, el procesamiento no es homogéneo entre fechas, y esto condiciona cómo debe leerse el resultado. Las imágenes del 07/09 son exportaciones reducidas, de \(960 \times 1280\) píxeles, frente a los \(4618 \times 3464\) de las otras dos fechas, y el desempeño del algoritmo de segmentación difiere en consecuencia: el 04/08 sobresegmenta, detectando del orden de 69 objetos por muestra para veinte semillas y arrojando una mediana de 2{,}5~mm; el 07/09 subdetecta, con unos 11 objetos y una mediana de 9{,}6~mm; el 11/09 resulta el más verosímil, con unos 24 objetos y una mediana de 5{,}6~mm.
+Incluso en el grupo donde la variable existe hay un problema que condiciona cómo leerla: las tres fechas no miden en la misma escala.
 
-El efecto es cuantificable: el término de bloque en el modelo de radícula alcanza \(F_{8,60} = 37{,}2\) (\(p < 0{,}001\)***), muy superior a cualquier efecto atribuible al tratamiento. Por esta razón la variable se analiza y se grafica \textbf{centrada por bloque}, es decir, como desvío respecto del promedio del bloque al que pertenece cada muestra, que es exactamente la operación que realiza el término \(C(\text{bloque})\) del modelo. En milímetros absolutos, las distancias entre fechas dominarían la representación y ocultarían el efecto de interés.
+La causa es que las imágenes no son equivalentes. Las del 07/09 son exportaciones reducidas, de \(960 \times 1280\) píxeles, contra los \(4618 \times 3464\) de las otras dos. El algoritmo de segmentación rinde distinto en cada caso, y se nota al contar cuántos objetos detecta por muestra, cuando lo esperable serían veinte radículas:
 
-Debe tenerse presente, por lo tanto, que el largo de radícula constituye en este trabajo una variable de \textbf{baja potencia}, con un efecto mínimo detectable del 26{,}4\,\pct, y que su eje no admite lectura en milímetros absolutos. La media absoluta del control, de 6{,}42~mm, se conserva como referencia de escala.
+\begin{itemize}
+    \item el 04/08 detecta unos 69 objetos por muestra: parte radículas en pedazos, y la mediana cae a 2{,}5~mm;
+    \item el 07/09 detecta unos 11: pierde radículas, y la mediana sube a 9{,}6~mm;
+    \item el 11/09 detecta unos 24, lo más cercano a lo esperable, con una mediana de 5{,}6~mm.
+\end{itemize}
+
+Las tres medianas difieren por un factor de casi cuatro, y esa diferencia es de la medición y no de las plantas. Se traduce en un término de bloque enorme, \(F_{8,60} = 37{,}2\) (\(p < 0{,}001\)***), muy por encima de cualquier efecto que pudiera tener el tratamiento.
+
+Por eso la variable se analiza y se grafica \textbf{centrada por bloque}: en lugar del largo en milímetros se usa su desvío respecto del promedio del bloque al que pertenece cada muestra. Es la misma operación que hace el término \(C(\text{bloque})\) del modelo. Si se graficaran los milímetros crudos, el alto de cada caja reflejaría la distancia entre fechas y no el efecto buscado.
+
+De esto se siguen dos advertencias para la lectura. El largo de radícula es una variable de \textbf{baja potencia}: solo permite detectar efectos mayores al 26{,}4\,\pct. Y \textbf{su eje no se lee en milímetros}. La media absoluta del control, 6{,}42~mm, se conserva como referencia de escala para quien quiera dimensionar los desvíos.
 
 La homogeneización del procedimiento de captura ---junto con el registro sistemático de temperatura, disponible solo en los dos primeros experimentos--- constituye una línea natural de continuidad para trabajos futuros.
 
@@ -586,11 +596,13 @@ Esta pre-especificación responde a un riesgo concreto en diseños con múltiple
 
 \paragraph{Criterio de inclusión de experimentos.}
 
-Entran en el análisis todos los experimentos de tratamiento que cuentan con los pesos completos de sus 27 muestras y con una tabla de dosis disponible para su combinación de imán y polo. El criterio es deliberadamente mecánico, y no contempla el resultado obtenido.
+El criterio para que un experimento entre en el análisis es deliberadamente mecánico, y no mira el resultado: entran todos los que tienen los pesos completos de sus 27 muestras y una tabla de dosis disponible para su combinación de imán y polo.
 
-Corresponde señalar que tres experimentos con imán de neodimio ---los del 26/06, 21/07 y 27/07--- habían quedado inicialmente fuera del análisis por no haber mostrado diferencias significativas. Esa exclusión fue revertida, porque apartar un experimento en función de su resultado es precisamente la práctica que el plan de análisis pre-especificado busca impedir: si se descartan las series que no muestran efecto, la tasa de error de tipo I del conjunto deja de ser la nominal y cualquier resultado positivo que sobreviva queda sin valor inferencial. Los tres experimentos satisfacen el criterio de inclusión, sus bloques están completos y balanceados y su variabilidad entre fechas es menor que la del grupo de cerámica, de modo que no existía fundamento metodológico para excluirlos.
+Hay que declarar algo al respecto. Tres experimentos con imán de neodimio ---los del 26/06, 21/07 y 27/07--- habían quedado inicialmente afuera porque no mostraron diferencias significativas. Esa exclusión se revirtió.
 
-El único experimento de tratamiento que queda fuera es el del 14/08, con el polo sur enfrentado a las semillas, por una razón ajena a su resultado: no se dispone de la caracterización del campo de esa configuración ni, en consecuencia, de la tabla de dosis por nivel, sin la cual los niveles de tratamiento no pueden asociarse a una intensidad de campo.
+El motivo es importante: descartar un experimento porque no encontró nada es la práctica que vuelve inútil cualquier resultado posterior. Si de varias repeticiones se conservan solo las que muestran efecto, encontrar efecto deja de ser informativo, porque el procedimiento lo garantizaba de antemano. Es exactamente lo que la pre-especificación del plan de análisis busca impedir. Y en este caso no había ningún otro argumento para excluirlos: los tres cumplen el criterio, tienen bloques completos y su variabilidad entre fechas es menor que la del grupo de cerámica, que sí entra.
+
+Un solo experimento de tratamiento queda afuera, el del 14/08, y por una razón que no tiene que ver con lo que mostró: se hizo con el polo sur enfrentado a las semillas, y no existe caracterización del campo de esa configuración. Sin ella no hay tabla de dosis, y sin tabla de dosis los niveles no se pueden asociar a una intensidad, de modo que no habría nada contra qué graficar la respuesta.
 
 \paragraph{Unidad experimental.}
 
