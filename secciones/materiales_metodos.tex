@@ -126,16 +126,16 @@ En el imán de cerámica, polo norte (Figura~\ref{fig:ceramica_n_perfil}), la in
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_n_bz_fit.png}
+    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_n_bz_fit.pdf}
     \caption[Perfil de campo del imán de cerámica, polo norte]{\textbf{Perfil de campo del imán de cerámica, polo norte.} Campo magnético en función de la distancia a la cara del imán. Los puntos corresponden a las mediciones experimentales de \(B_z\) y las líneas continuas a la predicción del modelo con \(B_r\) ajustado únicamente sobre el centro.}
     \label{fig:ceramica_n_perfil}
 \end{figure}
 
-Un comportamiento equivalente se observó para el imán de cerámica, polo sur (Figura~\ref{fig:ceramica_s_perfil}), donde nuevamente el centro presenta los valores de mayor magnitud y las cuatro esquinas se agrupan entre sí, con una caída marcada del campo dentro de los primeros 50~mm. El signo negativo de la remanencia ajustada refleja simplemente la polaridad opuesta de la cara enfrentada a la sonda. La validación en esquinas es igualmente satisfactoria (\(R^2 = 0{,}985\)).
+El imán de cerámica, polo sur (Figura~\ref{fig:ceramica_s_perfil}), se comporta igual, con una validación en esquinas igualmente satisfactoria (\(R^2 = 0{,}985\)). El signo negativo de su remanencia ajustada solo refleja la polaridad opuesta de la cara enfrentada a la sonda.
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_s_bz_fit.png}
+    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_s_bz_fit.pdf}
     \caption[Perfil de campo del imán de cerámica, polo sur]{\textbf{Perfil de campo del imán de cerámica, polo sur.} Campo magnético en función de la distancia a la cara del imán. Puntos: mediciones experimentales de \(B_z\); líneas continuas: predicción del modelo.}
     \label{fig:ceramica_s_perfil}
 \end{figure}
@@ -144,7 +144,7 @@ El imán de neodimio, polo norte, presentó un campo considerablemente más inte
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/neodimio_n_bz_fit.png}
+    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/neodimio_n_bz_fit.pdf}
     \caption[Perfil de campo del imán de neodimio, polo norte]{\textbf{Perfil de campo del imán de neodimio, polo norte.} Campo magnético en función de la distancia a la cara del imán. Puntos: mediciones experimentales de \(B_z\); líneas continuas: predicción del modelo. Nótese la discrepancia en las esquinas, discutida en el texto.}
     \label{fig:neodimio_n_perfil}
 \end{figure}
@@ -157,14 +157,14 @@ Los cortes en el plano \(xz\) (\(y = 0\)) de las Figuras~\ref{fig:ceramica_n_map
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_n_bz_fit_field_map.png}
+    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_n_bz_fit_field_map.pdf}
     \caption[Mapa de campo del imán de cerámica en el plano \(xz\)]{\textbf{Mapa de campo del imán de cerámica, polo norte.} Corte \(xz\) (\(y=0\)) de \(B_z\) con líneas de campo superpuestas. El contorno negro indica \(B_z = 0\) y el rectángulo verde el contorno del imán. Los puntos de medición de las esquinas quedan dentro de la proyección de la cara, en la región de campo normal positivo.}
     \label{fig:ceramica_n_mapa}
 \end{figure}
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/neodimio_n_bz_fit_field_map.png}
+    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/neodimio_n_bz_fit_field_map.pdf}
     \caption[Mapa de campo del imán de neodimio en el plano \(xz\)]{\textbf{Mapa de campo del imán de neodimio, polo norte.} Corte \(xz\) (\(y=0\)) de \(B_z\). A diferencia del caso anterior, los puntos correspondientes a las esquinas (\(r \approx 42{,}4\)~mm) caen fuera del borde de la cara (\(x = 25{,}4\)~mm) y en las cercanías del contorno \(B_z = 0\), donde la componente normal es pequeña y su gradiente muy pronunciado.}
     \label{fig:neodimio_n_mapa}
 \end{figure}
@@ -754,7 +754,7 @@ Leído junto con el umbral de relevancia, el efecto mínimo detectable dice si u
 
 \paragraph{El papel del control positivo.}
 
-Lo anterior establece qué se puede concluir de los datos, pero no acredita que el instrumento mida. Esa función la cumplen los experimentos de control positivo (Sección~\ref{subsec:ctrl_positivo}), en los que se varió deliberadamente la cantidad de agua suministrada: si un procedimiento no detecta una modificación conocida y de magnitud conocida del fenómeno que pretende medir, ningún resultado nulo que arroje es informativo. Acreditar la sensibilidad del ensayo es lo que permite sostener que un resultado nulo constituye evidencia sobre el tratamiento y no un simple reflejo de la insensibilidad del método.
+Todo lo anterior establece qué se puede concluir de los datos, pero descansa en un supuesto que todavía no se verificó: que el instrumento mida. De eso se ocupan los experimentos de control positivo, cuya lógica se desarrolla en la Sección~\ref{subsec:ctrl_positivo}.
 
 \section{Experimentos control positivo}
 \label{subsec:ctrl_positivo}
