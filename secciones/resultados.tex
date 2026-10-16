@@ -67,24 +67,34 @@ La Figura~\ref{fig:ctrl_positivo} muestra la relación completa.
 
 \subsection{Conclusión parcial}
 
-El procedimiento de medición detecta una modificación conocida del fenómeno con holgura: el efecto del agua es grande, monótono, reproducible entre fechas y estadísticamente inequívoco. Queda establecido, por lo tanto, que la cadena completa de medición ---armado de las muestras, pesaje, germinación controlada y agregación por muestra--- posee la sensibilidad necesaria para registrar un efecto real sobre la imbibición.
+El método detecta lo que tiene que detectar, y con holgura. El efecto del agua es grande, crece de forma ordenada con el volumen, se repite en las tres fechas y no deja lugar a dudas estadísticas. Toda la cadena de medición ---armar las muestras, pesarlas, germinarlas en condiciones controladas y resumir cada una a un número--- es capaz de registrar un cambio real en la absorción de agua.
 
-Esta verificación es la que confiere contenido informativo a los resultados nulos que se presentan más adelante. Un resultado nulo obtenido con un instrumento cuya sensibilidad no se ha acreditado no distingue entre la ausencia de efecto y la incapacidad de detectarlo; obtenido con un instrumento que sí detecta lo que debe detectar, constituye evidencia sobre el tratamiento.
+Esto es lo que le da valor a los resultados nulos que vienen después. Un resultado nulo obtenido con un instrumento que nunca se probó no distingue entre dos cosas: que el efecto no exista o que el instrumento no lo vea. Obtenido con un instrumento que ya demostró ver lo que debe ver, dice algo sobre el tratamiento.
 
-Corresponde además señalar un uso secundario de estos datos: la pendiente estimada permite ubicar cuantitativamente el régimen de estrés hídrico de 3~mL respecto del de saturación de 5~mL (Sección~\ref{subsec:regimen_hidrico}), y da cuenta del desplazamiento de la línea de base entre ambos conjuntos de experimentos.
+Estos datos tienen además un segundo uso. La pendiente estimada permite ubicar numéricamente el régimen de 3~mL respecto del de 5~mL (Sección~\ref{subsec:regimen_hidrico}), y explica por qué la línea de base de los experimentos con estrés hídrico está más abajo que la de los demás.
 
 \section{Caracterización del sistema: controles negativos}
 \label{sec:res_ctrl_negativo}
 
-Se realizaron tres experimentos de 72\,h los días 20260404, 20260428 y 20260507, para un total de \(n = 81\) bandejas (27 por día). La variable principal de análisis fue el \textbf{cambio porcentual de peso} (\emph{pct\_change} en el código de análisis), definido como el aumento de masa respecto al peso inicial de las semillas en cada bandeja. Como verificación de robustez, los principales análisis se repitieron con dos variables de crecimiento alternativas: el \textbf{cambio absoluto de peso} (\emph{raw\_delta\_weight}), definido como la diferencia entre el peso final e inicial en gramos, y el \textbf{logaritmo de la razón de pesos} (\emph{raw\_log\_ratio}), definido como el logaritmo natural del cociente entre el peso final y el inicial. Estas tres variables cuantifican el mismo fenómeno de crecimiento con distintas propiedades estadísticas; su coincidencia en dirección y significancia refuerza que los efectos reportados no dependen de la métrica elegida.
+Estos experimentos no llevan imán. Su propósito es medir cuánto varía el sistema por sí solo: si dos muestras tratadas igual dan resultados distintos según dónde estuvieron, conviene saberlo antes de atribuir cualquier diferencia al campo magnético.
+
+Se hicieron tres, de 72~h cada uno, los días 04/04, 28/04 y 07/05 de 2026, con 27 muestras por día: \(n = 81\) en total. Todas recibieron 5~mL de agua.
+
+La variable principal es la misma de todo el trabajo, la imbibición a 72~h (\emph{pct\_change} en el código). Como verificación, los análisis se repitieron con dos variables alternativas: el \textbf{cambio absoluto de peso} en gramos (\emph{raw\_delta\_weight}) y el \textbf{logaritmo de la razón de pesos} (\emph{raw\_log\_ratio}).
+
+El sentido de usar tres es el siguiente. Las tres describen el mismo fenómeno, pero se comportan distinto estadísticamente: la primera normaliza por el peso inicial, la segunda no normaliza nada y la tercera estabiliza la varianza cuando el proceso es multiplicativo. Si las tres coinciden en dirección y en significancia, el resultado no depende de haber elegido una en particular.
 
 \subsection{Supuestos estadísticos}
 
-Se evaluó la normalidad de los residuos mediante el test de Shapiro-Wilk y la homogeneidad de varianzas mediante el test de Brown-Forsythe. Para el cambio porcentual de peso, los residuos resultaron normales (\(p = 0{,}577\)) pero las varianzas no resultaron homogéneas entre días (\(p = 0{,}030\)). Por lo tanto, los modelos presentados a continuación fueron ajustados por día experimental y utilizan errores robustos HC3 para compensar la heterogeneidad de varianzas.
+Antes de aplicar las pruebas se verificaron sus dos supuestos: que los residuos del modelo se distribuyan de forma aproximadamente normal, con la prueba de Shapiro-Wilk, y que su dispersión sea parecida entre grupos, con la de Brown-Forsythe. En estas pruebas un valor \(p\) alto es buena noticia, porque indica que no hay evidencia de que el supuesto falle.
+
+Para la imbibición, los residuos resultaron normales (\(p = 0{,}577\)) pero la dispersión no fue homogénea entre días (\(p = 0{,}030\)). Por eso todos los modelos de esta sección incluyen el día experimental y emplean errores estándar robustos de tipo HC3, que son una forma de calcular la incertidumbre que no exige que la dispersión sea igual en todos los grupos.
 
 \subsection{Calidad del armado (pesos iniciales)}
 
-Para descartar un posible sesgo de selección al momento de armar las bandejas, se analizó si las semillas iniciales tenían masas diferentes entre pisos. El resultado no fue significativo (\(p = 0{,}493\)), lo que indica que los pisos A, B y C comenzaron con masas de semillas estadísticamente equivalentes. Las diferencias observadas al final del experimento se atribuyen, por lo tanto, a factores ocurridos durante el crecimiento y no a un sesgo inicial.
+Hay una explicación alternativa que conviene descartar antes de seguir: que las diferencias entre pisos ya estuvieran presentes al armar las muestras. Si al piso A le hubieran tocado por casualidad semillas más grandes, la diferencia final no diría nada sobre el sistema de germinación.
+
+Se comparó entonces el peso seco inicial entre pisos, y no hay diferencia (\(p = 0{,}493\)): los tres arrancaron con masas equivalentes. Lo que se observa al final ocurrió, por lo tanto, durante el experimento.
 
 \subsection{Efecto del piso (A, B, C)}
 
@@ -107,7 +117,9 @@ C & 0,409 \(\pm\) 0,053 \\
 
 Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3{,}97\), \(p = 0{,}023\)*), con un gradiente descendente de A hacia C en crecimiento promedio.
 
-\paragraph{Análisis post-hoc.} El ANOVA indica que las medias de los tres pisos no son todas iguales, pero no identifica cuáles pares difieren entre sí. Para determinarlo se realizaron comparaciones múltiples por pares mediante el test de Tukey HSD, que controla la tasa de error familiar al conjunto de las tres comparaciones. Dado que el test de Brown-Forsythe había indicado varianzas no homogéneas entre días, el análisis se repitió con el test de Games-Howell, que no asume homocedasticidad, como verificación de robustez. La Tabla~\ref{tab:ctrl_floor_posthoc} presenta ambos resultados.
+\paragraph{Análisis post-hoc.} La prueba anterior dice que los tres pisos no son todos iguales, pero no dice cuáles difieren entre sí. Para averiguarlo hay que comparar los pisos de a pares, y al hacer tres comparaciones en lugar de una aparece el mismo problema de multiplicidad explicado en la Sección~\ref{subsec:plan_analisis}. La prueba de Tukey HSD lo resuelve ajustando los valores \(p\) al conjunto de las tres comparaciones.
+
+Tukey, sin embargo, da por supuesto que la dispersión es parecida entre grupos, y acá no lo es. Por eso el análisis se repitió con la prueba de Games-Howell, que no necesita ese supuesto. La Tabla~\ref{tab:ctrl_floor_posthoc} muestra las dos, y si coinciden es señal de que el supuesto incumplido no afecta la conclusión.
 
 \begin{table}[tbp]
 \centering
@@ -129,7 +141,9 @@ B vs C & 0,017 & 0,375  & 0,431 \\
 \end{threeparttable}
 \end{table}
 
-La única diferencia estadísticamente significativa se observó entre los pisos extremos, A y C (\(p = 0{,}013\)*), mientras que las comparaciones A--B y B--C no alcanzaron significancia. Ambos tests coinciden en las tres comparaciones, de modo que la heterogeneidad de varianzas no altera las conclusiones. Este resultado indica que el efecto de piso corresponde a un gradiente vertical suave antes que a diferencias abruptas entre niveles contiguos: el piso B ocupa una posición intermedia que no se distingue estadísticamente de ninguno de los otros dos. Un gradiente monótono de este tipo resulta compatible con la acción de un factor ambiental continuo a lo largo de la altura del montaje, tal como la temperatura, la iluminación o la humedad.
+La única diferencia significativa es entre los pisos extremos, A y C (\(p = 0{,}013\)*). Las comparaciones A--B y B--C no llegan. Y las dos pruebas coinciden en las tres comparaciones, así que la dispersión desigual no cambia nada.
+
+Esto dice algo sobre la \emph{forma} del efecto, y no solo sobre su existencia. Si hubiera un salto brusco entre pisos contiguos, alguna comparación vecina habría resultado significativa. Que solo se distingan los extremos, con el B a mitad de camino sin diferenciarse de ninguno, describe un \textbf{gradiente suave} a lo largo de la altura. Esa forma es la que cabe esperar de un factor ambiental que varíe de manera continua con la altura del montaje ---la temperatura, la iluminación o la humedad--- antes que de una diferencia abrupta entre bandejas.
 
 El mismo análisis post-hoc, aplicado a las variables de robustez, reproduce el patrón observado (Tabla~\ref{tab:ctrl_floor_posthoc_robustez}): en ambos casos la única comparación significativa es A vs C.
 
@@ -342,7 +356,7 @@ C9 vs B6 & 0,372 & 0,475 & 0,103 \\
 \end{threeparttable}
 \end{table}
 
-Notar que si bien C9 presentó una desviación estándar muy pequeña (0,011), esto refleja la consistencia entre las tres réplicas, no necesariamente una mayor precisión a nivel poblacional.
+Una advertencia sobre la celda C9: su desviación estándar es muy chica (0,011), pero eso no significa que esa posición se mida con más precisión. Solo refleja que sus tres réplicas coincidieron entre sí, y con tres observaciones esa coincidencia puede ser casualidad.
 
 \begin{figure}[tbp]
     \centering
@@ -353,7 +367,15 @@ Notar que si bien C9 presentó una desviación estándar muy pequeña (0,011), e
 
 \subsection{Conclusión parcial}
 
-En los controles negativos combinados se detectó un efecto espacial general asociado al piso de la bandeja, con un gradiente descendente de A hacia C, pero no a los ejes izquierda-centro-derecha ni frente-medio-atrás. El análisis post-hoc mostró que dicho gradiente resulta significativo únicamente entre los pisos extremos (A vs C), ocupando el piso B una posición intermedia no distinguible de los otros dos. Sin embargo, al analizar cada celda individual A1--C9, se observaron diferencias significativas entre posiciones específicas. El análisis post-hoc indicó que estas diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas de mayor crecimiento. Esto sugiere que el control negativo no fue completamente homogéneo a escala espacial fina, por lo que los análisis de tratamientos deberían considerar o controlar posibles efectos de posición.
+El sistema de germinación no es espacialmente homogéneo, y conviene resumir en qué sentido lo es y en qué sentido no.
+
+Sí hay un efecto del \textbf{piso}: las muestras del piso A crecen más que las del C, con el B en el medio. El gradiente es suave antes que abrupto, porque la única diferencia significativa aparece entre los pisos extremos, A contra C, mientras que el B no se distingue de ninguno de los dos. Un gradiente de ese tipo es compatible con la acción de algún factor que varíe de forma continua con la altura del montaje.
+
+No hay efecto de los otros dos ejes: ni izquierda-centro-derecha ni frente-medio-atrás muestran diferencias.
+
+Pero al bajar a la \textbf{celda individual}, de A1 a C9, sí aparecen diferencias, y están concentradas en una sola: la C9, que crece menos que varias de las demás. Es decir que el montaje tiene una anomalía localizada además del gradiente general.
+
+La consecuencia práctica para el resto del trabajo es directa: la posición de una muestra dentro del sistema de germinación influye sobre lo que se mide, así que no puede dejarse al azar ni ignorarse. Es lo que justifica asignar las posiciones por sorteo y conservar la posición como término disponible en los modelos.
 
 \section{Imbibición bajo campo magnético}
 \label{sec:res_imbibicion}
@@ -416,13 +438,17 @@ La Figura~\ref{fig:forest_ceramica} presenta los contrastes por nivel junto con 
     \label{fig:forest_ceramica}
 \end{figure}
 
-Las desviaciones de los supuestos de este grupo, declaradas en la Sección~\ref{subsec:plan_analisis}, se verifican aquí: los residuos se apartan de la normalidad (Shapiro-Wilk, \(p = 0{,}0003\)) aunque las varianzas resultan homogéneas (Levene, \(p = 0{,}71\)), y cuatro muestras superan el umbral convencional de influencia de Cook. El análisis de sensibilidad desplaza la estimación entre \(+1{,}43\,\pct\) y \(+0{,}60\,\pct\) según se incluyan o no los términos de bloque y de posición, sin alterar la conclusión en ninguna de las cuatro especificaciones.
+Este es el grupo con los supuestos más débiles, como se adelantó en la Sección~\ref{subsec:plan_analisis}. Los residuos se apartan de la normalidad (Shapiro-Wilk, \(p = 0{,}0003\)), aunque la dispersión sí es parecida entre niveles (Levene, \(p = 0{,}71\)), y cuatro muestras resultan especialmente influyentes sobre el ajuste.
+
+Para ver si eso cambia algo, el análisis se repitió de cuatro formas, incluyendo y excluyendo los términos de bloque y de posición. La estimación se movió entre \(+1{,}43\,\pct\) y \(+0{,}60\,\pct\), y la conclusión fue la misma en los cuatro casos.
 
 \subsection{Neodimio N en saturación de agua}
 
-La media de imbibición del control resultó de 0,4872, prácticamente idéntica a la del grupo de cerámica pese a tratarse de otro imán y de otras fechas. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}424\), \(p = 0{,}90\)), y en este grupo el término de bloque tampoco resultó significativo (\(F_{8,64} = 1{,}080\), \(p = 0{,}39\)): se trata de la campaña más homogénea entre fechas de todo el trabajo.
+La imbibición media del control fue de 0,4872. Vale detenerse un segundo acá: el grupo de cerámica dio 0,4878, con otro imán y meses antes. Dos campañas distintas con el mismo volumen de agua dieron prácticamente la misma línea de base, lo que habla bien de la reproducibilidad del montaje.
 
-El contraste primario arrojó una diferencia de \textbf{\(-1{,}46\,\pct\)}, con un intervalo de confianza del 95\,\pct de \([-6{,}28\,\pct;\ +3{,}36\,\pct]\) y \(p = 0{,}55\). Nótese que el signo es opuesto al del grupo anterior, lo que refuerza la lectura de fluctuación aleatoria en torno a cero antes que de un efecto sistemático de pequeña magnitud. La tendencia dosis-respuesta tampoco resultó significativa (\(p = 0{,}74\)).
+La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}424\), \(p = 0{,}90\)). Y en este grupo el término de bloque tampoco es significativo (\(F_{8,64} = 1{,}080\), \(p = 0{,}39\)): es la campaña más parecida entre fechas de todo el trabajo.
+
+La comparación principal dio \textbf{\(-1{,}46\,\pct\)}, con un intervalo del 95\,\pct que va de \(-6{,}28\,\pct\) a \(+3{,}36\,\pct\) y \(p = 0{,}55\). El signo es importante: es \emph{opuesto} al del grupo de cerámica. Si hubiera un efecto real pequeño, cabría esperar que apuntara siempre en la misma dirección. Que cambie de signo entre grupos es lo que se espera de la fluctuación al azar. La tendencia frente a la dosis tampoco es significativa (\(p = 0{,}74\)).
 
 \begin{figure}[tbp]
     \centering
@@ -437,7 +463,7 @@ Los supuestos se satisfacen con una desviación leve de la normalidad (Shapiro-W
 
 La media de imbibición del control resultó de 0,3758, sensiblemente menor que en los dos grupos anteriores, como corresponde al régimen de 3~mL. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}551\), \(p = 0{,}81\)) y el término de bloque resultó despreciable (\(F_{8,64} = 0{,}293\), \(p = 0{,}97\)).
 
-El contraste primario arrojó una diferencia de \textbf{\(+1{,}59\,\pct\)}, con un intervalo de confianza del 95\,\pct de \([-0{,}80\,\pct;\ +3{,}98\,\pct]\) y \(p = 0{,}19\). Es el intervalo más estrecho de los tres grupos, consecuencia de la mayor precisión del armado descrita en la Sección~\ref{subsec:regimen_hidrico}. La tendencia dosis-respuesta no resultó significativa (\(p = 0{,}29\)).
+La comparación principal dio \textbf{\(+1{,}59\,\pct\)}, con un intervalo del 95\,\pct de \(-0{,}80\,\pct\) a \(+3{,}98\,\pct\) y \(p = 0{,}19\). Es el intervalo más angosto de los tres grupos, y no es casualidad: es el grupo armado con el dosificador exacto (Sección~\ref{subsec:regimen_hidrico}). Menos variabilidad en el armado se traduce directamente en más precisión en la estimación. La tendencia frente a la dosis no es significativa (\(p = 0{,}29\)).
 
 \begin{figure}[tbp]
     \centering
@@ -549,7 +575,9 @@ El contraste primario arrojó una diferencia de \textbf{\(+0{,}60\)~mm}, equival
 
 \paragraph{Sensibilidad de la variable.}
 
-El efecto mínimo detectable de esta variable asciende a 1,69~mm, es decir un 26,4\,\pct relativo. Se trata, por lo tanto, de una variable de \textbf{baja potencia}: solo permite descartar efectos de gran magnitud, y no admite un análisis de equivalencia informativo dentro del margen del 10\,\pct adoptado para la variable primaria. Esta limitación es consecuencia directa de la heterogeneidad del procesamiento fotográfico entre fechas y no del diseño experimental.
+El efecto más chico que esta variable podía detectar es de 1,69~mm, un 26,4\,\pct en términos relativos. Eso la vuelve una variable de \textbf{baja potencia}: sirve para descartar efectos grandes y nada más. En particular, no tiene sentido hacer con ella una prueba de equivalencia contra el umbral del 10\,\pct, porque el experimento no podía ver efectos de ese tamaño; declarar equivalencia ahí sería afirmar que el efecto es chico solo porque el instrumento era grueso.
+
+Conviene señalar de dónde viene esta limitación: del procesamiento desigual de las fotos entre fechas, no del diseño del experimento. Con imágenes homogéneas, la misma cantidad de muestras habría dado una variable mucho más útil.
 
 El análisis se repitió con tres especificaciones alternativas, con resultados concordantes: tomando la mediana por muestra (\(+0{,}60\)~mm, \(p = 0{,}32\)), la media por muestra (\(+0{,}10\)~mm, \(p = 0{,}79\)) y excluyendo la única muestra marcada como probable sobresegmentación (\(+0{,}65\)~mm, \(p = 0{,}27\), \(n = 76\)). Los supuestos se satisfacen (Shapiro-Wilk, \(p = 0{,}43\); Levene, \(p = 0{,}95\)).
 
@@ -580,7 +608,9 @@ Corresponde declarar un límite que impide atribuir el resultado al agua de mane
 
 \paragraph{Sobre la comparación entre imanes.}
 
-Una comparación que este trabajo \textbf{no} está en condiciones de realizar es la del tipo de imán, cerámica frente a neodimio, en igualdad de condiciones de dosis. Los dos materiales producen rangos de campo distintos ---de 11 a 82~mT la cerámica y de 12 a 263~mT el neodimio--- que solo se superponen parcialmente, y el grupo de cerámica presenta además las desviaciones de supuestos ya señaladas. Lo que sí puede afirmarse es que ambos materiales arrojaron resultados equivalentes dentro del margen en el mismo régimen de saturación, con medias de control prácticamente coincidentes (0,4878 y 0,4872), lo que constituye una verificación de reproducibilidad del montaje entre campañas separadas por varios meses.
+Hay una comparación que este trabajo \textbf{no} puede hacer: cerámica contra neodimio a igual dosis de campo. El motivo es que los dos imanes no cubren el mismo rango. La cerámica va de 11 a 82~mT y el neodimio de 12 a 263~mT, así que solo se superponen en la parte baja, y encima el grupo de cerámica arrastra los problemas de supuestos ya señalados.
+
+Lo que sí puede decirse es más modesto y no deja de ser útil: los dos materiales dieron resultados equivalentes dentro del umbral en el mismo régimen de agua, y sus líneas de base coincidieron casi exactamente (0,4878 y 0,4872) pese a estar separadas por meses. Eso no habla del efecto del imán, habla de que el montaje es reproducible.
 
 \section{Síntesis de los resultados}
 
