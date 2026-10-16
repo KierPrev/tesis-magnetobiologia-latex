@@ -1,9 +1,39 @@
 \chapter{Conclusiones}
-%% --- Epígrafe (opcional). Descomentá y completá. ---
-%% \epigrafe{Texto de la cita.}{Autor}{Obra, año}
-%% El tercer argumento puede ir vacío: \epigrafe{...}{Autor}{}
 
+Esta tesina se propuso responder si existe un rango de condiciones de exposición a campos magnéticos estáticos que produzca mejoras reproducibles en la germinación y el crecimiento inicial de \textit{Zea mays}. La respuesta, dentro de las condiciones ensayadas, es que no se encontró tal rango, y el trabajo permite además acotar cuánto podría valer un efecto que hubiera pasado inadvertido.
 
-\pendiente{redactar las conclusiones}
+\section*{Sobre el resultado experimental}
+
+Se analizaron tres grupos de experimentos ---cerámica con agua abundante, neodimio con agua abundante y neodimio con estrés hídrico---, cada uno con 81 muestras distribuidas en nueve bloques completos. En ninguno se detectó efecto del campo magnético sobre la absorción de agua a las 72~h, y en los tres las pruebas de equivalencia permiten afirmar algo más preciso que la simple ausencia de hallazgo: \textbf{si el campo afecta esa variable, lo hace en menos del 10\%}, umbral fijado de antemano como límite de relevancia práctica.
+
+El resultado más consistente del trabajo no es la ausencia de efecto medio, sino la \textbf{ausencia de relación entre dosis y respuesta}. No aparece en ninguno de los tres grupos ni en ninguna de las tres variables medidas, y el nivel de campo más intenso nunca es el que más se aparta del control. Esto coincide con lo que anticipaba el marco teórico: los imanes empleados operan en régimen de campo alto, donde el mecanismo de pares de radicales tiende a saturar, de modo que no cabía esperar una relación simple de mayor campo y mayor efecto.
+
+La hipótesis de que el efecto pudiera manifestarse solo bajo condiciones limitantes también recibió respuesta negativa. Al comparar el mismo imán en dos regímenes de agua, la diferencia entre ambos resultados nulos no se distingue de cero (\(p = 0{,}30\)).
+
+\section*{Sobre el alcance de la conclusión}
+
+Conviene delimitar qué se acotó y qué no, porque el alcance es más estrecho que «el campo magnético no afecta la germinación del maíz».
+
+Lo acotado con firmeza es el efecto sobre la \textbf{absorción de agua a las 72~h}. Sobre la germinación la conclusión es más débil: el intervalo de confianza admite efectos de hasta 14{,}5 puntos porcentuales, de modo que un efecto del tamaño que reporta la literatura no queda excluido. Sobre el largo de radícula solo pueden descartarse efectos mayores al 26{,}4\%.
+
+Y hay una pregunta que este diseño \textbf{no responde}. La literatura que reporta efectos del magnetopriming sobre la germinación mide habitualmente la \emph{velocidad} del proceso y no su resultado final; en varios de esos trabajos el porcentaje final no cambia y lo que se adelanta es el momento de germinar. Este trabajo midió una sola vez, a las 72~h, de modo que su sensibilidad a un efecto de ese tipo es limitada. La estimación de la germinación se movió 6{,}2 puntos en la dirección que ese efecto predice, sin alcanzar significancia. La cuestión queda abierta y requiere medir a varios tiempos.
+
+\section*{Sobre el método}
+
+Buena parte del esfuerzo de esta tesina se destinó a construir las condiciones que vuelven interpretable un resultado nulo, y conviene reconocerlo como parte de lo producido.
+
+Los \textbf{controles positivos} establecieron que el procedimiento detecta un efecto real con holgura: la imbibición crece \(0{,}064\) por cada mililitro de agua aplicado, con \(p = 2{,}9\times10^{-7}\). Sin esa verificación, un resultado nulo no distinguiría entre la ausencia de efecto y la insensibilidad del método.
+
+Los \textbf{controles negativos} caracterizaron la variabilidad espacial del sistema de germinación. Esa misma componente reaparece en los experimentos de tratamiento: al incorporar la posición al modelo, el efecto estimado del campo se desplaza hacia cero. Haberla caracterizado de antemano es lo que permitió reconocerla.
+
+El \textbf{diseño por bloques} resultó imprescindible y no opcional: la variación entre fechas excede holgadamente cualquier efecto buscado, de modo que una comparación que no la contemplara habría quedado dominada por ella.
+
+Finalmente, la \textbf{pre-especificación del plan de análisis y la corrección por multiplicidad} determinaron la diferencia entre reportar y no reportar hallazgos. Sin corrección, este trabajo habría comunicado un efecto en el nivel de 22~mT sobre la germinación y otro en el de 77~mT sobre el largo de radícula. Ninguno sobrevive el ajuste, ninguno se acompaña de una relación dosis-respuesta, y ambos quedan como hipótesis a testear en experimentos dedicados.
+
+\section*{Lo que queda hecho para continuar}
+
+El trabajo deja montado y validado un sistema que permite retomar la pregunta con modificaciones acotadas: una torre de exposición con ocho dosis simultáneas caracterizadas mediante un modelo de campo validado experimentalmente, un protocolo de germinación controlada, un dosificador determinista de semillas, un sistema de adquisición y medición de radículas por imagen, y un conjunto de datos y código íntegramente disponible y reproducible.
+
+Sobre esa base, la continuación más valiosa es también la más sencilla: convertir la medición única en una curva temporal. No requiere instrumentos nuevos, solo contar las semillas germinadas varias veces por día. Es el cambio que permitiría responder la pregunta que esta tesina dejó abierta.
 
 \endinput

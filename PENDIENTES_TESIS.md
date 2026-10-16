@@ -294,32 +294,32 @@ resultado nulo sabiendo que el instrumento mide.
 
 ---
 
-## Etapa 3 — Discusión `[~]`
+## Etapa 3 — Discusión `[x]`
 
 - [x] Qué mide un control negativo (analogía de Young y las ratas, Feynman)
-- [ ] El estrés hídrico como hipótesis y su respuesta
-- [ ] Interpretación del resultado nulo: equivalencia, no ausencia de evidencia
-- [ ] El efecto espacial: en Neodimio N 3 mL, agregar `position` al modelo baja el
+- [x] El estrés hídrico como hipótesis y su respuesta
+- [x] Interpretación del resultado nulo: equivalencia, no ausencia de evidencia
+- [x] El efecto espacial: en Neodimio N 3 mL, agregar `position` al modelo baja el
       efecto de +1,59% a +0,52%. Es exactamente el efecto espacial que el control
       negativo había caracterizado — cierra el círculo con la sección de Feynman
-- [ ] La línea de base y el registro de variables: qué se aprende de que el factor
+- [x] La línea de base y el registro de variables: qué se aprende de que el factor
       más influyente del ensayo (el agua) no estuviera registrado, y de que el
       20260804 cambiara cuatro cosas a la vez. Es la continuación natural de la
       sección de Feynman: no es un resultado sobre imanes, es un resultado sobre el
       aparato. **Encuadre correcto**: no hay deriva temporal del sistema, hay
       variabilidad entre fechas a agua constante (0,377–0,538), que el bloqueo
       absorbe
-- [ ] Contraste con la literatura de magnetopriming (usar `resumenes/`)
-- [ ] Limitaciones y líneas futuras. Está ya escrito el párrafo del control de
+- [x] Contraste con la literatura de magnetopriming (usar `resumenes/`)
+- [x] Limitaciones y líneas futuras. Está ya escrito el párrafo del control de
       apilamiento que falta (torre sin imán); 20260721 **no** sirve para eso, es
       neodimio N
 
 ---
 
-## Etapa 4 — Conclusiones, Resumen y Abstract `[ ]`
+## Etapa 4 — Conclusiones, Resumen y Abstract `[x]`
 
-- [ ] `secciones/conclusiones.tex` — hoy son 9 líneas con un `\pendiente{}`
-- [ ] `secciones/resumen.tex` — Resumen y Abstract hablan solo de controles
+- [x] `secciones/conclusiones.tex` — hoy son 9 líneas con un `\pendiente{}`
+- [x] `secciones/resumen.tex` — Resumen y Abstract hablan solo de controles
       negativos y de *"imanes cerámicos de ferrita"*: no mencionan neodimio, ni
       germinación, ni radícula, ni el estrés hídrico, y no dan ningún resultado.
       Reescribir enteros
@@ -328,8 +328,8 @@ resultado nulo sabiendo que el instrumento mide.
 
 ## Etapa 5 — Cierre del documento `[ ]`
 
-- [ ] Descomentar en `tesis.tex` los `\include` de `discusion` y `conclusiones`
-- [ ] Descomentar `reproducibilidad` — **está terminado**, solo falta incluirlo
+- [x] Descomentar en `tesis.tex` los `\include` de `discusion` y `conclusiones`
+- [x] Descomentar `reproducibilidad` — **está terminado**, solo falta incluirlo
 - [ ] Agregar a la tabla `tab:repro` las filas de las figuras de imán y de control
       positivo (hoy solo lista control negativo y caracterización de campo)
 - [ ] Actualizar los hashes de commit de `tab:repro` al cerrar la versión final
