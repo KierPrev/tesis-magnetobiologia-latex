@@ -383,8 +383,14 @@ plan de análisis.
 
       La asimetría a tener en cuenta: con 10.000 palabras, este capítulo es la
       mitad de la tesis, así que su registro define la impresión general.
-- [ ] **Antecedentes** (~1.968 palabras)
-- [ ] **Introducción** (~271 palabras)
+- [x] **Introducción**, reescrita entera. Ahora plantea el problema antes de la
+      pregunta, y el objetivo general ya no dice «identificando rangos efectivos»
+      ---que presupone que existen--- sino «estableciendo si existe una relación
+      entre dosis y respuesta, y acotando la magnitud del efecto, exista o no»
+- [~] **Antecedentes**. Pasados los dos párrafos más densos (las dos frases de
+      64 y 68 palabras). Quedan 35 frases de más de 30 palabras sobre 77: es una
+      revisión de literatura y tiende a ser densa por naturaleza, pero admite
+      mejora si se decide hacerla
 - [ ] **Marco teórico** (~2.060 palabras). **Decidir con cuidado**: contiene
       derivaciones físicas y una reescritura mal hecha puede introducir errores
       de contenido, no solo de estilo. Conviene dejarlo último, o no tocarlo
