@@ -1,4 +1,5 @@
 \chapter{Resultados}
+\epigrafeen{A fair result can be obtained only by fully stating and balancing the facts and arguments on both sides of each question \ldots}{Charles Darwin}{On the Origin of Species, Introduction}
 
 Este capítulo no sigue el orden en que se hicieron los experimentos, sino el orden en que hacen falta para entender el resultado.
 
@@ -14,6 +15,8 @@ Se realizaron tres experimentos en los que se varió deliberadamente el volumen 
 La Tabla~\ref{tab:ctrl_pos_niveles} presenta la imbibición media de cada nivel de agua.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Imbibición según el volumen de agua suministrado]{\textbf{Imbibición según el volumen de agua suministrado.} Media \(\pm\) SD entre muestras de cada nivel, en los tres experimentos de control positivo combinados.}
@@ -35,6 +38,8 @@ El efecto del volumen de agua resultó altamente significativo (\(F_{2,33} = 21{
 Los contrastes entre niveles, mediante la prueba de Welch con corrección de Holm, se presentan en la Tabla~\ref{tab:ctrl_pos_contrastes}.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Contrastes entre niveles de agua]{\textbf{Contrastes entre niveles de agua.} Diferencias de imbibición entre pares de niveles, con prueba de Welch y corrección de Holm por multiplicidad.}
@@ -98,11 +103,13 @@ Se comparó entonces el peso seco inicial entre pisos, y no hay diferencia (\(p 
 
 \subsection{Efecto del piso (A, B, C)}
 
-La Figura~\ref{fig:ctrl_pct_change_floor} muestra el crecimiento relativo promedio para cada piso. La Tabla~\ref{tab:ctrl_floor} presenta las medias y desvíos estándar.
+La Figura~\ref{fig:ctrl_pct_change_floor} muestra la imbibición promedio de cada piso. La Tabla~\ref{tab:ctrl_floor} presenta las medias y desvíos estándar.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
-\caption[Crecimiento relativo por piso en controles negativos]{\textbf{Crecimiento relativo por piso en controles negativos combinados.} Cambio porcentual de peso, expresado como media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
+\caption[Imbibición por piso en controles negativos]{\textbf{Imbibición por piso en controles negativos combinados.} Cambio relativo de peso, expresado como media \(\pm\) SD entre cajas dentro de cada grupo (\(n = 27\) por piso).}
 \label{tab:ctrl_floor}
 \begin{tabular}{lc}
 \toprule
@@ -115,16 +122,18 @@ C & 0,409 \(\pm\) 0,053 \\
 \end{tabular}
 \end{table}
 
-Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3{,}97\), \(p = 0{,}023\)*), con un gradiente descendente de A hacia C en crecimiento promedio.
+Se observaron diferencias significativas entre pisos (\(F_{2,76} = 3{,}97\), \(p = 0{,}023\)*), con un gradiente descendente de A hacia C en la imbibición promedio.
 
 \paragraph{Análisis post-hoc.} La prueba anterior dice que los tres pisos no son todos iguales, pero no dice cuáles difieren entre sí. Para averiguarlo hay que comparar los pisos de a pares, y al hacer tres comparaciones en lugar de una aparece el mismo problema de multiplicidad explicado en la Sección~\ref{subsec:plan_analisis}. La prueba de Tukey HSD lo resuelve ajustando los valores \(p\) al conjunto de las tres comparaciones.
 
 Tukey, sin embargo, da por supuesto que la dispersión es parecida entre grupos, y acá no lo es. Por eso el análisis se repitió con la prueba de Games-Howell, que no necesita ese supuesto. La Tabla~\ref{tab:ctrl_floor_posthoc} muestra las dos, y si coinciden es señal de que el supuesto incumplido no afecta la conclusión.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
-\caption[Comparaciones post-hoc entre pisos]{\textbf{Comparaciones post-hoc por pares entre pisos.} Cambio porcentual de peso. Se reportan los valores \(p\) ajustados de Tukey HSD y de Games-Howell (verificación sin supuesto de homocedasticidad); \(n = 27\) por piso.}
+\caption[Comparaciones post-hoc entre pisos]{\textbf{Comparaciones post-hoc por pares entre pisos.} Cambio relativo de peso. Se reportan los valores \(p\) ajustados de Tukey HSD y de Games-Howell (verificación sin supuesto de homocedasticidad); \(n = 27\) por piso.}
 \label{tab:ctrl_floor_posthoc}
 \begin{tabular}{lrrr}
 \toprule
@@ -143,11 +152,13 @@ B vs C & 0,017 & 0,375  & 0,431 \\
 
 La única diferencia significativa es entre los pisos extremos, A y C (\(p = 0{,}013\)*). Las comparaciones A--B y B--C no llegan. Y las dos pruebas coinciden en las tres comparaciones, así que la dispersión desigual no cambia nada.
 
-Esto dice algo sobre la \emph{forma} del efecto, y no solo sobre su existencia. Si hubiera un salto brusco entre pisos contiguos, alguna comparación vecina habría resultado significativa. Que solo se distingan los extremos, con el B a mitad de camino sin diferenciarse de ninguno, describe un \textbf{gradiente suave} a lo largo de la altura. Esa forma es la que cabe esperar de un factor ambiental que varíe de manera continua con la altura del montaje ---la temperatura, la iluminación o la humedad--- antes que de una diferencia abrupta entre bandejas.
+Esto dice algo sobre la \emph{forma} del efecto, y no solo sobre su existencia. Si hubiera un salto brusco entre pisos contiguos, alguna comparación vecina habría resultado significativa. Que solo se distingan los extremos, con el B a mitad de camino sin diferenciarse de ninguno, describe un \textbf{gradiente suave} a lo largo de la altura. Esa forma es la que cabe esperar de un factor ambiental que varíe de manera continua con la altura del montaje ---la temperatura, la iluminación o la humedad--- antes que de una diferencia abrupta entre cajas.
 
 El mismo análisis post-hoc, aplicado a las variables de robustez, reproduce el patrón observado (Tabla~\ref{tab:ctrl_floor_posthoc_robustez}): en ambos casos la única comparación significativa es A vs C.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Comparaciones post-hoc entre pisos: verificación de robustez]{\textbf{Comparaciones post-hoc entre pisos: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos, con los valores \(p\) ajustados de Tukey HSD y de Games-Howell; \(n = 27\) por piso.}
@@ -174,9 +185,11 @@ Variable & Comparación & Diferencia & \(p\) (Tukey) & \(p\) (Games-Howell) \\
 Como verificación de robustez, el mismo análisis se repitió utilizando el cambio absoluto de peso y el logaritmo de la razón de pesos. La Tabla~\ref{tab:ctrl_floor_robustez} presenta las medias y desvíos estándar por piso para ambas variables, junto con los resultados del test de diferencias.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
-\caption[Crecimiento por piso: verificación de robustez]{\textbf{Crecimiento por piso: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos, como control del efecto observado con el cambio porcentual. Media \(\pm\) SD entre bandejas dentro de cada grupo (\(n = 27\) por piso).}
+\caption[Imbibición por piso: verificación de robustez]{\textbf{Imbibición por piso: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos, como control del efecto observado con el cambio relativo de peso. Media \(\pm\) SD entre cajas dentro de cada grupo (\(n = 27\) por piso).}
 \label{tab:ctrl_floor_robustez}
 \begin{tabular}{lcccr}
 \toprule
@@ -192,9 +205,11 @@ Logaritmo razón de pesos & 0,368 \(\pm\) 0,026 & 0,354 \(\pm\) 0,031 & 0,343 \(
 \end{threeparttable}
 \end{table}
 
-Ambas variables reproducen el mismo patrón A \(>\) B \(>\) C y alcanzan significancia estadística, confirmando que el efecto de piso no depende de la métrica de crecimiento elegida. Adicionalmente, se verificó el resultado mediante un ANOVA clásico ajustado por día experimental (sin errores robustos), obteniéndose resultados consistentes para las tres variables (Tabla~\ref{tab:ctrl_floor_anova_clasico}).
+Ambas variables reproducen el mismo patrón A \(>\) B \(>\) C y alcanzan significancia estadística, confirmando que el efecto de piso no depende de la métrica de respuesta elegida. Adicionalmente, se verificó el resultado mediante un ANOVA clásico ajustado por día experimental (sin errores robustos), obteniéndose resultados consistentes para las tres variables (Tabla~\ref{tab:ctrl_floor_anova_clasico}).
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Efecto de piso mediante ANOVA clásico]{\textbf{Efecto de piso mediante ANOVA clásico.} Modelo ajustado por día experimental, sin errores robustos, como verificación del análisis principal.}
@@ -204,7 +219,7 @@ Ambas variables reproducen el mismo patrón A \(>\) B \(>\) C y alcanzan signifi
 Variable & \(F_{2,76}\) & \(p\) \\
 \midrule
 Cambio absoluto de peso   & 5,16 & 0,008** \\
-Cambio porcentual de peso & 4,27 & 0,018* \\
+Imbibición (cambio relativo de peso) & 4,27 & 0,018* \\
 Logaritmo razón de pesos  & 4,37 & 0,016* \\
 \bottomrule
 \end{tabular}
@@ -217,17 +232,19 @@ Logaritmo razón de pesos  & 4,37 & 0,016* \\
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_floor_barplot.pdf}
-    \caption[Crecimiento relativo por piso en controles negativos]{\textbf{Crecimiento relativo por piso en controles negativos combinados.} Cada punto corresponde a una bandeja individual, coloreada según el día del experimento.}
+    \caption[Imbibición por piso en controles negativos]{\textbf{Imbibición por piso en controles negativos combinados.} Cada punto corresponde a una caja individual, coloreada según el día del experimento.}
     \label{fig:ctrl_pct_change_floor}
 \end{figure}
 
 \subsection{Efecto de la posición lateral (izquierda, centro, derecha)}
 
-La Figura~\ref{fig:ctrl_pct_change_lcr} muestra el crecimiento según la posición lateral. La Tabla~\ref{tab:ctrl_lcr} presenta los valores numéricos.
+La Figura~\ref{fig:ctrl_pct_change_lcr} muestra la imbibición según la posición lateral. La Tabla~\ref{tab:ctrl_lcr} presenta los valores numéricos.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
-\caption[Crecimiento relativo según posición lateral]{\textbf{Crecimiento relativo según posición lateral.} Cambio porcentual de peso; izquierda = celdas 1, 4, 7; centro = 2, 5, 8; derecha = 3, 6, 9. Media \(\pm\) SD, \(n = 27\) por grupo.}
+\caption[Imbibición según posición lateral]{\textbf{Imbibición según posición lateral.} Cambio relativo de peso; izquierda = celdas 1, 4, 7; centro = 2, 5, 8; derecha = 3, 6, 9. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_lcr}
 \begin{tabular}{lc}
 \toprule
@@ -245,6 +262,8 @@ No se detectaron diferencias significativas entre izquierda, centro y derecha (\
 El mismo análisis con el cambio absoluto de peso y el logaritmo de la razón de pesos confirma la ausencia de efecto lateral (Tabla~\ref{tab:ctrl_lcr_robustez}).
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Posición lateral: verificación de robustez]{\textbf{Posición lateral: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos. Media \(\pm\) SD, \(n = 27\) por grupo.}
@@ -266,17 +285,19 @@ Logaritmo razón de pesos & 0,348 \(\pm\) 0,033 & 0,355 \(\pm\) 0,035 & 0,362 \(
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_left_center_right_barplot.pdf}
-    \caption[Crecimiento relativo según posición lateral]{\textbf{Crecimiento relativo según posición lateral.} Cambio porcentual de peso por columna (izquierda, centro, derecha) en controles negativos combinados.}
+    \caption[Imbibición según posición lateral]{\textbf{Imbibición según posición lateral.} Cambio relativo de peso por columna (izquierda, centro, derecha) en controles negativos combinados.}
     \label{fig:ctrl_pct_change_lcr}
 \end{figure}
 
 \subsection{Efecto de la profundidad (frente, medio, atrás)}
 
-La Figura~\ref{fig:ctrl_pct_change_fmb} muestra el crecimiento según la profundidad. La Tabla~\ref{tab:ctrl_fmb} presenta los valores.
+La Figura~\ref{fig:ctrl_pct_change_fmb} muestra la imbibición según la profundidad. La Tabla~\ref{tab:ctrl_fmb} presenta los valores.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
-\caption[Crecimiento relativo según profundidad]{\textbf{Crecimiento relativo según profundidad.} Cambio porcentual de peso; frente = celdas 7, 8, 9; medio = 4, 5, 6; atrás = 1, 2, 3. Media \(\pm\) SD, \(n = 27\) por grupo.}
+\caption[Imbibición según profundidad]{\textbf{Imbibición según profundidad.} Cambio relativo de peso; frente = celdas 7, 8, 9; medio = 4, 5, 6; atrás = 1, 2, 3. Media \(\pm\) SD, \(n = 27\) por grupo.}
 \label{tab:ctrl_fmb}
 \begin{tabular}{lc}
 \toprule
@@ -294,6 +315,8 @@ No se detectaron diferencias significativas entre frente, medio y atrás (\(F_{2
 El mismo análisis con el cambio absoluto de peso y el logaritmo de la razón de pesos confirma la ausencia de efecto de profundidad (Tabla~\ref{tab:ctrl_fmb_robustez}).
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Profundidad: verificación de robustez]{\textbf{Profundidad: verificación de robustez.} Cambio absoluto de peso y logaritmo de la razón de pesos. Media \(\pm\) SD, \(n = 27\) por grupo.}
@@ -315,29 +338,31 @@ Logaritmo razón de pesos & 0,348 \(\pm\) 0,034 & 0,358 \(\pm\) 0,039 & 0,359 \(
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_front_middle_back_barplot.pdf}
-    \caption[Crecimiento relativo según profundidad]{\textbf{Crecimiento relativo según profundidad.} Cambio porcentual de peso por fila (frente, medio, atrás) en controles negativos combinados.}
+    \caption[Imbibición según profundidad]{\textbf{Imbibición según profundidad.} Cambio relativo de peso por fila (frente, medio, atrás) en controles negativos combinados.}
     \label{fig:ctrl_pct_change_fmb}
 \end{figure}
 
 \subsection{Comparación entre todas las celdas (A1--C9)}
 
-El análisis a escala de celda individual reveló diferencias significativas entre posiciones (\(F_{26,52} = 6{,}27\), \(p = 1{,}1 \times 10^{-8}\)***). El mismo análisis, realizado con el cambio absoluto de peso (\(F_{26,52} = 6{,}28\), \(p = 1{,}0 \times 10^{-8}\)***) y con el logaritmo de la razón de pesos (\(F_{26,52} = 6{,}55\), \(p = 5{,}0 \times 10^{-9}\)***), confirma la existencia de un efecto de celda independientemente de la métrica de crecimiento utilizada.
+El análisis a escala de celda individual reveló diferencias significativas entre posiciones (\(F_{26,52} = 6{,}27\), \(p = 1{,}1 \times 10^{-8}\)***). El mismo análisis, realizado con el cambio absoluto de peso (\(F_{26,52} = 6{,}28\), \(p = 1{,}0 \times 10^{-8}\)***) y con el logaritmo de la razón de pesos (\(F_{26,52} = 6{,}55\), \(p = 5{,}0 \times 10^{-9}\)***), confirma la existencia de un efecto de celda independientemente de la métrica de respuesta utilizada.
 
-La Figura~\ref{fig:ctrl_pct_change_heatmap} presenta un mapa de calor con el crecimiento relativo promedio de cada celda, permitiendo visualizar simultáneamente el patrón por piso y las diferencias finas entre celdas individuales.
+La Figura~\ref{fig:ctrl_pct_change_heatmap} presenta un mapa de calor con la imbibición promedio de cada celda, permitiendo visualizar simultáneamente el patrón por piso y las diferencias finas entre celdas individuales.
 
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.85\linewidth]{datos/img/ctrl_pct_change_heatmap.png}
-    \caption[Mapa de calor del crecimiento relativo por celda]{\textbf{Mapa de calor del crecimiento relativo por celda.} Cambio porcentual de peso promedio de cada celda (A1--C9) en controles negativos combinados. La celda C9 presenta el menor valor promedio del conjunto.}
+    \caption[Mapa de calor de la imbibición por celda]{\textbf{Mapa de calor de la imbibición por celda.} Cambio relativo de peso promedio de cada celda (A1--C9) en controles negativos combinados. La celda C9 presenta el menor valor promedio del conjunto.}
     \label{fig:ctrl_pct_change_heatmap}
 \end{figure}
 
-El análisis post-hoc por pares con corrección FDR identificó que las diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor crecimiento relativo que varias celdas (Tabla~\ref{tab:ctrl_posthoc}).
+El análisis post-hoc por pares con corrección FDR identificó que las diferencias estuvieron principalmente asociadas a la celda C9, que presentó menor imbibición que varias celdas (Tabla~\ref{tab:ctrl_posthoc}).
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
-\caption[Comparaciones post-hoc significativas entre celdas individuales]{\textbf{Comparaciones post-hoc significativas entre celdas individuales.} Cambio porcentual de peso en el análisis A1--C9, con corrección FDR; \(n = 3\) por celda.}
+\caption[Comparaciones post-hoc significativas entre celdas individuales]{\textbf{Comparaciones post-hoc significativas entre celdas individuales.} Cambio relativo de peso en el análisis A1--C9, con corrección FDR; \(n = 3\) por celda.}
 \label{tab:ctrl_posthoc}
 \begin{tabular}{lrrr}
 \toprule
@@ -361,7 +386,7 @@ Una advertencia sobre la celda C9: su desviación estándar es muy chica (0,011)
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=\linewidth]{datos/software_data/analysis/negative_control_combined/negative_control_combined_pct_change_tray_cell_barplot.pdf}
-    \caption[Crecimiento relativo por celda individual]{\textbf{Crecimiento relativo por celda individual.} Cambio porcentual de peso de cada celda (A1--C9) en controles negativos combinados. Se observa el menor crecimiento de la celda C9 respecto de las demás.}
+    \caption[Imbibición por celda individual]{\textbf{Imbibición por celda individual.} Cambio relativo de peso de cada celda (A1--C9) en controles negativos combinados. Se observa la menor imbibición de la celda C9 respecto de las demás.}
     \label{fig:ctrl_pct_change_all}
 \end{figure}
 
@@ -369,11 +394,11 @@ Una advertencia sobre la celda C9: su desviación estándar es muy chica (0,011)
 
 El sistema de germinación no es espacialmente homogéneo, y conviene resumir en qué sentido lo es y en qué sentido no.
 
-Sí hay un efecto del \textbf{piso}: las muestras del piso A crecen más que las del C, con el B en el medio. El gradiente es suave antes que abrupto, porque la única diferencia significativa aparece entre los pisos extremos, A contra C, mientras que el B no se distingue de ninguno de los dos. Un gradiente de ese tipo es compatible con la acción de algún factor que varíe de forma continua con la altura del montaje.
+Sí hay un efecto del \textbf{piso}: las muestras del piso A absorben más agua que las del C, con el B en el medio. El gradiente es suave antes que abrupto, porque la única diferencia significativa aparece entre los pisos extremos, A contra C, mientras que el B no se distingue de ninguno de los dos. Un gradiente de ese tipo es compatible con la acción de algún factor que varíe de forma continua con la altura del montaje.
 
 No hay efecto de los otros dos ejes: ni izquierda-centro-derecha ni frente-medio-atrás muestran diferencias.
 
-Pero al bajar a la \textbf{celda individual}, de A1 a C9, sí aparecen diferencias, y están concentradas en una sola: la C9, que crece menos que varias de las demás. Es decir que el montaje tiene una anomalía localizada además del gradiente general.
+Pero al bajar a la \textbf{celda individual}, de A1 a C9, sí aparecen diferencias, y están concentradas en una sola: la C9, que absorbe menos agua que varias de las demás. Es decir que el montaje tiene una anomalía localizada además del gradiente general.
 
 La consecuencia práctica para el resto del trabajo es directa: la posición de una muestra dentro del sistema de germinación influye sobre lo que se mide, así que no puede dejarse al azar ni ignorarse. Es lo que justifica asignar las posiciones por sorteo y conservar la posición como término disponible en los modelos.
 
@@ -389,6 +414,8 @@ En los tres casos el contraste primario es el promedio de los ocho niveles expue
 La Tabla~\ref{tab:imbibicion_niveles} presenta la diferencia de imbibición de cada nivel respecto del control de su grupo, expresada en porcentaje relativo a la media del control.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Imbibición de cada nivel de tratamiento respecto del control]{\textbf{Imbibición de cada nivel de tratamiento respecto del control.} Diferencia en porcentaje relativo a la media del control de cada grupo, ajustada por bloque. El nivel 9 es el control interno y no aparece en la tabla. Los campos aplicados difieren entre imanes, por lo que se indican por separado.}
@@ -463,7 +490,7 @@ Los supuestos se satisfacen con una desviación leve de la normalidad (Shapiro-W
 
 La media de imbibición del control resultó de 0,3758, sensiblemente menor que en los dos grupos anteriores, como corresponde al régimen de 3~mL. La prueba global del tratamiento no detectó efecto (\(F_{8,64} = 0{,}551\), \(p = 0{,}81\)) y el término de bloque resultó despreciable (\(F_{8,64} = 0{,}293\), \(p = 0{,}97\)).
 
-La comparación principal dio \textbf{\(+1{,}59\,\pct\)}, con un intervalo del 95\,\pct de \(-0{,}80\,\pct\) a \(+3{,}98\,\pct\) y \(p = 0{,}19\). Es el intervalo más angosto de los tres grupos, y no es casualidad: es el grupo armado con el dosificador exacto (Sección~\ref{subsec:regimen_hidrico}). Menos variabilidad en el armado se traduce directamente en más precisión en la estimación. La tendencia frente a la dosis no es significativa (\(p = 0{,}29\)).
+La comparación principal dio \textbf{\(+1{,}59\,\pct\)}, con un intervalo del 95\,\pct de \(-0{,}80\,\pct\) a \(+3{,}98\,\pct\) y \(p = 0{,}19\). Es el intervalo más angosto de los tres grupos. Esta mayor precisión coincide con el uso del medidor de celdas y una menor variabilidad observada; no puede atribuirse exclusivamente al dispositivo, dado que también cambiaron el régimen hídrico y las fechas experimentales (Sección~\ref{subsec:regimen_hidrico}). La tendencia frente a la dosis no es significativa (\(p = 0{,}29\)).
 
 \begin{figure}[tbp]
     \centering
@@ -479,6 +506,8 @@ Este grupo satisface los supuestos sin reparos (Shapiro-Wilk, \(p = 0{,}55\); Le
 Lo anterior establece que ninguno de los tres grupos detectó un efecto. La pregunta que corresponde formular a continuación es qué magnitud de efecto queda descartada en cada caso, y es la que responde el análisis de equivalencia. La Tabla~\ref{tab:tost} reúne los tres resultados.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Contraste primario, equivalencia y sensibilidad por grupo]{\textbf{Contraste primario, equivalencia y sensibilidad por grupo.} El margen de relevancia es de \(\pm 10\,\pct\) relativo a la media del control. El efecto mínimo detectable corresponde a una potencia del 80\,\pct. Todos los grupos reúnen \(n = 81\) muestras.}
@@ -498,7 +527,7 @@ Neodimio N, 3~mL  & \(+1{,}59\) & \([-0{,}80;\ +3{,}98]\) & \(< 10^{-5}\)*** & \
 \end{threeparttable}
 \end{table}
 
-En los tres grupos la prueba de equivalencia da positiva. Lo que se obtiene, entonces, no es «no encontramos nada», sino algo más preciso: \textbf{si el campo magnético afecta la imbibición en estas condiciones, lo hace en menos del 10\,\pct}, que es el umbral por debajo del cual el cambio deja de tener interés práctico.
+En los tres grupos, la prueba TOST permite declarar equivalencia dentro del margen de \(\pm 10\,\pct\) para el \textbf{contraste entre el promedio de los ocho niveles expuestos y el control}, relativo a la media del control de cada grupo. Esta conclusión se refiere al efecto promedio sobre la imbibición en las condiciones estudiadas; no demuestra que el efecto de cada intensidad de campo esté dentro de ese margen. En particular, efectos de distinto signo entre niveles podrían compensarse en el promedio.
 
 La última columna dice hasta dónde llega esa afirmación en cada caso. El grupo de neodimio en estrés hídrico es el más sensible: podía detectar efectos desde el 3{,}40\,\pct, así que su conclusión es la más firme. El de cerámica es el menos sensible, con un 8{,}19\,\pct, lo que concuerda con su mayor variabilidad entre fechas y con los problemas de supuestos ya señalados.
 
@@ -514,6 +543,8 @@ Las muestras control germinaron en promedio 14,22 semillas de 20, es decir un 71
 La Tabla~\ref{tab:germinacion_niveles} presenta la germinación de cada nivel.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Germinación por nivel de tratamiento]{\textbf{Germinación por nivel de tratamiento, neodimio N en estrés hídrico.} Número de semillas germinadas sobre 20, como media \(\pm\) SD entre las nueve muestras de cada nivel. El nivel 9 es el control interno.}
@@ -562,7 +593,7 @@ Ese número hay que leerlo con cuidado y no como «el efecto verdadero es más c
 
 El largo de radícula está disponible únicamente en el grupo de neodimio en estrés hídrico, con 77 muestras de las 81 del grupo. Las cuatro restantes no cuentan con radículas medidas, de modo que los bloques no están completos para esta variable.
 
-La media del control resultó de \textbf{6,42~mm}. La prueba global del tratamiento no alcanzó significancia (\(F_{8,60} = 1{,}923\), \(p = 0{,}073\)), mientras que el término de bloque resultó muy grande (\(F_{8,60} = 37{,}16\), \(p < 0{,}001\)***), reflejo de las escalas no comparables entre fechas analizadas en la Sección~\ref{subsec:plan_analisis}.
+La media del control resultó de \textbf{6,42~mm}. La prueba global del tratamiento no alcanzó significancia (\(F_{8,60} = 1{,}923\), \(p = 0{,}073\)), mientras que el término de bloque resultó muy grande (\(F_{8,60} = 37{,}16\), \(p < 0{,}001\)***), reflejo de la segmentación no comparable entre fechas descrita en la Sección~\ref{par:segmentacion_fechas}.
 
 El contraste primario arrojó una diferencia de \textbf{\(+0{,}60\)~mm}, equivalente a un \(+9{,}3\,\pct\), con un intervalo de confianza del 95\,\pct de \([-9{,}2\,\pct;\ +27{,}8\,\pct]\) y \(p = 0{,}32\). No se detectó tendencia dosis-respuesta (\(p = 0{,}70\)).
 
@@ -585,26 +616,24 @@ El análisis se repitió con tres especificaciones alternativas, con resultados 
 
 En esta variable, el nivel 3 (77~mT) presenta la mayor diferencia respecto del control, de \(+1{,}96\)~mm o \(+30{,}6\,\pct\), con un valor \(p\) sin corregir de 0,012. Tras la corrección de Holm por los ocho contrastes, ese valor pasa a \textbf{0,093} y no alcanza significancia.
 
-¿Por qué esto no es un hallazgo? Por la razón explicada en la Sección~\ref{subsec:plan_analisis}: los ocho niveles se compararon contra el control al mismo tiempo, y con ocho comparaciones la probabilidad de que alguna resulte aparentemente significativa por azar es del 34\,\pct. Encontrar exactamente una es, entonces, el resultado más esperable si no hay ningún efecto. Es lo que ocurrió.
+La interpretación debe considerar que se realizaron ocho contrastes contra el control, como se explicó en la Sección~\ref{subsec:plan_analisis}. El valor \(p\) sin corregir no controla la probabilidad de obtener al menos un falso positivo en ese conjunto. Tras aplicar la corrección de Holm, el contraste del nivel 3 no alcanza el nivel de significación adoptado. Por tanto, no aporta evidencia estadística suficiente para afirmar una diferencia respecto del control; esto tampoco demuestra que la diferencia observada se deba al azar.
 
-Hay además una razón física para desconfiar. El nivel 3 recibe 77~mT, mientras que el nivel 1 recibe 263~mT, más del triple, y el nivel 1 no muestra nada. Un efecto que apareciera a 77~mT y desapareciera al triplicar la intensidad no describe ninguna relación entre dosis y respuesta, y el contraste de tendencia lo confirma (\(p = 0{,}70\)).
+La ausencia de una diferencia significativa en el nivel 1 (263~mT) no descarta una posible respuesta en el nivel 3 (77~mT): una relación dosis-respuesta podría ser no monotónica. El contraste de tendencia utilizado tampoco detectó una asociación con el logaritmo de la intensidad (\(p = 0{,}70\)), pero esa prueba no evalúa todas las formas posibles de respuesta. En este análisis, la evidencia del nivel 3 es insuficiente tras la corrección de Holm; no se atribuye esa conclusión a la ausencia de una respuesta mayor a intensidades más altas.
 
-El nivel 3 queda, entonces, como una pista y no como un resultado. Si alguien quisiera ponerla a prueba, el diseño adecuado sería un experimento dedicado a esa dosis, que la comparara contra el control sin las otras siete comparaciones compitiendo. En este trabajo \textbf{no constituye un resultado} y no se lo presenta como tal.
+La diferencia estimada en el nivel 3 se reporta como un resultado exploratorio que no alcanza significación tras la corrección por comparaciones múltiples. Podría motivar una nueva hipótesis, cuya evaluación requeriría un experimento independiente con esa dosis y su contraste frente al control definidos de antemano. Ese estudio permitiría evaluar la observación sin reutilizar los mismos datos que la sugirieron.
 
 \section{Efecto del régimen hídrico sobre la respuesta al campo}
 \label{sec:res_interaccion}
 
-El régimen de estrés hídrico se incorporó con una idea concreta: que el campo magnético tal vez solo se note cuando el agua es escasa, y no cuando las semillas la tienen de sobra (Sección~\ref{subsec:regimen_hidrico}). Como el mismo imán se usó en los dos regímenes, esa idea se puede poner a prueba directamente.
+El régimen de estrés hídrico se incorporó para explorar si la respuesta al campo magnético difería cuando la disponibilidad de agua era menor (Sección~\ref{subsec:regimen_hidrico}). Los dos grupos de neodimio comparten el imán, el polo, la torre, la duración de exposición y la tabla de intensidades de campo. Sin embargo, corresponden a fechas distintas y el cambio de volumen de agua coincidió con el reemplazo del medidor de semillas. La comparación entre campañas no permite, por tanto, aislar el efecto del régimen hídrico.
 
-La comparación es válida porque los dos grupos de neodimio comparten todo lo demás: el mismo imán, el mismo polo, la misma torre, la misma hora de exposición y la misma tabla de dosis. Lo único que cambia es el agua. En cada uno, el efecto del campo fue de \(-1{,}46\,\pct\) con agua abundante y de \(+1{,}59\,\pct\) con agua escasa.
+Los efectos promedio estimados respecto del control de cada grupo fueron de \(-1{,}46\,\pct\) con 5~mL y de \(+1{,}59\,\pct\) con 3~mL. Como análisis exploratorio, se ajustó un modelo conjunto para evaluar si la respuesta al tratamiento difería entre ambas campañas. El contraste reportado fue de \(-0{,}0131\), con un error estándar de \(0{,}0126\) y \(p = 0{,}30\). Este coeficiente no es la resta directa de los efectos porcentuales anteriores, que se expresan respecto de controles distintos.
 
-La pregunta no es si cada uno de esos números difiere de cero ---ya se vio que no--- sino si \emph{difieren entre sí}. Para responderla se ajusta un modelo con los dos grupos juntos que estima directamente esa diferencia. El resultado es \(-0{,}0131\) con un error estándar de 0{,}0126, es decir, una diferencia del tamaño de su propia incertidumbre (\(p = 0{,}30\)).
-
-\textbf{No hay evidencia de que la escasez de agua cambie la respuesta al campo magnético.} El efecto es nulo en los dos regímenes, y la diferencia entre ambos tampoco llega a distinguirse de cero. La idea que motivó ampliar el protocolo recibe, entonces, una respuesta negativa.
+\textbf{No se detectó una diferencia estadísticamente significativa en la respuesta promedio al campo entre las dos campañas.} Este resultado no demuestra que las respuestas sean iguales ni que el régimen hídrico no modifique el efecto del campo.
 
 \paragraph{Límite de esta comparación.}
 
-Corresponde declarar un límite que impide atribuir el resultado al agua de manera aislada. Como se detalló en la Sección~\ref{subsec:regimen_hidrico}, el cambio de régimen coincidió con otras modificaciones del protocolo, entre ellas el reemplazo del dosificador. Los dos conjuntos difieren, por lo tanto, en el volumen de agua y también en la precisión del armado. Dado que el resultado de la comparación es nulo, esta confusión no altera la conclusión: ninguna de las dos variables, ni su combinación, produjo una respuesta al campo. Si el resultado hubiera sido positivo, en cambio, no habría sido interpretable, y conviene dejarlo asentado.
+La coincidencia del cambio de agua con otras modificaciones del protocolo impide atribuir una diferencia, o su falta de detección, al volumen de agua de manera aislada. Esta limitación se mantiene con independencia del valor \(p\) obtenido. Para evaluar específicamente la modificación de la respuesta al campo por el régimen hídrico sería necesario comparar ambos volúmenes dentro de un diseño que mantuviera constantes los demás procedimientos y distribuyera las condiciones entre las mismas fechas experimentales.
 
 \paragraph{Sobre la comparación entre imanes.}
 
@@ -619,6 +648,6 @@ Los resultados pueden resumirse en cuatro enunciados.
 \begin{enumerate}
     \item \textbf{El método detecta lo que debe detectar.} El control positivo establece un efecto del agua sobre la imbibición grande, monótono y reproducible (\(+0{,}0639\) por mL, \(p = 2{,}9 \times 10^{-7}\)).
     \item \textbf{El montaje posee una variabilidad espacial propia}, caracterizada en los controles negativos, que la asignación aleatoria de posiciones impide confundir con el efecto del tratamiento.
-    \item \textbf{No se detectó efecto del campo magnético estático sobre ninguna de las tres variables}, en ninguno de los tres grupos de tratamiento, y la magnitud del efecto quedó acotada por debajo del margen de relevancia del 10\,\pct en la variable primaria de los tres grupos.
-    \item \textbf{El estrés hídrico no modificó esa respuesta}, de modo que la hipótesis de que el efecto se manifestara solo bajo condiciones limitantes no encontró respaldo.
+    \item \textbf{No se detectó efecto del campo magnético estático} sobre la imbibición en ninguno de los tres grupos de tratamiento, ni sobre la germinación o el largo de radícula, medidos solo en el grupo de neodimio con estrés hídrico. Para la variable primaria, el contraste promedio de los ocho niveles expuestos frente al control resultó equivalente dentro del margen de \(\pm 10\,\pct\) en los tres grupos. Esta equivalencia no se extiende a cada intensidad por separado.
+    \item \textbf{No se detectó una diferencia en la respuesta promedio al campo entre las campañas de 5 y 3~mL}. La coincidencia del cambio de agua con otras modificaciones del protocolo impide atribuir este resultado al régimen hídrico de manera aislada.
 \end{enumerate}

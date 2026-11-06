@@ -9,7 +9,7 @@
 \usepackage{iftex}
 % El idioma principal va ÚLTIMO. «english» hace falta para el Abstract
 % y para los epígrafes en inglés (guionado correcto).
-\usepackage[english,spanish,es-nodecimaldot]{babel}
+\usepackage[english,spanish,es-nodecimaldot,es-tabla]{babel}
 
 % ------------------------------------------------------------
 %  Tipografía
@@ -116,6 +116,7 @@
 \setkeys{Gin}{draft=false}
 \usepackage{subcaption}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{threeparttable}
@@ -140,7 +141,7 @@
 %  Bibliografía
 % ------------------------------------------------------------
 \usepackage{csquotes}
-\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\usepackage[backend=biber,style=ieee,citestyle=numeric-comp,sorting=none]{biblatex}
 \addbibresource{bib.bib}
 
 % ------------------------------------------------------------
@@ -217,8 +218,6 @@
 % ------------------------------------------------------------
 \renewcommand{\contentsname}{Índice general}
 \renewcommand{\listfigurename}{Índice de figuras}
-\renewcommand{\listtablename}{Índice de tablas}
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}} % babel usa «Cuadro»
 \renewcommand{\bibname}{Referencias}
 
 \renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
@@ -271,7 +270,7 @@
     plainpages=false,
     bookmarksopen=true,
     bookmarksopenlevel=\maxdimen,
-    pdftitle={Efecto de campos magnéticos estáticos sobre la germinación de Zea mays},
+    pdftitle={Exposición de semillas de maíz (Zea mays) a campos magnéticos estáticos: desarrollos 3D, software y experimentos},
     pdfauthor={Kiernan Elizabeth Preve},
     pdfsubject={Trabajo Especial de Licenciatura en Física — UNSL},
     pdfkeywords={magnetobiología, magnetopriming, Zea mays, campo magnético estático, germinación},
@@ -330,7 +329,7 @@
 
 \begin{document}
 
-%\input{Titlepage}
+\input{Titlepage}
 
 % ============================ PRELIMINARES ============================
 \pagenumbering{roman}
@@ -372,6 +371,9 @@
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
+\begingroup
+\emergencystretch=3em
 \printbibliography[title=\bibname]
+\endgroup
 
 \end{document}

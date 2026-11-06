@@ -1,12 +1,13 @@
 \chapter{Conclusiones}
+\epigrafe{El tiempo se bifurca perpetuamente hacia innumerables futuros.}{Jorge Luis Borges}{El jardín de senderos que se bifurcan, 1941}
 
-Esta tesina se propuso responder si existe un rango de condiciones de exposición a campos magnéticos estáticos que produzca mejoras reproducibles en la germinación y el crecimiento inicial de \textit{Zea mays}. La respuesta, dentro de las condiciones ensayadas, es que no se encontró tal rango, y el trabajo permite además acotar cuánto podría valer un efecto que hubiera pasado inadvertido.
+Esta tesina se propuso responder si existe un rango de condiciones de exposición a campos magnéticos estáticos que produzca mejoras reproducibles en la imbibición y la germinación de \textit{Zea mays}. La respuesta, dentro de las condiciones ensayadas, es que no se encontró tal rango, y el trabajo permite además acotar cuánto podría valer un efecto que hubiera pasado inadvertido.
 
 \section*{Sobre el resultado experimental}
 
 Se analizaron tres grupos de experimentos ---cerámica con agua abundante, neodimio con agua abundante y neodimio con estrés hídrico---, cada uno con 81 muestras distribuidas en nueve bloques completos. En ninguno se detectó efecto del campo magnético sobre la absorción de agua a las 72~h. Y en los tres, las pruebas de equivalencia permiten afirmar algo más preciso que la simple ausencia de hallazgo: \textbf{si el campo afecta esa variable, lo hace en menos del 10\%}. Ese umbral se fijó de antemano como límite de relevancia práctica.
 
-El resultado más consistente del trabajo no es la ausencia de efecto medio, sino la \textbf{ausencia de relación entre dosis y respuesta}. No aparece en ninguno de los tres grupos ni en ninguna de las tres variables medidas, y el nivel de campo más intenso nunca es el que más se aparta del control. Esto coincide con lo que anticipaba el marco teórico: los imanes empleados operan en régimen de campo alto, donde el mecanismo de pares de radicales tiende a saturar, de modo que no cabía esperar una relación simple de mayor campo y mayor efecto.
+El resultado más consistente del trabajo no es la ausencia de efecto medio, sino la \textbf{ausencia de relación entre dosis y respuesta}. No aparece en la imbibición de ninguno de los tres grupos, ni en la germinación o el largo de radícula del grupo en que se midieron, y el nivel de campo más intenso nunca es el que más se aparta del control. Esto coincide con lo que anticipaba el marco teórico: los imanes empleados operan en régimen de campo alto, donde el mecanismo de pares de radicales tiende a saturar, de modo que no cabía esperar una relación simple de mayor campo y mayor efecto.
 
 La hipótesis de que el efecto pudiera manifestarse solo bajo condiciones limitantes también recibió respuesta negativa. Al comparar el mismo imán en dos regímenes de agua, la diferencia entre ambos resultados nulos no se distingue de cero (\(p = 0{,}30\)).
 
@@ -28,12 +29,14 @@ Los \textbf{controles negativos} caracterizaron la variabilidad espacial del sis
 
 El \textbf{diseño por bloques} resultó imprescindible y no opcional: la variación entre fechas excede holgadamente cualquier efecto buscado, de modo que una comparación que no la contemplara habría quedado dominada por ella.
 
-Finalmente, la \textbf{pre-especificación del plan de análisis y la corrección por multiplicidad} determinaron la diferencia entre reportar y no reportar hallazgos. Sin corrección, este trabajo habría comunicado un efecto en el nivel de 22~mT sobre la germinación y otro en el de 77~mT sobre el largo de radícula. Ninguno sobrevive el ajuste, ninguno se acompaña de una relación dosis-respuesta, y ambos quedan como hipótesis a testear en experimentos dedicados.
+Finalmente, la \textbf{corrección por multiplicidad} determinó la diferencia entre reportar y no reportar hallazgos. En la germinación, el nivel 6 (22{,}3~mT) presentó una media de 16{,}78 semillas germinadas sobre 20, frente a 14{,}22 en el control: una diferencia de \(+2{,}56\) semillas (\(+12{,}8\) puntos porcentuales), con \(p = 0{,}01\) sin corregir y \(p = 0{,}06\) tras el ajuste de Holm. Es una señal sugerente, pero no alcanza el umbral de significación adoptado una vez consideradas las ocho comparaciones. De modo análogo, el nivel de 77~mT mostró una diferencia en el largo de radícula (\(p = 0{,}012\) sin corregir; \(p = 0{,}093\) tras Holm). Ninguno de estos contrastes sobrevive el ajuste; ambos quedan como hipótesis para experimentos dedicados.
 
 \section*{Lo que queda hecho para continuar}
 
-El trabajo deja montado y validado un sistema que permite retomar la pregunta con modificaciones acotadas. Lo componen una torre de exposición que aplica ocho dosis simultáneas, caracterizadas con un modelo de campo validado experimentalmente; un protocolo de germinación controlada; un dosificador que fija exactamente veinte semillas por muestra; un sistema de adquisición y medición de radículas por imagen; y un conjunto de datos y código disponible y reproducible en su totalidad.
+El trabajo deja montado un sistema que permite retomar la pregunta con modificaciones acotadas. Lo componen una torre de exposición que aplica ocho dosis simultáneas, caracterizadas con un modelo de campo validado en el centro de ambos imanes y en las esquinas del de cerámica; un protocolo de germinación controlada; un medidor de celdas que fija exactamente veinte semillas por muestra; un sistema de adquisición y medición de radículas por imagen, cuya validación queda pendiente; y un conjunto de datos y código disponible y reproducible en su totalidad.
 
 Sobre esa base, la continuación más valiosa es también la más sencilla: convertir la medición única en una curva temporal. No requiere instrumentos nuevos, solo contar las semillas germinadas varias veces por día. Es el cambio que permitiría responder la pregunta que esta tesina dejó abierta.
+
+Otra tarea pendiente es validar el algoritmo de medición de radículas: medir a mano, con regla o calibre, las radículas de un conjunto de fotografías no usado en su calibración, y comparar esas mediciones con las del programa. Eso permitiría conocer su error y saber cuánto confiar en el largo de radícula como variable.
 
 \endinput

@@ -1,4 +1,14 @@
 \chapter{Materiales y métodos}
+\noindent\begin{minipage}[c]{0.32\textwidth}
+\centering
+\includegraphics[height=4.5cm]{secciones/images/torre-cajon-maiz-lapiz.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.64\textwidth}
+\setlength{\epigraphwidth}{\linewidth}
+\epigrafeen{What I cannot create, I do not understand.}{Richard Feynman}{Pizarra de Caltech, 1988}
+\end{minipage}
+\par\vspace{0.5\baselineskip}
+
 
 \section{Diseño experimental}
 
@@ -14,32 +24,69 @@ Los tratamientos magnéticos se aplicaron con dos imanes permanentes de material
 
 El diseño de piezas se realizó principalmente con \textit{Tinkercad}, complementado en algunos casos con \textit{build123d}, especialmente cuando se requirieron modificaciones paramétricas o ajustes sistemáticos de dimensiones. Las tareas de programación asociadas a este trabajo se realizaron utilizando \textit{Visual Studio Code} como entorno principal de desarrollo.
 
-Para la adquisición de imágenes se construyó un \textit{photobox}, consistente en una caja con fondo negro e iluminación LED, diseñado con el objetivo de mejorar el contraste y estandarizar las condiciones de captura.
+Para la adquisición de imágenes se construyó un «photobox», consistente en una caja con fondo negro e iluminación LED, diseñado con el objetivo de mejorar el contraste y estandarizar las condiciones de captura.
 
-Finalmente, cabe señalar que el sistema PID utilizado en el laboratorio ya se encontraba previamente implementado en el MBLab por otros integrantes, por lo que no forma parte del desarrollo original de esta tesis.
+Los pesajes de las semillas se realizaron con una balanza analítica Shimadzu TX323L, de 320~g de capacidad máxima y 0,001~g de resolución (Figura~\ref{fig:balanza}).
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.4\linewidth]{secciones/images/balanza.jpg}
+    \caption[Balanza empleada en los pesajes]{\textbf{Balanza.} Balanza analítica Shimadzu TX323L (capacidad 320~g, resolución 0,001~g) con la que se registraron las masas seca y húmeda de cada muestra.}
+    \label{fig:balanza}
+\end{figure}
+
+La temperatura de germinación se mantuvo con un sistema de control PID (proporcional-integral-derivativo). Es un mecanismo de realimentación: mide continuamente la temperatura, la compara con el valor deseado y ajusta la acción sobre la temperatura según tres términos. El proporcional responde al error presente, el integral corrige el error acumulado en el tiempo, y el derivativo anticipa la tendencia del error. Combinados, llevan la temperatura al valor fijado y la sostienen ahí con poca oscilación. El sistema empleado fue construido en el Laboratorio de Magnetobiología (MBLab) por otros integrantes del grupo, y no forma parte del desarrollo original de esta tesis.
 
 \section{Caracterización de los imanes}
 \label{subsec:caracterizacion_imanes}
 
 Con el fin de conocer el perfil espacial del campo magnético generado por los imanes utilizados en los tratamientos, se realizó una caracterización experimental del campo en función de la distancia a la cara del imán. Para ello se empleó un gaussímetro con sonda Hall, registrándose la intensidad de campo magnético (mT) sobre el eje central de la cara del imán (\textit{Centro}) y sobre sus cuatro esquinas (\textit{Esq A}, \textit{Esq B}, \textit{Esq C} y \textit{Esq D}), a una serie de distancias crecientes respecto de la superficie del imán.
 
+Para ubicar la sonda a distancias conocidas y reproducibles se empleó un soporte con ranuras a alturas regulares, que permite variar la separación entre la cara del imán y la sonda. Sobre su cara superior, una grilla impresa señala los puntos de medición: el centro y las cuatro esquinas (Figura~\ref{fig:dispositivo_altura}).
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.45\linewidth]{secciones/images/dispositivo_altura.jpg}
+    \caption[Dispositivo de altura para la caracterización de los imanes]{\textbf{Dispositivo de altura.} Soporte con ranuras a alturas regulares empleado en la caracterización del campo. La grilla de la cara superior marca los puntos de medición (centro y esquinas).}
+    \label{fig:dispositivo_altura}
+\end{figure}
+
 \subsection{Geometría de los imanes y de los puntos de medición}
 
-Ambos imanes son prismas rectangulares y se utilizaron acostados, de modo que la cara enfrentada a las semillas es la de mayor superficie y la magnetización queda orientada según la dimensión más corta. Sus dimensiones se detallan en la Tabla~\ref{tab:dimensiones_imanes}.
+Ambos imanes son prismas rectangulares y se utilizaron acostados, de modo que la cara enfrentada a las semillas es la de mayor superficie y la magnetización queda orientada según la dimensión más corta. Sus dimensiones se detallan en la Tabla~\ref{tab:dimensiones_imanes}, y la Figura~\ref{fig:imanes} muestra ambos imanes.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
     \centering
-    \caption[Dimensiones de los imanes permanentes empleados]{\textbf{Dimensiones de los imanes permanentes empleados.} En ambos casos la magnetización es normal a la cara enfrentada a las semillas.}
+    \caption[Dimensiones de los imanes permanentes empleados]{\textbf{Dimensiones de los imanes permanentes empleados.} En ambos casos la magnetización es normal a la cara enfrentada a las semillas; la tercera dimensión es el espesor del imán a lo largo de esa dirección.}
     \label{tab:dimensiones_imanes}
-    \begin{tabular}{lccc}
+    \begin{tabular}{lcc}
         \toprule
-        Imán & Dimensiones (mm) & Cara enfrentada (mm) & Eje de magnetización (mm) \\
+        Imán & Dimensiones (mm) & Cara enfrentada (mm) \\
         \midrule
-        Neodimio & \(50{,}8 \times 50{,}8 \times 25{,}3\) & \(50{,}8 \times 50{,}8\) & \(25{,}3\) \\
-        Cerámica & \(100 \times 80 \times 30{,}5\)        & \(100 \times 80\)       & \(30{,}5\) \\
+        Neodimio & \(50{,}8 \times 50{,}8 \times 25{,}3\) & \(50{,}8 \times 50{,}8\) \\
+        Cerámica & \(100 \times 80 \times 30{,}5\)        & \(100 \times 80\) \\
         \bottomrule
     \end{tabular}
 \end{table}
+
+\begin{figure}[tbp]
+    \centering
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{secciones/images/iman_ceramica.jpg}
+        \caption{Cerámica}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{secciones/images/iman_neodimio.jpg}
+        \caption{Neodimio}
+    \end{subfigure}
+    \caption[Imanes permanentes empleados]{\textbf{Imanes permanentes empleados.} En ambos, la letra N señala el polo norte, que es la cara que se enfrentó a las semillas.}
+    \label{fig:imanes}
+\end{figure}
 
 El punto \textit{Centro} se ubica sobre el eje central de la cara. Los puntos \textit{Esq A}--\textit{Esq D} se sitúan a 30~mm en \(x\) y 30~mm en \(y\) respecto del centro, es decir a \(30\sqrt{2} \approx 42{,}4\)~mm en diagonal, formando un cuadrado de \(60 \times 60\)~mm. Esta geometría tiene una consecuencia que resultará determinante para la interpretación: el cuadrado de medición \textbf{excede la cara del imán de neodimio} (\(50{,}8 \times 50{,}8\)~mm), de modo que los cuatro puntos caen fuera del borde, unos 4,6~mm por lado. En el imán de cerámica (\(100 \times 80\)~mm), en cambio, los cuatro puntos quedan holgadamente dentro de la proyección de la cara.
 
@@ -47,7 +94,7 @@ El barrido en distancia se realizó perpendicularmente a la cara, con un desplaz
 
 Cabe señalar que la sonda Hall empleada mide \textbf{únicamente la componente \(B_z\)}, normal a la cara del imán, y no el módulo \(|\vec{B}|\). Esta distinción es esencial: en regiones donde las líneas de campo se han curvado para cerrarse hacia el polo opuesto, la componente normal puede anularse o incluso invertir su signo aunque el módulo del campo no sea pequeño.
 
-\subsection{Modelo numérico de contraste}
+\subsection{Simulación del campo: campo medido y campo simulado}
 
 Con el objeto de contrastar las mediciones contra una predicción independiente, se implementó una simulación del campo de cada imán mediante la biblioteca \texttt{magpylib} \cite{magpylib}, que resuelve de forma analítica el campo de un prisma uniformemente magnetizado. Se optó por esta aproximación en lugar de un método de elementos finitos porque la geometría involucrada es un único imán en el aire, sin núcleos ferromagnéticos ni contornos complejos, condiciones bajo las cuales la solución analítica es exacta y computacionalmente mucho más económica.
 
@@ -74,10 +121,10 @@ Bajo la hipótesis de magnetización uniforme se tiene \(\nabla\cdot\bm{M}=0\) y
     \arctan\!\left(\frac{(x-x_i)\,(y-y_j)}{(z-z_k)\,r_{ijk}}\right),
     \label{eq:bz_prisma}
 \end{equation}
-con \(x_{1,2}=\pm a\), \(y_{1,2}=\pm b\), \(z_{1,2}=\pm c\) y \(r_{ijk}=\left[(x-x_i)^{2}+(y-y_j)^{2}+(z-z_k)^{2}\right]^{1/2}\). Las componentes transversales admiten expresiones análogas de tipo logarítmico. Esta solución ha sido publicada de forma equivalente en diversas ocasiones \cite{yang_1990,engel_herbert_2005,camacho_2013} y es la que implementa \texttt{magpylib}. Fuera del imán se cumple \(\bm{J}=\bm{0}\) y por lo tanto \(\bm{B}=\mu_0\bm{H}\), de manera que la Ecuación~\ref{eq:bz_prisma} proporciona directamente la magnitud registrada por la sonda.
+donde el origen de coordenadas se ubica en el centro del imán y el eje \(z\) coincide con la dirección de magnetización; \(a\), \(b\) y \(c\) son las semiaristas del prisma, es decir, la mitad de cada una de sus dimensiones (Tabla~\ref{tab:dimensiones_imanes}), de modo que la cara enfrentada a las semillas se encuentra en \(z=c\). Además, \(x_{1,2}=\pm a\), \(y_{1,2}=\pm b\), \(z_{1,2}=\pm c\) y \(r_{ijk}=\left[(x-x_i)^{2}+(y-y_j)^{2}+(z-z_k)^{2}\right]^{1/2}\). Las componentes transversales admiten expresiones análogas de tipo logarítmico. Esta solución ha sido publicada de forma equivalente en diversas ocasiones \cite{yang_1990,engel_herbert_2005,camacho_2013} y es la que implementa \texttt{magpylib}. Fuera del imán se cumple \(\bm{J}=\bm{0}\) y por lo tanto \(\bm{B}=\mu_0\bm{H}\), de manera que la Ecuación~\ref{eq:bz_prisma} proporciona directamente la magnitud registrada por la sonda.
 
 \paragraph{Ajuste de la remanencia.}
-El modelo se construyó con las dimensiones nominales de cada imán (Tabla~\ref{tab:dimensiones_imanes}) y un \textbf{único parámetro libre}: la remanencia \(B_r\). La Ecuación~\ref{eq:bz_prisma} se evaluó en las coordenadas de cada punto de medición, esto es, en \((x,y)=(0,0)\) para el \textit{Centro} y \((x,y)=(\pm 30,\pm 30)\)~mm para las esquinas, con \(z=c+d\), siendo \(d\) la distancia a la cara del imán.
+El modelo se construyó con las dimensiones nominales de cada imán (Tabla~\ref{tab:dimensiones_imanes}) y un \textbf{único parámetro libre}: la remanencia \(B_r\). La Ecuación~\ref{eq:bz_prisma} se evaluó en las coordenadas de cada punto de medición, esto es, en \((x,y)=(0,0)\) para el \textit{Centro} y \((x,y)=(\pm 30,\pm 30)\)~mm para las esquinas, con \(z=c+d\), siendo \(c\) el semiespesor del imán y \(d\) la distancia a su cara.
 
 Puesto que \(J\) aparece como factor multiplicativo global en la Ecuación~\ref{eq:bz_prisma}, el campo simulado es lineal en la remanencia. Resulta conveniente entonces evaluar el modelo con remanencia unitaria, lo que proporciona un perfil \(B_z^{\mathrm{u}}(d)\) que depende exclusivamente de la geometría ---dimensiones del imán y coordenadas del punto de medición--- y es por completo independiente del material. El campo simulado para una remanencia arbitraria es entonces \(B_z^{\mathrm{sim}}=B_r\,B_z^{\mathrm{u}}\), y la minimización de la suma de residuos cuadráticos
 \begin{equation}
@@ -106,6 +153,8 @@ Esta separación es lo que otorga valor diagnóstico al procedimiento: un ajuste
 Las Figuras~\ref{fig:ceramica_n_perfil} a~\ref{fig:neodimio_n_perfil} presentan, para cada imán, las mediciones experimentales (puntos) superpuestas a la predicción del modelo (líneas continuas). Los indicadores de bondad de ajuste se resumen en la Tabla~\ref{tab:ajuste_imanes}.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
     \centering
     \caption[Remanencia ajustada y bondad del modelo para cada imán]{\textbf{Remanencia ajustada y bondad del modelo para cada imán.} El coeficiente del \textit{Centro} corresponde al ajuste; el de las \textit{Esquinas}, a la validación independiente (no participaron del ajuste).}
     \label{tab:ajuste_imanes}
@@ -153,23 +202,16 @@ El imán de neodimio, polo norte, presentó un campo considerablemente más inte
 
 El contraste entre ambos materiales resulta esclarecedor: el mismo modelo, con el mismo procedimiento de ajuste, valida satisfactoriamente en los dos imanes de cerámica y falla únicamente en el de neodimio. Esto descarta que la discrepancia provenga del modelo físico en sí y orienta la explicación hacia la geometría de medición.
 
-Los cortes en el plano \(xz\) (\(y = 0\)) de las Figuras~\ref{fig:ceramica_n_mapa} y~\ref{fig:neodimio_n_mapa} hacen visible el origen del problema. En ambas figuras el contorno negro marca la superficie \(B_z = 0\), que separa la región donde la componente normal es positiva de aquella donde, habiéndose curvado las líneas de campo para cerrarse hacia el polo opuesto, resulta negativa.
+Los cortes en el plano \(xz\) (\(y = 0\)) de la Figura~\ref{fig:mapas_campo} hacen visible el origen del problema. En ambos paneles el contorno negro marca la superficie \(B_z = 0\), que separa la región donde la componente normal es positiva de aquella donde, habiéndose curvado las líneas de campo para cerrarse hacia el polo opuesto, resulta negativa.
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/ceramica_n_bz_fit_field_map.pdf}
-    \caption[Mapa de campo del imán de cerámica en el plano \(xz\)]{\textbf{Mapa de campo del imán de cerámica, polo norte.} Corte \(xz\) (\(y=0\)) de \(B_z\) con líneas de campo superpuestas. El contorno negro indica \(B_z = 0\) y el rectángulo verde el contorno del imán. Los puntos de medición de las esquinas quedan dentro de la proyección de la cara, en la región de campo normal positivo.}
-    \label{fig:ceramica_n_mapa}
+    \includegraphics[width=\linewidth]{datos/software_data/extra/plots/field_maps_ceramica_neodimio_n.pdf}
+    \caption[Mapas de campo de los imanes en el plano \(xz\)]{\textbf{Mapas de campo de los imanes, polo norte.} Corte \(xz\) (\(y=0\)) de \(B_z\) con líneas de campo superpuestas, para (a) el imán de cerámica y (b) el de neodimio. El contorno negro indica \(B_z = 0\), el rectángulo verde el contorno del imán y los marcadores, los puntos de medición. En la cerámica, los puntos de las esquinas quedan dentro de la proyección de la cara, en la región de campo normal positivo. En el neodimio, en cambio, las esquinas (\(r \approx 42{,}4\)~mm) caen fuera del borde de la cara (\(x = 25{,}4\)~mm) y cerca del contorno \(B_z = 0\), donde la componente normal es pequeña y su gradiente muy pronunciado.}
+    \label{fig:mapas_campo}
 \end{figure}
 
-\begin{figure}[tbp]
-    \centering
-    \includegraphics[width=0.85\linewidth]{datos/software_data/extra/plots/neodimio_n_bz_fit_field_map.pdf}
-    \caption[Mapa de campo del imán de neodimio en el plano \(xz\)]{\textbf{Mapa de campo del imán de neodimio, polo norte.} Corte \(xz\) (\(y=0\)) de \(B_z\). A diferencia del caso anterior, los puntos correspondientes a las esquinas (\(r \approx 42{,}4\)~mm) caen fuera del borde de la cara (\(x = 25{,}4\)~mm) y en las cercanías del contorno \(B_z = 0\), donde la componente normal es pequeña y su gradiente muy pronunciado.}
-    \label{fig:neodimio_n_mapa}
-\end{figure}
-
-En el imán de cerámica, cuya cara mide \(100 \times 80\)~mm, los puntos de esquina (\(r \approx 42{,}4\)~mm) se encuentran cómodamente dentro de la proyección de la cara, en una zona donde \(B_z\) es grande y varía suavemente; allí el modelo predice bien. En el de neodimio, en cambio, el semiancho de la cara es de apenas 25,4~mm, de modo que las esquinas quedan \textit{fuera} del imán, en la región donde el campo de retorno se curva y \(B_z\) cruza por cero. En esas condiciones, la componente normal es pequeña en valor absoluto y su gradiente espacial es muy elevado, por lo que una incertidumbre milimétrica en la posición efectiva de la sonda ---o el promediado espacial que introduce su volumen sensible finito--- se traduce en un error relativo muy grande. El máximo local observado experimentalmente a pocos milímetros de la cara es, precisamente, la firma de ese cierre de las líneas de campo.
+En el imán de cerámica, cuya cara mide \(100 \times 80\)~mm, los puntos de esquina (\(r \approx 42{,}4\)~mm) se encuentran cómodamente dentro de la proyección de la cara, en una zona donde \(B_z\) es intenso y varía suavemente; allí el modelo predice bien. En el de neodimio, en cambio, el semiancho de la cara es de apenas 25,4~mm, de modo que las esquinas quedan \textit{fuera} del imán, en la región donde el campo de retorno se curva y \(B_z\) cruza por cero. En esas condiciones, la componente normal es pequeña en valor absoluto y su gradiente espacial es muy elevado, por lo que una incertidumbre milimétrica en la posición efectiva de la sonda ---o el promediado espacial que introduce su volumen sensible finito--- se traduce en un error relativo muy grande. El máximo local observado experimentalmente a pocos milímetros de la cara es, precisamente, la firma de ese cierre de las líneas de campo.
 
 Por consiguiente, el \(R^2\) negativo en las esquinas del neodimio no debe interpretarse como una falla del modelo, sino como el reflejo de que dichos puntos constituyen un punto de operación intrínsecamente inadecuado para validar la predicción: el estadístico compara la dispersión de los residuos contra la varianza de los datos, y esta última es muy pequeña en una zona donde la señal misma se aproxima a cero. La validación relevante para los fines de este trabajo es la del centro, que es además la región donde efectivamente se disponen las semillas durante el tratamiento.
 
@@ -183,7 +225,7 @@ Durante el diseño se buscó que las piezas cumplieran simultáneamente varios r
 
 El modelado de la geometría se realizó principalmente en \textit{Tinkercad}, herramienta utilizada para desarrollar la estructura general de la torre y los semilleros. En algunos casos particulares, especialmente cuando se requirieron modificaciones paramétricas o ajustes más sistemáticos, se empleó también \textit{build123d}.
 
-A lo largo del desarrollo fue necesario realizar ajustes sucesivos sobre las dimensiones y el diseño de las piezas, con el fin de mejorar aspectos de calce, estabilidad mecánica y facilidad de uso. Una vez obtenidas versiones satisfactorias, las piezas fueron fabricadas mediante impresión 3D e incorporadas al sistema experimental.
+A lo largo del desarrollo fue necesario realizar ajustes sucesivos sobre las dimensiones y el diseño de las piezas, con el fin de mejorar aspectos de calce, estabilidad mecánica y facilidad de uso. Una vez obtenidas versiones satisfactorias, las piezas fueron fabricadas mediante impresión 3D en una impresora \textit{Creality Hi}, en el FabLab del Departamento de Física, e incorporadas al sistema experimental.
 
 La Figura~\ref{fig:torre_semilleros} muestra, lado a lado, el diseño digital y la pieza ya impresa. Los archivos de diseño y desarrollo asociados se encuentran documentados en el repositorio del proyecto.
 
@@ -238,11 +280,11 @@ A modo ilustrativo, la Figura~\ref{fig:cajon_cargado} muestra un cajón ya carga
 
 \subsection{Piezas auxiliares para manipulación experimental}
 
-Además de la estructura principal de tratamiento, se diseñaron piezas auxiliares destinadas a facilitar distintas etapas del trabajo experimental. Entre ellas se incluyó una cubierta parcial para cajones y una cuchara medidora para la dosificación de semillas.
+Además de la estructura principal de tratamiento, se diseñaron piezas auxiliares destinadas a facilitar distintas etapas del trabajo experimental. Entre ellas se incluyó una cubierta parcial para cajones y una cuchara medidora para la carga de semillas.
 
-\subsection{Dispositivo de dosificación de semillas}
+\subsection{Dispositivos de medición de semillas}
 
-Con el fin de evitar el conteo manual repetido de 20 semillas por muestra, se diseñó una cuchara medidora orientada a dosificar aproximadamente esa cantidad con la menor variabilidad posible. Dado que el volumen ocupado por las semillas depende de su tamaño y disposición, se optó por un diseño paramétrico utilizando \textit{build123d}, lo que permitió modificar de manera sistemática las dimensiones de la pieza.
+Con el fin de evitar el conteo manual repetido de 20 semillas por muestra, se diseñó una cuchara medidora orientada a cargar aproximadamente esa cantidad con la menor variabilidad posible. Dado que el volumen ocupado por las semillas depende de su tamaño y disposición, se optó por un diseño paramétrico utilizando \textit{build123d}, lo que permitió modificar de manera sistemática las dimensiones de la pieza.
 
 A partir de un diseño inicial, se generaron variantes con cambios de tamaño del orden de \(\pm 5\%\), con el objetivo de evaluar cuál de ellas se ajustaba mejor a una carga cercana a 20 semillas de maíz por uso. Las distintas versiones fueron fabricadas mediante impresión 3D y comparadas experimentalmente, seleccionándose finalmente aquella que mostró el mejor ajuste al valor buscado y una menor variabilidad entre repeticiones. La caracterización de la cuchara seleccionada, realizada a partir de 108 mediciones, mostró una media de 17,44 semillas por carga, una mediana de 17,00 semillas y una desviación estándar de 2,08 semillas. Se agradece a Lucía Guerreiro por la obtención y provisión de estos datos.
 
@@ -261,7 +303,7 @@ La Figura~\ref{fig:cuchara3D} muestra, lado a lado, el diseño digital y la cuch
         \includegraphics[width=\linewidth]{datos/img/cuchara_foto.jpg}
         \caption{Pieza impresa}
     \end{subfigure}
-    \caption[Cuchara medidora: diseño y pieza impresa]{\textbf{Cuchara medidora.} Dispositivo desarrollado para dosificar aproximadamente 20 semillas de maíz: diseño y pieza fabricada mediante impresión 3D.}
+    \caption[Cuchara medidora: diseño y pieza impresa]{\textbf{Cuchara medidora.} Dispositivo desarrollado para cargar aproximadamente 20 semillas de maíz: diseño y pieza fabricada mediante impresión 3D.}
     \label{fig:cuchara3D}
 \end{figure}
 
@@ -272,61 +314,70 @@ La Figura~\ref{fig:cuchara3D} muestra, lado a lado, el diseño digital y la cuch
     \label{fig:caracterizacion_cuchara}
 \end{figure}
 
-\paragraph{Reemplazo por un dosificador determinista.}
+\paragraph{Reemplazo por un medidor de celdas.}
 
-La caracterización dejó a la vista el problema de fondo de dosificar por volumen, y es doble.
+La caracterización dejó a la vista el problema de fondo de medir por volumen, y es doble.
 
-El primero es que la media quedó en 17,44 semillas y no en 20. Eso es corregible agrandando la pieza. El segundo no lo es: la dispersión entre cargas (\(\sigma = 2{,}08\) semillas) no se puede reducir por diseño, porque el volumen que ocupan las semillas depende del tamaño de cada grano y de cómo se acomodan entre sí, y eso cambia en cada carga.
+El primero es que la media quedó en 17,44 semillas y no en 20. Eso podría haberse corregido agrandando la pieza, pero no se hizo porque no resolvía el segundo problema, que es el de fondo: la dispersión entre cargas (\(\sigma = 2{,}08\) semillas) no se puede reducir por diseño, porque el volumen que ocupan las semillas depende del tamaño de cada grano y de cómo se acomodan entre sí, y eso cambia en cada carga.
 
-Esa dispersión importa porque lo que se mide es el peso de la muestra, y el peso depende de cuántas semillas hay. Una muestra con dos semillas de más pesa más desde el inicio, de manera que la variabilidad del dosificador se traslada directamente como ruido a la variable de respuesta.
+Esa dispersión importa porque lo que se mide es el peso de la muestra, y el peso depende de cuántas semillas hay. Una muestra con dos semillas de más pesa más desde el inicio, de manera que la variabilidad de la cuchara se traslada directamente como ruido a la variable de respuesta.
 
-Para eliminar dicha fuente de variabilidad se diseñó un segundo dispositivo, que sustituyó a la cuchara en los experimentos posteriores. En lugar de dosificar por volumen, este medidor fija la cantidad por construcción geométrica: consiste en una placa con una matriz de \(4 \times 5\) celdas individuales, dimensionadas para alojar exactamente un grano cada una, de modo que una placa completa contiene invariablemente 20 semillas (Figura~\ref{fig:medidor2}). El llenado se realiza distribuyendo semillas sobre la placa hasta ocupar todas las celdas y descartando las sobrantes.
+Para eliminar dicha fuente de variabilidad se diseñó un segundo dispositivo, que sustituyó a la cuchara en los experimentos posteriores. En lugar de medir por volumen, este medidor fija la cantidad por construcción geométrica: consiste en una placa con una matriz de \(4 \times 5\) celdas individuales, dimensionadas para alojar exactamente un grano cada una, de modo que una placa completa contiene invariablemente 20 semillas (Figura~\ref{fig:medidor2}). El llenado se realiza distribuyendo semillas sobre la placa hasta ocupar todas las celdas y descartando las sobrantes.
 
 El cambio traslada el problema de un dominio estadístico a uno geométrico: mientras que la cuchara requería caracterizar una distribución y asumir su dispersión, el medidor de celdas hace que el conteo sea verificable por inspección directa, con desviación nula respecto del valor nominal. El costo es un tiempo de carga algo mayor, considerado aceptable frente a la reducción de ruido en la variable medida.
 
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.6\linewidth]{secciones/images/medidor2.jpg}
-    \caption[Dosificador determinista de 20 celdas]{\textbf{Dosificador determinista.} Segundo dispositivo de dosificación, impreso en 3D. La matriz de \(4 \times 5\) celdas individuales aloja un grano por celda, fijando la cantidad en exactamente 20 semillas por carga.}
+    \caption[Medidor de 20 celdas]{\textbf{Medidor de 20 celdas.} Segundo dispositivo de medición, impreso en 3D. La matriz de \(4 \times 5\) celdas individuales aloja un grano por celda, fijando la cantidad en exactamente 20 semillas por carga.}
     \label{fig:medidor2}
 \end{figure}
 
-\subsection{Construcción del photobox}
+\subsection{Construcción del «photobox»}
 
-Para la adquisición de imágenes de semillas germinadas se construyó un \textit{photobox}, consistente en una caja con fondo negro e iluminación LED. Este dispositivo fue diseñado con el propósito de mejorar el contraste de las imágenes y estandarizar las condiciones de captura, reduciendo la variabilidad asociada a la iluminación y al fondo durante la toma fotográfica.
+Para la adquisición de imágenes de semillas germinadas se construyó un «photobox», consistente en una caja con fondo negro e iluminación LED. Este dispositivo fue diseñado con el propósito de mejorar el contraste de las imágenes y estandarizar las condiciones de captura, reduciendo la variabilidad asociada a la iluminación y al fondo durante la toma fotográfica.
 
 La utilización de este sistema permitió obtener imágenes en condiciones más homogéneas, facilitando posteriormente el procesamiento automático de las radículas mediante software.
 
+La Figura~\ref{fig:photobox} muestra el dispositivo. La tira LED recorre el perímetro interior de la caja para iluminar la muestra de forma difusa y pareja. Las semillas se disponen sobre el fondo negro, junto a la regla blanca de 100~mm que el programa de medición usa como referencia de escala.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{secciones/images/photobox.jpg}
+    \caption[«Photobox» para la adquisición de imágenes]{\textbf{«Photobox».} Caja con iluminación LED perimetral y fondo negro. En el centro, el marco donde se disponen las semillas y la regla blanca de 100~mm usada como referencia de escala.}
+    \label{fig:photobox}
+\end{figure}
+
 \section{Procedimiento experimental}
 
-Los experimentos se llevaron a cabo empleando el sistema de torre, semilleros y cajones diseñado para este trabajo. Las semillas fueron distribuidas en bandejas identificadas de forma individual, de manera de conservar la trazabilidad de cada unidad experimental durante las distintas etapas del protocolo.
+Los experimentos se llevaron a cabo empleando el sistema de torre, semilleros y cajones diseñado para este trabajo. Las semillas fueron distribuidas en cajas identificadas de forma individual, de manera de conservar la trazabilidad de cada unidad experimental durante las distintas etapas del protocolo.
 
 La organización espacial de las muestras dentro del sistema experimental fue asistida mediante una asignación controlada de posiciones (Sección~\ref{subsec:asignador}), con el objetivo de ordenar la disposición de las semillas dentro del montaje y disminuir posibles sesgos asociados a la ubicación de las muestras.
 
 \subsection{Configuración de la exposición}
 
-El tratamiento magnético se aplica sobre la semilla seca y quiescente, con anterioridad a la imbibición. Se trata, por lo tanto, de un esquema de \textit{magnetopriming} en sentido estricto, y no de una exposición sostenida durante la germinación.
+El tratamiento magnético se aplica sobre la semilla seca e inactiva, con anterioridad a la imbibición. Se trata, por lo tanto, de un esquema de \textit{magnetopriming} en sentido estricto, y no de una exposición sostenida durante la germinación.
 
-El imán se ubica en la \textbf{base de la torre de exposición}, con la cara de mayor superficie orientada hacia arriba, enfrentando las semillas. Los cajones portasemillas se disponen \textbf{apilados uno sobre otro} por encima del imán, de manera que cada nivel de la pila queda a una distancia creciente de la cara y, en consecuencia, expuesto a una intensidad de campo decreciente. Esta disposición constituye el mecanismo por el cual un único montaje genera simultáneamente ocho condiciones de dosis: el nivel de apilamiento \textit{es} el nivel de tratamiento.
+El imán se ubica en la \textbf{base de la torre de exposición}, con la cara de mayor superficie orientada hacia arriba, enfrentando las semillas. Los cajones portasemillas se disponen \textbf{apilados uno sobre otro} por encima del imán, de manera que cada nivel de la pila queda a una distancia creciente de la cara y, en consecuencia, expuesto a una intensidad de campo decreciente. Esta disposición constituye el mecanismo por el cual un único montaje genera simultáneamente ocho condiciones de exposición: el nivel de apilamiento \textit{es} el nivel de tratamiento.
 
-La torre aloja \textbf{ocho niveles expuestos}. Cada cajón contiene tres muestras alojadas en tres de sus cuatro compartimentos, de modo que los ocho niveles aportan 24 unidades experimentales. Las tres muestras restantes, hasta completar las 27 bandejas del experimento, constituyen el \textbf{control interno}: no se colocan en la torre de exposición sino a distancia del montaje, donde el campo del imán es despreciable.
+La torre aloja \textbf{ocho niveles expuestos}. Cada cajón contiene tres muestras alojadas en tres de sus cuatro compartimentos, de modo que los ocho niveles aportan 24 unidades experimentales. Las tres muestras restantes, hasta completar las 27 cajas del experimento, constituyen el \textbf{control interno}. Se lo llama interno porque forma parte del mismo experimento: se arma el mismo día, con el mismo lote de semillas, y germina junto a las muestras expuestas, a diferencia de los experimentos de control negativo, en los que ninguna muestra recibe campo. Estas muestras no se colocan en la torre de exposición sino a distancia del montaje (al menos a 1,5~m de la torre de exposición), donde el campo del imán es despreciable.
 
-Corresponde distinguir esta torre de exposición del arreglo de germinación. Concluida la exposición, las 27 muestras se distribuyen en el sistema de germinación, compuesto por tres pisos (A, B, C) y nueve posiciones por piso, mediante una asignación aleatoria (Sección~\ref{subsec:asignador}). Esta aleatorización es la que impide que el efecto de posición documentado en los controles negativos se confunda con el efecto del tratamiento.
+Corresponde distinguir esta torre de exposición del arreglo de germinación. Concluida la exposición, las 27 muestras se distribuyen en el sistema de germinación, compuesto por tres pisos (A, B, C) y nueve posiciones por piso, mediante una asignación aleatoria (Sección~\ref{subsec:asignador}). Esta aleatorización es la que impide que el efecto de posición documentado en los controles negativos (Sección~\ref{sec:res_ctrl_negativo}) se confunda con el efecto del tratamiento.
 
 \subsection{Protocolo}
 
 El procedimiento seguido en cada experimento fue el siguiente:
 
 \begin{enumerate}
-    \item \textbf{Dosificación y armado.} Se carga el lote de semillas de maíz de cada muestra mediante uno de los dos dispositivos descritos anteriormente, según la etapa del trabajo: la cuchara medidora hasta el experimento del 27/07/2026 inclusive, que dosifica por volumen, y el medidor de celdas a partir del experimento del 04/08/2026, que fija exactamente 20 semillas por construcción geométrica. Sobre el grado de precisión efectivo de la primera etapa, véase la Sección~\ref{subsec:regimen_hidrico}. Las semillas se disponen sobre una lámina de papel absorbente de cocina y se cubren con una segunda lámina, de modo que el lote queda contenido entre ambas. Las láminas se cortan con idénticas dimensiones para todas las muestras, a fin de que su capacidad de retención de agua sea equivalente entre unidades experimentales.
-    \item \textbf{Pesaje en seco.} Se tara la balanza con el cajón vacío y su papel, y a continuación se incorporan las semillas: la lectura resultante corresponde a la masa seca del lote, sin intervención del recipiente ni del papel.
-    \item \textbf{Exposición.} Los cajones se apilan en la torre sobre el imán y permanecen allí durante \textbf{1~h}. Las muestras de control permanecen ese mismo lapso alejadas del montaje.
-    \item \textbf{Hidratación.} Concluida la exposición, se suministra a cada muestra el volumen de agua correspondiente a su régimen hídrico: 5~mL en los experimentos de saturación y 3~mL en los de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}).
+    \item \textbf{Carga y armado.} Se carga el lote de semillas de maíz de cada muestra mediante uno de los dos dispositivos descritos anteriormente, según la etapa del trabajo: la cuchara medidora hasta el experimento del 27/07/2026 inclusive, que mide por volumen, y el medidor de celdas a partir del experimento del 04/08/2026, que fija exactamente 20 semillas por construcción geométrica. Sobre el grado de precisión efectivo de la primera etapa, véase la Sección~\ref{subsec:regimen_hidrico}.
+    \item \textbf{Pesaje en seco.} Se tara la balanza con el cajón vacío y a continuación se incorporan las semillas: la lectura resultante corresponde a la masa seca del lote, sin intervención del recipiente.
+    \item \textbf{Exposición.} Los cajones se apilan en la torre sobre el imán, con las semillas apoyadas directamente sobre el piso del cajón, sin papel, y permanecen allí durante \textbf{1~h}. Las muestras de control permanecen ese mismo lapso alejadas del montaje.
+    \item \textbf{Hidratación.} Concluida la exposición, las semillas se disponen sobre una hoja de papel absorbente y se cubren con una segunda hoja, de modo que quedan contenidas entre ambas. Las hojas se cortan con idénticas dimensiones para todas las muestras, a fin de que su capacidad de retención de agua sea igual entre unidades experimentales. A continuación se suministra a cada muestra el volumen de agua correspondiente a su régimen hídrico: 5~mL en los experimentos de saturación y 3~mL en los de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}).
     \item \textbf{Germinación.} Las muestras se distribuyen aleatoriamente en el sistema de germinación y permanecen allí durante \(72 \pm 1\)~h a una temperatura de 25~\textdegree C.
     \item \textbf{Pesaje húmedo.} Transcurridas las 72~h se tara la balanza con el cajón completo ---semillas y papel húmedo--- y se retiran las semillas. La lectura resultante, de signo negativo, corresponde en valor absoluto a la masa húmeda del lote.
 \end{enumerate}
 
-El procedimiento de tara empleado en ambos pesajes tiene una consecuencia metodológica que conviene explicitar: al descontar el cajón y el papel en el mismo acto de medición, \textbf{el agua retenida por el papel absorbente no interviene en la variable de respuesta}. Lo que se registra es la masa del lote de semillas, no la del conjunto hidratado. La variable de respuesta se construye a partir de ambos pesajes según la Ecuación~\ref{eq:pct_change}.
+El procedimiento de tara empleado en ambos pesajes tiene una consecuencia metodológica que conviene explicitar: en el pesaje en seco el papel todavía no está presente, y en el húmedo el cajón y el papel se descuentan en el mismo acto de medición, de modo que \textbf{el agua retenida por el papel absorbente no interviene en la variable de respuesta}. Lo que se registra es la masa del lote de semillas, no la del conjunto hidratado. La variable de respuesta se construye a partir de ambos pesajes según la Ecuación~\ref{eq:pct_change}.
 
 \subsection{Régimen hídrico}
 \label{subsec:regimen_hidrico}
@@ -334,6 +385,8 @@ El procedimiento de tara empleado en ambos pesajes tiene una consecuencia metodo
 El volumen de agua suministrado en la etapa de hidratación no fue el mismo en todos los experimentos: constituye un \textbf{segundo factor del diseño}, con dos niveles. La Tabla~\ref{tab:regimen_hidrico} resume la correspondencia entre cada grupo de experimentos y su régimen.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
 \centering
 \begin{threeparttable}
 \caption[Régimen hídrico de cada grupo de experimentos]{\textbf{Régimen hídrico de cada grupo de experimentos.} Volumen de agua suministrado por muestra en la etapa de hidratación del protocolo.}
@@ -363,11 +416,11 @@ Esa idea no es una ocurrencia: la literatura revisada en la Sección~\ref{subsec
 
 Hay que ser claros sobre cuándo se tomó esta decisión: el régimen de 3~mL \textbf{no estaba previsto al comienzo} y se agregó después de ver el resultado nulo del primer grupo. Decirlo importa, porque cambiar el experimento según lo que van mostrando los datos es una práctica que puede invalidar las conclusiones.
 
-Lo que salva la situación es distinguir dos cosas. Una es agregar una \emph{condición experimental nueva}, que es lo que se hizo acá, y que es legítimo siempre que se declare. La otra sería cambiar el \emph{método de análisis} después de ver los resultados, para que salgan más favorables, y eso no se hizo: el plan de análisis quedó fijado antes de mirar los datos de neodimio y se aplicó sin modificaciones (Sección~\ref{subsec:plan_analisis}).
+El trabajo contó con un plan experimental inicial. La incorporación de los tres experimentos con 3~mL constituyó una ampliación de ese plan, motivada por los resultados ya observados. Se distingue esta modificación del diseño experimental de las decisiones sobre el análisis estadístico: la existencia de un plan experimental previo no permite afirmar, por sí sola, que todas las decisiones analíticas se hubieran fijado antes de conocer los resultados. La comparación entre regímenes se interpreta con carácter exploratorio y con las limitaciones descritas en la Sección~\ref{sec:res_interaccion}.
 
 \paragraph{La magnitud del efecto del agua.}
 
-El volumen de agua es, con diferencia, la variable más influyente del ensayo. Los experimentos de control positivo (Sección~\ref{subsec:ctrl_positivo}) cuantifican su efecto en \(+0{,}064\) de imbibición por cada mililitro suministrado, de modo que la diferencia entre 5 y 3~mL representa un desplazamiento de la línea de base muy superior a cualquier efecto atribuible al tratamiento magnético. Por esta razón los dos regímenes se analizan como \textbf{grupos separados} y nunca se agrupan en un mismo modelo: hacerlo introduciría en la comparación una fuente de variación que excede en un orden de magnitud al efecto de interés.
+El volumen de agua es, con diferencia, la variable más influyente del ensayo. Los experimentos de control positivo (Sección~\ref{subsec:ctrl_positivo}) cuantifican su efecto en \(+0{,}064\) de imbibición por cada mililitro suministrado, de modo que la diferencia entre 5 y 3~mL representa un desplazamiento de la línea de base muy superior a cualquier efecto atribuible al tratamiento magnético. Por esta razón, el análisis principal se realiza por separado para cada régimen, utilizando sus propios controles internos. Como análisis exploratorio complementario, se emplea un modelo conjunto para comparar la respuesta al tratamiento entre campañas (Sección~\ref{sec:res_interaccion}); su interpretación está limitada por las modificaciones de protocolo que coincidieron con el cambio de agua.
 
 \paragraph{Discontinuidad de protocolo asociada.}
 
@@ -375,34 +428,34 @@ El cambio de régimen hídrico coincidió con otras modificaciones del protocolo
 
 \begin{enumerate}
     \item el volumen de agua se redujo de 5 a 3~mL;
-    \item la dosificación de semillas pasó de la cuchara volumétrica al medidor de celdas, de modo que el número de semillas por muestra dejó de ser aproximado y quedó fijado en exactamente 20;
+    \item la carga de semillas pasó de la cuchara volumétrica al medidor de celdas, de modo que el número de semillas por muestra dejó de ser aproximado y quedó fijado en exactamente 20;
     \item se incorporó el \textbf{conteo de germinación}, ausente en los experimentos anteriores;
     \item se incorporó el registro fotográfico sistemático para la medición de radículas.
 \end{enumerate}
 
-La segunda de estas modificaciones deja una huella medible en los datos. El coeficiente de variación del peso seco por muestra, que en los experimentos anteriores va del 3 al 10\,\pct según la fecha, se estabiliza a partir del 04/08 en valores de entre 2{,}5 y 3{,}2\,\pct. Ese rango es el que cabe esperar de un lote de exactamente veinte semillas: con el número fijo, la dispersión del peso de la muestra es la del grano individual reducida por \(\sqrt{20}\), lo que para un coeficiente de variación por grano del orden del 10 al 15\,\pct arroja entre 2{,}2 y 3{,}4\,\pct. La mejora en la precisión del armado explica, a su vez, que la sensibilidad del ensayo sea mayor en el grupo de 3~mL que en los de 5~mL (Sección~\ref{subsec:plan_analisis}).
+El coeficiente de variación del peso seco por muestra, que en los experimentos anteriores va del 3 al 10\,\pct según la fecha, se sitúa a partir del 04/08 entre 2{,}5 y 3{,}2\,\pct. Esta menor dispersión coincide con la incorporación del medidor de celdas, pero también con el cambio de régimen hídrico y de fechas experimentales. No permite atribuir de manera aislada la mayor precisión del análisis a uno de esos cambios.
 
-\paragraph{Una inconsistencia que conviene declarar.}
+\paragraph{Número de semillas en las dos etapas de carga.}
 
-La dosificación de los experimentos anteriores al 04/08 no queda del todo descrita por la caracterización de la cuchara. Si las muestras se hubieran cargado únicamente con ella, su dispersión de \(\sigma = 2{,}08\) semillas sobre una media de 17{,}44 implicaría un coeficiente de variación del conteo cercano al 12\,\pct, y el del peso de la muestra no podría ser menor. Sin embargo, cinco de esas seis fechas presentan coeficientes de entre el 3 y el 7\,\pct, y la del 08/06 alcanza el 3{,}3\,\pct, tan bajo como el de las fechas con dosificador determinista. A ello se añade que el peso seco medio de esas muestras corresponde a unas veinte semillas y no a diecisiete, tomando como referencia la masa por grano que se obtiene de las fechas de conteo exacto.
+En los experimentos anteriores al 04/08 se utilizó la cantidad de semillas obtenida con la cuchara volumétrica, sin completar ni ajustar manualmente el conteo a veinte. El número de semillas por muestra era, por tanto, aproximado. En los experimentos posteriores se empleó el medidor de celdas, que fija exactamente veinte semillas por muestra.
 
-Lo más probable es que la cuchara se haya empleado como carga inicial y el número se haya ajustado luego a mano, lo que explicaría a la vez el conteo cercano a veinte y la dispersión menor que la del dispositivo aislado. El registro experimental no permite determinarlo con certeza, de modo que se declara como una indeterminación del protocolo en su etapa inicial.
+La caracterización de la cuchara arrojó una media de 17{,}44 semillas y un desvío estándar de 2{,}08. Estos valores describen el ensayo del dispositivo y no sustituyen un registro del número efectivo de semillas de cada muestra experimental. Los pesos iniciales tampoco permiten reconstruir ese conteo con certeza, porque la masa individual de los granos es variable.
 
-Corresponde señalar que esto no afecta los resultados. La variable de respuesta normaliza por el peso inicial de cada muestra (Ecuación~\ref{eq:pct_change}), de modo que una diferencia en el número de semillas se cancela en el cociente; y la comparación es dentro del bloque, donde todas las muestras se armaron en la misma jornada y con el mismo procedimiento. Lo que la indeterminación afecta es la posibilidad de atribuir con precisión la mejora de sensibilidad a uno u otro de los cambios introducidos el 04/08.
+La normalización por el peso inicial (Ecuación~\ref{eq:pct_change}) expresa la ganancia de masa respecto de la masa seca de cada muestra, pero no garantiza que se elimine la influencia del número de semillas. Como el agua se suministró en un volumen fijo por muestra, una cantidad distinta de semillas puede modificar la disponibilidad de agua por semilla y por unidad de masa inicial. Las comparaciones dentro de cada campaña comparten el procedimiento de carga de semillas, pero la variación del conteo no registrado constituye una limitación de los primeros experimentos. La diferencia entre dispositivos también limita la atribución de diferencias entre campañas exclusivamente al régimen hídrico.
 
 \subsection{Campo magnético aplicado en cada nivel de tratamiento}
 \label{subsec:dosis}
 
 La correspondencia entre cada nivel de la torre y el campo efectivamente aplicado se establece evaluando el modelo validado en la Sección~\ref{subsec:caracterizacion_imanes} en la posición que ocupan las semillas. Esta evaluación es legítima precisamente porque el modelo fue validado de manera independiente: al tratarse de una solución analítica continua, puede evaluarse en posiciones arbitrarias, que no necesitan coincidir con las alturas en que se tomaron las mediciones de caracterización.
 
-La geometría del montaje determina dichas posiciones. Entre la cara del imán y la base del primer cajón media una separación de 2{,}0~mm; cada cajón añade 9{,}8~mm de altura al apilarse y posee un piso de 0{,}5~mm de espesor, sobre el cual descansan las semillas. El grano de maíz, dispuesto de costado, presenta una altura de entre 4{,}9 y 6{,}4~mm, lo que define el espesor de la capa de semillas. El espesor del papel absorbente, del orden de las décimas de milímetro, resulta un orden de magnitud inferior a la dispersión de altura del grano y se desprecia.
+La geometría del montaje determina dichas posiciones. Entre la cara del imán y la base del primer cajón media una separación de 2{,}0~mm; cada cajón añade 9{,}8~mm de altura al apilarse y posee un piso de 0{,}5~mm de espesor, sobre el cual descansan las semillas. El grano de maíz, dispuesto de costado, presenta una altura de entre 4{,}9 y 6{,}4~mm, lo que define el espesor de la capa de semillas.
 
 La Figura~\ref{fig:torre_campos} representa el montaje a escala para ambos imanes, con el campo correspondiente a cada nivel. La representación en escala real hace manifiesta la diferencia geométrica entre ambas configuraciones: mientras que en el imán de cerámica el borde de la cara excede al del cajón, en el de neodimio ocurre lo contrario, de modo que los compartimentos sobresalen respecto del imán.
 
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=\linewidth]{datos/software_data/extra/plots/torre_exposicion_campos.pdf}
-    \caption[Corte a escala de la torre de exposición con el campo de cada nivel]{\textbf{Campo aplicado en cada nivel de la torre.} Corte lateral a escala de la torre de exposición para ambos imanes. El imán se sitúa en la base y los cajones se apilan por encima; el número a la izquierda de cada cajón identifica el nivel. El primer valor a la derecha corresponde a \(|\vec{B}|\), en mT, en el centro de la capa de semillas sobre el eje del imán ---donde \(B_z = |\vec{B}|\)---, y entre paréntesis se consigna el intervalo que abarca dicha magnitud a lo largo de la extensión horizontal de los compartimentos. La línea de trazos azul señala el borde del cajón, y el rectángulo gris de la base representa el imán con su ancho real: en el caso del imán de cerámica el cajón queda contenido dentro de la cara, mientras que en el de neodimio sobresale respecto de ella. El color de la capa de semillas codifica la intensidad del campo en escala logarítmica.}
+    \caption[Corte a escala de la torre de exposición con el campo de cada nivel]{\textbf{Campo aplicado en cada nivel de la torre.} Corte lateral a escala de la torre de exposición para ambos imanes. El imán se sitúa en la base y los cajones se apilan por encima; el número a la izquierda de cada cajón identifica el nivel. El primer valor a la derecha corresponde a \(|\vec{B}|\), en mT, en el centro de la capa de semillas sobre el eje del imán ---donde \(B_z = |\vec{B}|\)---, y entre paréntesis se consigna el intervalo que abarca dicha magnitud a lo largo de la extensión horizontal de los compartimentos. El rectángulo gris de la base representa el imán con su ancho real: en el caso del imán de cerámica el cajón queda contenido dentro de la cara, mientras que en el de neodimio sobresale respecto de ella. El color de la capa de semillas codifica la intensidad del campo en escala logarítmica.}
     \label{fig:torre_campos}
 \end{figure}
 
@@ -410,15 +463,17 @@ La Figura~\ref{fig:torre_campos} representa el montaje a escala para ambos imane
 
 La caracterización experimental se realizó sobre \(B_z\), por ser la única componente que registra la sonda Hall empleada, y es contra esa componente que el modelo fue validado. Sin embargo, la magnitud físicamente pertinente para caracterizar la exposición no es \(B_z\) sino el módulo \(|\vec{B}|\).
 
-La razón es que las semillas se disponen sin orientación privilegiada dentro de los compartimentos. Ninguna dirección del sistema de referencia del laboratorio posee significado para ellas, de modo que la proyección del campo sobre un eje arbitrario no constituye una descripción adecuada de la exposición. Adicionalmente, en el marco del mecanismo de pares de radicales, la escala relevante es la del desdoblamiento Zeeman frente a los acoplamientos hiperfinos, que depende del módulo del campo y no de una de sus componentes.
+La razón es que las semillas se disponen sin orientación privilegiada dentro de los compartimentos. Ninguna dirección del sistema de referencia del laboratorio posee significado para ellas, de modo que la proyección del campo sobre un eje arbitrario no constituye una descripción adecuada de la exposición.
 
 Una vez validado el modelo, la obtención de \(|\vec{B}|\) es inmediata, dado que la solución analítica proporciona el campo vectorial completo. Se reportan por lo tanto ambas magnitudes: \(B_z\), por ser la efectivamente medida y validada, y \(|\vec{B}|\), por ser la relevante para la interpretación biológica. Sobre el eje del imán ambas coinciden exactamente, ya que por simetría las componentes transversales se anulan.
 
 Las Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} consignan, para cada nivel, el campo en el centro de la capa de semillas sobre el eje, el campo en el centro geométrico de un compartimento, el intervalo que abarca dicha capa en sentido vertical, el gradiente vertical en su centro y los intervalos de valores que se registran a lo largo de la extensión horizontal de los compartimentos, tanto para \(B_z\) como para \(|\vec{B}|\).
 
-Conviene precisar el sentido de las dos primeras columnas de campo. El eje del imán coincide con el eje de la torre, esto es, con la arista en que se encuentran las paredes de los cuatro compartimentos: se trata del punto geométricamente mejor definido y del valor nominal que se adopta para cada nivel, pero en él no se aloja semilla alguna. Por ese motivo se consigna además \(|\vec{B}|\) en el centro geométrico de un compartimento, ubicado a \(65{,}56/4 = 16{,}39\)~mm del eje en ambas direcciones horizontales. Dicho valor es común a los cuatro compartimentos: aun cuando la cara del imán de cerámica es rectangular, el montaje posee simetría de reflexión respecto de los dos planos verticales que contienen al eje, de modo que los cuatro puntos \((\pm d, \pm d)\) resultan equivalentes. El valor es asimismo poco sensible a la posición exacta adoptada: desplazar \(d\) entre 15,5 y 17,5~mm ---esto es, cualquier espesor razonable de las paredes divisorias--- modifica \(|\vec{B}|\) en menos de un 1\% en el imán de cerámica y menos de un 4\% en el de neodimio.
+Conviene precisar el sentido de las dos primeras columnas de campo. El eje del imán coincide con el eje de la torre, esto es, con la arista en que se encuentran las paredes de los cuatro compartimentos: se trata del punto geométricamente mejor definido, pero en él no se aloja semilla alguna. Por ese motivo se consigna además \(|\vec{B}|\) en el centro geométrico de un compartimento, que es el valor nominal que se adopta para cada nivel, ubicado a \(65{,}56/4 = 16{,}39\)~mm del eje en ambas direcciones horizontales. Dicho valor es común a los cuatro compartimentos: aun cuando la cara del imán de cerámica es rectangular, el montaje posee simetría de reflexión respecto de los dos planos verticales que contienen al eje, de modo que los cuatro puntos \((\pm d, \pm d)\) resultan equivalentes. El valor es asimismo poco sensible a la posición exacta adoptada: desplazar \(d\) entre 15,5 y 17,5~mm ---esto es, cualquier espesor razonable de las paredes divisorias--- modifica \(|\vec{B}|\) en menos de un 1\% en el imán de cerámica y menos de un 4\% en el de neodimio.
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
     \centering
     \small
     \caption[Campo aplicado en cada nivel, imán de cerámica]{\textbf{Campo aplicado en cada nivel, imán de cerámica polo norte.} La columna \textit{Eje} corresponde al eje del imán, donde las componentes transversales se anulan por simetría y \(B_z\) resulta positiva en todo el rango considerado, de modo que \(|\vec{B}| = B_z\); la columna \textit{Compart.} consigna \(|\vec{B}|\) en el centro geométrico de un compartimento, valor común a los cuatro por simetría. El intervalo vertical abarca la base y el tope de la capa de semillas sobre el eje, y los intervalos horizontales, la extensión de los compartimentos.}
@@ -442,6 +497,8 @@ Conviene precisar el sentido de las dos primeras columnas de campo. El eje del i
 \end{table}
 
 \begin{table}[tbp]
+\small
+\setlength{\tabcolsep}{3pt}
     \centering
     \small
     \caption[Campo aplicado en cada nivel, imán de neodimio]{\textbf{Campo aplicado en cada nivel, imán de neodimio polo norte.} Columnas con el mismo significado que en la Tabla~\ref{tab:dosis_ceramica}. El valor negativo del intervalo horizontal de \(B_z\) en el nivel 1 corresponde a la región de campo de retorno y no implica un campo débil, como muestra la columna de \(|\vec{B}|\).}
@@ -482,15 +539,15 @@ El cajón mide 65{,}56~mm de lado, o sea que sus bordes están a 32{,}8~mm del c
 
 Dentro del cajón, el módulo del campo varía entre el 8\% y el 24\% del valor central, según el nivel. Hay una excepción que conviene mencionar: en el nivel~1, el más cercano al imán, el máximo no está en el centro sino fuera del eje (94{,}6~mT contra 76{,}2~mT en el centro). Es el comportamiento esperable cerca de la cara de un imán ancho, donde las líneas de campo todavía no se han cerrado hacia el eje.
 
-En el imán de neodimio la situación es menos favorable. Su cara mide \(50{,}8 \times 50{,}8\)~mm, esto es, un semiancho de 25{,}4~mm, inferior al del cajón, de modo que los compartimentos se extienden más allá del borde del imán. La variación de \(|\vec{B}|\) dentro de una misma bandeja alcanza el 74\% del valor central en el nivel~1, donde el módulo recorre el intervalo de 78 a 266~mT. Aun cuando el campo conserva un mismo orden de magnitud en toda la muestra, la dispersión resulta considerablemente mayor que en el caso del imán de cerámica.
+En el imán de neodimio la situación es menos favorable. Su cara mide \(50{,}8 \times 50{,}8\)~mm, esto es, un semiancho de 25{,}4~mm, inferior al del cajón, de modo que los compartimentos se extienden más allá del borde del imán. La variación de \(|\vec{B}|\) dentro de un mismo compartimento alcanza el 74\% del valor central en el nivel~1, donde el módulo recorre el intervalo de 78 a 266~mT. Aun cuando el campo conserva un mismo orden de magnitud en toda la muestra, la dispersión resulta considerablemente mayor que en el caso del imán de cerámica.
 
-Hay un agravante: esa misma región es donde el modelo validó peor (Sección~\ref{subsec:caracterizacion_imanes}), así que los extremos del intervalo del neodimio deben leerse como órdenes de magnitud y no como valores precisos.
+Estos valores tienen además una incertidumbre propia. No se midieron en la posición de las semillas: se calcularon con el modelo numérico. Y en el imán de neodimio, el modelo coincidió peor con las mediciones justamente fuera del borde de la cara, que es donde quedan los compartimentos laterales (Sección~\ref{subsec:caracterizacion_imanes}). Por eso los extremos del intervalo, 78 y 266~mT, deben tomarse como una estimación del orden de magnitud y no como valores exactos.
 
-Conviene matizarlo, de todos modos. La validación falló sobre \(B_z\), y \(B_z\) está mal condicionada justamente en esa zona: su valor resulta de la cancelación parcial de contribuciones de signo contrario, de modo que un error de un milímetro en la posición de la sonda produce un error relativo enorme. El módulo \(|\vec{B}|\), en cambio, varía de forma mucho más suave y no sufre esa cancelación. Es razonable esperar, entonces, que la predicción del módulo sea más confiable de lo que sugiere el \(R^2\) medido sobre la componente vertical.
+La incertidumbre, de todos modos, es probablemente menor de lo que sugiere esa validación. Lo que se comparó fue \(B_z\), la componente vertical, que fuera del borde es muy sensible a la posición: ahí las líneas de campo se curvan y \(B_z\) pasa por cero, de modo que un error de un milímetro en la ubicación de la sonda cambia mucho el valor medido. El módulo \(|\vec{B}|\), que es el que se usa para describir la exposición, varía de forma mucho más suave en esa zona, y cabe esperar que el modelo lo prediga mejor.
 
-La comparación entre las columnas \textit{Eje} y \textit{Compart.} permite precisar hasta qué punto el valor nominal representa la exposición efectiva de las semillas, en lugar de un punto del montaje que ninguna de ellas ocupa. En el imán de cerámica el campo en el centro de los compartimentos se mantiene entre el 93\% y el 108\% del valor sobre el eje, de modo que el valor nominal describe adecuadamente lo que las muestras experimentaron. En el de neodimio, en cambio, desciende hasta el 80\% en los niveles 3 y 4: allí el valor nominal sobreestima de manera sistemática la exposición real, en aproximadamente un quinto. El nivel~1 del neodimio ilustra además con particular claridad por qué la magnitud pertinente es el módulo: en el centro del compartimento \(B_z\) desciende a 223~mT frente a los 253~mT del eje, mientras que \(|\vec{B}|\) asciende a 263~mT, por hallarse el punto en la región donde las líneas ya se han inclinado hacia el borde del imán.
+La comparación entre las columnas \textit{Eje} y \textit{Compart.} muestra cuánto importa esta elección. En el imán de cerámica el campo en el centro de los compartimentos se mantiene entre el 93\% y el 108\% del valor sobre el eje, de modo que la diferencia es menor. En el de neodimio, en cambio, desciende hasta el 80\% en los niveles 3 y 4: tomar el valor sobre el eje habría sobreestimado la exposición de las semillas en aproximadamente un quinto. El nivel~1 del neodimio ilustra además con particular claridad por qué la magnitud pertinente es el módulo: en el centro del compartimento \(B_z\) desciende a 223~mT frente a los 253~mT del eje, mientras que \(|\vec{B}|\) asciende a 263~mT, por hallarse el punto en la región donde las líneas ya se han inclinado hacia el borde del imán.
 
-Por todo lo anterior se adopta el valor sobre el eje como valor nominal de cada nivel, y se reporta junto a él el intervalo dentro del cajón, para que quede explícito cuánto se está idealizando al hablar de «la dosis del nivel 3».
+Por todo lo anterior se adopta como valor nominal de cada nivel el módulo \(|\vec{B}|\) en el centro de un compartimento, que es el que se usa en todo el análisis, y se reporta junto a él el intervalo dentro del cajón, para que quede explícito cuánto se está idealizando al hablar de «la dosis del nivel 3».
 
 De esto se siguen dos cosas a tener en cuenta al leer los resultados. La primera es que el imán de cerámica define una condición de exposición mejor determinada que el de neodimio. La segunda es que, en los dos imanes, la dispersión relativa disminuye con la distancia: los niveles superiores reciben campos más débiles, pero más parejos a lo largo del cajón. Hay, por lo tanto, un compromiso entre intensidad y homogeneidad a lo largo de la torre.
 
@@ -504,7 +561,7 @@ De la lectura conjunta de ambas figuras se desprenden tres observaciones.
 
 En primer lugar, las curvas de nivel presentan \textbf{simetría cuadrada, no radial}, siguiendo la forma de la cara del imán en los niveles próximos y volviéndose progresivamente circulares al aumentar la distancia. Esta transición corresponde al paso de un régimen de campo cercano, en el que la muestra distingue la geometría del polo, a uno de campo lejano, en el que el imán se comporta aproximadamente como un dipolo. Una consecuencia práctica relevante es que, por simetría, \textbf{los cuatro compartimentos son equivalentes entre sí}: la elección de cuál de ellos se deja libre no introduce un sesgo sistemático en el tratamiento.
 
-En segundo lugar, la homogeneidad no mejora de manera monótona con la distancia en el imán de cerámica. El nivel~2 constituye la condición más uniforme de las dieciséis evaluadas, con el campo contenido dentro de un 10\% en toda la bandeja (0{,}92--1{,}02 del valor central); la uniformidad se degrada luego hasta aproximadamente 0{,}74 en los niveles 5 y 6, y vuelve a mejorar levemente hacia el nivel 8. Este comportamiento resulta consistente con la superposición de las dos tendencias mencionadas: en el nivel~1 domina la estructura del borde del polo, que produce un máximo fuera del eje, mientras que a partir del nivel~3 predomina la caída radial propia del campo lejano. El nivel~2 se sitúa en el punto en que ambos efectos se compensan. En el imán de neodimio, en cambio, la homogeneidad mejora de forma monótona, de 0{,}26 a 0{,}67, sin alcanzar en ningún nivel la uniformidad del cerámico.
+En segundo lugar, la homogeneidad no mejora de manera monótona con la distancia en el imán de cerámica. El nivel~2 constituye la condición más uniforme de las dieciséis evaluadas, con el campo contenido dentro de un 10\% en todo el compartimento (0{,}92--1{,}02 del valor central); la uniformidad se degrada luego hasta aproximadamente 0{,}74 en los niveles 5 y 6, y vuelve a mejorar levemente hacia el nivel 8. Este comportamiento resulta consistente con la superposición de las dos tendencias mencionadas: en el nivel~1 domina la estructura del borde del polo, que produce un máximo fuera del eje, mientras que a partir del nivel~3 predomina la caída radial propia del campo lejano. El nivel~2 se sitúa en el punto en que ambos efectos se compensan. En el imán de neodimio, en cambio, la homogeneidad mejora de forma monótona, de 0{,}26 a 0{,}67, sin alcanzar en ningún nivel la uniformidad del cerámico.
 
 En tercer lugar, se verifica el compromiso entre intensidad y homogeneidad ya señalado: los niveles que proporcionan los campos más intensos son también los menos uniformes. En caso de requerirse una condición de exposición bien definida a expensas de la intensidad, el nivel~2 del imán de cerámica es la opción indicada.
 
@@ -530,7 +587,7 @@ Esta falta es una limitación del diseño y conviene declararla. El problema es 
 
 Supongamos que durante esa hora de exposición existiera, por ejemplo, una diferencia de temperatura entre la base de la pila y su parte superior. Ese gradiente produciría una señal que crece o decrece con el nivel, exactamente igual que lo haría un efecto del campo. Con este montaje, las dos explicaciones son indistinguibles.
 
-Dos consideraciones atenúan, sin eliminar, este riesgo. En primer lugar, la exposición es breve (1~h) y se realiza sobre semilla seca, condición en la que la actividad metabólica es mínima. En segundo lugar, la germinación ---etapa de 72~h en la que se desarrolla efectivamente el crecimiento medido--- transcurre en un sistema distinto y con posiciones aleatorizadas. Un experimento de control consistente en apilar los cajones en la torre sin imán, replicando el resto del protocolo, permitiría descartar este factor de manera concluyente y constituye la verificación natural para dar continuidad a este trabajo.
+Dos consideraciones atenúan, sin eliminar, este riesgo. En primer lugar, la exposición es breve (1~h) y se realiza sobre semilla seca, condición en la que la actividad metabólica es mínima. En segundo lugar, la germinación ---etapa de 72~h en la que ocurre efectivamente la absorción de agua medida--- transcurre en un sistema distinto y con posiciones aleatorizadas. Un experimento de control consistente en apilar los cajones en la torre sin imán, replicando el resto del protocolo, permitiría descartar este factor de manera concluyente y constituye la verificación natural para dar continuidad a este trabajo.
 
 \section{Registro de datos}
 
@@ -544,27 +601,27 @@ Dos condiciones ambientales merecen una precisión, porque su grado de control y
 
 La incorporación de ambos registros al protocolo de adquisición ---no solo al control--- es una recomendación que este trabajo deja planteada para ensayos posteriores.
 
-Las fotografías adquiridas durante la etapa de germinación también fueron almacenadas de manera ordenada dentro de la estructura del proyecto, de modo de conservar la trazabilidad entre las imágenes, las bandejas y los resultados del análisis posterior.
+Las fotografías adquiridas durante la etapa de germinación también fueron almacenadas de manera ordenada dentro de la estructura del proyecto, de modo de conservar la trazabilidad entre las imágenes, las cajas y los resultados del análisis posterior. Para ello, cada caja de germinación llevaba una etiqueta con un código QR que la identifica (experimento, piso y posición), visible en cada fotografía junto a las semillas. El programa de medición lee ese código y asocia automáticamente cada foto, y las radículas medidas en ella, al registro de su caja, sin necesidad de renombrar archivos a mano. Cuando el código no resulta legible, la caja se deduce del orden fijo en que se toman las fotos, a partir de las fotos vecinas cuyo código sí se leyó; si ese orden no cierra, la foto queda sin asignar en lugar de arriesgar una asignación errónea.
 
 \section{Herramientas computacionales desarrolladas}
 
 Además del desarrollo del montaje físico, se implementaron herramientas computacionales orientadas a asistir la organización del experimento, el registro de datos y el procesamiento automático de imágenes. Estas herramientas constituyeron un soporte metodológico para mejorar la trazabilidad, reproducibilidad y eficiencia del flujo de trabajo experimental.
 
-\subsection{Asignador de bandejas}
+\subsection{Asignador de cajas}
 \label{subsec:asignador}
 
-Como parte de las herramientas computacionales desarrolladas para este trabajo, se implementó un programa en Python destinado a la asignación y gestión de las bandejas experimentales. Su propósito fue asistir la organización de cada ensayo mediante la creación automática de la estructura de archivos asociada al experimento, la generación del archivo \texttt{trays.csv} y la asignación aleatoria de los tratamientos a las posiciones físicas disponibles en el arreglo experimental.
+Como parte de las herramientas computacionales desarrolladas para este trabajo, se implementó un programa en Python destinado a la asignación y gestión de las cajas experimentales. Su propósito fue asistir la organización de cada ensayo mediante la creación automática de la estructura de archivos asociada al experimento, la generación del archivo \texttt{trays.csv} y la asignación aleatoria de los tratamientos a las posiciones físicas disponibles en el arreglo experimental.
 
-El programa permitió definir e identificar cada bandeja de manera unívoca, asociándola al experimento correspondiente y a su posición dentro del montaje. Además, incorporó el registro de metadatos experimentales, tales como el imán utilizado y el polo enfrentado a las semillas. De este modo, se facilitó la trazabilidad de cada unidad experimental y la conservación ordenada de la información relevante para el posterior análisis de datos.
+El programa permitió definir e identificar cada caja de manera unívoca, asociándola al experimento correspondiente y a su posición dentro del montaje. Además, incorporó el registro de metadatos experimentales, tales como el imán utilizado y el polo enfrentado a las semillas. De este modo, se facilitó la trazabilidad de cada unidad experimental y la conservación ordenada de la información relevante para el posterior análisis de datos.
 
-Adicionalmente, la herramienta incluyó una interfaz para la carga y actualización de los pesos iniciales y finales de las bandejas, con sugerencias automáticas de la siguiente posición a completar. Esta funcionalidad permitió agilizar la carga secuencial de datos y reducir la probabilidad de errores manuales durante el registro. En conjunto, el asignador de bandejas constituyó una herramienta auxiliar para estandarizar la organización del experimento, mejorar la reproducibilidad del procedimiento y favorecer la consistencia del registro experimental.
+Adicionalmente, la herramienta incluyó una interfaz para la carga y actualización de los pesos iniciales y finales de las cajas, con sugerencias automáticas de la siguiente posición a completar. Esta funcionalidad permitió agilizar la carga secuencial de datos y reducir la probabilidad de errores manuales durante el registro. En conjunto, el asignador de cajas constituyó una herramienta auxiliar para estandarizar la organización del experimento, mejorar la reproducibilidad del procedimiento y favorecer la consistencia del registro experimental.
 
 En la Figura~\ref{fig:asignador-bandejas} se muestra una captura de la interfaz gráfica desarrollada para esta herramienta.
 
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\linewidth]{secciones/images/asignadorGUI.png}
-    \caption[Interfaz del asignador de bandejas]{\textbf{Asignador de bandejas.} Interfaz gráfica del programa desarrollado para la asignación y gestión de las bandejas experimentales.}
+    \caption[Interfaz del asignador de cajas]{\textbf{Asignador de cajas.} Interfaz gráfica del programa desarrollado para la asignación y gestión de las cajas experimentales.}
     \label{fig:asignador-bandejas}
 \end{figure}
 
@@ -574,7 +631,7 @@ Una vez adquiridas las imágenes de las semillas germinadas, se realizó un proc
 
 \subsection{Software de detección y medición de radículas}
 
-Se desarrolló una herramienta de software para el procesamiento automático de imágenes de semillas germinadas, con el objetivo de estimar la longitud de las radículas a partir de fotografías adquiridas mediante el \textit{photobox}. El programa permite identificar las radículas presentes en cada imagen, calcular sus longitudes individuales y obtener medidas agregadas, como la longitud media de radícula por muestra.
+Se desarrolló una herramienta de software para el procesamiento automático de imágenes de semillas germinadas, con el objetivo de estimar la longitud de las radículas a partir de fotografías adquiridas mediante el «photobox». El programa permite identificar las radículas presentes en cada imagen, calcular sus longitudes individuales y obtener medidas agregadas, como la longitud media de radícula por muestra.
 
 La implementación de esta herramienta tuvo como finalidad reducir la intervención manual en la etapa de medición, mejorar la reproducibilidad del procesamiento y facilitar el almacenamiento sistemático de los resultados experimentales. Los datos generados por el software fueron utilizados posteriormente en la etapa de análisis.
 
@@ -587,17 +644,42 @@ La Figura~\ref{fig:software_radiculas} presenta una captura de pantalla de la in
     \label{fig:software_radiculas}
 \end{figure}
 
+\paragraph{Funcionamiento del algoritmo.}
+
+El programa está escrito en Python y se apoya en la biblioteca de visión por computadora OpenCV. Cada fotografía se procesa en cinco pasos:
+
+\begin{enumerate}
+    \item \textbf{Silueta.} Sobre el fondo negro del «photobox», un umbral automático (método de Otsu) separa todo lo que no es fondo: semillas, radículas y la regla de referencia.
+    \item \textbf{Semillas.} Dentro de esa silueta, las semillas se reconocen por el color. En el espacio HSV (tono, saturación, brillo) son cálidas y saturadas, mientras que las radículas son claras y casi sin color. Esa diferencia basta para separarlas.
+    \item \textbf{Escala.} Junto a las semillas se coloca una regla blanca de 100~mm. El programa la detecta por su forma alargada y de ahí obtiene cuántos píxeles corresponden a un milímetro en esa foto. Si la regla no aparece, recurre al código QR de la etiqueta, de tamaño conocido.
+    \item \textbf{Radículas.} Lo que queda de la silueta al quitar las semillas y la regla son las radículas candidatas. Se descartan los objetos demasiado chicos, demasiado compactos o con proporciones que no corresponden a una raíz alargada.
+    \item \textbf{Largo.} Cada radícula se reduce a su esqueleto, una línea de un píxel de ancho que sigue su eje. El largo es la cantidad de píxeles de ese esqueleto, convertida a milímetros con la escala del paso 3.
+\end{enumerate}
+
+Los umbrales de color, tamaño y forma no se fijaron a ojo. Se pintaron a mano, sobre fotografías de referencia, las regiones que corresponden a semillas y a radículas, y se buscaron automáticamente los valores que mejor reproducen ese marcado.
+
+Ese ajuste es una calibración, no una validación. El algoritmo \textbf{no fue validado}: no se compararon sus mediciones con mediciones independientes del largo de las radículas, hechas por ejemplo a mano con regla o calibre sobre un conjunto de fotografías distinto del usado para calibrarlo. No se conoce, por lo tanto, su error de medición. Esa validación queda pendiente como trabajo futuro.
+
+Por cada fotografía, el programa guarda además una imagen de control con lo que detectó dibujado encima (Figura~\ref{fig:radiculas_deteccion}). Esto permite revisar a simple vista cada medición y advertir errores, como radículas partidas en varios trozos o restos confundidos con raíces.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{secciones/images/radiculas_deteccion.jpg}
+    \caption[Detección automática de semillas y radículas]{\textbf{Detección automática de semillas y radículas.} Imagen de control generada por el programa para una muestra del experimento del 11/09. En azul, las semillas detectadas; en verde, las radículas medidas; en amarillo, la regla de 100~mm usada como referencia de escala. Abajo, la etiqueta con el código QR que identifica la muestra. En el ángulo inferior derecho se ven dos fragmentos pequeños tomados como radículas: un ejemplo de los errores que la imagen de control permite detectar.}
+    \label{fig:radiculas_deteccion}
+\end{figure}
+
 \paragraph{Alcance efectivo de la medición de radículas.}
 
 Corresponde precisar en qué grupos de experimentos esta herramienta aportó datos efectivamente analizables, porque no fue en todos.
 
-El registro fotográfico es exigente en tiempo: requiere, por cada experimento, disponer las 27 muestras de a una en el \textit{photobox}, capturar las imágenes bajo condiciones controladas y transferirlas y procesarlas, todo ello dentro de la misma jornada en que debe realizarse el pesaje a las 72~h. En las etapas iniciales del trabajo esa carga resultó incompatible con el resto del protocolo y la adquisición se realizó de manera intermitente. Solo a partir de la incorporación del régimen de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}) el registro pasó a ser sistemático.
+El registro fotográfico es exigente en tiempo: requiere, por cada experimento, disponer las 27 muestras de a una en el «photobox», capturar las imágenes bajo condiciones controladas y transferirlas y procesarlas, todo ello dentro de la misma jornada en que debe realizarse el pesaje a las 72~h. En las etapas iniciales del trabajo esa carga resultó incompatible con el resto del protocolo y la adquisición se realizó de manera intermitente. Solo a partir de la incorporación del régimen de estrés hídrico (Sección~\ref{subsec:regimen_hidrico}) el registro pasó a ser sistemático.
 
 La consecuencia es una disponibilidad desigual. En el grupo de \textbf{neodimio a 3~mL} las tres fechas cuentan con fotografías procesadas, lo que permite analizar la variable: se dispone de 77 muestras con radículas medidas. En el grupo de \textbf{cerámica}, en cambio, solo el experimento del 31/03 tiene radículas medidas; el del 08/06 produjo un archivo sin mediciones y el del 22/06 no tiene fotografías. Con una sola fecha, el bloque coincidiría con la fecha misma y la comparación dejaría de ser la que se aleatorizó, de modo que el análisis de radícula se omite para ese grupo en lugar de realizarse sobre una base que no corresponde al diseño. Los grupos de \textbf{neodimio a 5~mL} no cuentan con registro fotográfico.
 
-\paragraph{Escalas no comparables entre fechas.}
+\paragraph{Segmentación no comparable entre fechas.}\label{par:segmentacion_fechas}
 
-Incluso en el grupo donde la variable existe hay un problema que condiciona cómo leerla: las tres fechas no miden en la misma escala.
+Incluso en el grupo donde la variable existe hay un problema que condiciona cómo leerla. No es la escala: como la cámara no quedó siempre a la misma distancia de la muestra, cada fotografía se calibra por separado con la regla de referencia, de modo que la conversión de píxeles a milímetros es correcta en todas. El problema es que el algoritmo no reconoce las radículas igual de bien en las tres fechas.
 
 La causa es que las imágenes no son equivalentes. Las del 07/09 son exportaciones reducidas, de \(960 \times 1280\) píxeles, contra los \(4618 \times 3464\) de las otras dos. El algoritmo de segmentación rinde distinto en cada caso, y se nota al contar cuántos objetos detecta por muestra, cuando lo esperable serían veinte radículas:
 
@@ -615,12 +697,12 @@ De esto se siguen dos advertencias para la lectura. El largo de radícula es una
 
 La homogeneización del procedimiento de captura ---junto con el registro sistemático de temperatura, disponible solo en los dos primeros experimentos--- constituye una línea natural de continuidad para trabajos futuros.
 
-\subsection{Plan de análisis estadístico}
+\subsection{Análisis estadístico}
 \label{subsec:plan_analisis}
 
-Con el objeto de evitar que las decisiones analíticas quedaran condicionadas por los resultados que se pretende evaluar, el plan de análisis se estableció y documentó \textit{antes} de examinar los datos correspondientes a los tratamientos con imán de neodimio. Los criterios que se detallan a continuación se fijaron a partir de los experimentos de control negativo y de los tratamientos con imán de cerámica, y se aplican sin modificación al resto de los tratamientos, con independencia del resultado que arrojen.
+A continuación se describen los criterios del análisis final. Conviene aclarar de entrada cuándo se fijó cada cosa. Antes de comenzar los experimentos se definió qué variables se iban a medir y cómo, y se fijó el umbral de relevancia del 10\,\pct (Sección~\ref{par:umbral_relevancia}). El plan de análisis estadístico propiamente dicho, en cambio, se definió después de obtenidos los datos. Además, el estudio se amplió con tres experimentos de neodimio a 3~mL tras observar los resultados de las campañas anteriores.
 
-Esta pre-especificación responde a un riesgo concreto en diseños con múltiples grupos: si la métrica de respuesta, el criterio de exclusión de valores atípicos o la estructura del contraste se eligen después de observar los datos, la tasa de error de tipo I deja de ser la nominal, ya que cada elección constituye una comparación implícita adicional.
+La necesidad de explicitar las decisiones analíticas responde a un riesgo concreto en diseños con múltiples grupos: si la métrica de respuesta, el criterio de exclusión de valores atípicos o la estructura del contraste se eligen después de observar los datos, la tasa de error de tipo I deja de ser la nominal, ya que cada elección constituye una comparación implícita adicional. Dicho de otro modo: quien prueba varias alternativas y se queda con la que da significativa está haciendo varias pruebas aunque reporte una sola. Con un nivel de significación de 0,05, cada prueba tiene un 5\,\pct de probabilidad de dar un falso positivo; con cinco variantes independientes, la probabilidad de que al menos una lo dé asciende a \(1-0{,}95^5 \approx 23\,\pct\). La protección más completa contra esa inflación es fijar todos los criterios antes de mirar los datos. Como en este trabajo el plan de análisis se definió después, la protección proviene de otras decisiones: los mismos criterios se aplican a los tres grupos, se reportan todos los contrastes y no solo los significativos, los ocho contrastes por nivel se corrigen por multiplicidad, y las alternativas evaluadas ---como la métrica logarítmica o los análisis de sensibilidad--- se informan junto a la principal.
 
 \paragraph{Criterio de inclusión de experimentos.}
 
@@ -628,13 +710,13 @@ El criterio para que un experimento entre en el análisis es deliberadamente mec
 
 Hay que declarar algo al respecto. Tres experimentos con imán de neodimio ---los del 26/06, 21/07 y 27/07--- habían quedado inicialmente afuera porque no mostraron diferencias significativas. Esa exclusión se revirtió.
 
-El motivo es importante: descartar un experimento porque no encontró nada es la práctica que vuelve inútil cualquier resultado posterior. Si de varias repeticiones se conservan solo las que muestran efecto, encontrar efecto deja de ser informativo, porque el procedimiento lo garantizaba de antemano. Es exactamente lo que la pre-especificación del plan de análisis busca impedir. Y en este caso no había ningún otro argumento para excluirlos: los tres cumplen el criterio, tienen bloques completos y su variabilidad entre fechas es menor que la del grupo de cerámica, que sí entra.
+El motivo es importante: descartar un experimento porque no encontró nada es la práctica que vuelve inútil cualquier resultado posterior. Si de varias repeticiones se conservan solo las que muestran efecto, encontrar efecto deja de ser informativo, porque el procedimiento lo garantizaba de antemano. Por eso el análisis final incluye estos experimentos y no utiliza la significación estadística como criterio de inclusión. Y en este caso no había ningún otro argumento para excluirlos: los tres cumplen el criterio, tienen bloques completos y su variabilidad entre fechas es menor que la del grupo de cerámica, que sí entra.
 
 Un solo experimento de tratamiento queda afuera, el del 14/08, y por una razón que no tiene que ver con lo que mostró: se hizo con el polo sur enfrentado a las semillas, y no existe caracterización del campo de esa configuración. Sin ella no hay tabla de dosis, y sin tabla de dosis los niveles no se pueden asociar a una intensidad, de modo que no habría nada contra qué graficar la respuesta.
 
 \paragraph{Unidad experimental.}
 
-Antes de cualquier cuenta hay que decidir qué cuenta como un dato. Acá el dato es la \textbf{muestra} ---el lote de veinte semillas de un compartimento--- y nunca la semilla suelta.
+Antes de cualquier cuenta hay que decidir qué cuenta como un dato. Acá el dato es la \textbf{muestra} ---el conjunto de semillas de un compartimento, con número aproximado en la etapa de cuchara y exactamente veinte en la etapa del medidor de celdas--- y nunca la semilla suelta.
 
 El motivo es que las veinte semillas de una muestra no son veinte experimentos independientes: recibieron el mismo campo, la misma agua y la misma posición durante la germinación. Si una muestra estuvo en un lugar un poco más cálido, las veinte estuvieron ahí. Contarlas como veinte datos sería multiplicar por veinte una sola observación, y el resultado serían intervalos de confianza mucho más angostos de lo que corresponde, es decir, una falsa sensación de precisión. Este error tiene nombre propio en la literatura estadística: \textbf{pseudo-replicación}.
 
@@ -653,24 +735,26 @@ La \textbf{variable primaria} es la \textbf{imbibición a 72~h}, definida como e
 
 \noindent donde la normalización por el peso inicial compensa las diferencias de masa entre muestras. Un valor de \(\Delta = 0{,}50\) significa que la muestra ganó la mitad de su peso seco en agua.
 
-Conviene fijar una convención, porque en este trabajo la palabra «porcentaje» aparece en dos sentidos distintos y confundirlos haría ilegibles las tablas. Los \textbf{valores} de \(\Delta\) se reportan como fracción, de modo que una imbibición típica es del orden de 0{,}40 a 0{,}55. Los \textbf{efectos del tratamiento}, en cambio, se reportan en porcentaje \emph{relativo a la media del control} de su propio grupo: un efecto de \(+1{,}43\,\pct\) quiere decir que las muestras expuestas superaron a su control en un 1{,}43\,\pct del valor de este, no que la imbibición haya aumentado en 1{,}43 unidades. Se evaluó como alternativa el logaritmo de la razón de pesos, \(\ln(w_{\text{final}}/w_{\text{inicial}})\), habitual cuando el proceso subyacente es multiplicativo o cuando la dispersión crece con la media. Sobre los tratamientos con imán de cerámica ambas métricas resultaron equivalentes en cuanto a homogeneidad de varianzas (prueba de Brown-Forsythe: \(p = 0{,}708\) y \(p = 0{,}689\) respectivamente) y produjeron estadísticos \(F\) prácticamente indistinguibles. Ante esa equivalencia se adoptó el cambio porcentual como métrica primaria por su interpretación directa, y el logaritmo de la razón se conserva como \textbf{verificación de robustez}: se reporta junto a la métrica primaria, y toda discrepancia cualitativa entre ambas se señala explícitamente.
+Conviene fijar una convención, porque en este trabajo la palabra «porcentaje» aparece en dos sentidos distintos y confundirlos haría ilegibles las tablas. Los \textbf{valores} de \(\Delta\) se reportan como fracción, de modo que una imbibición típica es del orden de 0{,}40 a 0{,}55. Los \textbf{efectos del tratamiento}, en cambio, se reportan en porcentaje \emph{relativo a la media del control} de su propio grupo: un efecto de \(+1{,}43\,\pct\) quiere decir que las muestras expuestas superaron a su control en un 1{,}43\,\pct del valor de este, no que la imbibición haya aumentado en 1{,}43 unidades. Se evaluó como alternativa el logaritmo de la razón de pesos, \(\ln(w_{\text{final}}/w_{\text{inicial}})\), habitual cuando el proceso subyacente es multiplicativo o cuando la dispersión crece con la media. Sobre los tratamientos con imán de cerámica ambas métricas resultaron equivalentes en cuanto a homogeneidad de varianzas (prueba de Brown-Forsythe: \(p = 0{,}708\) y \(p = 0{,}689\) respectivamente) y produjeron estadísticos \(F\) prácticamente indistinguibles. Ante esa equivalencia se adoptó el cambio relativo de peso como métrica primaria por su interpretación directa, y el logaritmo de la razón se conserva como \textbf{verificación de robustez}: se reporta junto a la métrica primaria, y toda discrepancia cualitativa entre ambas se señala explícitamente.
 
 Conviene precisar qué mide esta variable y qué no. A las 72~h el peso registrado combina el agua físicamente absorbida por el grano con la que incorpora la plántula al iniciar su crecimiento, de modo que la magnitud es una \textbf{medida de absorción de agua} y no de biomasa producida. La determinación de biomasa requeriría peso seco final, lo que implica secado en estufa y, por lo tanto, la destrucción de la muestra. Por esta razón la variable se denomina imbibición a lo largo de todo el trabajo, y no crecimiento ni biomasa.
+
+La elección de esta variable tiene, además, respaldo en la literatura. La relación entre el tratamiento magnético y el agua es uno de los efectos más documentados en semillas de maíz: se reportaron aumentos en los sitios de unión débil de agua \cite{vashisth_nagarajan_2009, torres_socorro_2018}, una absorción total de agua mayor durante la imbibición \cite{vashisth_nagarajan_2010} y un 62\,\pct más de absorción bajo estrés salino \cite{kataria_2017} (Capítulo~\ref{cap:antecedentes}).
 
 Las dos variables restantes son \textbf{secundarias}:
 
 \begin{itemize}
-    \item \textbf{Germinación}: número de semillas germinadas sobre las veinte de la muestra, expresado como proporción. Solo está disponible en el grupo de neodimio a 3~mL: en los experimentos anteriores el conteo no se registró (Sección~\ref{subsec:regimen_hidrico}). No se trata de un dato pendiente de procesamiento, sino de una medición que no se realizó. Su denominador es exactamente veinte porque esas tres fechas son las que emplearon el medidor de celdas; extenderla a los experimentos dosificados con cuchara requeriría conocer el número efectivo de semillas de cada muestra, que no se registró.
+    \item \textbf{Germinación}: número de semillas germinadas sobre las veinte de la muestra, expresado como proporción. Solo está disponible en el grupo de neodimio a 3~mL: en los experimentos anteriores el conteo no se registró (Sección~\ref{subsec:regimen_hidrico}). No se trata de un dato pendiente de procesamiento, sino de una medición que no se realizó. Su denominador es exactamente veinte porque esas tres fechas son las que emplearon el medidor de celdas; extenderla a los experimentos cargados con cuchara requeriría conocer el número efectivo de semillas de cada muestra, que no se registró.
     \item \textbf{Largo de radícula}: mediana del largo de las radículas de cada muestra, obtenida por análisis de imagen. Solo está disponible en el grupo de neodimio a 3~mL, por las razones detalladas más adelante en esta misma sección.
 \end{itemize}
 
 La asimetría en la disponibilidad de variables entre grupos es una limitación del trabajo y no un criterio de selección: ningún grupo quedó fuera del análisis por el resultado que arrojó, y las variables que faltan son las que no se midieron.
 
-\paragraph{Estructura del contraste: bloques completos aleatorizados.}
+\paragraph{Diseño en bloques completos aleatorizados.}
 
-Hay un problema que hay que resolver antes de comparar nada: \textbf{dos experimentos hechos en fechas distintas no dan lo mismo}, aunque se sigan los mismos pasos. En los tres experimentos con imán de cerámica, la imbibición media fue del 56{,}4\%, del 47{,}8\% y del 44{,}0\%. Esa diferencia entre fechas es mucho mayor que cualquier efecto que pudiera tener el imán, así que si se juntan todas las muestras en una sola bolsa y se comparan tratadas contra control, la diferencia entre fechas se mete en el medio y tapa lo que se quiere ver.
+Hay un problema que hay que resolver antes de comparar nada: \textbf{dos experimentos hechos en fechas distintas no dan lo mismo}, aunque se sigan los mismos pasos. En los tres experimentos con imán de cerámica, la imbibición media fue de 0{,}564, 0{,}478 y 0{,}440. Esa diferencia entre fechas es mucho mayor que cualquier efecto que pudiera tener el imán, así que si se juntan todas las muestras en una sola bolsa y se comparan tratadas contra control, la diferencia entre fechas se mete en el medio y tapa lo que se quiere ver.
 
-La solución es \textbf{comparar solo dentro de lo comparable}. Se llama \textbf{bloque} a un conjunto de muestras que compartieron fecha y piso de germinación ---por ejemplo, todas las del 04/08 que fueron al piso A--- y se exige que dentro de cada bloque estén los nueve niveles de tratamiento, con una muestra cada uno. Así cada experimento aporta tres bloques, uno por piso, y cada grupo de tres fechas aporta nueve. Esta estructura se conoce como \textbf{diseño de bloques completos aleatorizados}: completos porque cada bloque contiene todos los tratamientos, y aleatorizados porque la posición de cada muestra dentro del sistema de germinación se sorteó.
+La solución es \textbf{comparar solo dentro de lo comparable}. Se llama \textbf{bloque} a un conjunto de muestras que compartieron fecha y piso de germinación ---por ejemplo, todas las del 04/08 que fueron al piso A--- y se exige que dentro de cada bloque estén los nueve niveles de tratamiento, con una muestra cada uno. Así cada experimento aporta tres bloques, uno por piso, y cada grupo de tres fechas aporta nueve. La fecha entra así en el modelo como parte de la definición del bloque, y no como covariable: no se le supone ninguna forma particular de efecto, como sería una tendencia lineal en el tiempo, sino que cada combinación de fecha y piso tiene su propio promedio. Esta estructura se conoce como \textbf{diseño de bloques completos aleatorizados}: completos porque cada bloque contiene todos los tratamientos, y aleatorizados porque la posición de cada muestra dentro del sistema de germinación se sorteó.
 
 La comparación se hace entonces nivel contra control \emph{dentro de cada bloque}, y después se promedia entre bloques. En los modelos esto aparece como un término \(C(\text{bloque})\), que no es otra cosa que la instrucción de descontar el promedio propio de cada bloque antes de comparar. En el grupo de cerámica ese término resulta muy grande (\(F_{8,64} = 18{,}4\), \(p < 0{,}001\)***), lo que confirma que sin él la comparación no se sostendría.
 
@@ -686,7 +770,7 @@ Para evitar ambigüedades conviene fijar dos términos que designan ejes distint
 
 \paragraph{Tratamiento de valores atípicos.}
 
-El análisis principal se realiza sobre el \textbf{conjunto completo de datos}, sin exclusiones. De manera complementaria, y con criterio fijado de antemano, se reporta un análisis de sensibilidad que excluye las observaciones cuyo residuo estandarizado respecto del modelo (tratamiento más experimento) supere \(|z| > 3\).
+El análisis principal se realiza sobre el \textbf{conjunto completo de datos}, sin exclusiones. De manera complementaria, se reporta un análisis de sensibilidad que excluye las observaciones cuyo residuo estandarizado respecto del modelo (tratamiento más experimento) supere \(|z| > 3\).
 
 Se optó por no excluir observaciones en el análisis principal porque, con \(n = 9\) réplicas por condición, la pérdida de potencia asociada a cada exclusión es considerable. El umbral \(|z| > 3\) es deliberadamente conservador. Toda diferencia relevante entre el análisis principal y el de sensibilidad se informa de manera explícita, y en ningún caso se selecciona uno u otro en función de cuál resulte más favorable.
 
@@ -702,7 +786,7 @@ Para cada conjunto de datos se verifican los supuestos antes de aplicar las prue
 
 \paragraph{Por qué hay que corregir cuando se hacen ocho comparaciones.}
 
-Cuando se hace una sola comparación, un valor \(p\) menor que 0{,}05 significa que un resultado así de extremo ocurriría menos de una vez en veinte si no hubiera ningún efecto. Pero si se hacen ocho comparaciones a la vez, hay ocho oportunidades de que alguna salga extrema por azar, y la probabilidad de que al menos una lo haga sube al 34\%. Es decir: \emph{si el campo no tuviera ningún efecto, lo más esperable sería encontrar exactamente una comparación «significativa»}.
+Para una prueba individual válida con un nivel de significación de 0{,}05, la probabilidad de rechazar la hipótesis nula cuando es verdadera es, como máximo, del 5\%. Al realizar ocho comparaciones sin corrección, aumenta la posibilidad de obtener al menos un falso positivo. Como ilustración, si las ocho pruebas fueran independientes y todas sus hipótesis nulas fueran verdaderas, esa probabilidad sería \(1-(1-0{,}05)^8 \approx 33{,}7\,\pct\). Bajo ese supuesto, lo más probable seguiría siendo no obtener ninguna comparación significativa. En este trabajo los contrastes comparten un mismo control y, por tanto, no son independientes: el 33{,}7\,\pct no representa la probabilidad exacta del conjunto de contrastes utilizado.
 
 La corrección de Holm ajusta los valores \(p\) según cuántas comparaciones se hicieron, de manera que una comparación llamativa entre ocho no cuente lo mismo que una comparación llamativa decidida de antemano y hecha sola. Se eligió Holm, y no un criterio de los que controlan la proporción de falsos positivos entre los declarados, porque la pregunta de este trabajo es si \emph{algún} nivel difiere del control: lo que interesa acotar es la probabilidad de equivocarse al menos una vez en el conjunto.
 
@@ -734,9 +818,9 @@ Responderla requiere decidir primero qué significa «no importar», es decir, f
 
 Este procedimiento se conoce como \textbf{prueba de equivalencia} o \textbf{TOST}, por las iniciales de \textit{two one-sided tests}: las dos pruebas unilaterales que se hacen, una por cada extremo de la franja \cite{schuirmann_1987, lakens_2017}. Lo que se concluye con él no es «el campo no hace nada», sino «si el campo hace algo, es menos que el umbral».
 
-\paragraph{Margen de relevancia.}
+\paragraph{Margen de relevancia.}\label{par:umbral_relevancia}
 
-El umbral se fijó en el \textbf{10\,\pct} respecto de la media del control, y se fijó antes de mirar los datos. La idea es que un cambio menor al 10\,\pct no tendría interés práctico para nadie que quisiera usar esta técnica, aunque llegara a dar significativo con una muestra suficientemente grande. Es un criterio de \emph{relevancia}, no de estadística.
+El umbral se fijó en el \textbf{10\,\pct} respecto de la media del control antes de examinar los datos, y se emplea como criterio de relevancia práctica para el análisis de equivalencia. La idea es que un cambio menor al 10\,\pct no tendría interés práctico para nadie que quisiera usar esta técnica, aunque llegara a dar significativo con una muestra suficientemente grande. Es un criterio de \emph{relevancia}, no de estadística.
 
 ¿Por qué el 10\,\pct y no otro número? Porque los efectos que reporta la literatura son bastante mayores, y conviene que el umbral quede por debajo de ellos. El meta-análisis de Tapia-Belmonte et al.~\cite{tapia_belmonte_2023} informa mejoras del 12{,}8\,\pct en germinación con campos uniformes y del 123\,\pct en peso fresco con campos no uniformes. Kataria et al.~\cite{kataria_2017}, en la variable más parecida a la de este trabajo, reportan un 62\,\pct más de absorción de agua bajo estrés salino.
 
@@ -746,7 +830,7 @@ Fijar el umbral en el 10\,\pct es entonces exigente con uno mismo: es más chico
 
 Un experimento con nueve réplicas por condición no puede ver efectos arbitrariamente chicos. En lugar de dejar esa limitación implícita, se la mide: para cada grupo y cada variable se calcula el \textbf{efecto mínimo detectable}, que es el efecto más chico que el experimento habría tenido buenas chances de encontrar si hubiera existido. Convencionalmente «buenas chances» significa un 80\,\pct.
 
-Sobre la variable primaria, ese valor es del 8{,}19\,\pct en cerámica a 5~mL, del 6{,}87\,\pct en neodimio a 5~mL y del 3{,}40\,\pct en neodimio a 3~mL. Que el último sea el más chico no es casualidad: es el grupo armado con el dosificador exacto, y menos variabilidad en el armado permite ver diferencias más finas (Sección~\ref{subsec:regimen_hidrico}).
+Sobre la variable primaria, ese valor es del 8{,}19\,\pct en cerámica a 5~mL, del 6{,}87\,\pct en neodimio a 5~mL y del 3{,}40\,\pct en neodimio a 3~mL. La mayor sensibilidad del último grupo coincide con el uso del medidor de celdas y una menor variabilidad observada, sin que el diseño permita atribuirla exclusivamente al cambio de medidor (Sección~\ref{subsec:regimen_hidrico}).
 
 El largo de radícula es el caso incómodo: su efecto mínimo detectable es del 26{,}4\,\pct. Esa variable solo sirve, entonces, para descartar efectos muy grandes, y así se la interpreta.
 
@@ -780,6 +864,6 @@ Se excluyó una muestra, la \texttt{20260522\_A9}, en la que el peso inicial y e
 
 Con el objetivo de caracterizar la variabilidad basal del sistema experimental y establecer una línea de referencia para la comparación con los tratamientos magnéticos, se realizaron tres experimentos control independientes en los que las semillas no estuvieron expuestas a ningún campo magnético. Estos experimentos se llevaron a cabo en las fechas 04/04/2026, 28/04/2026 y 07/05/2026.
 
-Cada experimento control consistió en 27 bandejas experimentales, distribuidas en 3 pisos (A, B, C) y 9 posiciones, siguiendo la misma disposición geométrica y el mismo protocolo de preparación, hidratación, germinación y pesaje que los experimentos con tratamiento. No se colocaron imanes en ninguna de las bandejas durante la etapa de exposición.
+Cada experimento control consistió en 27 cajas experimentales, distribuidas en 3 pisos (A, B, C) y 9 posiciones, siguiendo la misma disposición geométrica y el mismo protocolo de preparación, hidratación, germinación y pesaje que los experimentos con tratamiento. No se colocaron imanes en ninguna de las cajas durante la etapa de exposición.
 
 El diseño repetido en el tiempo permitió evaluar la reproducibilidad del protocolo y cuantificar la variabilidad interexperimento atribuible a factores no controlados. Conviene precisar que esa variabilidad no proviene de diferencias entre lotes de semillas: todos los experimentos de este trabajo se realizaron con el mismo lote. Las fuentes posibles son, por lo tanto, la variación de masa entre los granos efectivamente seleccionados en cada armado y fluctuaciones ambientales residuales no capturadas por el control de temperatura. Asimismo, el diseño espacial (piso y posición) posibilitó la detección de posibles sesgos sistemáticos dentro del montaje experimental, información relevante para la interpretación de los resultados de los experimentos con tratamiento.
