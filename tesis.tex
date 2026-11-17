@@ -114,6 +114,8 @@
 % ------------------------------------------------------------
 \usepackage[final]{graphicx}
 \setkeys{Gin}{draft=false}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -132,7 +134,36 @@
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{A85D42}
 \definecolor{ink}{HTML}{222222}
+\definecolor{interpretation}{HTML}{3E6675}
+\definecolor{interpretationbg}{HTML}{F1F6F7}
+\definecolor{limitation}{HTML}{9A6B25}
+\definecolor{limitationbg}{HTML}{FBF7EC}
+\definecolor{chapterbg}{HTML}{F3EFE9}
 \color{ink}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{interpretacionfisica}{
+  enhanced,
+  colback=interpretationbg,colframe=interpretation,
+  boxrule=0pt,leftrule=2.2pt,arc=0pt,
+  width=0.96\linewidth,
+  left=9pt,right=9pt,top=7pt,bottom=7pt,
+  before={\par\noindent\centering},after={\par},
+  before skip=10pt,after skip=10pt}
+\newtcolorbox{alcancelimitacion}{
+  enhanced,
+  colback=limitationbg,colframe=limitation,
+  boxrule=0pt,leftrule=2.2pt,arc=0pt,
+  width=0.96\linewidth,
+  left=9pt,right=9pt,top=7pt,bottom=7pt,
+  before={\par\noindent\centering},after={\par},
+  before skip=10pt,after skip=10pt}
+\newcommand{\titulointerpretacion}{%
+  \textcolor{interpretation}{\Large$\rightarrow$}\hspace{0.55em}%
+  \textbf{Interpretación física}\par}
+\newcommand{\tituloalcance}{%
+  \textcolor{limitation}{\Large$\triangle$}\hspace{0.55em}%
+  \textbf{Alcance y limitación}\par}
 % OJO: report/article usan US Letter por defecto. Sin «a4paper» la tesis
 % se componía en 216x279 mm en vez de 210x297 mm.
 \usepackage[a4paper, top=32mm, bottom=30mm, left=27mm, right=24mm]{geometry}
@@ -310,6 +341,44 @@
 }
 
 % ------------------------------------------------------------
+%  Páginas de apertura de capítulo
+%
+%  Uso:
+%  \aperturacapitulo{Título}{tamaño}{imagen}{opciones de imagen}%
+%                     {epígrafe}{autor}{obra}{idioma}
+% ------------------------------------------------------------
+\newcommand{\aperturacapitulo}[8]{%
+  \clearpage
+  \refstepcounter{chapter}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}%
+  \thispagestyle{empty}%
+  \pagecolor{chapterbg}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north,font=\bfseries\Large\scshape,text=accent]
+      (chapterlabel) at ([yshift=-34mm]current page.north)
+      {Capítulo \thechapter};
+    \draw[accent,line width=.5pt]
+      ([xshift=-23mm]chapterlabel.west) -- (chapterlabel.west);
+    \draw[accent,line width=.5pt]
+      (chapterlabel.east) -- ([xshift=23mm]chapterlabel.east);
+    \node[anchor=north,font=\bfseries\fontsize{#2}{#2}\selectfont,text=ink]
+      at ([yshift=-54mm]current page.north) {#1};
+    \node[anchor=center] at ([yshift=15mm]current page.center)
+      {\includegraphics[#4]{#3}};
+    \node[anchor=north,text width=.70\paperwidth,align=center,
+          font=\itshape\fontsize{16}{21}\selectfont,text=ink]
+      at ([yshift=-175mm]current page.north)
+      {{\foreignlanguage{#8}{\hyphenchar\font=-1 ``#5''}}\\[6mm]
+       {\upshape\fontsize{12}{14}\selectfont\scshape #6}\\[1mm]
+       {\upshape\fontsize{12}{14}\selectfont\itshape #7}};
+  \end{tikzpicture}%
+  \null
+  \clearpage
+  \pagecolor{white}%
+}
+
+% ------------------------------------------------------------
 %  Macros propias
 % ------------------------------------------------------------
 % Porcentaje utilizable TAMBIÉN en modo matemático.
@@ -329,13 +398,15 @@
 
 \begin{document}
 
+\hypersetup{pageanchor=false}
 \input{Titlepage}
+\hypersetup{pageanchor=true}
 
 % ============================ PRELIMINARES ============================
 \pagenumbering{roman}
 \setcounter{page}{1}
 
-%\include{secciones/agradecimientos}
+\include{secciones/agradecimientos}
 \include{secciones/resumen}
 
 \clearpage

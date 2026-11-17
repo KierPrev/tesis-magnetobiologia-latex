@@ -6,138 +6,21 @@
 \addcontentsline{toc}{chapter}{Disponibilidad de datos y código}
 \markboth{Disponibilidad de datos y código}{}
 
-La totalidad de los datos crudos, del código de análisis y de los archivos fuente de este documento se encuentra disponible públicamente. El objetivo de esta sección es que cualquier lector pueda reconstruir, a partir de las mediciones originales, cada figura y cada tabla que aparecen en esta tesis.
+Los datos crudos, el código de procesamiento y análisis, las figuras generadas computacionalmente y los archivos fuente de este documento se encuentran disponibles públicamente en los repositorios del proyecto indicados a continuación. Los archivos crudos se conservan sin modificaciones y cada registro mantiene los identificadores de experimento, muestra, posición y tratamiento necesarios para reconstruir su procedencia.
+
+\section*{Herramientas de desarrollo y asistencia}
+
+Las tareas de programación se realizaron principalmente en \textit{Visual Studio Code}. Para modificar y cargar en el ESP32 el código asociado al controlador PID se utilizó \textit{Arduino IDE}. La redacción y edición del documento en \LaTeX{} contó con asistencia de herramientas de inteligencia artificial generativa: \textit{Claude}, de Anthropic, y \textit{Codex}, de OpenAI. Su uso comprendió la generación y revisión de código \LaTeX{}, la resolución de problemas de compilación y el apoyo en tareas de edición y maquetación. Todo el contenido incorporado fue revisado por la autora, quien conserva la responsabilidad sobre las decisiones metodológicas, el análisis, la interpretación de los resultados y la versión final del texto.
 
 \section*{Repositorios}
 
 \begin{description}\raggedright
-  \item[Documento y bibliografía.] Fuentes \LaTeX, archivo \texttt{bib.bib} e imágenes:\\
+  \item[Documento y bibliografía.] Fuentes \LaTeX, bibliografía e imágenes:\\
     \small\url{https://github.com/KierPrev/tesis-magnetobiologia-latex}
-  \item[Datos y software de análisis.] Datos crudos por experimento, código de procesamiento y \textit{scripts} de generación de figuras:\\
-    \small\url{https://github.com/KierPrev/tesis-magnetobiologia-software}
+  \item[Datos y software.] Mediciones originales, datos procesados y programas de análisis y generación de figuras:\\
+    \small\url{https://github.com/KierPrev/Magseed}
 \end{description}
 
-\noindent La versión de los repositorios que corresponde a este documento queda identificada por los siguientes \textit{commits}. El del repositorio de datos y software identifica el estado exacto con que se produjeron todas las figuras y valores citados. El del documento identifica el \textit{commit} inmediatamente anterior a su compilación final, por una razón de principio: un documento no puede contener el identificador del \textit{commit} que lo contiene.
-
-\begin{center}
-\small
-\begin{tabular}{ll}
-\toprule
-Repositorio & \textit{Commit} \\
-\midrule
-\texttt{tesis-magnetobiologia-latex}    & \texttt{25440a2} \\
-\texttt{tesis-magnetobiologia-software} & \texttt{6846423} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section*{Organización de los datos}
-
-Los datos siguen una estructura por experimento, en la que cada ensayo posee un directorio propio identificado por su fecha:
-
-\begin{quote}\ttfamily\footnotesize\raggedright
-data/experiments/AAAAMMDD/\\
-\hspace*{2em}raw/\hfill mediciones originales, no modificadas\\
-\hspace*{2em}processed/\hfill derivados del procesamiento\\
-\hspace*{2em}plots/\hfill figuras propias del experimento\\
-data/global/full\_dataset.csv\hfill consolidado de todos los experimentos\\
-data/extra/plots/\hfill figuras transversales (caracterización, dosis)
-\end{quote}
-
-\noindent Rige un criterio de \textbf{inmutabilidad de los archivos crudos}: los contenidos de \texttt{raw/} no se editan una vez registrados. El archivo \texttt{full\_dataset.csv} es una vista derivada, reconstruible en cualquier momento a partir de los archivos por experimento, y no una fuente primaria de datos. Cada registro conserva el identificador de caja, su posición dentro del montaje, el tratamiento asignado y el identificador del experimento, de modo que la trazabilidad entre una medición y su origen físico se mantiene en todas las etapas.
-
-\section*{Correspondencia entre figuras, tablas y código}
-
-La Tabla~\ref{tab:repro} indica, para cada figura y tabla generada computacionalmente, el archivo de salida y el \textit{script} que la produce. Las figuras que corresponden a fotografías o a capturas de pantalla no se incluyen, por no ser reproducibles a partir de datos.
-
-\begingroup
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.49\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}@{}}
-\caption[Correspondencia entre figuras, tablas y código de generación]{\textbf{Correspondencia entre figuras, tablas y código de generación.} Rutas relativas al repositorio de datos y software.}
-\label{tab:repro}\\
-\toprule
-Elemento & Archivo de salida & \textit{Script} \\
-\midrule
-\endfirsthead
-\toprule
-Elemento & Archivo de salida & \textit{Script} \\
-\midrule
-\endhead
-Fig.~\ref{fig:mapa_dosis}          & \path{extra/plots/mapa_dosis_literatura.pdf} & \path{src/plot_literature_dose_map.py} \\
-Fig.~\ref{fig:ceramica_n_perfil}   & \path{extra/plots/ceramica_n_bz_fit.pdf}             & \path{src/simulate_magnet_field.py} \\
-Fig.~\ref{fig:ceramica_s_perfil}   & \path{extra/plots/ceramica_s_bz_fit.pdf}             & \path{src/simulate_magnet_field.py} \\
-Fig.~\ref{fig:neodimio_n_perfil}   & \path{extra/plots/neodimio_n_bz_fit.pdf}             & \path{src/simulate_magnet_field.py} \\
-Fig.~\ref{fig:mapas_campo}        & \path{extra/plots/field_maps_ceramica_neodimio_n.pdf} & \path{src/plot_field_maps_combinados.py} \\
-Fig.~\ref{fig:caracterizacion_cuchara} & \path{secciones/images/CaracterizacionCucharaPlots.png} & \textit{dato externo (Lucía Guerreiro), sin script en el repositorio} \\
-Fig.~\ref{fig:torre_campos}        & \path{extra/plots/torre_exposicion_campos.pdf}        & \path{src/plot_exposure_tower.py} \\
-Fig.~\ref{fig:heatmaps_ceramica}   & \path{extra/plots/heatmaps/grilla_heatmaps_ceramica_n.pdf} & \path{src/plot_field_heatmaps.py} \\
-Fig.~\ref{fig:heatmaps_neodimio}   & \path{extra/plots/heatmaps/grilla_heatmaps_neodimio_n.pdf} & \path{src/plot_field_heatmaps.py} \\
-Fig.~\ref{fig:ctrl_pct_change_floor}   & \path{analysis/negative_control_combined/...pct_change_floor_barplot.pdf} & \path{src/AnalisisTrays.py} \\
-Fig.~\ref{fig:ctrl_pct_change_lcr}     & \path{analysis/negative_control_combined/...left_center_right_barplot.pdf} & \path{src/AnalisisTrays.py} \\
-Fig.~\ref{fig:ctrl_pct_change_fmb}     & \path{analysis/negative_control_combined/...front_middle_back_barplot.pdf} & \path{src/AnalisisTrays.py} \\
-Fig.~\ref{fig:ctrl_pct_change_heatmap} & \path{datos/img/ctrl_pct_change_heatmap.png} & \textit{figura preparada a mano a partir de \path{...tray_cell_barplot}} \\
-Fig.~\ref{fig:ctrl_pct_change_all}     & \path{analysis/negative_control_combined/...tray_cell_barplot.pdf} & \path{src/AnalisisTrays.py} \\
-Fig.~\ref{fig:ctrl_positivo}           & \path{analysis/control_positivo_combinado/fig_control_positivo.pdf} & \path{src/analisis_confirmatorio.py} \\
-Fig.~\ref{fig:forest_ceramica}         & \path{analysis/confirmatorio_ceramica_n_5ml/fig_forest_peso_germinacion.pdf} & \path{src/analisis_confirmatorio.py} \\
-Fig.~\ref{fig:forest_neodimio_5ml}     & \path{analysis/confirmatorio_neodimio_n_5ml/fig_forest_peso_germinacion.pdf} & \path{src/analisis_confirmatorio.py} \\
-Fig.~\ref{fig:forest_neodimio_3ml}     & \path{analysis/confirmatorio_neodimio_n_3ml/fig_forest_peso_germinacion.pdf} & \path{src/analisis_confirmatorio.py} \\
-Fig.~\ref{fig:germinacion_boxplot}     & \path{analysis/confirmatorio_neodimio_n_3ml/fig_germinacion_boxplot.pdf} & \path{src/analisis_confirmatorio.py} \\
-Fig.~\ref{fig:radicula_boxplot}        & \path{analysis/confirmatorio_neodimio_n_3ml/fig_radicula_boxplot.pdf} & \path{src/analisis_confirmatorio.py} \\
-\midrule
-Tabla~\ref{tab:ajuste_imanes}      & --- & \path{src/simulate_magnet_field.py} \\
-Tablas~\ref{tab:dosis_ceramica} y~\ref{tab:dosis_neodimio} & --- & \path{src/compute_treatment_doses.py} \\
-Tablas~\ref{tab:ctrl_floor}--\ref{tab:ctrl_posthoc} & --- & \path{src/AnalisisTrays.py} \\
-Tablas~\ref{tab:ctrl_pos_niveles} y~\ref{tab:ctrl_pos_contrastes} & --- & \path{src/analisis_confirmatorio.py} \\
-Tablas~\ref{tab:imbibicion_niveles}, \ref{tab:tost} y~\ref{tab:germinacion_niveles} & --- & \path{src/analisis_confirmatorio.py} \\
-Sección~\ref{sec:res_interaccion}  & \path{analysis/linea_base_y_regimenes/reporte.txt} & \path{src/analisis_linea_base.py} \\
-\bottomrule
-\end{longtable}
-\noindent Las rutas de datos se indican relativas a \texttt{data/} en el repositorio de software.
-\endgroup
-
-\section*{Entorno de cómputo}
-
-El análisis se realizó en Python. Las dependencias y sus versiones exactas se encuentran declaradas en el repositorio de software, de modo que el entorno pueda reconstruirse de forma idéntica:
-
-\begin{quote}\ttfamily\small\raggedright
-pip install -r requirements.txt
-\end{quote}
-
-\begingroup\raggedright
-\noindent Las bibliotecas centrales del análisis son \texttt{pandas} para la gestión de datos, \texttt{statsmodels} y \texttt{scipy} para las pruebas estadísticas, \texttt{matplotlib} para las figuras y \texttt{magpylib}~\cite{magpylib} para el cálculo del campo magnético.\par
-\endgroup
-
-\section*{Cómo reproducir los resultados}
-
-\begin{enumerate}
-  \item Clonar ambos repositorios en directorios hermanos, de modo que el enlace simbólico \texttt{datos/software\_data} del repositorio del documento resuelva correctamente.
-  \item Reconstruir el entorno de cómputo con el comando indicado más arriba.
-  \item No existe un único script maestro. Ejecutar, desde la raíz del repositorio de software:
-  \begin{quote}\ttfamily\footnotesize\raggedright
-    \textcolor{gray}{\# caracterización de los imanes y dosis por nivel}\\
-    python src/simulate\_magnet\_field.py\\
-    python src/plot\_field\_heatmaps.py\\
-    python src/plot\_exposure\_tower.py\\
-    python src/plot\_literature\_dose\_map.py\\
-    python src/compute\_treatment\_doses.py\\[0.5em]
-    \textcolor{gray}{\# los tres grupos de tratamiento}\\
-    python src/analisis\_confirmatorio.py -{}-fechas \textbackslash\\
-    \hspace*{2em}20260331 20260608 20260622 \textbackslash\\
-    \hspace*{2em}20260626 20260721 20260727 \textbackslash\\
-    \hspace*{2em}20260804 20260907 20260911\\[0.5em]
-    \textcolor{gray}{\# control positivo}\\
-    python src/analisis\_confirmatorio.py -{}-fechas 20260518 20260522 20260603\\[0.5em]
-    \textcolor{gray}{\# línea de base por fecha e interacción entre regímenes}\\
-    python src/analisis\_linea\_base.py\\[0.5em]
-    \textcolor{gray}{\# control negativo combinado}\\
-    python -c "import sys; sys.path.insert(0,'src'); import AnalisisTrays; \textbackslash\\
-    \hspace*{2em}AnalisisTrays.run\_negative\_control\_analysis(\textbackslash\\
-    \hspace*{4em}['20260404','20260428','20260507'])"
-  \end{quote}
-
-  \item Sobre el último comando corresponde una advertencia. El análisis combinado de los controles negativos no es alcanzable desde la línea de órdenes de \texttt{AnalisisTrays.py}: la función que lo produce solo se invoca desde la interfaz gráfica \texttt{src/AnalisisTrayGUI.py}. El comando indicado la llama directamente, que es la forma de reproducirlo sin interfaz. Alternativamente puede usarse la interfaz gráfica, que ejecuta exactamente la misma función.
-  \item Compilar el documento con \texttt{latexmk -xelatex tesis.tex}.
-\end{enumerate}
+Las versiones correspondientes a la entrega final se identificarán mediante los \textit{commits} de ambos repositorios. Las instrucciones de instalación, la organización de los datos y los comandos necesarios para reproducir los resultados se documentan en el archivo \texttt{README} del repositorio de software.
 
 \endinput

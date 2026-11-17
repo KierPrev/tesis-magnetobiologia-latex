@@ -1,7 +1,8 @@
-\chapter{Marco teórico}
-\epigrafeen{We have to remember that what we observe is not nature in
-itself, but nature exposed to our method of questioning.}{Werner
-Heisenberg}{Physics and Philosophy, 1958}
+\aperturacapitulo
+  {Marco teórico}{34pt}
+  {secciones/images/aperturas/marco-teorico-grafito.png}{width=100mm}
+  {We have to remember that what we observe is not nature in itself, but nature exposed to our method of questioning.}
+  {Werner Heisenberg}{Physics and Philosophy, 1958}{english}
 
 
 \section{Campo magnético estático y escala de energía}
@@ -37,83 +38,17 @@ Esta comparación no implica que todo efecto magnético sea imposible. Lo que de
 También puede descartarse, al nivel de este marco teórico, una explicación dominante por fuerza de Lorentz sobre iones celulares. Para un ion que se mueve en un medio viscoso, la comparación de orden de magnitud entre $qvB$ y el arrastre $6\pi\eta r v$ da $qB/(6\pi\eta r)\ll1$ para radios iónicos nanométricos, viscosidades acuosas o mayores, y campos de la escala experimental. Por ello, el transporte iónico celular se tratará aquí como parte de la respuesta biológica posterior, no como el receptor físico primario del CME.
 
 \section{Pares de radicales como mecanismo físico}
+\label{sec:mecanismo_rpm}
 
 Un radical es una especie química con al menos un electrón desapareado. Un par de radicales se forma cuando un proceso químico o fotoquímico produce dos radicales cuyos electrones desapareados conservan una correlación de espín heredada del precursor molecular. En proteínas fotorreceptoras, por ejemplo, la absorción de luz puede iniciar una transferencia electrónica que genera dos radicales separados espacialmente; en una semilla hidratada, el inicio metabólico y los procesos redox tempranos también proporcionan un contexto químico donde aparecen especies radicalarias. En ambos casos, el elemento físico importante es que los dos electrones no nacen como grados de libertad independientes, sino en un estado de espín correlacionado.
 
-Para dos electrones de espín $1/2$, los estados electrónicos pueden organizarse en un estado singlete y tres estados triplete. El estado singlete tiene espín total nulo,
-\begin{equation}
-    \mathrm{S}=\frac{1}{\sqrt{2}}
-    \left(\uparrow\downarrow-\downarrow\uparrow\right),
-    \label{eq:singlete}
-\end{equation}
-mientras que los tripletes tienen espín total uno,
-\begin{equation}
-    \mathrm{T}_{+}=\uparrow\uparrow,\qquad
-    \mathrm{T}_{0}=\frac{1}{\sqrt{2}}
-    \left(\uparrow\downarrow+\downarrow\uparrow\right),\qquad
-    \mathrm{T}_{-}=\downarrow\downarrow.
-    \label{eq:tripletes}
-\end{equation}
-Las rutas químicas de recombinación suelen ser selectivas en espín: un par en configuración singlete puede recombinar hacia un producto, mientras que un par en configuración triplete puede recombinar más lentamente o seguir otra ruta. Por lo tanto, si un CME cambia la probabilidad de que el par se encuentre en $\mathrm{S}$ o en $\mathrm{T}$ durante su vida química, cambia también el rendimiento relativo de los productos de reacción.
+Los dos electrones del par pueden encontrarse en configuraciones denominadas singlete y triplete. Las rutas químicas de recombinación suelen depender de esa configuración: el singlete puede originar un producto y el triplete recombinar más lentamente o seguir otra vía. Por lo tanto, si un CME modifica durante la vida del par la proporción relativa de ambas configuraciones, también puede modificar la proporción de productos químicos.
 
-La clave es que la interconversión singlete--triplete no está determinada por una energía de equilibrio, sino por la evolución temporal de la fase cuántica de los espines. Esta evolución ocurre en tiempos típicos de nano- a microsegundos, comparables con escalas de transferencia electrónica, relajación de espín y recombinación. En ese intervalo, la interacción con el campo externo puede alterar frecuencias de precesión y condiciones de mezcla entre estados, generando cambios pequeños pero químicamente amplificables en los rendimientos \cite{maffei_2022,radhakrishnan_2019}. Esta es la razón por la cual el mecanismo de pares de radicales (RPM, por sus siglas en inglés) permite sortear la objeción térmica de la ecuación~\eqref{eq:paradoja_termica}.
+La interconversión entre singlete y triplete no depende únicamente de una energía de equilibrio. Depende de cómo evolucionan los espines durante el breve intervalo anterior a la recombinación. En esa evolución intervienen el campo externo y los campos magnéticos internos producidos por los núcleos cercanos. El campo aplicado puede cambiar las frecuencias de precesión y la mezcla entre las dos configuraciones, generando una modificación pequeña pero químicamente amplificable \cite{maffei_2022,radhakrishnan_2019}. Así, el mecanismo de pares de radicales (RPM, por sus siglas en inglés) permite sortear la objeción térmica de la ecuación~\eqref{eq:paradoja_termica} sin requerir calentamiento ni alineamiento macroscópico.
 
-\section{Hamiltoniano de espín en un campo estático}
-\label{sec:hamiltoniano_rpm}
+Para los fines de esta tesina alcanza con conservar el esquema causal: el campo estático puede modificar la dinámica de espín; esa dinámica puede cambiar la proporción de productos químicos; y la fisiología vegetal puede amplificar luego esa diferencia. El experimento no mide estados de espín ni rendimientos químicos, de modo que el RPM se presenta como un mecanismo físico plausible y no como una hipótesis comprobada directamente por estos datos.
 
-El modelo mínimo del RPM conserva solamente los grados de libertad de espín relevantes para la reacción: los dos espines electrónicos del par radical y los espines nucleares acoplados por interacción hiperfina. Para un campo magnético externo estático $\bm{B}$, el Hamiltoniano efectivo puede escribirse como
-\begin{equation}
-    H=
-    \mu_{\mathrm B}\,
-    \bm{B}\cdot
-    \left(
-        g_{1}\bm{S}_{1}
-        +g_{2}\bm{S}_{2}
-    \right)
-    +\sum_{i}\bm{S}_{1}\cdot\bm{A}_{1i}\cdot\bm{I}_{1i}
-    +\sum_{j}\bm{S}_{2}\cdot\bm{A}_{2j}\cdot\bm{I}_{2j}.
-    \label{eq:hamiltoniano_rpm}
-\end{equation}
-El primer término es la interacción Zeeman entre el campo externo y los espines electrónicos. Los factores $g_{1}$ y $g_{2}$ representan los factores giromagnéticos efectivos de cada radical, que pueden diferir por el entorno molecular. Los términos restantes describen el acoplamiento hiperfino entre cada espín electrónico $\bm{S}_{1,2}$ y los espines nucleares $\bm{I}_{1i}$, $\bm{I}_{2j}$ de los átomos cercanos; $\bm{A}_{1i}$ y $\bm{A}_{2j}$ son tensores hiperfinos que codifican la anisotropía local de la molécula.
-
-La interacción hiperfina es esencial porque proporciona campos magnéticos internos y anisotrópicos que mezclan los subespacios singlete y triplete. El campo externo modifica esa mezcla al cambiar las frecuencias de precesión de los espines electrónicos y al levantar parcialmente la degeneración de los tripletes. Si $g_{1}=g_{2}$ y no existieran interacciones hiperfinas, un campo uniforme no produciría por sí solo una conversión singlete--triplete efectiva. En sistemas moleculares reales, sin embargo, los acoplamientos hiperfinos y posibles diferencias $\Delta g=g_{1}-g_{2}$ hacen que la probabilidad de encontrar al par en $\mathrm{S}$ o $\mathrm{T}$ dependa de $\bm{B}$.
-
-Esta formulación permite entender por qué el campo puede ser débil en términos energéticos y aun así relevante dinámicamente. La sensibilidad no surge de comparar $\mu_{\mathrm B}B$ con $k_{\mathrm B}T$, sino de comparar frecuencias de precesión, acoplamientos hiperfinos, tiempos de vida del par radical y tasas de recombinación. Dicho de otro modo, el CME actúa sobre una competencia cinética: debe modificar la evolución de espín antes de que el par radical recombine o pierda coherencia.
-
-Cabe señalar que la sensibilidad del RPM a la intensidad del campo no es monótona. La mayor parte de la evidencia experimental y de modelado que sustenta este mecanismo se concentra en campos débiles, del orden de magnitud del campo geomagnético (decenas de $\mu\mathrm{T}$) o comparables a los acoplamientos hiperfinos típicos (del orden de $\sim1\,\mathrm{mT}$), rango en el que el rendimiento singlete--triplete suele crecer con $B$. Los imanes utilizados en esta tesina generan campos de intensidad muy superior: desde unos 11\,mT en el nivel más alejado hasta 263\,mT en el más próximo a la superficie del imán de neodimio. Eso sitúa al experimento entre uno y dos órdenes de magnitud por encima de la escala de los acoplamientos hiperfinos, y entre dos y casi cuatro por encima de la del campo geomagnético. En ese rango, el sistema se aproxima a un régimen de campo alto, donde el efecto magnético sobre los rendimientos químicos tiende a saturarse o a variar de forma no lineal, en lugar de seguir creciendo proporcionalmente con la intensidad aplicada. Esto no invalida al RPM como mecanismo físico plausible para el presente trabajo, pero sí implica que no debe esperarse una relación simple de \textit{a mayor campo, mayor efecto} en el rango experimental utilizado.
-
-\section{Dinámica de espines y rendimiento químico}
-
-La dinámica cuántica del par radical puede representarse mediante una matriz densidad $\rho(t)$ que evoluciona bajo el Hamiltoniano de la ecuación~\eqref{eq:hamiltoniano_rpm}. En su forma más simple,
-\begin{equation}
-    \frac{d\rho}{dt}
-    =
-    -\frac{i}{\hbar}[H,\rho]
-    -\frac{1}{2}
-    \left\{
-        k_{\mathrm S}P_{\mathrm S}
-        +k_{\mathrm T}P_{\mathrm T},
-        \rho
-    \right\}
-    -\mathcal{L}_{\mathrm{rel}}[\rho].
-    \label{eq:liouville_rpm}
-\end{equation}
-El primer término describe la precesión coherente de los espines. El segundo introduce la desaparición química del par por canales selectivos singlete y triplete, con constantes $k_{\mathrm S}$ y $k_{\mathrm T}$ y proyectores $P_{\mathrm S}$ y $P_{\mathrm T}$. El último término representa, de manera fenomenológica, la relajación y decoherencia inducidas por el entorno molecular.
-
-Una magnitud observable en este modelo es el rendimiento singlete,
-\begin{equation}
-    \Phi_{\mathrm S}
-    =
-    k_{\mathrm S}\int_{0}^{\infty}
-    \operatorname{Tr}
-    \left[
-        P_{\mathrm S}\rho(t)
-    \right]dt,
-    \label{eq:rendimiento_singlete}
-\end{equation}
-y de forma análoga puede definirse $\Phi_{\mathrm T}$ para el canal triplete. La dependencia magnética aparece porque $\rho(t)$ depende del Hamiltoniano, y por lo tanto de $\bm{B}$. Un cambio en la intensidad, orientación o geometría local del CME puede modificar la interconversión $\mathrm{S}\leftrightarrow\mathrm{T}$ y alterar los rendimientos químicos antes de que el sistema alcance una descripción térmica ordinaria.
-
-Para los fines de esta tesina no es necesario resolver analíticamente la ecuación~\eqref{eq:liouville_rpm}. Lo relevante es el esquema causal: el campo estático cambia la dinámica de espín; la dinámica de espín cambia la proporción de productos químicos; esos productos participan luego en señales bioquímicas que la fisiología vegetal amplifica. El modelo conserva así el núcleo físico-matemático sin pretender describir, desde primeros principios, toda la complejidad metabólica de la germinación.
+La sensibilidad prevista por este mecanismo tampoco crece necesariamente de forma proporcional con el campo. La mayor parte de la evidencia que lo sustenta se concentra en campos débiles, comparables al campo geomagnético o a los campos internos moleculares. Los imanes de esta tesina generan entre 11 y 263~mT, un régimen considerablemente más intenso en el que la respuesta puede saturarse o variar de forma no lineal. Por eso no debe esperarse una relación simple de \textit{a mayor campo, mayor efecto} en el rango experimental utilizado.
 
 \section{Criptocromos y complejos FAD como entorno molecular}
 

@@ -1,0 +1,1658 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{araujo_2016}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=7bb5fa10a670f5e82e88c6d271469a2a}{%
+           family={Araújo},
+           familyi={A\bibinitperiod},
+           given={Susana\bibnamedelimb de\bibnamedelima Sousa},
+           giveni={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=778c1bfa96841183860cb2b82489f5b4}{%
+           family={Paparella},
+           familyi={P\bibinitperiod},
+           given={Stefania},
+           giveni={S\bibinitperiod}}}%
+        {{hash=37fc9418d3175fffada3a92974174b35}{%
+           family={Dondi},
+           familyi={D\bibinitperiod},
+           given={Daniele},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3619c64614b2015bb75c661f6293ea9f}{%
+           family={Bentivoglio},
+           familyi={B\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=33043493b8c9e5d1e3f1916b8731b9e8}{%
+           family={Carbonera},
+           familyi={C\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c153cf708121e09baab02dc1813bbe96}{%
+           family={Balestrazzi},
+           familyi={B\bibinitperiod},
+           given={Alma},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{987447e08021d1d6e28dd55369bac7ef}
+      \strng{fullhash}{9f679c09583b1537a7f13cebe8ed3744}
+      \strng{fullhashraw}{9f679c09583b1537a7f13cebe8ed3744}
+      \strng{bibnamehash}{9f679c09583b1537a7f13cebe8ed3744}
+      \strng{authorbibnamehash}{9f679c09583b1537a7f13cebe8ed3744}
+      \strng{authornamehash}{987447e08021d1d6e28dd55369bac7ef}
+      \strng{authorfullhash}{9f679c09583b1537a7f13cebe8ed3744}
+      \strng{authorfullhashraw}{9f679c09583b1537a7f13cebe8ed3744}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Plant Science}
+      \field{title}{Physical Methods for Seed Invigoration: Advantages and Challenges in Seed Technology}
+      \field{volume}{7}
+      \field{year}{2016}
+      \field{pages}{646}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fpls.2016.00646
+      \endverb
+    \endentry
+    \entry{sarraf_2020}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=653be1dae6307769d6a307380bcdfeca}{%
+           family={Sarraf},
+           familyi={S\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1f9a37e7f14e57881fde8aa3f6e34de3}{%
+           family={Kataria},
+           familyi={K\bibinitperiod},
+           given={Sunita},
+           giveni={S\bibinitperiod}}}%
+        {{hash=293e262a962c0500f2983ed27259c7be}{%
+           family={Taimourya},
+           familyi={T\bibinitperiod},
+           given={Houda},
+           giveni={H\bibinitperiod}}}%
+        {{hash=dc32b81f672f4abe971ee1d75b2d2d53}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Lucielen\bibnamedelima Oliveira},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=1e7c95ac8402d1f913a4b429da659b5d}{%
+           family={Menegatti},
+           familyi={M\bibinitperiod},
+           given={Renata\bibnamedelima Diane},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=4c9d70a19b1cc234665511b2e9dcba21}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Meeta},
+           giveni={M\bibinitperiod}}}%
+        {{hash=60c64ca4a57a6e4778e43b3a4c60ec17}{%
+           family={Ihtisham},
+           familyi={I\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3463e9b90a5beb07bfec605ad152b71f}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Shiliang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1158f6fb4c66ae1e07fcc7d7ceae19e8}
+      \strng{fullhash}{3af553e9c3322806b796d6fac606e2cd}
+      \strng{fullhashraw}{3af553e9c3322806b796d6fac606e2cd}
+      \strng{bibnamehash}{1158f6fb4c66ae1e07fcc7d7ceae19e8}
+      \strng{authorbibnamehash}{1158f6fb4c66ae1e07fcc7d7ceae19e8}
+      \strng{authornamehash}{1158f6fb4c66ae1e07fcc7d7ceae19e8}
+      \strng{authorfullhash}{3af553e9c3322806b796d6fac606e2cd}
+      \strng{authorfullhashraw}{3af553e9c3322806b796d6fac606e2cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Plants}
+      \field{number}{9}
+      \field{title}{Magnetic Field (MF) Applications in Plants: An Overview}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{1139}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/plants9091139
+      \endverb
+    \endentry
+    \entry{vashisth_joshi_2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c02333e92107f955dcdbae646843d18f}{%
+           family={Vashisth},
+           familyi={V\bibinitperiod},
+           given={Ananta},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be7d1b556b98bfc2ce42f4e2879777fa}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Devendra\bibnamedelima Kumar},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{fullhash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{fullhashraw}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{bibnamehash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{authorbibnamehash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{authornamehash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{authorfullhash}{6dc1717f94421a9f301313580e1e8a53}
+      \strng{authorfullhashraw}{6dc1717f94421a9f301313580e1e8a53}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioelectromagnetics}
+      \field{number}{2}
+      \field{title}{Growth Characteristics of Maize Seeds Exposed to Magnetic Field}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{pages}{151\bibrangedash 157}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1002/bem.22023
+      \endverb
+    \endentry
+    \entry{ferroni_2024}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=ed669c23533cf55f88797ee65412f89d}{%
+           family={Ferroni},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e0e292994bc41714e7c76f292454870e}{%
+           family={Dolz},
+           familyi={D\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b03a6d73043fdeff2eaa3fac213933c7}{%
+           family={Guerra},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=53ec17c74865809cfa0cad61a95ebf9d}{%
+           family={Makinistian},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{064da9dcbb08d03c760b788fcf1f0f87}
+      \strng{fullhash}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \strng{fullhashraw}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \strng{bibnamehash}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \strng{authorbibnamehash}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \strng{authornamehash}{064da9dcbb08d03c760b788fcf1f0f87}
+      \strng{authorfullhash}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \strng{authorfullhashraw}{61d5dce9e36d7ec59c37782a96c1fdd4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{arXiv preprint}
+      \field{title}{Static magnetic field stimulates growth of maize seeds}
+      \field{year}{2024}
+    \endentry
+    \entry{radhakrishnan_2019}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a34a5435a9b176c89a2123d47c8be32}{%
+           family={Radhakrishnan},
+           familyi={R\bibinitperiod},
+           given={Ramalingam},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{fullhash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{fullhashraw}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{bibnamehash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{authorbibnamehash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{authornamehash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{authorfullhash}{0a34a5435a9b176c89a2123d47c8be32}
+      \strng{authorfullhashraw}{0a34a5435a9b176c89a2123d47c8be32}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physiology and Molecular Biology of Plants}
+      \field{number}{5}
+      \field{title}{Magnetic Field Regulates Plant Functions, Growth and Enhances Tolerance Against Environmental Stresses}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{1107\bibrangedash 1119}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s12298-019-00699-9
+      \endverb
+    \endentry
+    \entry{farooq_2019}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=6a59f397338f6a413b40b68cd45afd0d}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9b188d486913142cb26c6acb66a85531}{%
+           family={Usman},
+           familyi={U\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=12d0bb3502937cc104ff40d59c019755}{%
+           family={Nadeem},
+           familyi={N\bibinitperiod},
+           given={Faisal},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a498bf770c95c540395122c1b308b253}{%
+           family={Rehman},
+           familyi={R\bibinitperiod},
+           given={Hafeez\bibnamedelima ur},
+           giveni={H\bibinitperiod\bibinitdelim u\bibinitperiod}}}%
+        {{hash=ed16e14a65bbb6e6a4992cd0870191b2}{%
+           family={Wahid},
+           familyi={W\bibinitperiod},
+           given={Abdul},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5e4662cda7ca4d0cc5fa6c2b061d4a48}{%
+           family={Basra},
+           familyi={B\bibinitperiod},
+           given={Shahzad\bibnamedelimb M.\bibnamedelimi A.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5991d3a4b0dab2eab5f606cfcde15347}{%
+           family={Siddique},
+           familyi={S\bibinitperiod},
+           given={Kadambot\bibnamedelimb H.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f4bde1abd8aa0642fd0e8b2a9f07e83}
+      \strng{fullhash}{378af1c91866eab84a35e55cad64ea5d}
+      \strng{fullhashraw}{378af1c91866eab84a35e55cad64ea5d}
+      \strng{bibnamehash}{3f4bde1abd8aa0642fd0e8b2a9f07e83}
+      \strng{authorbibnamehash}{3f4bde1abd8aa0642fd0e8b2a9f07e83}
+      \strng{authornamehash}{3f4bde1abd8aa0642fd0e8b2a9f07e83}
+      \strng{authorfullhash}{378af1c91866eab84a35e55cad64ea5d}
+      \strng{authorfullhashraw}{378af1c91866eab84a35e55cad64ea5d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Crop and Pasture Science}
+      \field{title}{Seed Priming in Field Crops: Potential Benefits, Adoption and Challenges}
+      \field{volume}{70}
+      \field{year}{2019}
+      \field{pages}{731\bibrangedash 771}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1071/CP18604
+      \endverb
+    \endentry
+    \entry{tapia_belmonte_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2163cccb8bf031a754e4b416dc3dd907}{%
+           family={Tapia-Belmonte},
+           familyi={T\bibinithyphendelim B\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cee0f1b79ceadf3dce30d6504b7fc188}{%
+           family={Concha},
+           familyi={C\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ecd1e589f860cc71c6f13697c23862b9}{%
+           family={Poupin},
+           familyi={P\bibinitperiod},
+           given={María\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{380498e68bd5043ec788cfa40800d115}
+      \strng{fullhash}{01d73026f9b910b3556f180207e91cf4}
+      \strng{fullhashraw}{01d73026f9b910b3556f180207e91cf4}
+      \strng{bibnamehash}{01d73026f9b910b3556f180207e91cf4}
+      \strng{authorbibnamehash}{01d73026f9b910b3556f180207e91cf4}
+      \strng{authornamehash}{380498e68bd5043ec788cfa40800d115}
+      \strng{authorfullhash}{01d73026f9b910b3556f180207e91cf4}
+      \strng{authorfullhashraw}{01d73026f9b910b3556f180207e91cf4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioelectromagnetics}
+      \field{title}{The Effects of Uniform and Nonuniform Magnetic Fields in Plant Growth: A Meta-Analysis Approach}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1002/bem.22445
+      \endverb
+    \endentry
+    \entry{aladjadjiyan_2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e664af577cba900b9ac9a5f30963b199}{%
+           family={Aladjadjiyan},
+           familyi={A\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{fullhash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{fullhashraw}{e664af577cba900b9ac9a5f30963b199}
+      \strng{bibnamehash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{authorbibnamehash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{authornamehash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{authorfullhash}{e664af577cba900b9ac9a5f30963b199}
+      \strng{authorfullhashraw}{e664af577cba900b9ac9a5f30963b199}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Central European Agriculture}
+      \field{number}{2}
+      \field{title}{Study of the Influence of Magnetic Field on Some Biological Characteristics of Zea mays}
+      \field{volume}{3}
+      \field{year}{2002}
+      \field{pages}{89\bibrangedash 94}
+      \range{pages}{6}
+    \endentry
+    \entry{florez_2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=12b4287a9af36a06889203af5dab8b87}{%
+           family={Flórez},
+           familyi={F\bibinitperiod},
+           given={Mercedes},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83198f8a2e8f9bfa1ebe5f511c6b082a}{%
+           family={Carbonell},
+           familyi={C\bibinitperiod},
+           given={María\bibnamedelima Victoria},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ff2b2fef5015b45ea73301d7fecca0d3}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={Elvira},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7976896e9351ca026e494f921c07a068}
+      \strng{fullhash}{9980d5c83f593054c4155e48f05e8098}
+      \strng{fullhashraw}{9980d5c83f593054c4155e48f05e8098}
+      \strng{bibnamehash}{9980d5c83f593054c4155e48f05e8098}
+      \strng{authorbibnamehash}{9980d5c83f593054c4155e48f05e8098}
+      \strng{authornamehash}{7976896e9351ca026e494f921c07a068}
+      \strng{authorfullhash}{9980d5c83f593054c4155e48f05e8098}
+      \strng{authorfullhashraw}{9980d5c83f593054c4155e48f05e8098}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environmental and Experimental Botany}
+      \field{title}{Exposure of Maize Seeds to Stationary Magnetic Fields: Effects on Germination and Early Growth}
+      \field{volume}{59}
+      \field{year}{2007}
+      \field{pages}{68\bibrangedash 75}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.envexpbot.2005.10.006
+      \endverb
+    \endentry
+    \entry{shine_guruprasad_2012}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=4673264c46df9bef368fa8c4af1f85e5}{%
+           family={Shine},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6a413ad2e6d18e794212986a94ab346d}{%
+           family={Guruprasad},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{fullhash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{fullhashraw}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{bibnamehash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{authorbibnamehash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{authornamehash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{authorfullhash}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \strng{authorfullhashraw}{f6ee73f784dc85343f0b8f7e6dc76ad9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Physiologiae Plantarum}
+      \field{title}{Impact of Pre-Sowing Magnetic Field Exposure of Seeds to Stationary Magnetic Field on Growth, Reactive Oxygen Species and Photosynthesis of Maize Under Field Conditions}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1007/s11738-011-0824-7
+      \endverb
+    \endentry
+    \entry{kataria_2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1f9a37e7f14e57881fde8aa3f6e34de3}{%
+           family={Kataria},
+           familyi={K\bibinitperiod},
+           given={Sunita},
+           giveni={S\bibinitperiod}}}%
+        {{hash=40ff3c5bd7951bcfd441fb31967db8fb}{%
+           family={Baghel},
+           familyi={B\bibinitperiod},
+           given={Lokesh},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6a413ad2e6d18e794212986a94ab346d}{%
+           family={Guruprasad},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b307de8eb4a24693e46d8c76c5a41d7}
+      \strng{fullhash}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \strng{fullhashraw}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \strng{bibnamehash}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \strng{authorbibnamehash}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \strng{authornamehash}{7b307de8eb4a24693e46d8c76c5a41d7}
+      \strng{authorfullhash}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \strng{authorfullhashraw}{176aa8a2f3601eb1f1eb9fbc82194715}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biocatalysis and Agricultural Biotechnology}
+      \field{title}{Pre-Treatment of Seeds with Static Magnetic Field Improves Germination and Early Growth Characteristics Under Salt Stress in Maize and Soybean}
+      \field{volume}{10}
+      \field{year}{2017}
+      \field{pages}{83\bibrangedash 90}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.bcab.2017.02.010
+      \endverb
+    \endentry
+    \entry{martinez_2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=467c633b772b0af54f88325e4bbd2804}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=68011743e78f6b67f9bcd30bc7609caa}{%
+           family={Flórez},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dccc8844832006b7fc96b7132080db87}{%
+           family={Carbonell},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi V.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad97eefd3aa9ac2109ccd5e43dca3e8c}
+      \strng{fullhash}{2a295f5d279bf187e1af2b692ebf274b}
+      \strng{fullhashraw}{2a295f5d279bf187e1af2b692ebf274b}
+      \strng{bibnamehash}{2a295f5d279bf187e1af2b692ebf274b}
+      \strng{authorbibnamehash}{2a295f5d279bf187e1af2b692ebf274b}
+      \strng{authornamehash}{ad97eefd3aa9ac2109ccd5e43dca3e8c}
+      \strng{authorfullhash}{2a295f5d279bf187e1af2b692ebf274b}
+      \strng{authorfullhashraw}{2a295f5d279bf187e1af2b692ebf274b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Environment, Agriculture and Biotechnology}
+      \field{number}{1}
+      \field{title}{Stimulatory Effect of the Magnetic Treatment on the Germination of Cereal Seeds}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{375\bibrangedash 381}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.22161/ijeab/2.1.47
+      \endverb
+    \endentry
+    \entry{torres_2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=078567407aeca6c34c23d972daa0915a}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ead44e2bf92427b9a5a4a3366903b51b}{%
+           family={Aranzazu-Osorio},
+           familyi={A\bibinithyphendelim O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f1f7c22767afc17b328c24817aba7533}{%
+           family={Restrepo-Parra},
+           familyi={R\bibinithyphendelim P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9a45a4ddbfab1dc3168b217a049da91}
+      \strng{fullhash}{4f0da776ebbafdf2706eda077715b467}
+      \strng{fullhashraw}{4f0da776ebbafdf2706eda077715b467}
+      \strng{bibnamehash}{4f0da776ebbafdf2706eda077715b467}
+      \strng{authorbibnamehash}{4f0da776ebbafdf2706eda077715b467}
+      \strng{authornamehash}{d9a45a4ddbfab1dc3168b217a049da91}
+      \strng{authorfullhash}{4f0da776ebbafdf2706eda077715b467}
+      \strng{authorfullhashraw}{4f0da776ebbafdf2706eda077715b467}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Agricultural Science}
+      \field{number}{2}
+      \field{title}{Favourable and Unfavourable Effect of Homogeneous Static Magnetic Field on Germination of Zea mays L. (Maize) Seeds}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{90\bibrangedash 99}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.5539/jas.v11n2p90
+      \endverb
+    \endentry
+    \entry{siyami_2018}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=4d8c81af35502cb7c14f4b8c1ac1dab7}{%
+           family={Siyami},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=26b49c32fec3be9981fbaf589395022c}{%
+           family={Mirshekari},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5ee42ae476b3f740f7e532c895de2c1e}{%
+           family={Farahvash},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=016a9a9d02ae4b758fce3b8020e06734}{%
+           family={Rashidi},
+           familyi={R\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=776daecf030527891457bf573ba9dc85}{%
+           family={Tarinejad},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7148ffba228d61a9d4d6c1542dbafa10}
+      \strng{fullhash}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \strng{fullhashraw}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \strng{bibnamehash}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \strng{authorbibnamehash}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \strng{authornamehash}{7148ffba228d61a9d4d6c1542dbafa10}
+      \strng{authorfullhash}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \strng{authorfullhashraw}{09bb55c5fe907a221d3dfb8f36a92f57}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Ecology and Environmental Research}
+      \field{number}{1}
+      \field{title}{The Effect of Physical Priming of Seed on Traits and Yield of Corn (Zea mays L.) Under Water Deficit Conditions in Iran}
+      \field{volume}{16}
+      \field{year}{2018}
+      \field{pages}{617\bibrangedash 627}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.15666/aeer/1601_617627
+      \endverb
+    \endentry
+    \entry{anand_2012}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=2d2ef7b50aa79d97d812e6f54c57b607}{%
+           family={Anand},
+           familyi={A\bibinitperiod},
+           given={Anjali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b7887f8ba8d1a1739ee5c87fcdb74d6e}{%
+           family={Nagarajan},
+           familyi={N\bibinitperiod},
+           given={Shantha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=53546c42e5c186009a6f6e1b8f54753e}{%
+           family={Verma},
+           familyi={V\bibinitperiod},
+           given={A.\bibnamedelimi P.\bibnamedelimi S.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=6b83a81851ebc7d50d9cbdb10845a0d9}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={D.\bibnamedelimi K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2873cfed99f9e349b12ca3dfa25ed485}{%
+           family={Pathak},
+           familyi={P\bibinitperiod},
+           given={P.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=aeb2ba0ace8c9be9001a73fcc0e62157}{%
+           family={Bhardwaj},
+           familyi={B\bibinitperiod},
+           given={Jyotsna},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6e79a4ca4cff6db32e42ecdaf41c90f}
+      \strng{fullhash}{842d86649eb7d86fc7207b965d05767b}
+      \strng{fullhashraw}{842d86649eb7d86fc7207b965d05767b}
+      \strng{bibnamehash}{842d86649eb7d86fc7207b965d05767b}
+      \strng{authorbibnamehash}{842d86649eb7d86fc7207b965d05767b}
+      \strng{authornamehash}{a6e79a4ca4cff6db32e42ecdaf41c90f}
+      \strng{authorfullhash}{842d86649eb7d86fc7207b965d05767b}
+      \strng{authorfullhashraw}{842d86649eb7d86fc7207b965d05767b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Biochemistry and Biophysics}
+      \field{title}{Pre-Treatment of Seeds with Static Magnetic Field Ameliorates Soil Water Stress in Seedlings of Maize (Zea mays L.)}
+      \field{volume}{49}
+      \field{year}{2012}
+      \field{pages}{63\bibrangedash 70}
+      \range{pages}{8}
+    \endentry
+    \entry{shine_2017}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4673264c46df9bef368fa8c4af1f85e5}{%
+           family={Shine},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1f9a37e7f14e57881fde8aa3f6e34de3}{%
+           family={Kataria},
+           familyi={K\bibinitperiod},
+           given={Sunita},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6a413ad2e6d18e794212986a94ab346d}{%
+           family={Guruprasad},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=2d2ef7b50aa79d97d812e6f54c57b607}{%
+           family={Anand},
+           familyi={A\bibinitperiod},
+           given={Anjali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d70c8ca88ddddb3724190972a743bb5b}
+      \strng{fullhash}{bbe95085ff08b9386d146cb2a38e121b}
+      \strng{fullhashraw}{bbe95085ff08b9386d146cb2a38e121b}
+      \strng{bibnamehash}{bbe95085ff08b9386d146cb2a38e121b}
+      \strng{authorbibnamehash}{bbe95085ff08b9386d146cb2a38e121b}
+      \strng{authornamehash}{d70c8ca88ddddb3724190972a743bb5b}
+      \strng{authorfullhash}{bbe95085ff08b9386d146cb2a38e121b}
+      \strng{authorfullhashraw}{bbe95085ff08b9386d146cb2a38e121b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Agricultural and Crop Research}
+      \field{number}{4}
+      \field{title}{Enhancement of Maize Seeds Germination by Magnetopriming in Perspective with Reactive Oxygen Species}
+      \field{volume}{5}
+      \field{year}{2017}
+      \field{pages}{66\bibrangedash 76}
+      \range{pages}{11}
+    \endentry
+    \entry{vashisth_nagarajan_2009}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c02333e92107f955dcdbae646843d18f}{%
+           family={Vashisth},
+           familyi={V\bibinitperiod},
+           given={Ananta},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b7887f8ba8d1a1739ee5c87fcdb74d6e}{%
+           family={Nagarajan},
+           familyi={N\bibinitperiod},
+           given={Shantha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{fullhash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{fullhashraw}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{bibnamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorbibnamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authornamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorfullhash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorfullhashraw}{b777552c65a72db96ecf5e871fa6bd26}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Biochemistry and Biophysics}
+      \field{title}{Characterization of Water Binding and Germination Traits of Magnetically Exposed Maize (Zea mays L.) Seeds Equilibrated at Different Relative Humidities at Two Temperatures}
+      \field{volume}{46}
+      \field{year}{2009}
+      \field{pages}{184\bibrangedash 191}
+      \range{pages}{8}
+    \endentry
+    \entry{vashisth_nagarajan_2010}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c02333e92107f955dcdbae646843d18f}{%
+           family={Vashisth},
+           familyi={V\bibinitperiod},
+           given={Ananta},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b7887f8ba8d1a1739ee5c87fcdb74d6e}{%
+           family={Nagarajan},
+           familyi={N\bibinitperiod},
+           given={Shantha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{fullhash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{fullhashraw}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{bibnamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorbibnamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authornamehash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorfullhash}{b777552c65a72db96ecf5e871fa6bd26}
+      \strng{authorfullhashraw}{b777552c65a72db96ecf5e871fa6bd26}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Biochemistry and Biophysics}
+      \field{title}{Characterization of Water Distribution and Activities of Enzymes During Germination in Magnetically-Exposed Maize (Zea mays L.) Seeds}
+      \field{volume}{47}
+      \field{year}{2010}
+      \field{pages}{311\bibrangedash 318}
+      \range{pages}{8}
+    \endentry
+    \entry{saletnik_2022_static}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=7894ea4e2318c205eb3622815daf7f6e}{%
+           family={Saletnik},
+           familyi={S\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8944567e000934e20be40d5ff898015e}{%
+           family={Saletnik},
+           familyi={S\bibinitperiod},
+           given={Aneta},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e3feb80d1d7130514f58151b1aac5323}{%
+           family={Słysz},
+           familyi={S\bibinitperiod},
+           given={Ewelina},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e46cd37373621a4ba5a00cc2a534bede}{%
+           family={Zaguła},
+           familyi={Z\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5e22de04e81932f47eef0655878db16d}{%
+           family={Bajcar},
+           familyi={B\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ef27087c0d1e867c9d8ac8aeb81bdf06}{%
+           family={Puchalska-Sarna},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=19eb0b3c18cc68bca5fd0bf1c38d0cd0}{%
+           family={Puchalski},
+           familyi={P\bibinitperiod},
+           given={Czesław},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e25d8bd788d82afe3dcd09bb2cfba43}
+      \strng{fullhash}{bd6b82862f2103e45f5ae15faad4d263}
+      \strng{fullhashraw}{bd6b82862f2103e45f5ae15faad4d263}
+      \strng{bibnamehash}{9e25d8bd788d82afe3dcd09bb2cfba43}
+      \strng{authorbibnamehash}{9e25d8bd788d82afe3dcd09bb2cfba43}
+      \strng{authornamehash}{9e25d8bd788d82afe3dcd09bb2cfba43}
+      \strng{authorfullhash}{bd6b82862f2103e45f5ae15faad4d263}
+      \strng{authorfullhashraw}{bd6b82862f2103e45f5ae15faad4d263}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecules}
+      \field{title}{The Static Magnetic Field Regulates the Structure, Biochemical Activity, and Gene Expression of Plants}
+      \field{volume}{27}
+      \field{year}{2022}
+      \field{pages}{5823}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/molecules27185823
+      \endverb
+    \endentry
+    \entry{maffei_2022}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=73ca813e21e2b353dd036e8e86cfa771}{%
+           family={Maffei},
+           familyi={M\bibinitperiod},
+           given={Massimo\bibnamedelima Emilio},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{fullhash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{fullhashraw}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{bibnamehash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{authorbibnamehash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{authornamehash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{authorfullhash}{73ca813e21e2b353dd036e8e86cfa771}
+      \strng{authorfullhashraw}{73ca813e21e2b353dd036e8e86cfa771}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Bioelectromagnetism}
+      \field{title}{Magnetoreception in Plants}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1201/9781003181354-5
+      \endverb
+    \endentry
+    \entry{belyavskaya_2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=27f9a93e33343ed04793fdf4b5cd68cf}{%
+           family={Belyavskaya},
+           familyi={B\bibinitperiod},
+           given={N.\bibnamedelimi A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{fullhash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{fullhashraw}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{bibnamehash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{authorbibnamehash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{authornamehash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{authorfullhash}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \strng{authorfullhashraw}{27f9a93e33343ed04793fdf4b5cd68cf}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Space Research}
+      \field{number}{7}
+      \field{title}{Biological Effects Due to Weak Magnetic Field on Plants}
+      \field{volume}{34}
+      \field{year}{2004}
+      \field{pages}{1566\bibrangedash 1574}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.asr.2004.01.021
+      \endverb
+    \endentry
+    \entry{torres_socorro_2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e7eeb5ddb4ffb66645354e281bb157d2}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e76963d9248bfdb5edfe3a583bfd4c6b}{%
+           family={Socorro},
+           familyi={S\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=81327d1b2573683bb53e6c7fb49bb14b}{%
+           family={Hincapié},
+           familyi={H\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb683fe05ee03a04eeb7528413afc432}
+      \strng{fullhash}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \strng{fullhashraw}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \strng{bibnamehash}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \strng{authorbibnamehash}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \strng{authornamehash}{fb683fe05ee03a04eeb7528413afc432}
+      \strng{authorfullhash}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \strng{authorfullhashraw}{3e55f4f3bbd79071cf3995f6dc3a1276}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioelectromagnetics}
+      \field{title}{Effect of Homogeneous Static Magnetic Treatment on the Adsorption Capacity in Maize Seeds (Zea mays L.)}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1002/bem.22120
+      \endverb
+    \endentry
+    \entry{sharma_2017}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=47827ea3b20c97680b257fcceda24d9d}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Vishwanath},
+           giveni={V\bibinitperiod}}}%
+        {{hash=19ed76bf6cca144e6b179fcf341795e0}{%
+           family={Dadlani},
+           familyi={D\bibinitperiod},
+           given={Malavika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0225baab7aeb73e7b647cc4ac6a738db}{%
+           family={Basu},
+           familyi={B\bibinitperiod},
+           given={Sudipta},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2d2ef7b50aa79d97d812e6f54c57b607}{%
+           family={Anand},
+           familyi={A\bibinitperiod},
+           given={Anjali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=17273f0e821665458f29ae425028549b}{%
+           family={Hossain},
+           familyi={H\bibinitperiod},
+           given={Firoz},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{93a9dc39173ad8c3812c49fc271d4765}
+      \strng{fullhash}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \strng{fullhashraw}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \strng{bibnamehash}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \strng{authorbibnamehash}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \strng{authornamehash}{93a9dc39173ad8c3812c49fc271d4765}
+      \strng{authorfullhash}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \strng{authorfullhashraw}{0e8a3298dc1bf5b764fb1b5caab7bb0f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemical Science Review and Letters}
+      \field{number}{23}
+      \field{title}{Comparison between Pulsed and Static Magnetic Treatment for Enhancement of Germination Characteristics in Differentially Aged Maize Seeds}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{pages}{1617\bibrangedash 1622}
+      \range{pages}{6}
+    \endentry
+    \entry{dominguez_pacheco_2010}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=63da44a8815c0f5ebd5ea22fb6c11452}{%
+           family={Domínguez\bibnamedelima Pacheco},
+           familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Arturo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d57f096a18dcaaa0f69ff481837a6772}{%
+           family={Hernández\bibnamedelima Aguilar},
+           familyi={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=be3f5a28b11af03fa42b59118be2dfed}{%
+           family={Cruz\bibnamedelima Orea},
+           familyi={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a72787e9db68ee2674f6424f8b027d05}{%
+           family={Carballo\bibnamedelima Carballo},
+           familyi={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Aquiles},
+           giveni={A\bibinitperiod}}}%
+        {{hash=18c79acec5b834b764c4552309e5ab0a}{%
+           family={Zepeda\bibnamedelima Bautista},
+           familyi={Z\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Rosalba},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4dd4d54fbc3b0aa86e9ccfa74a998881}{%
+           family={Martínez\bibnamedelima Ortíz},
+           familyi={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Efraín},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{29926614abaf540b04c5c1ae23b9c052}
+      \strng{fullhash}{10f99d5c49b77a776a351349cfa734a2}
+      \strng{fullhashraw}{10f99d5c49b77a776a351349cfa734a2}
+      \strng{bibnamehash}{10f99d5c49b77a776a351349cfa734a2}
+      \strng{authorbibnamehash}{10f99d5c49b77a776a351349cfa734a2}
+      \strng{authornamehash}{29926614abaf540b04c5c1ae23b9c052}
+      \strng{authorfullhash}{10f99d5c49b77a776a351349cfa734a2}
+      \strng{authorfullhashraw}{10f99d5c49b77a776a351349cfa734a2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Fitotecnia Mexicana}
+      \field{number}{2}
+      \field{title}{Semilla de maíz bajo la influencia de irradiación de campos electromagnéticos}
+      \field{volume}{33}
+      \field{year}{2010}
+      \field{pages}{183\bibrangedash 188}
+      \range{pages}{6}
+    \endentry
+    \entry{zepeda_bautista_2014}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=4a427aff00110fd1e210cd42bcf38402}{%
+           family={Zepeda-Bautista},
+           familyi={Z\bibinithyphendelim B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9e4eeefffc77ad744fd6eb2286dd62f3}{%
+           family={Hernández-Aguilar},
+           familyi={H\bibinithyphendelim A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c5986a201bbd6fc512c6023242d3950c}{%
+           family={Suazo-López},
+           familyi={S\bibinithyphendelim L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=bc9e0d5819c0c6f5ea7d8560e82044c0}{%
+           family={Domínguez-Pacheco},
+           familyi={D\bibinithyphendelim P\bibinitperiod},
+           given={A.\bibnamedelimi F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1e5f3cc714dcd0dab4efc48b3fa133bc}{%
+           family={Virgen-Vargas},
+           familyi={V\bibinithyphendelim V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fbe50658ca7230bb3eacbc3fc98c39b0}{%
+           family={Pérez-Reyes},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4f84dd7d59b26d6ab2c4612c325ae41f}{%
+           family={Peón-Escalante},
+           familyi={P\bibinithyphendelim E\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1eb95e9f42a0ade2c69293ad3dc2486b}
+      \strng{fullhash}{4f5ea64596efed7d1f69d2f2afab3a9e}
+      \strng{fullhashraw}{4f5ea64596efed7d1f69d2f2afab3a9e}
+      \strng{bibnamehash}{1eb95e9f42a0ade2c69293ad3dc2486b}
+      \strng{authorbibnamehash}{1eb95e9f42a0ade2c69293ad3dc2486b}
+      \strng{authornamehash}{1eb95e9f42a0ade2c69293ad3dc2486b}
+      \strng{authorfullhash}{4f5ea64596efed7d1f69d2f2afab3a9e}
+      \strng{authorfullhashraw}{4f5ea64596efed7d1f69d2f2afab3a9e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{African Journal of Biotechnology}
+      \field{number}{1}
+      \field{title}{Electromagnetic field in corn grain production and health}
+      \field{volume}{13}
+      \field{year}{2014}
+      \field{pages}{76\bibrangedash 83}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5897/AJB2013.13245
+      \endverb
+    \endentry
+    \entry{racuciu_2006}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=39d495377ef879a7a6443e82308925a8}{%
+           family={Răcuciu},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af20e17b5a8f679b52d2dea0ab505fba}{%
+           family={Călugăru},
+           familyi={C\bibinitperiod},
+           given={Gh.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=25e7f714c0daa31e99628c6416f5af56}{%
+           family={Creangă},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a43133da04cf447b90b311052d4c23}
+      \strng{fullhash}{7fdac4973a079222b6be593169998be7}
+      \strng{fullhashraw}{7fdac4973a079222b6be593169998be7}
+      \strng{bibnamehash}{7fdac4973a079222b6be593169998be7}
+      \strng{authorbibnamehash}{7fdac4973a079222b6be593169998be7}
+      \strng{authornamehash}{b3a43133da04cf447b90b311052d4c23}
+      \strng{authorfullhash}{7fdac4973a079222b6be593169998be7}
+      \strng{authorfullhashraw}{7fdac4973a079222b6be593169998be7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Romanian Journal of Physics}
+      \field{number}{1--2}
+      \field{title}{Static Magnetic Field Influence on Some Plant Growth}
+      \field{volume}{51}
+      \field{year}{2006}
+      \field{pages}{245\bibrangedash 251}
+      \range{pages}{7}
+    \endentry
+    \entry{magpylib}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=32de318119f4f8b56c6f0181757b872b}{%
+           family={Ortner},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a0c699293cff0eddbabe5a06de5685fc}{%
+           family={{Coliado Bandeira}},
+           familyi={C\bibinitperiod},
+           given={Lucas\bibnamedelima Gabriel},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{fullhash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{fullhashraw}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{bibnamehash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{authorbibnamehash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{authornamehash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{authorfullhash}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \strng{authorfullhashraw}{baf3d8278a380a7fe45b6cbb9dfade80}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SoftwareX}
+      \field{title}{Magpylib: A free Python package for magnetic field computation}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{pages}{100466}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.softx.2020.100466
+      \endverb
+    \endentry
+    \entry{yang_1990}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=32c6354bf21413589a5a6639b7e7fd06}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Z.\bibnamedelimi J.},
+           giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3595bdeacbe66bb9b073f95da3a0f4ae}{%
+           family={Johansen},
+           familyi={J\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=01cd7542f191c815347061aa279b6886}{%
+           family={Bratsberg},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a5f705bc52fd2f3c78a61c95eeb49063}{%
+           family={Helgesen},
+           familyi={H\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4c8ec0af243056d017ba96f1320904b2}{%
+           family={Skjeltorp},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed2cd68c66866e1eaf736b87e30f91cd}
+      \strng{fullhash}{a24b55782ebbfafba9fb024aefe0d44c}
+      \strng{fullhashraw}{a24b55782ebbfafba9fb024aefe0d44c}
+      \strng{bibnamehash}{a24b55782ebbfafba9fb024aefe0d44c}
+      \strng{authorbibnamehash}{a24b55782ebbfafba9fb024aefe0d44c}
+      \strng{authornamehash}{ed2cd68c66866e1eaf736b87e30f91cd}
+      \strng{authorfullhash}{a24b55782ebbfafba9fb024aefe0d44c}
+      \strng{authorfullhashraw}{a24b55782ebbfafba9fb024aefe0d44c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Superconductor Science and Technology}
+      \field{number}{12}
+      \field{title}{Potential and force between a magnet and a bulk {Y}$_1${B}a$_2${C}u$_3${O}$_{7-\delta}$ superconductor studied by a mechanical pendulum}
+      \field{volume}{3}
+      \field{year}{1990}
+      \field{pages}{591\bibrangedash 597}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1088/0953-2048/3/12/004
+      \endverb
+    \endentry
+    \entry{engel_herbert_2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=dd23774c8d614be78f4638925290cd26}{%
+           family={Engel-Herbert},
+           familyi={E\bibinithyphendelim H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e670139b867410bf80add45d704dace2}{%
+           family={Hesjedal},
+           familyi={H\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{fullhash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{fullhashraw}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{bibnamehash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{authorbibnamehash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{authornamehash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{authorfullhash}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \strng{authorfullhashraw}{c9d8d4d4b88fa9aaa1e847d610a8a26c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{number}{7}
+      \field{title}{Calculation of the magnetic stray field of a uniaxial magnetic domain}
+      \field{volume}{97}
+      \field{year}{2005}
+      \field{pages}{074504}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/1.1883308
+      \endverb
+    \endentry
+    \entry{camacho_2013}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d4dc1173a875de8183ba54b6c4f0b810}{%
+           family={Camacho},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a499cd8797afa9dd8a972e01707b4353}{%
+           family={Sosa},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{fullhash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{fullhashraw}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{bibnamehash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{authorbibnamehash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{authornamehash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{authorfullhash}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \strng{authorfullhashraw}{ee9d7da0e2d55a4e5644fa82c87e4342}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Mexicana de Física E}
+      \field{number}{1}
+      \field{title}{Alternative method to calculate the magnetic field of permanent magnets with azimuthal symmetry}
+      \field{volume}{59}
+      \field{year}{2013}
+      \field{pages}{8\bibrangedash 17}
+      \range{pages}{10}
+    \endentry
+    \entry{shapiro_wilk_1965}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d68649e4f2a1a671378e6b8133ccb0d3}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4804e1730322ac9acf50f7acded4b705}{%
+           family={Wilk},
+           familyi={W\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{fullhash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{fullhashraw}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{bibnamehash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{authorbibnamehash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{authornamehash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{authorfullhash}{c79429df467595c7a5a1ca33b7d909f2}
+      \strng{authorfullhashraw}{c79429df467595c7a5a1ca33b7d909f2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{3--4}
+      \field{title}{An Analysis of Variance Test for Normality (Complete Samples)}
+      \field{volume}{52}
+      \field{year}{1965}
+      \field{pages}{591\bibrangedash 611}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1093/biomet/52.3-4.591
+      \endverb
+    \endentry
+    \entry{levene_1960}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=07a71162dce2a5a90de134a5134c86be}{%
+           family={Levene},
+           familyi={L\bibinitperiod},
+           given={Howard},
+           giveni={H\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=08b4c6e1a47a160b5dcf1c147bb99855}{%
+           family={Olkin},
+           familyi={O\bibinitperiod},
+           given={Ingram},
+           giveni={I\bibinitperiod}}}%
+        {{hash=78ed45477b6ac42faf5799f2e9b3d1b1}{%
+           family={Ghurye},
+           familyi={G\bibinitperiod},
+           given={Sudhish\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=26d3c01664dc4b0c60afbdf4153437e2}{%
+           family={Hoeffding},
+           familyi={H\bibinitperiod},
+           given={Wassily},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1455c58d395019ed85d9cb8f24578374}{%
+           family={Madow},
+           familyi={M\bibinitperiod},
+           given={William\bibnamedelima G.},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=5cf19aa5110d49e31bafd83ce394b092}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Henry\bibnamedelima B.},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stanford, California}%
+      }
+      \list{publisher}{1}{%
+        {Stanford University Press}%
+      }
+      \strng{namehash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{fullhash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{fullhashraw}{07a71162dce2a5a90de134a5134c86be}
+      \strng{bibnamehash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{authorbibnamehash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{authornamehash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{authorfullhash}{07a71162dce2a5a90de134a5134c86be}
+      \strng{authorfullhashraw}{07a71162dce2a5a90de134a5134c86be}
+      \strng{editorbibnamehash}{418a8fee0f0873b513457d735537f324}
+      \strng{editornamehash}{e06a2655b0e40907335f1c3a6fc7ad8c}
+      \strng{editorfullhash}{418a8fee0f0873b513457d735537f324}
+      \strng{editorfullhashraw}{418a8fee0f0873b513457d735537f324}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Contributions to Probability and Statistics: Essays in Honor of Harold Hotelling}
+      \field{title}{Robust Tests for Equality of Variances}
+      \field{year}{1960}
+      \field{pages}{278\bibrangedash 292}
+      \range{pages}{15}
+    \endentry
+    \entry{brown_forsythe_1974}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=654f65d334c0d021799e501f4a538640}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Morton\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=f25521af68ab5c61cb39828f57ef6ddd}{%
+           family={Forsythe},
+           familyi={F\bibinitperiod},
+           given={Alan\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{fullhash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{fullhashraw}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{bibnamehash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{authorbibnamehash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{authornamehash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{authorfullhash}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \strng{authorfullhashraw}{bd1b3ae7927e7bb76ea1b8bac6d78a6c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{346}
+      \field{title}{Robust Tests for the Equality of Variances}
+      \field{volume}{69}
+      \field{year}{1974}
+      \field{pages}{364\bibrangedash 367}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1080/01621459.1974.10482955
+      \endverb
+    \endentry
+    \entry{tukey_1949}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9edab5dbc1987bcb98d6de058f00fc47}{%
+           family={Tukey},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{fullhash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{fullhashraw}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{bibnamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authorbibnamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authornamehash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authorfullhash}{9edab5dbc1987bcb98d6de058f00fc47}
+      \strng{authorfullhashraw}{9edab5dbc1987bcb98d6de058f00fc47}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{number}{2}
+      \field{title}{Comparing Individual Means in the Analysis of Variance}
+      \field{volume}{5}
+      \field{year}{1949}
+      \field{pages}{99\bibrangedash 114}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.2307/3001913
+      \endverb
+    \endentry
+    \entry{games_howell_1976}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=43a3488b9d0515e55855eb1ee151e9a8}{%
+           family={Games},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=54973d88991eb9f12d360fdc792f8ae4}{%
+           family={Howell},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfe7042ce178597946becf1f861a932f}
+      \strng{fullhash}{cfe7042ce178597946becf1f861a932f}
+      \strng{fullhashraw}{cfe7042ce178597946becf1f861a932f}
+      \strng{bibnamehash}{cfe7042ce178597946becf1f861a932f}
+      \strng{authorbibnamehash}{cfe7042ce178597946becf1f861a932f}
+      \strng{authornamehash}{cfe7042ce178597946becf1f861a932f}
+      \strng{authorfullhash}{cfe7042ce178597946becf1f861a932f}
+      \strng{authorfullhashraw}{cfe7042ce178597946becf1f861a932f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Statistics}
+      \field{number}{2}
+      \field{title}{Pairwise Multiple Comparison Procedures with Unequal {N}'s and/or Variances: A {Monte Carlo} Study}
+      \field{volume}{1}
+      \field{year}{1976}
+      \field{pages}{113\bibrangedash 125}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.3102/10769986001002113
+      \endverb
+    \endentry
+    \entry{holm_1979}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=23b6a8c4d3d9710bb3b84d15d65dc86e}{%
+           family={Holm},
+           familyi={H\bibinitperiod},
+           given={Sture},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{fullhash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{fullhashraw}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{bibnamehash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{authorbibnamehash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{authornamehash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{authorfullhash}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \strng{authorfullhashraw}{23b6a8c4d3d9710bb3b84d15d65dc86e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scandinavian Journal of Statistics}
+      \field{number}{2}
+      \field{title}{A Simple Sequentially Rejective Multiple Test Procedure}
+      \field{volume}{6}
+      \field{year}{1979}
+      \field{pages}{65\bibrangedash 70}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.2307/4615733
+      \endverb
+    \endentry
+    \entry{schuirmann_1987}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5e0d2a24ac217d400b55711d59470ec5}{%
+           family={Schuirmann},
+           familyi={S\bibinitperiod},
+           given={Donald\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{fullhash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{fullhashraw}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{bibnamehash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{authorbibnamehash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{authornamehash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{authorfullhash}{5e0d2a24ac217d400b55711d59470ec5}
+      \strng{authorfullhashraw}{5e0d2a24ac217d400b55711d59470ec5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Pharmacokinetics and Biopharmaceutics}
+      \field{number}{6}
+      \field{title}{A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability}
+      \field{volume}{15}
+      \field{year}{1987}
+      \field{pages}{657\bibrangedash 680}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/BF01068419
+      \endverb
+    \endentry
+    \entry{lakens_2017}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e153babe7a2cf2ba76b26425b9e8e52d}{%
+           family={Lakens},
+           familyi={L\bibinitperiod},
+           given={Daniël},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{fullhash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{fullhashraw}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{bibnamehash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{authorbibnamehash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{authornamehash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{authorfullhash}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \strng{authorfullhashraw}{e153babe7a2cf2ba76b26425b9e8e52d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Social Psychological and Personality Science}
+      \field{number}{4}
+      \field{title}{Equivalence tests: a practical primer for $t$ tests, correlations, and meta-analyses}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{355\bibrangedash 362}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1177/1948550617697177
+      \endverb
+    \endentry
+    \entry{welch_1947}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=582fa361b6ad3433c6560bd94f446ca5}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{fullhash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{fullhashraw}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{bibnamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorbibnamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authornamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorfullhash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorfullhashraw}{582fa361b6ad3433c6560bd94f446ca5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{1--2}
+      \field{title}{The Generalization of {Student's} Problem When Several Different Population Variances Are Involved}
+      \field{volume}{34}
+      \field{year}{1947}
+      \field{pages}{28\bibrangedash 35}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/biomet/34.1-2.28
+      \endverb
+    \endentry
+    \entry{feynman_1974}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=aac54ccf9c76aa4ba4310ed1334be7d8}{%
+           family={Feynman},
+           familyi={F\bibinitperiod},
+           given={Richard\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{fullhash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{fullhashraw}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{bibnamehash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{authorbibnamehash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{authornamehash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{authorfullhash}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \strng{authorfullhashraw}{aac54ccf9c76aa4ba4310ed1334be7d8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0013-7812}
+      \field{journaltitle}{Engineering and Science}
+      \field{number}{7}
+      \field{title}{Cargo Cult Science}
+      \field{volume}{37}
+      \field{year}{1974}
+      \field{pages}{10\bibrangedash 13}
+      \range{pages}{4}
+      \verb{urlraw}
+      \verb https://resolver.caltech.edu/CaltechES:37.7.CargoCult
+      \endverb
+      \verb{url}
+      \verb https://resolver.caltech.edu/CaltechES:37.7.CargoCult
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

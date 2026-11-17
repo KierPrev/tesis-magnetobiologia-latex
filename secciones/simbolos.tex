@@ -5,6 +5,8 @@
 
 \section*{Símbolos}
 
+\small
+\renewcommand{\arraystretch}{0.88}
 \begin{longtable}{@{}p{0.20\textwidth}p{0.74\textwidth}@{}}
 \toprule
 Símbolo & Significado \\
@@ -14,29 +16,13 @@ Símbolo & Significado \\
 \(|\vec{B}|\)              & Módulo del campo magnético \\
 \(B_z\)                    & Componente del campo normal a la cara del imán (magnitud medida por la sonda Hall) \\
 \(B_r\)                    & Remanencia del imán; único parámetro libre del modelo numérico \\
-\(B_z^{\mathrm{u}}\)       & Perfil de \(B_z\) simulado con remanencia unitaria; depende solo de la geometría \\
-\(B_z^{\mathrm{sim}},\,B_z^{\mathrm{med}}\) & Componente normal simulada y medida, respectivamente \\
-\(\bm{H}\)                 & Campo magnético \(\bm{H}\); \(\bm{B}=\mu_0\bm{H}+\bm{J}\) \\
-\(\bm{M}\)                 & Magnetización (momento dipolar magnético por unidad de volumen) \\
-\(\bm{J}\)                 & Polarización magnética, \(\bm{J}=\mu_0\bm{M}\) \\
-\(\psi\)                   & Potencial escalar magnético, \(\bm{H}=-\nabla\psi\) \\
-\(\sigma_m,\,\rho_m\)      & Densidades de carga magnética superficial y volumétrica (artificio de cálculo) \\
-\(\mu_0\)                  & Permeabilidad magnética del vacío \\
 \(\partial B/\partial z\)  & Gradiente vertical del campo en el centro de la capa de semillas \\
 \(\mu_{\mathrm B}\)        & Magnetón de Bohr, \(9{,}27\times10^{-24}\,\mathrm{J\,T^{-1}}\) \\
 \(k_{\mathrm B}\)          & Constante de Boltzmann \\
 \(T\)                      & Temperatura absoluta \\
-\(g_{1},\,g_{2}\)          & Factores giromagnéticos efectivos de cada radical del par \\
-\(\bm{S}_{1},\,\bm{S}_{2}\)& Operadores de espín electrónico \\
-\(\bm{I}_{ij}\)            & Operadores de espín nuclear \\
-\(\bm{A}_{ij}\)            & Tensores de acoplamiento hiperfino \\
-\(\rho(t)\)                & Matriz densidad del par de radicales \\
-\(P_{\mathrm S},\,P_{\mathrm T}\) & Proyectores sobre los subespacios singlete y triplete \\
-\(k_{\mathrm S},\,k_{\mathrm T}\) & Constantes de recombinación de los canales singlete y triplete \\
-\(\Phi_{\mathrm S}\)       & Rendimiento singlete \\
 \(\Delta\)                 & Imbibición: cambio relativo de peso entre el estado seco y las 72~h; variable de respuesta primaria (Ec.~\ref{eq:pct_change}) \\
 \(w_{\text{inicial}},\,w_{\text{final}}\) & Masa del lote de semillas en seco y a las 72\,h \\
-\(n\)                      & Número de réplicas \\
+\(n\)                      & Número de unidades experimentales (muestras) \\
 \(F_{\nu_1,\nu_2}\)        & Estadístico \(F\) con \(\nu_1\) y \(\nu_2\) grados de libertad \\
 \(p\)                      & Valor \(p\) \\
 \(\alpha\)                 & Nivel de significación (0,05) \\
@@ -45,7 +31,7 @@ Símbolo & Significado \\
 \bottomrule
 \end{longtable}
 
-\vspace{1.5em}
+\vspace{0.4em}
 
 \section*{Abreviaturas}
 
@@ -58,7 +44,6 @@ ANOVA   & Análisis de la varianza (\textit{analysis of variance}) \\
 CME     & Campo magnético estático \\
 FAD     & Flavina adenina dinucleótido \\
 FDR     & Tasa de falsos descubrimientos (\textit{false discovery rate}) \\
-HC3     & Estimador de errores estándar robustos a heterocedasticidad, tipo 3 \\
 HSD     & Diferencia honestamente significativa (\textit{honestly significant difference}) \\
 MBLab   & Laboratorio de Magnetobiología, UNSL \\
 RMSE    & Raíz del error cuadrático medio (\textit{root mean square error}) \\
@@ -68,5 +53,7 @@ SD      & Desviación estándar (\textit{standard deviation}) \\
 UNSL    & Universidad Nacional de San Luis \\
 \bottomrule
 \end{longtable}
+\renewcommand{\arraystretch}{1}
+\normalsize
 
 \endinput

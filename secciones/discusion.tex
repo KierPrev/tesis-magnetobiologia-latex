@@ -1,7 +1,8 @@
-\chapter{Discusión}
-\epigrafeen{The first principle is that you must not fool yourself---and
-you are the easiest person to fool.}{Richard P. Feynman}{Cargo Cult
-Science, 1974}
+\aperturacapitulo
+  {Discusión}{34pt}
+  {secciones/images/aperturas/discusion-grafito.png}{height=67mm}
+  {The first principle is that you must not fool yourself---and you are the easiest person to fool.}
+  {Richard P. Feynman}{Cargo Cult Science, 1974}{english}
 
 \section{Qué mide un control negativo}
 \label{sec:disc_controles}
@@ -17,8 +18,6 @@ Los controles negativos de este trabajo cumplen esa función. El análisis conju
 Conviene precisar qué protección ofrece este conocimiento y cuál no. Detectar el gradiente no lo elimina: lo que impide que se confunda con el efecto del tratamiento es la asignación aleatoria de las muestras a las posiciones de germinación (Sección~\ref{subsec:asignador}), que distribuye esa variabilidad entre condiciones en lugar de dejarla asociada a alguna de ellas. La caracterización y la aleatorización operan, por lo tanto, de manera complementaria: la primera establece que el sesgo existe y cuánto vale; la segunda impide que se alinee con la variable de interés.
 
 Corresponde, por último, aplicar el mismo criterio al propio diseño. La torre de exposición no cuenta con un control equivalente: el nivel de apilamiento determina simultáneamente la dosis magnética y la altura, de modo que ambos factores permanecen confundidos durante la hora de exposición. En los términos de la analogía anterior, se caracterizó el piso del corredor de germinación pero no el de la torre. Un experimento consistente en apilar los cajones sin imán, replicando el resto del protocolo, es la verificación que falta, y es exactamente el tipo de experimento que Feynman señala que la literatura tiende a no realizar y a no citar.
-
-\endinput
 
 \section{Qué se midió acá y qué mide la literatura}
 \label{sec:disc_punto_final}
@@ -55,7 +54,7 @@ Lo que \textbf{no} se puede afirmar es que se haya observado mayor germinación 
 
 La primera es la multiplicidad. Entre los ocho niveles, uno presenta un valor \(p\) sin corregir menor que 0{,}05: el nivel 6, a 22~mT, con 12{,}8 puntos de diferencia y \(p = 0{,}022\). Corregido por Holm pasa a 0{,}18, por la razón desarrollada en la Sección~\ref{subsec:plan_analisis}.
 
-La segunda es física. El nivel que destaca recibe 22~mT, mientras que el nivel 1 recibe 263~mT ---doce veces más--- y queda por debajo del control. Un efecto que apareciera a 22~mT y se desvaneciera al multiplicar la intensidad por doce no describe ninguna relación entre dosis y respuesta. El contraste de tendencia lo confirma (\(p = 0{,}23\)), y una prueba de permutación dentro de bloque, hecha por si la naturaleza acotada de la variable comprometía los supuestos del modelo, arroja el mismo valor.
+La segunda es física. El nivel que destaca recibe 22~mT, mientras que el nivel 1 recibe 263~mT ---doce veces más--- y queda por debajo del control. Un efecto que apareciera a 22~mT y se desvaneciera al multiplicar la intensidad por doce no describe ninguna relación entre dosis y respuesta. El contraste de tendencia lo confirma (\(p = 0{,}23\)), y una verificación por remuestreo conduce a la misma conclusión.
 
 La tercera es que el patrón de «siete de ocho niveles por encima del control» es menos informativo de lo que parece. Los ocho niveles se comparan contra las mismas nueve muestras de control. Si esas nueve resultaron algo bajas por azar, los ocho niveles quedan por encima de manera automática. No son ocho evidencias concordantes, sino una sola, y esa una ya está cuantificada en el contraste principal de 6{,}2 puntos con \(p = 0{,}14\).
 
@@ -89,11 +88,11 @@ Y hay un detalle temporal que vuelve sobre el argumento de la Sección~\ref{sec:
 
 El resultado más robusto de este trabajo no es la ausencia de efecto medio, sino la \textbf{ausencia de relación entre dosis y respuesta}, que se verifica en los tres grupos y en las tres variables. Conviene señalar que esto es lo que el marco teórico anticipaba.
 
-Como se desarrolló en la Sección~\ref{sec:hamiltoniano_rpm}, el mecanismo de pares de radicales es más sensible en campos débiles ---del orden de los acoplamientos hiperfinos, cerca de 1~mT--- y tiende a saturar o a comportarse de manera no lineal en campos mucho mayores. Los imanes empleados generan decenas o centenas de mT, es decir, operan en régimen de campo alto. La conclusión que se extrajo allí fue explícita: no debe esperarse una relación simple de \emph{a mayor campo, mayor efecto} en el rango experimental utilizado.
+Como se desarrolló en la Sección~\ref{sec:mecanismo_rpm}, el mecanismo de pares de radicales es más sensible en campos débiles ---del orden de los campos internos moleculares--- y tiende a saturar o a comportarse de manera no lineal en campos mucho mayores. Los imanes empleados generan decenas o centenas de mT, es decir, operan en régimen de campo alto. La conclusión que se extrajo allí fue explícita: no debe esperarse una relación simple de \emph{a mayor campo, mayor efecto} en el rango experimental utilizado.
 
 Los datos coinciden con esa expectativa. No hay tendencia dosis-respuesta en imbibición (\(p = 0{,}18\); \(p = 0{,}74\); \(p = 0{,}29\) en los tres grupos), ni en germinación (\(p = 0{,}23\)), ni en largo de radícula (\(p = 0{,}70\)). El nivel más intenso nunca es el que más se aparta del control, y en dos de las tres variables queda por debajo de él.
 
-Corresponde, sin embargo, señalar una tensión. El marco teórico admite que puedan existir \textbf{ventanas de intensidad} donde la respuesta aumente y otras donde disminuya (Sección~\ref{sec:consecuencias_rpm}). Esa flexibilidad teórica podría usarse para dar sentido a cualquier nivel que apareciera destacado, incluido el nivel 6 en germinación o el nivel 3 en radícula. Pero una teoría que puede acomodar cualquier resultado puntual no ofrece sustento a ninguno: es precisamente porque el mecanismo admite ventanas que la corrección por multiplicidad resulta indispensable. Postular una ventana después de haber visto cuál nivel se destacó no es una explicación, es una descripción del azar con vocabulario físico.
+Corresponde, sin embargo, señalar una tensión. El marco teórico admite que puedan existir \textbf{ventanas de intensidad} donde la respuesta aumente y otras donde disminuya (Sección~\ref{sec:consecuencias_rpm}). Esa posibilidad de respuestas no monótonas no permite, por sí sola, interpretar retrospectivamente cualquier diferencia puntual como una ventana, incluido el nivel 6 en germinación o el nivel 3 en radícula. Precisamente porque el mecanismo admite máximos y mínimos locales, identificar una ventana requiere formular la hipótesis de antemano y confirmarla en un experimento independiente. En este estudio, por lo tanto, los niveles destacados solo pueden considerarse señales exploratorias, y la corrección por comparaciones múltiples es indispensable para no atribuir significado físico a fluctuaciones compatibles con el azar.
 
 \section{Qué significa este resultado nulo}
 \label{sec:disc_nulo}
@@ -102,13 +101,46 @@ Un resultado nulo puede significar dos cosas muy distintas, y la diferencia depe
 
 Este trabajo construyó la evidencia necesaria para estar en el segundo caso. El control positivo muestra que el procedimiento registra un efecto conocido con enorme claridad: la imbibición crece \(0{,}064\) por cada mililitro de agua aplicado, con \(p = 2{,}9\times10^{-7}\). El método mide.
 
-Sobre esa base, las pruebas de equivalencia permiten pasar de «no se encontró efecto» a una afirmación acotada: \textbf{si el campo magnético afecta la imbibición en estas condiciones, lo hace en menos del 10\%}, y esto se verifica en los tres grupos. El efecto mínimo detectable precisa el alcance de cada caso: 3{,}40\% en neodimio con estrés hídrico, 6{,}87\% en neodimio con agua abundante y 8{,}19\% en cerámica. En los tres el umbral de relevancia es mayor que el efecto mínimo detectable, de modo que la equivalencia no es un artificio de un umbral demasiado ancho.
+Sobre esa base, los intervalos de confianza permiten pasar de «no se encontró efecto» a una afirmación acotada: \textbf{si el campo magnético afecta la imbibición promedio en estas condiciones, lo hace en menos del 10\%}. En los tres grupos el intervalo completo queda dentro de ese margen.
 
-Conviene ser precisa sobre el alcance de esa afirmación, porque es más estrecho que «el campo magnético no afecta la germinación del maíz». Lo acotado es el efecto sobre la \textbf{absorción de agua a las 72~h}. Sobre la germinación, el intervalo es más ancho y no excluye efectos relevantes. Sobre la velocidad del proceso, este diseño no se pronuncia. Y sobre el largo de radícula, el efecto mínimo detectable del 26{,}4\% limita la conclusión a descartar efectos grandes.
+Conviene ser precisa sobre el alcance de esa afirmación, porque es más estrecho que «el campo magnético no afecta la germinación del maíz». Lo acotado es el efecto promedio sobre la \textbf{absorción de agua a las 72~h}. Sobre la germinación y el largo de radícula, los intervalos son más anchos y no excluyen efectos relevantes. Sobre la velocidad del proceso, este diseño no se pronuncia.
+
+La Tabla~\ref{tab:sintesis_inferencial} resume esa diferencia de alcance en lenguaje directo. En el grupo de neodimio con 3~mL, las tres variables proceden mayormente de las mismas unidades experimentales; no constituyen, por lo tanto, evidencias independientes. Sus distintas precisiones se deben a la naturaleza de cada medición y a su procedimiento de registro.
+
+\begin{table}[H]
+\small
+\setlength{\tabcolsep}{4pt}
+\centering
+\caption[Alcance de las inferencias principales]{\textbf{Alcance de las inferencias principales.} Los rangos compatibles con los datos corresponden a intervalos de confianza del 95\,\pct.}
+\label{tab:sintesis_inferencial}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\linewidth}
+                >{\raggedright\arraybackslash}p{0.36\linewidth}
+                >{\raggedright\arraybackslash}p{0.39\linewidth}}
+\toprule
+Medición & Resultado & Qué permite concluir \\
+\midrule
+Imbibición a las 72~h
+& Las estimaciones estuvieron entre \(-1{,}5\,\pct\) y \(+1{,}6\,\pct\); los tres intervalos quedaron dentro de \(\pm10\,\pct\).
+& Se descarta un efecto promedio relevante en las condiciones estudiadas. \\
+\addlinespace
+Germinación a las 72~h
+& Mejor estimación: \(+6{,}2\) puntos porcentuales; rango compatible: de \(-2{,}0\) a \(+14{,}5\) puntos.
+& Resultado inconcluso: todavía admite una mejora relevante. \\
+\addlinespace
+Largo de radícula
+& Mejor estimación: \(+0{,}60\)~mm (\(+9{,}3\,\pct\)); rango compatible: de \(-9{,}2\,\pct\) a \(+27{,}8\,\pct\).
+& Estimación poco precisa; no permite descartar cambios moderados. \\
+\addlinespace
+Relación dosis--respuesta
+& No apareció una tendencia consistente en ninguna de las tres variables.
+& Una intensidad mayor no produjo sistemáticamente una respuesta mayor. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \paragraph{Sobre el rigor del diseño y la comparación con la literatura.}
 
-La discrepancia entre estos resultados y los de la literatura admite una explicación adicional que conviene mencionar con cuidado. Este trabajo empleó bloques completos aleatorizados, control positivo, control negativo caracterizado, corrección por multiplicidad y un umbral de relevancia fijado antes de examinar los datos. No todos los trabajos revisados declaran ese nivel de control, y es conocido que los diseños sin bloqueo ni corrección tienden a producir estimaciones de efecto mayores.
+La discrepancia entre estos resultados y los de la literatura admite una explicación adicional que conviene mencionar con cuidado. Este trabajo empleó un diseño aleatorizado con ajuste por bloque ---completo y balanceado en los dos grupos de neodimio, con el desbalance de cerámica declarado---, control positivo, control negativo caracterizado, corrección por multiplicidad y un umbral de relevancia fijado antes de examinar los datos. No todos los trabajos revisados declaran ese nivel de control, y es conocido que los diseños sin bloqueo ni corrección tienden a producir estimaciones de efecto mayores.
 
 Sería excesivo, no obstante, concluir de ello que los efectos publicados sean espurios: evaluar cada trabajo requeriría acceso a sus datos y excede el alcance de esta tesina. Lo que sí puede sostenerse es la afirmación recíproca y más modesta: \textbf{es el rigor del diseño lo que vuelve informativo a este resultado nulo}. Sin control positivo no se podría distinguir la ausencia de efecto de la insensibilidad del método; sin bloqueo, la variación entre fechas ---mayor que cualquier efecto buscado--- habría dominado la comparación; sin corrección por multiplicidad, este trabajo habría reportado un hallazgo en el nivel 6 de germinación y otro en el nivel 3 de radícula.
 
@@ -123,17 +155,11 @@ Los controles negativos habían detectado una variación espacial dentro del sis
 
 Esto cierra el círculo abierto en la analogía de Young: la caracterización previa del montaje no fue un ejercicio preliminar, sino la que permitió reconocer esa componente cuando reapareció. Y como el efecto estimado se mueve hacia cero al controlar la posición, el resultado nulo se refuerza en lugar de debilitarse.
 
-\paragraph{La variable más influyente no estaba registrada.}
+\paragraph{Una comparación entre regímenes de alcance exploratorio.}
 
-El hallazgo metodológico más incómodo de este trabajo es que el volumen de agua aplicado ---la variable de mayor influencia sobre la respuesta, con \(0{,}064\) de imbibición por mililitro--- no constituía un campo registrado en los metadatos de los experimentos. El dato existía en el protocolo de cada campaña y en la bitácora, pero no en la estructura de datos, y hubo que incorporarlo con posterioridad.
+El régimen de 3~mL se incorporó después de observar los primeros resultados y no se asignó como factor dentro de una misma serie experimental. Por eso, la comparación entre 5 y 3~mL no constituye una estimación causal del efecto del agua, aunque cada campaña conserve una comparación válida entre tratamiento magnético y su propio control.
 
-La consecuencia práctica fue concreta: los dos grupos de neodimio, que difieren en el régimen hídrico, habrían sido analizados como un grupo único de seis fechas, promediando dos condiciones experimentales distintas. La lección es general y vale enunciarla: en un experimento con varias campañas, toda variable que el protocolo fije debe quedar registrada en los datos, aunque durante esa campaña sea constante. Es precisamente cuando cambia entre campañas que se la necesita, y es entonces cuando ya no se la recuerda con precisión.
-
-\paragraph{Un cambio de protocolo con varios componentes simultáneos.}
-
-A partir del experimento del 04/08/2026 cambiaron a la vez cuatro cosas: el volumen de agua, el medidor de semillas, la incorporación del conteo de germinación y la del registro fotográfico. La consecuencia es que la comparación entre los dos regímenes hídricos no puede atribuirse al agua de manera aislada.
-
-En este caso el perjuicio es limitado, porque la comparación resultó nula: ninguna de las variables que cambiaron, ni su combinación, produjo una respuesta al campo. Si el resultado hubiera sido positivo, en cambio, no habría sido interpretable. Es un recordatorio de que conviene modificar un factor a la vez, incluso cuando los cambios restantes parezcan mejoras evidentes del protocolo.
+En las campañas de 3~mL también se incorporaron el conteo de germinación y el registro fotográfico de las radículas. Estas variables ampliaron lo que podía medirse, pero, al no estar disponibles en las campañas de 5~mL, solo permiten evaluar el efecto del campo dentro del régimen de estrés hídrico.
 
 \section{Limitaciones}
 \label{sec:disc_limitaciones}
@@ -149,15 +175,15 @@ Varias limitaciones se han señalado en su lugar; se reúnen acá las que condic
 
     \item \textbf{La torre de exposición no tiene un control propio.} El nivel de apilamiento determina simultáneamente la dosis de campo y la altura, de modo que ambos factores permanecen confundidos durante la hora de exposición. Apilar los cajones sin imán, replicando el resto del protocolo, es la verificación que falta.
 
-    \item \textbf{Potencia limitada en las variables secundarias.} El intervalo de la germinación admite efectos de hasta 14{,}5 puntos porcentuales, y el largo de radícula solo permite descartar efectos mayores al 26{,}4\%.
+    \item \textbf{Potencia limitada en las variables secundarias.} El intervalo de la germinación admite efectos de hasta 14{,}5 puntos porcentuales. En el largo de radícula, el intervalo abarca desde una reducción del 9{,}2\,\pct hasta un aumento del 27{,}8\,\pct, por lo que no permite descartar cambios moderados.
 
-    \item \textbf{El procesamiento fotográfico no es homogéneo entre fechas}, lo que obliga a analizar el largo de radícula centrado por bloque y a renunciar a su lectura en milímetros absolutos.
+    \item \textbf{El procesamiento fotográfico no es homogéneo entre fechas}. Aunque todas las imágenes se calibraron en milímetros mediante una regla de referencia, las diferencias de resolución afectaron la segmentación y obligaron a analizar el largo de radícula centrado por bloque, en lugar de comparar directamente los valores absolutos entre campañas.
 
     \item \textbf{El algoritmo de medición de radículas no fue validado.} Sus parámetros se calibraron contra marcados hechos a mano, pero sus mediciones no se contrastaron con mediciones independientes, de modo que se desconoce su error.
 
     \item \textbf{El grupo de cerámica tiene supuestos más débiles}: residuos no normales y bloques incompletos en una de las tres fechas.
 
-    \item \textbf{Una sola especie, un solo lote y un solo polo.} Todos los experimentos se realizaron con maíz del mismo lote y con el polo norte enfrentado a las semillas. La generalización a otras especies, lotes o configuraciones no está respaldada por estos datos.
+    \item \textbf{Una sola especie, un solo material, un solo lote y un solo polo.} Todos los experimentos se realizaron con maíz DF 777 del mismo lote y con el polo norte enfrentado a las semillas. El envase indica que las semillas estaban protegidas con insecticida, pero la cara documentada no identifica su principio activo ni su dosis. Al ser una condición común a todas las unidades no sesga la comparación interna entre tratamientos y controles, aunque limita la extrapolación a semillas sin tratar o con otra formulación. La generalización a otros materiales genéticos, especies, lotes o configuraciones tampoco está respaldada por estos datos.
 \end{enumerate}
 
 \section{Líneas futuras}
@@ -171,9 +197,9 @@ Las limitaciones anteriores sugieren un orden de prioridades bastante definido.
 
 \textbf{Agregar el control de apilamiento}: una torre sin imán, con el resto del protocolo intacto, que separe el efecto de la altura del efecto del campo.
 
-\textbf{Registrar lo que hoy no se registra}: el volumen de agua por experimento ---ya incorporado a los metadatos--- y la temperatura de manera continua en todas las fechas, no solo en las primeras.
+\textbf{Completar el registro ambiental}: mantener el volumen de agua por experimento, ya incorporado a los metadatos, y registrar la temperatura de manera continua en todas las fechas, no solo en las primeras.
 
-\textbf{Homogeneizar la captura fotográfica}, de modo que el largo de radícula pueda analizarse en milímetros absolutos y comparar entre fechas.
+\textbf{Homogeneizar la captura fotográfica entre fechas}, manteniendo constantes la resolución, la iluminación y el encuadre. La regla milimetrada ya proporciona la escala de cada imagen; esta mejora busca evitar diferencias de segmentación que dificulten la comparación directa de los valores absolutos entre campañas.
 
 \textbf{Validar el algoritmo de medición de radículas}: medir a mano, con regla o calibre, las radículas de un conjunto de fotografías no usado en la calibración, y comparar esas mediciones con las del programa. Eso permitiría conocer su error y saber cuánto confiar en el largo de radícula como variable.
 
